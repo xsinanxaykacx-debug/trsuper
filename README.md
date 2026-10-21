@@ -292,3 +292,16 @@ Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büy�
 - [100 birim kasa ve ileriye dönük test raporu](data/bankroll_ruin_simulation/dort_buyuk_unique/gercek_takim_secimi/2026_2027_100_birim_ileri_test.md)
 
 **Önemli:** Galatasaray örneklemindeki +%8,81 tarihsel ROI'nin yaklaşık %95 belirsizlik aralığı sıfırı içerir. 108,81 birim, bu tarihsel nokta ROI'sinin 100 bahiste aynen tekrarlandığı varsayımına dayanan aritmetik senaryodur; kâr beklentisi veya garanti değildir. Dört büyük takımın birleşik örnekleminde tarihsel ROI -%3,07'dir. 2026–2027 sonuçları önceden sabitlenmiş kuralla ileriye dönük test edilmelidir.
+
+
+## Dört Büyük Takım — Yüksek Oran Stratejileri
+
+İki karşı stratejiyi aynı uygun maç havuzunda test eden betik eklendi:
+
+- [Analiz betiği](analiz_dort_buyuk_yuksek_oran_stratejileri.py)
+- Strateji A: MS1/MS2 arasında düşük oranlı tarafın tersi, yani daha yüksek oranlı taraf.
+- Strateji B: MS1/MSX/MS2 arasındaki en yüksek oranlı sonuç.
+- Ortak maç havuzu, sabit 1 birim bahis, 100 birim kasa, ROI ve hareketli blok bootstrap belirsizlik aralığı hesaplanır.
+- Çıktılar `data/bankroll_ruin_simulation/dort_buyuk_unique/yuksek_oran_karsilastirmasi/` klasörüne yazılır.
+
+Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullanılır; eşit oran durumlarında ilgili strateji bahis yapmaz. Geçmiş performans gelecekteki sonucu garanti etmez.
