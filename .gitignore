@@ -36,3 +36,7 @@ Thumbs.db
 # Boş üretilen dosyalar
 docs/discovery_survivors.csv
 docs/discovery_strong_candidates.csv
+
+# Yedek dosyalar
+*.before_market_fix
+*_before_*.py
