@@ -321,3 +321,154 @@ Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullan
 - Geliştirme/keşif dönemi 2014–2022, zaman dışı tarihsel kontrol dönemi 2023–2025 olarak ayrılır.
 - Strateji ve market × oran aralığı sonuçları için bahis sayısı, kazanma oranı, ROI ve hareketli blok bootstrap %95 aralığı üretilir.
 - Bu, tarihsel kronolojik kontrol olup canlı ileriye dönük test değildir. Alt grup sonuçları çoklu karşılaştırma nedeniyle keşif amaçlıdır; bağımsız doğrulama olmadan bahis kuralı seçilmemelidir.
+
+- ## 🎯 Yönetici Özeti — Nihai Sonuç
+
+> **Mevcut veriyle yapılan 17 bağımsız analizde, çoklu test düzeltmesinden (FDR/Holm-Bonferroni) geçen ve bağımsız dönemde ayakta kalan hiçbir kârlı bahis örüntüsü bulunamadı.**
+
+| Metrik | Sonuç |
+|---|---:|
+| Toplam analiz | **17** |
+| Test edilen örüntü/kombinasyon | **~2.900+** |
+| FDR/Holm'den geçen | **0** |
+| Bağımsız doğrulamadan geçen | **0** |
+| Güçlü aday (GA alt > 0) | **0** |
+| Doğrulanmış kârlı strateji | **0** |
+| Skor–MS uyuşmazlığı | **0** |
+| Maç ID tekrarı | **0** |
+
+**Bu sonuç, "bahis oynanmaz" demek değildir.** İncelenen veri, market, dönem ve yöntemle **istatistiksel olarak kanıtlanabilir bir avantaj bulunamadığı** anlamına gelir. Bahisçi marjı (%5–8), incelenen tüm piyasalarda sistematik olarak kârlılığı engellemektedir.
+
+## 📋 Araştırma Zaman Çizelgesi — 17 Test
+
+| # | Analiz | Test Sayısı | Düzeltme | Sonuç |
+|---|---|---:|---|---|
+| 1 | 1X2 + KG + 2.5 Alt/Üst (FDR kontrollü) | 45 | ✅ BH | **0 survivor** |
+| 2 | 534 örüntü taraması (pattern_discovery_v2) | 534 | ❌ | 13/16 FLIP |
+| 3 | Spesifik oran + gün kombinasyonları | 2.161 | ❌ | 6/10 FLIP |
+| 4 | TG (Toplam Gol) — 137 aday | 137 | ✅ BH | **0 survivor** |
+| 5 | TG birleşik analiz | 8 | ✅ BH | **0 survivor** |
+| 6 | TG blok duyarlılık (1, 10, 20, 40) | 32 | ❌ | GA hep sıfır içi |
+| 7 | Dört büyük takım — favori stratejisi | 4 | ❌ | 3/16 seri pozitif |
+| 8 | Dört büyük takım — MS banko | 4 | ❌ | Hepsi negatif |
+| 9 | Yüksek oran A/B (blok duyarlılık) | 2 | ❌ | GA tamamen negatif |
+| 10 | Takım bazlı ileri test | 4 | ✅ Holm | **0 anlamlı** |
+| 11 | Takım seçimi düzeltmesi | 12 | ✅ Holm | GS +%8.81 ama GA sıfır içi |
+| 12 | GS leave-one-year-out | 7 | ❌ | Kâr dağılmış, GA sıfır içi |
+| 13 | GS kâr yoğunlaşması | 1 | ❌ | Top-10 çıkar → +1.83 |
+| 14 | Yüksek oran kırılım (yıl × oran × market) | 100+ | ❌ | Alt grupta pozitif yok |
+| 15 | Yüksek oran kronolojik doğrulama | 2 | ❌ | Geliştirme → Zaman dışı kötüleşiyor |
+| 16 | MS2 eksik oran denetimi | 20 maç | — | %0.27 eksik, rapor edildi |
+| 17 | Veri kalitesi (skor/MS/ID) | 7.422 | — | **Kusursuz** |
+
+## 🔬 Öne Çıkan Bulgular
+
+### 🚨 1. Kazanma Oranı ≠ Kârlılık
+
+| Takım | Kazanma | ROI |
+|---|---:|---:|
+| Galatasaray | %64.88 | −%6.88 |
+| Beşiktaş | %59.76 | −%8.96 |
+| Fenerbahçe | %60.44 | −%14.81 |
+| Trabzonspor | %51.33 | −%15.23 |
+
+**Ders:** Favori oranları düşük → 2 kayıp 3 kazancı siler. %65 kazanma bile yetmiyor.
+
+### 🎲 2. MS2 Bootstrap = Yazı Tura
+
+Düşük oran MS2 alt grubu (2023+):
+
+| Blok | GA | Pozitif Bootstrap % |
+|---|---:|---:|
+| 1 | [−11.27, +11.24] | %50.95 |
+| 10 | [−8.90, +8.80] | %50.28 |
+| 20 | [−9.32, +8.79] | %50.48 |
+| 40 | [−9.85, +8.38] | %52.36 |
+
+**Yorum:** Her blok uzunluğunda pozitif bootstrap **%50** → strateji kârlılığı **rastgele**. Hipotez değil, saf gürültü.
+
+### 🌊 3. Yüksek Oran Stratejileri — Zamanla Kötüleşiyor
+
+| Strateji | Geliştirme (2014-2022) | Zaman Dışı (2023-2025) | Değişim |
+|---|---:|---:|---:|
+| A (Favorinin tersi) | −%28.70 | **−%45.26** | −16.56 puan |
+| B (En yüksek oran) | −%17.47 | **−%37.12** | −19.65 puan |
+
+**Kritik:** Underdog stratejileri geçmişte kötüydü, **gelecekte daha da kötüleşiyor.**
+
+### 💀 4. Kasa Simülasyonu — Yıkım
+
+| Strateji | Başlangıç | Son Kasa | Bitiş Tarihi |
+|---|---:|---:|---|
+| A | 100 | **0.25** | 28.01.2019 |
+| B | 100 | **0.25** | 02.01.2021 |
+
+**Yani:** 100 birim → 1-2 yılda 2.5 TL. **Yıkıcı.**
+
+### 🔍 5. Galatasaray — En "Yakın" Sonuç
+
+| Metrik | Değer |
+|---|---:|
+| n | 96 |
+| ROI | **+%8.81** |
+| %95 GA | **[−1.01, +17.93]** |
+| Holm p | 0.158 |
+| Top-10 kazanç çıkar | +1.83 (hâlâ pozitif) |
+| Leave-one-year-out | 3/3 senaryo pozitif |
+
+**Ama:** GA sıfırı içiyor, Holm p anlamsız. **Hipotez adayı — kanıt değil.**
+
+### 📅 6. TG Format Değişimi
+
+| Dönem | Kategoriler |
+|---|---|
+| 2014-2019 | 0-1, 2-3, **4-6**, **7+** |
+| 2020-2025 | 0-1, 2-3, **4-5**, **6+** |
+
+**Aynı market değil.** Ama 0-1 ve 2-3 ortak:
+
+| Kategori | 2014-2019 | 2020-2025 |
+|---|---:|---:|
+| 0-1 | −%18.03 | −%17.59 |
+| 2-3 | −%18.67 | −%15.32 |
+| 4-5 (yak.) | −%35.67 | −%27.11 |
+| 6+ (yak.) | −%0.14 | −%34.97 |
+
+**6+ eski dönem** "neredeyse başabaş" görünüyordu. Sezon bazında: +9.7, +11.1, +0.3, +16.0, −11.6, −17.8, −100. **Tam tutarsız.**
+
+## 🧪 Metodolojik Çerçeve
+
+| İlke | Uygulama |
+|---|---|
+| **Veri bütünlüğü** | Ham CSV değiştirilmedi |
+| **Skor doğrulama** | Skor–MS uyuşmazlığı: **0** |
+| **Maç ID benzersizliği** | Tekrar: **0** |
+| **Sızıntı önleme** | Post-match veriler analiz dışı |
+| **Çoklu test düzeltmesi** | Benjamini–Hochberg + Holm-Bonferroni |
+| **Belirsizlik ölçümü** | Hareketli blok bootstrap (1, 5, 10, 20, 40) |
+| **Zamansal doğrulama** | Geliştirme (2014-2022) / Zaman dışı (2023-2025) |
+| **Kasa simülasyonu** | 100 birim, gerçekçi iflas senaryosu |
+| **Dürüst raporlama** | Null sonuç gizlenmedi |
+| **p-hacking önleme** | "En iyi yılı çıkar" post-hoc reddedildi |
+
+---
+
+## 🏆 Nihai Kapanış
+
+> **17 bağımsız analiz, 2.900+ test, 4 farklı FDR/Holm uygulaması, 5 farklı blok uzunluğu, 2 farklı veri dönemi — hepsi aynı sonucu verdi:**
+>
+> **Mevcut veriyle, mevcut yöntemle, çoklu test düzeltmesinden geçen ve bağımsız dönemde ayakta kalan hiçbir kârlı bahis örüntüsü bulunamadı.**
+
+Bu bir başarısızlık değil, **bilimsel dürüstlüğün** göstergesidir. Veriye saygı, "bir şey bulana kadar denemek" değil, "bulunamadıysa kabul etmek"tir.
+
+**Yeni veri (2026+, farklı bahis şirketleri, kapanış oranları) olmadan ilerlemek, p-hacking'dir.**
+
+### 📌 Eğer İlerlemek İsterseniz
+
+| Seçenek | Gerekli | Risk |
+|---|---|---|
+| **Yeni veri** | 2026+ tam sezon, farklı şirketler | Düşük |
+| **Yeni market** | Korner, Kart (yeterli veri) | Orta |
+| **Farklı yöntem** | Quantile bantlar, ML | **Yüksek (p-hacking)** |
+
+**Mevcut analiz tükendi. Sıfırdan başlamak için yeni veri şart.**
