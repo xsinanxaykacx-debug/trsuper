@@ -1,92 +1,96 @@
-# Maçkolik Bahis Oranları — Örüntü Araştırması
+# Ma├ğkolik Bahis Oranlar─▒ ÔÇö ├ûr├╝nt├╝ Ara┼şt─▒rmas─▒
 
-Futbol maçlarında bahis oranları ile sonuçlar arasındaki istatistiksel olarak desteklenebilir örüntüleri arayan bir keşif çalışması.
+Bu depo, futbol ma├ğlar─▒n─▒n ge├ğmi┼ş sonu├ğlar─▒ ve bahis oranlar─▒ aras─▒nda **istatistiksel olarak desteklenebilir, ba─ş─▒ms─▒z veride de ayakta kalan bir ├Âr├╝nt├╝ bulunup bulunmad─▒─ş─▒n─▒** ara┼şt─▒r─▒r. Ama├ğ yaln─▒zca ge├ğmi┼şte k├órl─▒ g├Âr├╝nen gruplar─▒ bulmak de─şil; tesad├╝f, a┼ş─▒r─▒ uyum ve ├ğoklu test kaynakl─▒ sahte sonu├ğlar─▒ ay─▒rt etmektir.
 
-## 📌 Özet
+## Ara┼şt─▒rman─▒n g├╝ncel sonucu
 
-**Sonuç: Null.** 2019/2020 – 2022/2023 döneminde, 9 market ve 45 oran bandı test edildi. Benjamini–Hochberg FDR düzeltmesinden geçen hiçbir aday bulunmadı. En yüksek gözlenen ROI, KG Var marketinin 1,80–2,00 oran bandında +%2,36 oldu (n=148); ancak bu değer istatistiksel olarak anlamsızdı (ham p=0,3781, BH p=1,0). Ayrıntılar için [`docs/RAPOR.md`](docs/RAPOR.md).
+> **Nihai karar: Mevcut analizlerde ba─ş─▒ms─▒z do─şrulamayla desteklenmi┼ş, genellenebilir k├órl─▒ bir bahis ├Âr├╝nt├╝s├╝ bulunmad─▒.**
 
-> Bu sonuç, piyasanın bütünüyle verimli olduğunu veya başka koşullarda avantaj bulunamayacağını **kanıtlamaz**. Yalnızca bu veri, dönem, marketler ve yöntemle istatistiksel olarak desteklenen bir bahis avantajı bulunamadığını gösterir.
+En son ├Âr├╝nt├╝ ke┼şif ├ğal─▒┼şmas─▒; lig ailesi, haftan─▒n g├╝n├╝, market ve oran band─▒ kombinasyonlar─▒n─▒ inceledi. Genel raporda en az 30 ma├ğ i├ğeren **534 ├Âr├╝nt├╝** de─şerlendirildi. T├╝m d├Ânem verisinde pozitif getiri (ROI) ve en az 60 ma├ğ ko┼şuluyla **16 aday** ├Âne ├ğ─▒kt─▒. Ancak bu, 16 aday─▒n k├órl─▒ oldu─şu anlam─▒na gelmez.
 
-## 🎯 Projenin Amacı
+- Erken d├Ânem (2013ÔÇô2020) ile ge├ğ d├Ânem (2021ÔÇô2025) kar┼ş─▒la┼şt─▒rmas─▒nda **16 aday─▒n 13'├╝nde ROI i┼şareti de─şi┼şti**.
+- Adaylar t├╝m d├Ânem verisi incelendikten sonra se├ğildi─şi i├ğin 2021ÔÇô2025, bu adaylar a├ğ─▒s─▒ndan ba─ş─▒ms─▒z ve k├Âr bir do─şrulama seti de─şildir.
+- pattern_discovery_v2 kapsam─▒ndaki 534 ├Âr├╝nt├╝ i├ğin FDR ├ğoklu kar┼ş─▒la┼şt─▒rma d├╝zeltmesi **hen├╝z hesaplan─▒p do─şrulanm─▒┼ş de─şildir**. Bu nedenle bu analiz i├ğin ÔÇ£FDR'den ge├ğen aday say─▒s─▒ s─▒f─▒rÔÇØ denmemektedir.
+- Daha ├Ânceki ayr─▒ discovery.py ├ğal─▒┼şmas─▒nda 45 test i├ğin BenjaminiÔÇôHochberg FDR d├╝zeltmesinden ge├ğen aday bulunmad─▒.
 
-Bu çalışma, "geçmişte kârlı görünen oranları bulmak" değil, **çoklu test düzeltmesi ve istatistiksel doğrulamadan sonra da ayakta kalan bir örüntü var mı?** sorusuna cevap aramaktır. Amaç, tek bir olumlu ROI sonucunu başarı kabul etmek değil, sahte pozitifleri elemektir.
+**Yorum:** Ge├ğmi┼ş veride pozitif ROI g├Ârmek tek ba┼ş─▒na bir bahis avantaj─▒n─▒ kan─▒tlamaz. Mevcut bulgular g├╝venilir bir avantaj─▒ g├Âstermiyor; ancak t├╝m olas─▒ stratejilerin k├órs─▒z oldu─şunu da kan─▒tlam─▒yor.
 
-## 📊 Veri
-
-| Özellik | Değer |
-|---|---|
-| Kaynak | [Maçkolik arşivi](https://arsiv.mackolik.com) |
-| Toplam maç | 7.422 |
-| Toplam sütun | 353 |
-| Dönem | 2013/2014 – 2025/2026 |
-| Keşif dönemi | 2019/2020 – 2022/2023 (2.503 maç) |
-| Skor-MS uyuşmazlığı | **0** (doğrulandı) |
-| Maç_ID tekrarı | **0** (doğrulandı) |
-
-**Not:** Alt/Üst oranları yalnızca 2019/2020 sezonundan itibaren mevcuttur. Bu nedenle tüm analizler bu ortak pencerede yapılmıştır.
-
-## 🔬 Metodoloji
-
-### Test Edilen Marketler
-- Maç Sonucu: 1, X, 2
-- Karşılıklı Gol: Var, Yok
-- 1,5 Alt/Üst: Alt, Üst
-- 2,5 Alt/Üst: Alt, Üst
-
-### Oran Bantları
-- Dar bantlar: 1.00 – 2.80 arası 0.20'lik dilimler
-- Geniş bantlar: 2.80–4.00, 4.00–5.00, 5.00–7.50, 7.50–10.00, 10.00+
-
-### İstatistiksel Kurallar
-- **Minimum örneklem:** n ≥ 100
-- **Getiri:** Kazanç = oran − 1, Kayıp = −1
-- **Çoklu test düzeltmesi:** Benjamini–Hochberg FDR (α = 0.05)
-- **Güven aralığı:** Bootstrap (2.000 iterasyon, nominal %95)
-- **Test:** Tek yönlü t-testi (H₁: ROI > 0)
-
-### Karar Zinciri
-1. Keşif döneminde FDR'den geçmek (q < 0.05)
-2. Bootstrap alt GA > 0
-3. Doğrulama döneminde aynı kurallarla test
-4. Kilitli testte nihai onay
-
-**Hiçbir aday 1. aşamayı geçemediği için 2, 3 ve 4. aşamalar çalıştırılmadı.**
-
-## 📁 Repo Yapısı
-
-
-Futbol maç verileri ve bahis oranları üzerinde veri kalitesi kontrolleri ile istatistiksel örüntü keşfi için kullanılan çalışma deposu.
+Ayr─▒nt─▒l─▒ de─şerlendirme: [docs/discovery_notes.md](docs/discovery_notes.md).
 
 ## Veri
 
-- Ana CSV: [`data/csv/DATA.csv`](data/csv/DATA.csv)
-- Analizler, maç skorlarını ve market oranlarını kullanır.
-- Ham veri, keşif analizi sonucuna göre değiştirilmemelidir.
+| ├ûzellik | De─şer |
+|---|---|
+| Kaynak | [Ma├ğkolik ar┼şivi](https://arsiv.mackolik.com) |
+| Ana veri dosyas─▒ | [data/csv/DATA.csv](data/csv/DATA.csv) |
+| Ma├ğ say─▒s─▒ | 7.422 |
+| S├╝tun say─▒s─▒ | 353 |
+| Veri d├Ânemi | 2013/2014ÔÇô2025/2026 |
+| ├ûnceki FDR kontroll├╝ ke┼şif penceresi | 2019/2020ÔÇô2022/2023 |
+| ├ûnceki ke┼şif penceresindeki ma├ğ say─▒s─▒ | 2.503 |
 
-## Son analiz
+Veri kalitesi kontrolleri, skor-market uyumu ve tekrar eden ma├ğ kimlikleri gibi konular─▒ kapsar. Ham veri, analiz sonu├ğlar─▒n─▒ iyile┼ştirmek amac─▒yla de─şi┼ştirilmemelidir.
 
-2019/2020–2022/2023 sezonlarını kapsayan keşif çalışmasında 9 market ve 45 oran bandı testi değerlendirildi. Benjamini–Hochberg FDR düzeltmesinden geçen aday bulunmadı.
+## Son ├Âr├╝nt├╝ ke┼şfi nas─▒l yap─▒ld─▒?
 
-Bu sonuç, incelenen veri ve yöntem kapsamında istatistiksel olarak desteklenen bir bahis avantajı ortaya konamadığı anlamına gelir; piyasanın bütünüyle verimli olduğunu veya başka koşullarda avantaj bulunamayacağını kanıtlamaz.
+pattern_discovery_v2 ├ğal─▒┼şmas─▒ a┼şa─ş─▒daki boyutlar─▒n kombinasyonlar─▒n─▒ tarad─▒:
 
-- [Analiz protokolü](docs/protocol.md): market tanımları, oran filtreleri, bantlar ve istatistiksel yöntem.
-- [Sonuç raporu](docs/RAPOR.md): test sayısı, öne çıkan ROI ve sınırlamalar.
+- **Lig ailesi**
+- **Haftan─▒n g├╝n├╝**
+- **Bahis marketi:** MS1/MSX/MS2, KG Var/Yok ve 1,5 / 2,5 / 3,5 / 4,5 Alt-├£st
+- **Oran band─▒:** 1,00ÔÇô5,00 aral─▒─ş─▒nda 0,10 geni┼şli─şinde bantlar
+- **Genel ├Âr├╝nt├╝ e┼şi─şi:** en az 30 ma├ğ
+- **Aday inceleme e┼şi─şi:** pozitif ROI ve en az 60 ma├ğ
 
-## Kurulum ve Çalıştırma
+Bu e┼şikler ke┼şif gruplar─▒n─▒ tan─▒mlamak i├ğin kullan─▒lm─▒┼şt─▒r; ba─ş─▒ms─▒z do─şrulaman─▒n veya istatistiksel anlaml─▒l─▒─ş─▒n yerine ge├ğmez. ├çok say─▒da kombinasyon tarand─▒─ş─▒nda, yaln─▒zca ┼şans nedeniyle baz─▒ gruplar─▒n y├╝ksek ROI g├Âstermesi beklenebilir.
 
-Python 3 ve analiz için kullanılan bağımlılıklar gerekir. Yerel çalışma kopyanızda `discovery.py` mevcutsa, depo kök dizininden çalıştırın:
+### D├Ânem kar┼ş─▒la┼şt─▒rmas─▒n─▒n s─▒n─▒r─▒
 
-```powershell
+13/16 adayda ROI i┼şaretinin de─şi┼şmesi, sonu├ğlar─▒n d├Ânemler aras─▒nda kararl─▒ olmad─▒─ş─▒n─▒ d├╝┼ş├╝nd├╝ren bir bulgudur. Ancak adaylar t├╝m d├Ânem verisine bak─▒larak se├ğildi─şinden, bu kar┼ş─▒la┼şt─▒rma tek ba┼ş─▒na tarafs─▒z bir do─şrulama testi de─şildir. Binom testi i├ğin hesaplanan p de─şerleri de bu se├ğim etkisini ortadan kald─▒rmaz.
+
+## ├ûnceki FDR kontroll├╝ ├ğal─▒┼şma
+
+Ayr─▒ bir analiz olan discovery.py, 2019/2020ÔÇô2022/2023 d├Âneminde 9 market ve 45 oran band─▒n─▒ test etti. BenjaminiÔÇôHochberg FDR d├╝zeltmesinden ge├ğen aday olmad─▒. En y├╝ksek g├Âzlenen ROI, KG Var marketinin 1,80ÔÇô2,00 oran band─▒nda +%2,36 idi (n=148); sonu├ğ istatistiksel olarak anlaml─▒ de─şildi (ham p=0,3781; BH-d├╝zeltilmi┼ş p=1,0).
+
+Bu ├Ânceki testin ayr─▒nt─▒lar─▒:
+- [Sonu├ğ raporu](docs/RAPOR.md)
+- [Analiz protokol├╝](docs/protocol.md)
+- [45 testin sonu├ğlar─▒](docs/discovery_results.csv)
+
+**├ûnemli:** ├ûnceki 45 testin FDR sonucu ile sonraki 534 ├Âr├╝nt├╝l├╝k ke┼şif ayn─▒ analiz de─şildir; sonu├ğlar─▒ birbirine kar─▒┼şt─▒r─▒lmamal─▒d─▒r.
+
+## Bilimsel karar ve yeniden ba┼şlama ko┼şullar─▒
+
+Mevcut veriyle ke┼şif ├ğal─▒┼şmas─▒ kapat─▒lm─▒┼şt─▒r. Yeni bir ara┼şt─▒rma ba┼şlat─▒lacaksa:
+
+1. Yeni veya ba─ş─▒ms─▒z bir veri kayna─ş─▒ kullan─▒lmal─▒; m├╝mk├╝nse mevcut analizde incelenmemi┼ş ma├ğlar eklenmelidir.
+2. Hipotezler, aday se├ğme kurallar─▒, ├Ârneklem e┼şikleri ve istatistiksel testler sonu├ğlara bak─▒lmadan ├Ânce sabitlenmelidir.
+3. ├çoklu kar┼ş─▒la┼şt─▒rma d├╝zeltmesi ├Ânceden belirlenmi┼ş protokole g├Âre uygulanmal─▒d─▒r.
+4. Do─şrulama verisi, ke┼şif veya aday se├ğimi s─▒ras─▒nda kullan─▒lmamal─▒d─▒r.
+5. Pozitif ROI tek ba┼ş─▒na yeterli say─▒lmamal─▒; ├Ârneklem, belirsizlik aral─▒klar─▒, test sonu├ğlar─▒ ve ba─ş─▒ms─▒z d├Ânem performans─▒ birlikte de─şerlendirilmelidir.
+
+## Depo yap─▒s─▒ ve ├ğal─▒┼şt─▒rma
+
+- data/csv/DATA.csv ÔÇö ana ma├ğ verisi
+- docs/RAPOR.md ÔÇö ├Ânceki 45 testlik FDR kontroll├╝ ├ğal─▒┼şma
+- docs/protocol.md ÔÇö ├Ânceki ├ğal─▒┼şman─▒n analiz protokol├╝
+- docs/discovery_notes.md ÔÇö son ├Âr├╝nt├╝ ke┼şfinin nihai de─şerlendirmesi
+
+Python 3 ve ilgili analiz ba─ş─▒ml─▒l─▒klar─▒ gerekir. Yerel ├ğal─▒┼şma kopyan─▒zda discovery.py mevcutsa, depo k├Âk dizininde ┼şu komutlarla ├ğal─▒┼şt─▒rabilirsiniz:
+
+\`\`\`powershell
 python -m pip install pandas numpy scipy statsmodels
 python discovery.py
-```
+\`\`\`
 
-Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortamını tamamen yeniden üretilebilir saymayın. Sonuçları karşılaştırmadan önce kullanılan betik sürümünü, parametreleri ve girdi verisini doğrulayın.
+Betik ve ba─ş─▒ml─▒l─▒k s├╝r├╝mleri depoda yer alm─▒yorsa, ├ğal─▒┼şt─▒rma ortam─▒ b├╝t├╝n├╝yle yeniden ├╝retilebilir kabul edilmemelidir. Sonu├ğlar─▒ kar┼ş─▒la┼şt─▒rmadan ├Ânce kullan─▒lan betik s├╝r├╝m├╝n├╝, parametreleri ve girdi verisini do─şrulay─▒n.
 
-## Bilimsel yorumlama
+---
 
-Pozitif ROI tek başına kârlılık kanıtı değildir. Çoklu karşılaştırma düzeltmesi, güven aralıkları ve örneklem büyüklüğü birlikte değerlendirilmelidir. Keşif sonucunda aday bulunmaması, her olası markette veya dönemde avantajın imkânsız olduğunu göstermez.
+## Sorumlu yorumlama
+
+Bu depo istatistiksel ara┼şt─▒rma ama├ğl─▒d─▒r; bahis tavsiyesi veya k├ór garantisi sunmaz. Ge├ğmi┼ş performans gelecekteki sonu├ğlar─▒ garanti etmez. Buradaki ÔÇ£avantaj bulunamad─▒ÔÇØ ifadesi, incelenen veri ve y├Ântemlerle yeterli kan─▒t elde edilemedi─şi anlam─▒na gelir; t├╝m olas─▒ stratejiler hakk─▒nda evrensel bir h├╝k├╝m de─şildir.
+
 
 ## Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
 
