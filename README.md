@@ -313,3 +313,11 @@ Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullan
 - Önce `analiz_dort_buyuk_yuksek_oran_stratejileri.py` çalıştırılmalı; bu ikinci betik onun `yuksek_oran_stratejileri_bahis_detay.csv` çıktısını kullanır.
 - Yıllara, oran aralıklarına (1,00–1,99; 2,00–2,49; 2,50–2,99; 3,00–3,49; 3,50–3,99; 4,00–4,99), seçilen MS1/MSX/MS2 marketine ve bunların kesişimlerine göre bahis sayısı, kazanma oranı, ortalama oran, toplam kâr/zarar ve ROI üretir.
 - Kırılım sonuçları keşif amaçlıdır; çok sayıda kombinasyonda tesadüfi pozitif sonuçlar çıkabileceği için bağımsız doğrulama olmadan strateji seçmek için kullanılmamalıdır.
+
+
+### Yüksek Oran Stratejileri — Kronolojik Doğrulama
+
+- [Kronolojik doğrulama betiği](analiz_dort_buyuk_yuksek_oran_dogrulama.py)
+- Geliştirme/keşif dönemi 2014–2022, zaman dışı tarihsel kontrol dönemi 2023–2025 olarak ayrılır.
+- Strateji ve market × oran aralığı sonuçları için bahis sayısı, kazanma oranı, ROI ve hareketli blok bootstrap %95 aralığı üretilir.
+- Bu, tarihsel kronolojik kontrol olup canlı ileriye dönük test değildir. Alt grup sonuçları çoklu karşılaştırma nedeniyle keşif amaçlıdır; bağımsız doğrulama olmadan bahis kuralı seçilmemelidir.
