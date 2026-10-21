@@ -305,3 +305,11 @@ Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büy�
 - Çıktılar `data/bankroll_ruin_simulation/dort_buyuk_unique/yuksek_oran_karsilastirmasi/` klasörüne yazılır.
 
 Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullanılır; eşit oran durumlarında ilgili strateji bahis yapmaz. Geçmiş performans gelecekteki sonucu garanti etmez.
+
+
+### Yüksek Oran Stratejileri — Kırılım Analizi
+
+- [Yıl × oran aralığı × seçilen market analiz betiği](analiz_dort_buyuk_yuksek_oran_kirilim.py)
+- Önce `analiz_dort_buyuk_yuksek_oran_stratejileri.py` çalıştırılmalı; bu ikinci betik onun `yuksek_oran_stratejileri_bahis_detay.csv` çıktısını kullanır.
+- Yıllara, oran aralıklarına (1,00–1,99; 2,00–2,49; 2,50–2,99; 3,00–3,49; 3,50–3,99; 4,00–4,99), seçilen MS1/MSX/MS2 marketine ve bunların kesişimlerine göre bahis sayısı, kazanma oranı, ortalama oran, toplam kâr/zarar ve ROI üretir.
+- Kırılım sonuçları keşif amaçlıdır; çok sayıda kombinasyonda tesadüfi pozitif sonuçlar çıkabileceği için bağımsız doğrulama olmadan strateji seçmek için kullanılmamalıdır.
