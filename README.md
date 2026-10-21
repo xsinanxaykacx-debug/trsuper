@@ -1,96 +1,95 @@
-# Ma├ğkolik Bahis Oranlar─▒ ÔÇö ├ûr├╝nt├╝ Ara┼şt─▒rmas─▒
+# Maçkolik Bahis Oranları — Örüntü Araştırması
 
-Bu depo, futbol ma├ğlar─▒n─▒n ge├ğmi┼ş sonu├ğlar─▒ ve bahis oranlar─▒ aras─▒nda **istatistiksel olarak desteklenebilir, ba─ş─▒ms─▒z veride de ayakta kalan bir ├Âr├╝nt├╝ bulunup bulunmad─▒─ş─▒n─▒** ara┼şt─▒r─▒r. Ama├ğ yaln─▒zca ge├ğmi┼şte k├órl─▒ g├Âr├╝nen gruplar─▒ bulmak de─şil; tesad├╝f, a┼ş─▒r─▒ uyum ve ├ğoklu test kaynakl─▒ sahte sonu├ğlar─▒ ay─▒rt etmektir.
+Bu depo, futbol maçlarının geçmiş sonuçları ve bahis oranları arasında **istatistiksel olarak desteklenebilir, bağımsız veride de ayakta kalan bir örüntü bulunup bulunmadığını** araştırır. Amaç yalnızca geçmişte kârlı görünen grupları bulmak değil; tesadüf, aşırı uyum ve çoklu test kaynaklı sahte sonuçları ayırt etmektir.
 
-## Ara┼şt─▒rman─▒n g├╝ncel sonucu
+## Araştırmanın güncel sonucu
 
-> **Nihai karar: Mevcut analizlerde ba─ş─▒ms─▒z do─şrulamayla desteklenmi┼ş, genellenebilir k├órl─▒ bir bahis ├Âr├╝nt├╝s├╝ bulunmad─▒.**
+> **Nihai karar: Mevcut analizlerde bağımsız doğrulamayla desteklenmiş, genellenebilir kârlı bir bahis örüntüsü bulunmadı.**
 
-En son ├Âr├╝nt├╝ ke┼şif ├ğal─▒┼şmas─▒; lig ailesi, haftan─▒n g├╝n├╝, market ve oran band─▒ kombinasyonlar─▒n─▒ inceledi. Genel raporda en az 30 ma├ğ i├ğeren **534 ├Âr├╝nt├╝** de─şerlendirildi. T├╝m d├Ânem verisinde pozitif getiri (ROI) ve en az 60 ma├ğ ko┼şuluyla **16 aday** ├Âne ├ğ─▒kt─▒. Ancak bu, 16 aday─▒n k├órl─▒ oldu─şu anlam─▒na gelmez.
+En son örüntü keşif çalışması; lig ailesi, haftanın günü, market ve oran bandı kombinasyonlarını inceledi. Genel raporda en az 30 maç içeren **534 örüntü** değerlendirildi. Tüm dönem verisinde pozitif getiri (ROI) ve en az 60 maç koşuluyla **16 aday** öne çıktı. Ancak bu, 16 adayın kârlı olduğu anlamına gelmez.
 
-- Erken d├Ânem (2013ÔÇô2020) ile ge├ğ d├Ânem (2021ÔÇô2025) kar┼ş─▒la┼şt─▒rmas─▒nda **16 aday─▒n 13'├╝nde ROI i┼şareti de─şi┼şti**.
-- Adaylar t├╝m d├Ânem verisi incelendikten sonra se├ğildi─şi i├ğin 2021ÔÇô2025, bu adaylar a├ğ─▒s─▒ndan ba─ş─▒ms─▒z ve k├Âr bir do─şrulama seti de─şildir.
-- pattern_discovery_v2 kapsam─▒ndaki 534 ├Âr├╝nt├╝ i├ğin FDR ├ğoklu kar┼ş─▒la┼şt─▒rma d├╝zeltmesi **hen├╝z hesaplan─▒p do─şrulanm─▒┼ş de─şildir**. Bu nedenle bu analiz i├ğin ÔÇ£FDR'den ge├ğen aday say─▒s─▒ s─▒f─▒rÔÇØ denmemektedir.
-- Daha ├Ânceki ayr─▒ discovery.py ├ğal─▒┼şmas─▒nda 45 test i├ğin BenjaminiÔÇôHochberg FDR d├╝zeltmesinden ge├ğen aday bulunmad─▒.
+- Erken dönem (2013–2020) ile geç dönem (2021–2025) karşılaştırmasında **16 adayın 13'ünde ROI işareti değişti**.
+- Adaylar tüm dönem verisi incelendikten sonra seçildiği için 2021–2025, bu adaylar açısından bağımsız ve kör bir doğrulama seti değildir.
+- pattern_discovery_v2 kapsamındaki 534 örüntü için FDR çoklu karşılaştırma düzeltmesi **henüz hesaplanıp doğrulanmış değildir**. Bu nedenle bu analiz için “FDR'den geçen aday sayısı sıfır” denmemektedir.
+- Daha önceki ayrı discovery.py çalışmasında 45 test için Benjamini–Hochberg FDR düzeltmesinden geçen aday bulunmadı.
 
-**Yorum:** Ge├ğmi┼ş veride pozitif ROI g├Ârmek tek ba┼ş─▒na bir bahis avantaj─▒n─▒ kan─▒tlamaz. Mevcut bulgular g├╝venilir bir avantaj─▒ g├Âstermiyor; ancak t├╝m olas─▒ stratejilerin k├órs─▒z oldu─şunu da kan─▒tlam─▒yor.
+**Yorum:** Geçmiş veride pozitif ROI görmek tek başına bir bahis avantajını kanıtlamaz. Mevcut bulgular güvenilir bir avantajı göstermiyor; ancak tüm olası stratejilerin kârsız olduğunu da kanıtlamıyor.
 
-Ayr─▒nt─▒l─▒ de─şerlendirme: [docs/discovery_notes.md](docs/discovery_notes.md).
+Ayrıntılı değerlendirme: [docs/discovery_notes.md](docs/discovery_notes.md).
 
 ## Veri
 
-| ├ûzellik | De─şer |
+| Özellik | Değer |
 |---|---|
-| Kaynak | [Ma├ğkolik ar┼şivi](https://arsiv.mackolik.com) |
-| Ana veri dosyas─▒ | [data/csv/DATA.csv](data/csv/DATA.csv) |
-| Ma├ğ say─▒s─▒ | 7.422 |
-| S├╝tun say─▒s─▒ | 353 |
-| Veri d├Ânemi | 2013/2014ÔÇô2025/2026 |
-| ├ûnceki FDR kontroll├╝ ke┼şif penceresi | 2019/2020ÔÇô2022/2023 |
-| ├ûnceki ke┼şif penceresindeki ma├ğ say─▒s─▒ | 2.503 |
+| Kaynak | [Maçkolik arşivi](https://arsiv.mackolik.com) |
+| Ana veri dosyası | [data/csv/DATA.csv](data/csv/DATA.csv) |
+| Maç sayısı | 7.422 |
+| Sütun sayısı | 353 |
+| Veri dönemi | 2013/2014–2025/2026 |
+| Önceki FDR kontrollü keşif penceresi | 2019/2020–2022/2023 |
+| Önceki keşif penceresindeki maç sayısı | 2.503 |
 
-Veri kalitesi kontrolleri, skor-market uyumu ve tekrar eden ma├ğ kimlikleri gibi konular─▒ kapsar. Ham veri, analiz sonu├ğlar─▒n─▒ iyile┼ştirmek amac─▒yla de─şi┼ştirilmemelidir.
+Veri kalitesi kontrolleri, skor-market uyumu ve tekrar eden maç kimlikleri gibi konuları kapsar. Ham veri, analiz sonuçlarını iyileştirmek amacıyla değiştirilmemelidir.
 
-## Son ├Âr├╝nt├╝ ke┼şfi nas─▒l yap─▒ld─▒?
+## Son örüntü keşfi nasıl yapıldı?
 
-pattern_discovery_v2 ├ğal─▒┼şmas─▒ a┼şa─ş─▒daki boyutlar─▒n kombinasyonlar─▒n─▒ tarad─▒:
+pattern_discovery_v2 çalışması aşağıdaki boyutların kombinasyonlarını taradı:
 
 - **Lig ailesi**
-- **Haftan─▒n g├╝n├╝**
-- **Bahis marketi:** MS1/MSX/MS2, KG Var/Yok ve 1,5 / 2,5 / 3,5 / 4,5 Alt-├£st
-- **Oran band─▒:** 1,00ÔÇô5,00 aral─▒─ş─▒nda 0,10 geni┼şli─şinde bantlar
-- **Genel ├Âr├╝nt├╝ e┼şi─şi:** en az 30 ma├ğ
-- **Aday inceleme e┼şi─şi:** pozitif ROI ve en az 60 ma├ğ
+- **Haftanın günü**
+- **Bahis marketi:** MS1/MSX/MS2, KG Var/Yok ve 1,5 / 2,5 / 3,5 / 4,5 Alt-Üst
+- **Oran bandı:** 1,00–5,00 aralığında 0,10 genişliğinde bantlar
+- **Genel örüntü eşiği:** en az 30 maç
+- **Aday inceleme eşiği:** pozitif ROI ve en az 60 maç
 
-Bu e┼şikler ke┼şif gruplar─▒n─▒ tan─▒mlamak i├ğin kullan─▒lm─▒┼şt─▒r; ba─ş─▒ms─▒z do─şrulaman─▒n veya istatistiksel anlaml─▒l─▒─ş─▒n yerine ge├ğmez. ├çok say─▒da kombinasyon tarand─▒─ş─▒nda, yaln─▒zca ┼şans nedeniyle baz─▒ gruplar─▒n y├╝ksek ROI g├Âstermesi beklenebilir.
+Bu eşikler keşif gruplarını tanımlamak için kullanılmıştır; bağımsız doğrulamanın veya istatistiksel anlamlılığın yerine geçmez. Çok sayıda kombinasyon tarandığında, yalnızca şans nedeniyle bazı grupların yüksek ROI göstermesi beklenebilir.
 
-### D├Ânem kar┼ş─▒la┼şt─▒rmas─▒n─▒n s─▒n─▒r─▒
+### Dönem karşılaştırmasının sınırı
 
-13/16 adayda ROI i┼şaretinin de─şi┼şmesi, sonu├ğlar─▒n d├Ânemler aras─▒nda kararl─▒ olmad─▒─ş─▒n─▒ d├╝┼ş├╝nd├╝ren bir bulgudur. Ancak adaylar t├╝m d├Ânem verisine bak─▒larak se├ğildi─şinden, bu kar┼ş─▒la┼şt─▒rma tek ba┼ş─▒na tarafs─▒z bir do─şrulama testi de─şildir. Binom testi i├ğin hesaplanan p de─şerleri de bu se├ğim etkisini ortadan kald─▒rmaz.
+13/16 adayda ROI işaretinin değişmesi, sonuçların dönemler arasında kararlı olmadığını düşündüren bir bulgudur. Ancak adaylar tüm dönem verisine bakılarak seçildiğinden, bu karşılaştırma tek başına tarafsız bir doğrulama testi değildir. Binom testi için hesaplanan p değerleri de bu seçim etkisini ortadan kaldırmaz.
 
-## ├ûnceki FDR kontroll├╝ ├ğal─▒┼şma
+## Önceki FDR kontrollü çalışma
 
-Ayr─▒ bir analiz olan discovery.py, 2019/2020ÔÇô2022/2023 d├Âneminde 9 market ve 45 oran band─▒n─▒ test etti. BenjaminiÔÇôHochberg FDR d├╝zeltmesinden ge├ğen aday olmad─▒. En y├╝ksek g├Âzlenen ROI, KG Var marketinin 1,80ÔÇô2,00 oran band─▒nda +%2,36 idi (n=148); sonu├ğ istatistiksel olarak anlaml─▒ de─şildi (ham p=0,3781; BH-d├╝zeltilmi┼ş p=1,0).
+Ayrı bir analiz olan discovery.py, 2019/2020–2022/2023 döneminde 9 market ve 45 oran bandını test etti. Benjamini–Hochberg FDR düzeltmesinden geçen aday olmadı. En yüksek gözlenen ROI, KG Var marketinin 1,80–2,00 oran bandında +%2,36 idi (n=148); sonuç istatistiksel olarak anlamlı değildi (ham p=0,3781; BH-düzeltilmiş p=1,0).
 
-Bu ├Ânceki testin ayr─▒nt─▒lar─▒:
-- [Sonu├ğ raporu](docs/RAPOR.md)
-- [Analiz protokol├╝](docs/protocol.md)
-- [45 testin sonu├ğlar─▒](docs/discovery_results.csv)
+Bu önceki testin ayrıntıları:
+- [Sonuç raporu](docs/RAPOR.md)
+- [Analiz protokolü](docs/protocol.md)
+- [45 testin sonuçları](docs/discovery_results.csv)
 
-**├ûnemli:** ├ûnceki 45 testin FDR sonucu ile sonraki 534 ├Âr├╝nt├╝l├╝k ke┼şif ayn─▒ analiz de─şildir; sonu├ğlar─▒ birbirine kar─▒┼şt─▒r─▒lmamal─▒d─▒r.
+**Önemli:** Önceki 45 testin FDR sonucu ile sonraki 534 örüntülük keşif aynı analiz değildir; sonuçları birbirine karıştırılmamalıdır.
 
-## Bilimsel karar ve yeniden ba┼şlama ko┼şullar─▒
+## Bilimsel karar ve yeniden başlama koşulları
 
-Mevcut veriyle ke┼şif ├ğal─▒┼şmas─▒ kapat─▒lm─▒┼şt─▒r. Yeni bir ara┼şt─▒rma ba┼şlat─▒lacaksa:
+Mevcut veriyle keşif çalışması kapatılmıştır. Yeni bir araştırma başlatılacaksa:
 
-1. Yeni veya ba─ş─▒ms─▒z bir veri kayna─ş─▒ kullan─▒lmal─▒; m├╝mk├╝nse mevcut analizde incelenmemi┼ş ma├ğlar eklenmelidir.
-2. Hipotezler, aday se├ğme kurallar─▒, ├Ârneklem e┼şikleri ve istatistiksel testler sonu├ğlara bak─▒lmadan ├Ânce sabitlenmelidir.
-3. ├çoklu kar┼ş─▒la┼şt─▒rma d├╝zeltmesi ├Ânceden belirlenmi┼ş protokole g├Âre uygulanmal─▒d─▒r.
-4. Do─şrulama verisi, ke┼şif veya aday se├ğimi s─▒ras─▒nda kullan─▒lmamal─▒d─▒r.
-5. Pozitif ROI tek ba┼ş─▒na yeterli say─▒lmamal─▒; ├Ârneklem, belirsizlik aral─▒klar─▒, test sonu├ğlar─▒ ve ba─ş─▒ms─▒z d├Ânem performans─▒ birlikte de─şerlendirilmelidir.
+1. Yeni veya bağımsız bir veri kaynağı kullanılmalı; mümkünse mevcut analizde incelenmemiş maçlar eklenmelidir.
+2. Hipotezler, aday seçme kuralları, örneklem eşikleri ve istatistiksel testler sonuçlara bakılmadan önce sabitlenmelidir.
+3. Çoklu karşılaştırma düzeltmesi önceden belirlenmiş protokole göre uygulanmalıdır.
+4. Doğrulama verisi, keşif veya aday seçimi sırasında kullanılmamalıdır.
+5. Pozitif ROI tek başına yeterli sayılmamalı; örneklem, belirsizlik aralıkları, test sonuçları ve bağımsız dönem performansı birlikte değerlendirilmelidir.
 
-## Depo yap─▒s─▒ ve ├ğal─▒┼şt─▒rma
+## Depo yapısı ve çalıştırma
 
-- data/csv/DATA.csv ÔÇö ana ma├ğ verisi
-- docs/RAPOR.md ÔÇö ├Ânceki 45 testlik FDR kontroll├╝ ├ğal─▒┼şma
-- docs/protocol.md ÔÇö ├Ânceki ├ğal─▒┼şman─▒n analiz protokol├╝
-- docs/discovery_notes.md ÔÇö son ├Âr├╝nt├╝ ke┼şfinin nihai de─şerlendirmesi
+- data/csv/DATA.csv — ana maç verisi
+- docs/RAPOR.md — önceki 45 testlik FDR kontrollü çalışma
+- docs/protocol.md — önceki çalışmanın analiz protokolü
+- docs/discovery_notes.md — son örüntü keşfinin nihai değerlendirmesi
 
-Python 3 ve ilgili analiz ba─ş─▒ml─▒l─▒klar─▒ gerekir. Yerel ├ğal─▒┼şma kopyan─▒zda discovery.py mevcutsa, depo k├Âk dizininde ┼şu komutlarla ├ğal─▒┼şt─▒rabilirsiniz:
+Python 3 ve ilgili analiz bağımlılıkları gerekir. Yerel çalışma kopyanızda discovery.py mevcutsa, depo kök dizininde şu komutlarla çalıştırabilirsiniz:
 
 \`\`\`powershell
 python -m pip install pandas numpy scipy statsmodels
 python discovery.py
 \`\`\`
 
-Betik ve ba─ş─▒ml─▒l─▒k s├╝r├╝mleri depoda yer alm─▒yorsa, ├ğal─▒┼şt─▒rma ortam─▒ b├╝t├╝n├╝yle yeniden ├╝retilebilir kabul edilmemelidir. Sonu├ğlar─▒ kar┼ş─▒la┼şt─▒rmadan ├Ânce kullan─▒lan betik s├╝r├╝m├╝n├╝, parametreleri ve girdi verisini do─şrulay─▒n.
+Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortamı bütünüyle yeniden üretilebilir kabul edilmemelidir. Sonuçları karşılaştırmadan önce kullanılan betik sürümünü, parametreleri ve girdi verisini doğrulayın.
 
 ---
 
 ## Sorumlu yorumlama
 
-Bu depo istatistiksel ara┼şt─▒rma ama├ğl─▒d─▒r; bahis tavsiyesi veya k├ór garantisi sunmaz. Ge├ğmi┼ş performans gelecekteki sonu├ğlar─▒ garanti etmez. Buradaki ÔÇ£avantaj bulunamad─▒ÔÇØ ifadesi, incelenen veri ve y├Ântemlerle yeterli kan─▒t elde edilemedi─şi anlam─▒na gelir; t├╝m olas─▒ stratejiler hakk─▒nda evrensel bir h├╝k├╝m de─şildir.
-
+Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. Buradaki “avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
 
 ## Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
 
