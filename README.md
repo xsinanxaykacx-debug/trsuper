@@ -38,83 +38,108 @@ Bu depo, Maçkolik tarihsel maç sonuçları ve oran verilerinde tekrarlanabilir
 
 **Karar:** Mevcut sonuçlar gerçek parayla uygulanması önerilebilecek doğrulanmış bir avantaj göstermiyor. Bu, her olası stratejinin kârsız olduğunun evrensel kanıtı değildir; yalnızca incelenen veri, filtreler ve yöntemlerle avantaj doğrulanamadı.
 
-## 📋 Araştırma Zaman Çizelgesi — 17 Test/Araştırma Akışı
+## 📋 Araştırma Zaman Çizelgesi — 17 Test
 
-Aşağıdaki liste depoda yürütülen başlıca test ve analiz akışlarını toplar. Bazıları aynı maçları veya veriyi yeniden kullanır; bu nedenle sayım **17 bağımsız deney** veya 17 ayrı doğrulama kümesi olarak yorumlanmamalıdır.
+Bu tablo, depoda izlenen 17 test/analiz akışını özetler. Akışların bazıları aynı maçları, dönemleri veya adayları yeniden kullanır; **17 başlık, 17 bağımsız deney veya 17 bağımsız doğrulama örneklemi demek değildir.**
 
-1. **Favoriye bahis vaka çalışması:** Dört büyük takımın en düşük MS oranına bahis yaklaşımının tarihsel getirisi.
-2. **İlk örüntü keşfi:** Market ve oran bantlarında geçmişte pozitif görünen adayların taranması.
-3. **45 testlik FDR kontrollü çalışma:** 9 market × 5 oran bandı kapsamında çoklu karşılaştırma düzeltmesi.
-4. **2,5 Alt/Üst — haftanın günü:** 29 gün/oran bandı kombinasyonu; FDR'den geçen aday yok.
-5. **KG Var/Yok — haftanın günü:** 70 kombinasyon; FDR'den geçen aday yok.
-6. **MS1/MSX/MS2 — haftanın günü:** Market, gün ve oran bandı kombinasyonlarının FDR kontrollü taraması.
-7. **Örüntü keşfi v2:** 534 örüntü ve dönemler arası ROI istikrarı incelemesi.
-8. **Toplam Gol (TG) 4 kategori:** 0–1, 2–3, 4–6 ve 7+ sonuç grupları; 137 adayda FDR'den geçen yok.
-9. **MS2 eksik oran denetimi:** 7.422 maçta 20 boş MS2 oranı kaydı; tahmini değerle doldurma yapılmadı.
-10. **Dört büyük takım MS favorisi kasa simülasyonu:** 100 birim başlangıç, sabit 1 birim bahis ve kronolojik sonuçlar; dört takımın da tarihsel toplam ROI'si negatif, ancak 2025'e kadar kasa tükenmedi.
-11. **2026–2027 için 100 birim ileri test protokolü:** Geçmiş sonuçlardan ayrı, önceden sabitlenmiş kuralla izlenecek test planı.
-12. **Düşük oranlı strateji bootstrap duyarlılığı:** 2023 sonrası 378 bahis; toplam ROI −%2,38, MS1 −%4,27, MS2 +%0,07; tüm %95 aralıklar sıfırı içeriyor.
-13. **Takım bazlı ileri test karşılaştırması:** Galatasaray'ın nokta ROI'si +%4,46 olsa da %95 aralığı −%5,91 ile +%14,86; doğrulanmış avantaj yok.
-14. **Yüksek oran stratejileri:** Favorinin tersini seçme ve MS1/MSX/MS2 içindeki en yüksek oranı seçme.
-15. **Yüksek oran kırılım analizi:** Yıl, market ve oran bandı kesişimlerinin keşifsel incelemesi.
-16. **Yüksek oran kronolojik doğrulaması:** 2014–2022 geliştirme, 2023–2025 zaman dışı tarihsel test.
-17. **Veri ve şema tutarlılığı kontrolleri:** Skor/market uyumu, tekrar eden kimlikler, eksik oranlar ve dönemsel sütun değişimleri.
+| # | Analiz | Test/örneklem kapsamı | Düzeltme / yöntem | Sonuç |
+|---:|---|---:|---|---|
+| 1 | İlk 1X2 + KG + 2,5 Alt/Üst taraması | 45 test | Benjamini–Hochberg FDR | Geçen aday: 0 |
+| 2 | pattern_discovery_v2 örüntü taraması | 534 örüntü | Dönem karşılaştırması | 16 aday öne çıktı; 13/16 adayda ROI işareti dönemler arasında değişti |
+| 3 | Spesifik oran × gün kombinasyonları | 2.161 test | Keşifsel; tam çoklu-test düzeltmesi yok | Dönem kararlılığı zayıf; bağımsız doğrulama değildir |
+| 4 | Toplam Gol (TG) 4 kategori | 137 aday | Benjamini–Hochberg FDR | Geçen aday: 0 |
+| 5 | TG birleşik analiz | 8 aday/test | FDR | Geçen aday: 0 |
+| 6 | TG blok duyarlılık | 32 senaryo (4 blok uzunluğu × testler) | Hareketli blok bootstrap | Güven aralıkları sıfırı içerdi; avantaj doğrulanmadı |
+| 7 | Dört büyük takım — favori stratejisi | 4 takım; 16 adet 100 maçlık seri | Sabit bahis, seri analizi | 3/16 seri pozitif |
+| 8 | Dört büyük takım — MS banko/kasa | 4 takım | 100 birim başlangıç, sabit 1 birim | Dört takımın tarihsel ROI'si negatif; 2025'e kadar kasa tükenmedi |
+| 9 | Yüksek oran A/B | 2 strateji | Bootstrap güven aralığı | Genel ROI ve güven aralıkları negatif |
+| 10 | Takım bazlı ileri test | 4 takım | Holm düzeltmesi | Düzeltilmiş anlamlı sonuç: 0 |
+| 11 | Takım seçimi düzeltmesi | 12 karşılaştırma | Holm düzeltmesi | Galatasaray'ın görünen artısı güven aralığıyla doğrulanmadı |
+| 12 | Galatasaray leave-one-year-out | 7 senaryo | Duyarlılık kontrolü | Sonuç seçilen dönemlere duyarlı; doğrulama değil |
+| 13 | Galatasaray kâr yoğunlaşması | En yüksek kazançların etkisi | Yoğunlaşma kontrolü | En iyi kazançları çıkarınca sonuç belirgin değişiyor |
+| 14 | Yüksek oran kırılımı | Yıl × oran × market | Alt grup analizi | Küçük alt gruplar keşifsel; doğrulanmış pozitif grup yok |
+| 15 | Yüksek oran kronolojik doğrulaması | 2014–2022 / 2023–2025 | Zaman sıralı tarihsel test | Her iki strateji de zaman dışı dönemde kötüleşti |
+| 16 | MS2 eksik oran denetimi | 7.422 maç; 20 boş MS2 | Veri kalite kontrolü | Eksik oranlar raporlandı; tahminle doldurulmadı |
+| 17 | Skor/MS/maç ID veri kalite kontrolleri | 7.422 satırlık ana CSV | Tutarlılık ve benzersizlik kontrolleri | Mevcut raporda uyuşmazlık/tekrar bildirilmedi |
 
-Ayrıntılar ve yeniden üretim komutları, ilgili bölüm ve raporlarda verilir. Testler arası veri örtüşmesi ve adayların geçmiş sonuçlara bakılarak seçilmiş olması yorumlarda dikkate alınmalıdır.
+Ayrıntılar için ilgili bölüm ve raporlara bakın. Bu tablo bir yönetim özeti niteliğindedir; her satırın bağımsız bir veri kümesi kullandığı veya aynı düzeyde kanıt ürettiği anlamına gelmez.
 
 ## 🔬 Öne Çıkan Bulgular
 
 ### 🚨 Kazanma oranı ≠ kârlılık
 
-Bir strateji çok sayıda bahis kazanırken bile düşük oranlar ve kaybedilen bahisler nedeniyle toplamda zarar edebilir. Dört büyük takımın en düşük MS oranına bahis vaka çalışmasında kazanma oranları yaklaşık %51–65 aralığındayken, dört takımın da toplam ROI'si negatifti. Sonuçlar yalnızca kazanma yüzdesiyle değil, net kâr/zarar ve yatırılan toplam tutara göre ROI ile değerlendirilmelidir.
+| Takım | Kazanma oranı | ROI |
+|---|---:|---:|
+| Galatasaray | %64,88 | −%6,88 |
+| Beşiktaş | %59,76 | −%8,96 |
+| Fenerbahçe | %60,44 | −%14,81 |
+| Trabzonspor | %51,33 | −%15,23 |
+
+Favori oranları düşük olduğunda birkaç kayıp, çok sayıda kazancın getirisini silebilir. Başarı; kazanma yüzdesiyle değil, oranlar, net kâr/zarar ve yatırılan toplam tutara göre ROI ile ölçülmelidir.
 
 ### 🎲 MS2 bootstrap = yazı tura
 
-Düşük oranlı MS2 testinde 555 bahis, 162 kazanç ve 393 kayıp gözlendi; ROI −%17,89 oldu. Ayrı bootstrap duyarlılık kontrolünde 2023 sonrası 378 bahislik düşük oran örnekleminde MS2 nokta ROI'si yalnızca +%0,07 idi; %95 güven aralığı yaklaşık −%11,27 ile +%11,24 arasındaydı ve bootstrap tekrarlarının yaklaşık yarısı pozitifti. Bu, yazı-tura benzeri belirsizliktir; kanıtlanmış bir avantaj değildir.
+Düşük oranlı MS2 alt grubunda 2023 sonrası 378 bahis için nokta ROI'si yaklaşık **+%0,07** idi. Hareketli blok uzunluğu 1, 10, 20 ve 40 için %95 güven aralıklarının tümü sıfırı içerdi; bootstrap tekrarlarının pozitif sonuç veren oranı yaklaşık %50–52 aralığındaydı. Bu, pozitif avantaj kanıtı değil, yazı-tura benzeri belirsizliktir. Başka bir MS2 kasa simülasyonunda 555 bahis ve −%17,89 ROI görülmüştür; bunlar farklı analizlerdir.
+
+| Blok uzunluğu | ROI %95 güven aralığı | Pozitif bootstrap oranı |
+|---:|---:|---:|
+| 1 | −%11,27 – +%11,24 | %50,95 |
+| 10 | −%8,90 – +%8,80 | %50,28 |
+| 20 | −%9,32 – +%8,79 | %50,48 |
+| 40 | −%9,85 – +%8,38 | %52,36 |
 
 ### 🌊 Yüksek oran zamanla kötüleşiyor
 
-İki yüksek oran stratejisinin de ROI'si zaman dışı tarihsel testte geliştirme dönemine göre daha kötüydü:
-
-| Strateji | 2014–2022 ROI | 2023–2025 ROI | 2023–2025 %95 bootstrap aralığı |
+| Strateji | Geliştirme 2014–2022 | Zaman dışı tarihsel test 2023–2025 | Test dönemi %95 bootstrap aralığı |
 |---|---:|---:|---:|
 | A — Favorinin tersi MS1/MS2 | −%28,70 | −%45,26 | −%61,23 – −%28,68 |
 | B — MS1/MSX/MS2 içinden en yüksek oran | −%17,47 | −%37,12 | −%54,27 – −%19,14 |
 
-Her iki test aralığının üst sınırı da sıfırın altında. Bu dönem tarihsel zaman dışı kontroldür, canlı ileriye dönük deney değildir.
+İki stratejinin de zaman dışı tarihsel testte ROI'si kötüleşti ve güven aralığının üst sınırı sıfırın altında kaldı. Bu test geçmişte ayrılmış bir dönemdir; canlı ileriye dönük deney değildir.
 
 ### 💀 Kasa simülasyonu yıkım
 
-Yüksek oran stratejilerinde 100 birimlik başlangıç kasasıyla, sabit 1 birim bahis simülasyonunda tarihsel kümülatif sonuçlar kasayı neredeyse tamamen tüketti. Favorinin tersini seçen strateji 372 bahis oynayabildi; en yüksek MS1/MSX/MS2 oranını seçen strateji 530 bahis oynayabildi. Her ikisinde de kalan kasa 0,25 birim oldu. Bu simülasyon, tüm tarihsel bahislerin baştan sona aynı kuralla oynandığı varsayımına dayanır; canlı geleceği tahmin etmez.
+| Strateji | Başlangıç kasası | Simülasyonda oynanan bahis | Son kasa | Kasa duruş tarihi |
+|---|---:|---:|---:|---|
+| A — Favorinin tersi | 100 birim | 372 | 0,25 birim | 28.01.2019 |
+| B — En yüksek MS1/MSX/MS2 oranı | 100 birim | 530 | 0,25 birim | 02.01.2021 |
 
-Dört büyük takımın düşük oranlı favori simülasyonu ayrı bir çalışmadır: bu dört takımın tarihsel serilerinde kasa 2025'e kadar tükenmedi, fakat hepsinin toplam ROI'si negatifti. Bu iki simülasyon farklı stratejilerdir ve karıştırılmamalıdır.
+Bu sonuçlar, sabit 1 birim bahisle geçmiş maçların kronolojik olarak oynandığı varsayımına dayanır. Dört büyük takımın düşük oranlı favori simülasyonu ayrı bir çalışmadır; o simülasyonda 2025'e kadar kasa tükenmedi, ancak dört takımın da toplam ROI'si negatifti.
 
 ### 🔍 Galatasaray en yakın sonuç
 
-Düşük oranlı takım ileri testinde Galatasaray 100 bahis için +%4,46 nokta ROI gösterdi; ancak %95 güven aralığı −%5,91 ile +%14,86 arasındaydı ve Holm-düzeltilmiş p değeri 0,8007 idi. Bu nedenle Galatasaray sonucu istatistiksel olarak doğrulanmış avantaj değildir ve “Galatasaray'a bahis yap” önerisi olarak yorumlanmamalıdır. Dört takım birleşik örnekleminde tarihsel ROI −%3,07 olarak raporlandı.
+Bir takım seçimi/çoklu karşılaştırma analizinde Galatasaray için n=96 ve nokta ROI +%8,81 raporlandı; %95 güven aralığı −%1,01 ile +%17,93 arasındaydı ve Holm p değeri 0,158 idi. En yüksek 10 kazancın etkisi ve yıllar arası duyarlılık ayrıca incelendi; bu sonuç doğrulanmış avantaj değildir.
+
+Ayrı takım bazlı ileri testte Galatasaray 100 bahis için +%4,46 ROI gösterdi; %95 güven aralığı −%5,91 ile +%14,86, Holm-düzeltilmiş p değeri 0,8007 idi. İki sonuç farklı analizlere aittir; hiçbiri “Galatasaray'a bahis yap” önerisi olarak yorumlanmamalıdır.
 
 ### 📅 TG format değişimi
 
-Toplam Gol marketinde eski ve yeni sütun grupları aynı kesintisiz seri olarak doğrulanmış değildir:
+Toplam Gol (TG) sonuç kategorilerinin adlandırması/dönem kapsamı değişmiş görünüyor; dönemleri eşleştirmeden kategorileri doğrudan kıyaslamak hatalı olabilir:
 
-- Eski AÜ_2,5_Gol_|_Alt/Üst sütunlarında 3.325 geçerli oran bulunuyor; dönem 11.01.2014–26.08.2019.
-- Yeni 2,5_Alt/Üst_|_Alt/Üst sütunlarında 4.016 geçerli oran bulunuyor; dönem 30.08.2019–28.12.2025.
-- İki sütun grubunun aynı maçta birlikte dolu olduğu kayıt sayısı 0; 27–29 Ağustos 2019 arasında ayrıca veri boşluğu var.
+| Dönem | TG kategorileri |
+|---|---|
+| 2014–2019 | 0–1, 2–3, 4–6, 7+ |
+| 2020–2025 | 0–1, 2–3, 4–5, 6+ |
 
-Sütun adları, tarih aralığı ve kapsam eşdeğerliği doğrulanmadan bunları tek seri olarak birleştirmek doğru değildir. TG 0–1/2–3/4–6/7+ pazarlarında da 2014–2019 geçerli oranlı örneklemler üzerinden negatif ROI ve FDR'den geçen sıfır aday raporlandı; 2021 sonrası bağımsız TG doğrulaması mevcut değildir.
+2014–2019 dönemindeki oran/sonuç analizinde 0–1 ROI −%18,03; 2–3 −%18,67; 4–6 −%24,23; 7+ −%70,46 olarak raporlandı. 137 adayın hiçbirinde FDR q < 0,05 koşulu sağlanmadı. Geç dönem kategorileri farklı olduğundan 4–6 ile 4–5 veya 7+ ile 6+ doğrudan eşdeğer kabul edilmemelidir.
+
+Ayrı bir veri şeması sorunu olarak 2,5 Alt/Üst sütunları da dönemsel olarak değişiyor: eski AÜ_2,5_Gol sütunlarında geçerli oranlar 11.01.2014–26.08.2019, yeni 2,5_Alt/Üst sütunlarında ise 30.08.2019–28.12.2025 aralığında bulunuyor. İki sütun grubunun aynı maçta birlikte dolu olduğu kayıt sayısı 0; bu seriler kaynak ve anlam eşdeğerliği doğrulanmadan birleştirilmemelidir.
 
 ## 🧪 Metodolojik Çerçeve
 
-- **Sabit bahis:** Rapor açıkça farklı bir kural belirtmedikçe her geçerli bahis için 1 birim.
-- **ROI:** Toplam net kâr/zarar ÷ toplam bahis tutarı. Kazanma oranı tek başına başarı ölçütü değildir.
-- **Belirsizlik:** Uygun analizlerde %95 güven aralıkları ve/veya bootstrap duyarlılık kontrolleri kullanılır. Güven aralığının sıfırı içermesi, pozitif getirinin doğrulanmadığını gösterir.
-- **Çoklu karşılaştırma:** Birçok market/oran/gün kombinasyonu tarandığında şans eseri pozitif gruplar çıkabilir. Kullanılan çalışmalarda uygun olduğunda Benjamini–Hochberg FDR veya Holm düzeltmesi uygulanır; her keşif çalışmasında aynı düzeltmenin yapıldığı varsayılmamalıdır.
-- **Kronolojik ayrım:** Geçmişteki geliştirme verisi ile daha sonraki tarihsel test dönemi ayrılabilir; ancak bu, canlı ileriye dönük deneyle aynı değildir.
-- **Bootstrap sınırı:** Bootstrap gerçekleşmiş kâr/zararları yeniden örnekleyerek belirsizliği inceler; aday seçimi yanlılığını gidermez ve gelecekteki kârı garanti etmez.
-- **Veri bütünlüğü:** Ham CSV sonuçları iyileştirmek için değiştirilmez; eksik oranlar tahminle doldurulmaz. Skor-market uyumu, tarih aralıkları ve sütun şeması ayrı kontrol edilir.
-- **Bağımsızlık:** Aynı maçları, aynı dönemi veya aynı adayları tekrar kullanan raporlar bağımsız doğrulamalar olarak sayılmaz.
-
-Bu ölçütler, araştırma boyunca pozitif nokta ROI'sinin tek başına “avantaj” olarak sunulmasını önlemek için kullanılır.
+| İlke | Uygulama ve sınır |
+|---|---|
+| Veri bütünlüğü | Ham CSV sonuçları iyileştirmek için değiştirilmez; eksik oranlar tahminle doldurulmaz. |
+| Skor ve kimlik kontrolleri | Skor–market tutarlılığı ve tekrar eden maç kimlikleri ayrı denetlenir; sonuçlar yalnızca ilgili veri sürümü için geçerlidir. |
+| Sabit bahis | Rapor farklı bir kural belirtmedikçe geçerli her bahis için 1 birim. |
+| ROI | Toplam net kâr/zarar ÷ toplam bahis tutarı. Kazanma oranı tek başına yeterli değildir. |
+| Belirsizlik | Uygun analizlerde %95 güven aralığı ve bootstrap duyarlılığı kullanılır; aralık sıfırı içeriyorsa pozitif getiri doğrulanmış sayılmaz. |
+| Çoklu karşılaştırma | Uygun çalışmalarda Benjamini–Hochberg FDR veya Holm düzeltmesi kullanılır. Bir analizdeki düzeltme başka analizlere otomatik olarak uygulanmış sayılmaz. |
+| Bootstrap sınırı | Gerçekleşmiş kâr/zararı yeniden örnekleyerek belirsizliği inceler; aday seçimi yanlılığını ortadan kaldırmaz ve gelecek kârını garanti etmez. |
+| Kronolojik test | 2014–2022 geliştirme ve 2023–2025 zaman dışı tarihsel dönem ayrımı, canlı ileriye dönük testle aynı değildir. |
+| Bağımsızlık | Aynı maçları, dönemi veya adayları kullanan raporlar bağımsız doğrulama olarak sayılmaz. |
+| Dürüst raporlama | Negatif ve belirsiz sonuçlar da raporlanır; pozitif nokta ROI tek başına strateji kanıtı değildir. |
+| Seçim yanlılığı | Çok sayıda gruptan en iyi görüneni sonradan seçmek p-hacking riskini artırır. |
 
 ## 📊 Vaka Çalışması: "Favoriye Bahis" Stratejisi
 
@@ -392,141 +417,9 @@ Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullan
 
 **Bu sonuç, "bahis oynanmaz" demek değildir.** İncelenen veri, market, dönem ve yöntemle **istatistiksel olarak kanıtlanabilir bir avantaj bulunamadığı** anlamına gelir. Bahisçi marjı (%5–8), incelenen tüm piyasalarda sistematik olarak kârlılığı engellemektedir.
 
-## 📋 Araştırma Zaman Çizelgesi — 17 Test
+## Mevcut araştırmalar ve raporlar
 
-| # | Analiz | Test Sayısı | Düzeltme | Sonuç |
-|---|---|---:|---|---|
-| 1 | 1X2 + KG + 2.5 Alt/Üst (FDR kontrollü) | 45 | ✅ BH | **0 survivor** |
-| 2 | 534 örüntü taraması (pattern_discovery_v2) | 534 | ❌ | 13/16 FLIP |
-| 3 | Spesifik oran + gün kombinasyonları | 2.161 | ❌ | 6/10 FLIP |
-| 4 | TG (Toplam Gol) — 137 aday | 137 | ✅ BH | **0 survivor** |
-| 5 | TG birleşik analiz | 8 | ✅ BH | **0 survivor** |
-| 6 | TG blok duyarlılık (1, 10, 20, 40) | 32 | ❌ | GA hep sıfır içi |
-| 7 | Dört büyük takım — favori stratejisi | 4 | ❌ | 3/16 seri pozitif |
-| 8 | Dört büyük takım — MS banko | 4 | ❌ | Hepsi negatif |
-| 9 | Yüksek oran A/B (blok duyarlılık) | 2 | ❌ | GA tamamen negatif |
-| 10 | Takım bazlı ileri test | 4 | ✅ Holm | **0 anlamlı** |
-| 11 | Takım seçimi düzeltmesi | 12 | ✅ Holm | GS +%8.81 ama GA sıfır içi |
-| 12 | GS leave-one-year-out | 7 | ❌ | Kâr dağılmış, GA sıfır içi |
-| 13 | GS kâr yoğunlaşması | 1 | ❌ | Top-10 çıkar → +1.83 |
-| 14 | Yüksek oran kırılım (yıl × oran × market) | 100+ | ❌ | Alt grupta pozitif yok |
-| 15 | Yüksek oran kronolojik doğrulama | 2 | ❌ | Geliştirme → Zaman dışı kötüleşiyor |
-| 16 | MS2 eksik oran denetimi | 20 maç | — | %0.27 eksik, rapor edildi |
-| 17 | Veri kalitesi (skor/MS/ID) | 7.422 | — | **Kusursuz** |
-
-## 🔬 Öne Çıkan Bulgular
-
-### 🚨 1. Kazanma Oranı ≠ Kârlılık
-
-| Takım | Kazanma | ROI |
-|---|---:|---:|
-| Galatasaray | %64.88 | −%6.88 |
-| Beşiktaş | %59.76 | −%8.96 |
-| Fenerbahçe | %60.44 | −%14.81 |
-| Trabzonspor | %51.33 | −%15.23 |
-
-**Ders:** Favori oranları düşük → 2 kayıp 3 kazancı siler. %65 kazanma bile yetmiyor.
-
-### 🎲 2. MS2 Bootstrap = Yazı Tura
-
-Düşük oran MS2 alt grubu (2023+):
-
-| Blok | GA | Pozitif Bootstrap % |
-|---|---:|---:|
-| 1 | [−11.27, +11.24] | %50.95 |
-| 10 | [−8.90, +8.80] | %50.28 |
-| 20 | [−9.32, +8.79] | %50.48 |
-| 40 | [−9.85, +8.38] | %52.36 |
-
-**Yorum:** Her blok uzunluğunda pozitif bootstrap **%50** → strateji kârlılığı **rastgele**. Hipotez değil, saf gürültü.
-
-### 🌊 3. Yüksek Oran Stratejileri — Zamanla Kötüleşiyor
-
-| Strateji | Geliştirme (2014-2022) | Zaman Dışı (2023-2025) | Değişim |
-|---|---:|---:|---:|
-| A (Favorinin tersi) | −%28.70 | **−%45.26** | −16.56 puan |
-| B (En yüksek oran) | −%17.47 | **−%37.12** | −19.65 puan |
-
-**Kritik:** Underdog stratejileri geçmişte kötüydü, **gelecekte daha da kötüleşiyor.**
-
-### 💀 4. Kasa Simülasyonu — Yıkım
-
-| Strateji | Başlangıç | Son Kasa | Bitiş Tarihi |
-|---|---:|---:|---|
-| A | 100 | **0.25** | 28.01.2019 |
-| B | 100 | **0.25** | 02.01.2021 |
-
-**Yani:** 100 birim → 1-2 yılda 2.5 TL. **Yıkıcı.**
-
-### 🔍 5. Galatasaray — En "Yakın" Sonuç
-
-| Metrik | Değer |
-|---|---:|
-| n | 96 |
-| ROI | **+%8.81** |
-| %95 GA | **[−1.01, +17.93]** |
-| Holm p | 0.158 |
-| Top-10 kazanç çıkar | +1.83 (hâlâ pozitif) |
-| Leave-one-year-out | 3/3 senaryo pozitif |
-
-**Ama:** GA sıfırı içiyor, Holm p anlamsız. **Hipotez adayı — kanıt değil.**
-
-### 📅 6. TG Format Değişimi
-
-| Dönem | Kategoriler |
-|---|---|
-| 2014-2019 | 0-1, 2-3, **4-6**, **7+** |
-| 2020-2025 | 0-1, 2-3, **4-5**, **6+** |
-
-**Aynı market değil.** Ama 0-1 ve 2-3 ortak:
-
-| Kategori | 2014-2019 | 2020-2025 |
-|---|---:|---:|
-| 0-1 | −%18.03 | −%17.59 |
-| 2-3 | −%18.67 | −%15.32 |
-| 4-5 (yak.) | −%35.67 | −%27.11 |
-| 6+ (yak.) | −%0.14 | −%34.97 |
-
-**6+ eski dönem** "neredeyse başabaş" görünüyordu. Sezon bazında: +9.7, +11.1, +0.3, +16.0, −11.6, −17.8, −100. **Tam tutarsız.**
-
-## 🧪 Metodolojik Çerçeve
-
-| İlke | Uygulama |
-|---|---|
-| **Veri bütünlüğü** | Ham CSV değiştirilmedi |
-| **Skor doğrulama** | Skor–MS uyuşmazlığı: **0** |
-| **Maç ID benzersizliği** | Tekrar: **0** |
-| **Sızıntı önleme** | Post-match veriler analiz dışı |
-| **Çoklu test düzeltmesi** | Benjamini–Hochberg + Holm-Bonferroni |
-| **Belirsizlik ölçümü** | Hareketli blok bootstrap (1, 5, 10, 20, 40) |
-| **Zamansal doğrulama** | Geliştirme (2014-2022) / Zaman dışı (2023-2025) |
-| **Kasa simülasyonu** | 100 birim, gerçekçi iflas senaryosu |
-| **Dürüst raporlama** | Null sonuç gizlenmedi |
-| **p-hacking önleme** | "En iyi yılı çıkar" post-hoc reddedildi |
-
----
-
-## 🏆 Nihai Kapanış
-
-> **17 bağımsız analiz, 2.900+ test, 4 farklı FDR/Holm uygulaması, 5 farklı blok uzunluğu, 2 farklı veri dönemi — hepsi aynı sonucu verdi:**
->
-> **Mevcut veriyle, mevcut yöntemle, çoklu test düzeltmesinden geçen ve bağımsız dönemde ayakta kalan hiçbir kârlı bahis örüntüsü bulunamadı.**
-
-Bu bir başarısızlık değil, **bilimsel dürüstlüğün** göstergesidir. Veriye saygı, "bir şey bulana kadar denemek" değil, "bulunamadıysa kabul etmek"tir.
-
-**Yeni veri (2026+, farklı bahis şirketleri, kapanış oranları) olmadan ilerlemek, p-hacking'dir.**
-
-### 📌 Eğer İlerlemek İsterseniz
-
-| Seçenek | Gerekli | Risk |
-|---|---|---|
-| **Yeni veri** | 2026+ tam sezon, farklı şirketler | Düşük |
-| **Yeni market** | Korner, Kart (yeterli veri) | Orta |
-| **Farklı yöntem** | Quantile bantlar, ML | **Yüksek (p-hacking)** |
-
-**Mevcut analiz tükendi. Sıfırdan başlamak için yeni veri şart.**
-
-#### Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
+### Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
 
 Bu iki ayrı çalışma, haftanın günü ile bahis oran bandı arasında geçmiş veride kârlı ve istatistiksel olarak desteklenebilir bir ilişki bulunup bulunmadığını araştırır. Sonuçlar bahis tavsiyesi değildir.
 
@@ -560,7 +453,7 @@ Her iki araştırmada da pozitif ROI tek başına yeterli kabul edilmemiştir. �
 
 Sonuç CSV dosyaları test edilen bantları, genel performansı ve aday değerlendirmesini ayrı ayrı saklar. Ham veri üzerinde sonuçları iyileştirmek amacıyla değişiklik yapılmamalıdır.
 
-#### Depodaki Ek Araştırma Dosyaları
+### Depodaki Ek Araştırma Dosyaları
 
 ### Örüntü keşfi
 
@@ -582,12 +475,14 @@ Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştır
 
 ## Sorumlu yorumlama
 
-Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. Buradaki “avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
+Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. “Avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
 
 ## 🏆 Nihai Kapanış
 
-Araştırmanın şu anki nihai kararı: **mevcut veri ve testler, bağımsız doğrulamayla desteklenmiş kârlı bir bahis avantajı göstermiyor.** MS2 bootstrap sonucu yazı-tura benzeri belirsizlikte; yüksek oran stratejileri zaman dışı dönemde daha fazla zarar etmiş; TG sütunlarında dönemsel şema değişimi nedeniyle sahte bir kesintisiz seri varsayılmamalı.
+> **17 analiz/test akışı ve çok sayıda örüntü taraması sonucunda, mevcut veriyle bağımsız doğrulamayla desteklenmiş kârlı bir bahis avantajı gösterilemedi.**
 
-Yeni bir çalışma ancak hipotez, veri aralığı, aday seçme kuralı, örneklem eşiği ve istatistiksel testler önceden belirlenerek; keşifte kullanılmamış yeni veride doğrulanmak üzere açılmalıdır. Eski sonuçları gördükten sonra en iyi görünen alt grubu seçmek bağımsız doğrulama değildir.
+MS2 bootstrap sonuçları sıfır etrafında belirsiz; yüksek oran stratejileri 2023–2025 tarihsel testinde daha kötü performans gösterdi; TG kategori ve 2,5 Alt/Üst sütunlarının dönemsel şema farkları dikkate alınmalı. Bu bulgular tüm olası stratejilerin kârsız olduğunu kanıtlamaz, ancak mevcut stratejilerin kârlı olduğu iddiasını da desteklemez.
+
+Yeni bir çalışma başlatılırsa hipotez, veri aralığı, aday seçme kuralı, örneklem eşiği ve istatistiksel testler sonuçlar görülmeden önce sabitlenmeli; doğrulama için keşifte kullanılmamış veri ayrılmalıdır.
 
 **Bu depo araştırma ve yöntem denetimi içindir; bahis tavsiyesi, kazanç garantisi veya gelecekteki sonuçların tahmini değildir.**
