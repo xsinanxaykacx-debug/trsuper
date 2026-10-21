@@ -1,89 +1,92 @@
 # Maçkolik Bahis Oranları — Örüntü Araştırması
 
-Futbol maçlarında bahis oranları ile sonuçlar arasındaki istatistiksel olarak desteklenebilir örüntüleri arayan bir keşif çalışması.
+Bu depo, futbol maçlarının geçmiş sonuçları ve bahis oranları arasında **istatistiksel olarak desteklenebilir, bağımsız veride de ayakta kalan bir örüntü bulunup bulunmadığını** araştırır. Amaç yalnızca geçmişte kârlı görünen grupları bulmak değil; tesadüf, aşırı uyum ve çoklu test kaynaklı sahte sonuçları ayırt etmektir.
 
-## 📌 Özet
+## Araştırmanın güncel sonucu
 
-**Sonuç: Null.** 2019/2020 – 2022/2023 döneminde, 9 market ve 45 oran bandı test edildi. Benjamini–Hochberg FDR düzeltmesinden geçen hiçbir aday bulunmadı. En yüksek gözlenen ROI, KG Var marketinin 1,80–2,00 oran bandında +%2,36 oldu (n=148); ancak bu değer istatistiksel olarak anlamsızdı (ham p=0,3781, BH p=1,0). Ayrıntılar için [`docs/RAPOR.md`](docs/RAPOR.md).
+> **Nihai karar: Mevcut analizlerde bağımsız doğrulamayla desteklenmiş, genellenebilir kârlı bir bahis örüntüsü bulunmadı.**
 
-> Bu sonuç, piyasanın bütünüyle verimli olduğunu veya başka koşullarda avantaj bulunamayacağını **kanıtlamaz**. Yalnızca bu veri, dönem, marketler ve yöntemle istatistiksel olarak desteklenen bir bahis avantajı bulunamadığını gösterir.
+En son örüntü keşif çalışması; lig ailesi, haftanın günü, market ve oran bandı kombinasyonlarını inceledi. Genel raporda en az 30 maç içeren **534 örüntü** değerlendirildi. Tüm dönem verisinde pozitif getiri (ROI) ve en az 60 maç koşuluyla **16 aday** öne çıktı. Ancak bu, 16 adayın kârlı olduğu anlamına gelmez.
 
-## 🎯 Projenin Amacı
+- Erken dönem (2013–2020) ile geç dönem (2021–2025) karşılaştırmasında **16 adayın 13'ünde ROI işareti değişti**.
+- Adaylar tüm dönem verisi incelendikten sonra seçildiği için 2021–2025, bu adaylar açısından bağımsız ve kör bir doğrulama seti değildir.
+- pattern_discovery_v2 kapsamındaki 534 örüntü için FDR çoklu karşılaştırma düzeltmesi **henüz hesaplanıp doğrulanmış değildir**. Bu nedenle bu analiz için “FDR'den geçen aday sayısı sıfır” denmemektedir.
+- Daha önceki ayrı discovery.py çalışmasında 45 test için Benjamini–Hochberg FDR düzeltmesinden geçen aday bulunmadı.
 
-Bu çalışma, "geçmişte kârlı görünen oranları bulmak" değil, **çoklu test düzeltmesi ve istatistiksel doğrulamadan sonra da ayakta kalan bir örüntü var mı?** sorusuna cevap aramaktır. Amaç, tek bir olumlu ROI sonucunu başarı kabul etmek değil, sahte pozitifleri elemektir.
+**Yorum:** Geçmiş veride pozitif ROI görmek tek başına bir bahis avantajını kanıtlamaz. Mevcut bulgular güvenilir bir avantajı göstermiyor; ancak tüm olası stratejilerin kârsız olduğunu da kanıtlamıyor.
 
-## 📊 Veri
+Ayrıntılı değerlendirme: [docs/discovery_notes.md](docs/discovery_notes.md).
+
+## Veri
 
 | Özellik | Değer |
 |---|---|
 | Kaynak | [Maçkolik arşivi](https://arsiv.mackolik.com) |
-| Toplam maç | 7.422 |
-| Toplam sütun | 353 |
-| Dönem | 2013/2014 – 2025/2026 |
-| Keşif dönemi | 2019/2020 – 2022/2023 (2.503 maç) |
-| Skor-MS uyuşmazlığı | **0** (doğrulandı) |
-| Maç_ID tekrarı | **0** (doğrulandı) |
+| Ana veri dosyası | [data/csv/DATA.csv](data/csv/DATA.csv) |
+| Maç sayısı | 7.422 |
+| Sütun sayısı | 353 |
+| Veri dönemi | 2013/2014–2025/2026 |
+| Önceki FDR kontrollü keşif penceresi | 2019/2020–2022/2023 |
+| Önceki keşif penceresindeki maç sayısı | 2.503 |
 
-**Not:** Alt/Üst oranları yalnızca 2019/2020 sezonundan itibaren mevcuttur. Bu nedenle tüm analizler bu ortak pencerede yapılmıştır.
+Veri kalitesi kontrolleri, skor-market uyumu ve tekrar eden maç kimlikleri gibi konuları kapsar. Ham veri, analiz sonuçlarını iyileştirmek amacıyla değiştirilmemelidir.
 
-## 🔬 Metodoloji
+## Son örüntü keşfi nasıl yapıldı?
 
-### Test Edilen Marketler
-- Maç Sonucu: 1, X, 2
-- Karşılıklı Gol: Var, Yok
-- 1,5 Alt/Üst: Alt, Üst
-- 2,5 Alt/Üst: Alt, Üst
+pattern_discovery_v2 çalışması aşağıdaki boyutların kombinasyonlarını taradı:
 
-### Oran Bantları
-- Dar bantlar: 1.00 – 2.80 arası 0.20'lik dilimler
-- Geniş bantlar: 2.80–4.00, 4.00–5.00, 5.00–7.50, 7.50–10.00, 10.00+
+- **Lig ailesi**
+- **Haftanın günü**
+- **Bahis marketi:** MS1/MSX/MS2, KG Var/Yok ve 1,5 / 2,5 / 3,5 / 4,5 Alt-Üst
+- **Oran bandı:** 1,00–5,00 aralığında 0,10 genişliğinde bantlar
+- **Genel örüntü eşiği:** en az 30 maç
+- **Aday inceleme eşiği:** pozitif ROI ve en az 60 maç
 
-### İstatistiksel Kurallar
-- **Minimum örneklem:** n ≥ 100
-- **Getiri:** Kazanç = oran − 1, Kayıp = −1
-- **Çoklu test düzeltmesi:** Benjamini–Hochberg FDR (α = 0.05)
-- **Güven aralığı:** Bootstrap (2.000 iterasyon, nominal %95)
-- **Test:** Tek yönlü t-testi (H₁: ROI > 0)
+Bu eşikler keşif gruplarını tanımlamak için kullanılmıştır; bağımsız doğrulamanın veya istatistiksel anlamlılığın yerine geçmez. Çok sayıda kombinasyon tarandığında, yalnızca şans nedeniyle bazı grupların yüksek ROI göstermesi beklenebilir.
 
-### Karar Zinciri
-1. Keşif döneminde FDR'den geçmek (q < 0.05)
-2. Bootstrap alt GA > 0
-3. Doğrulama döneminde aynı kurallarla test
-4. Kilitli testte nihai onay
+### Dönem karşılaştırmasının sınırı
 
-**Hiçbir aday 1. aşamayı geçemediği için 2, 3 ve 4. aşamalar çalıştırılmadı.**
+13/16 adayda ROI işaretinin değişmesi, sonuçların dönemler arasında kararlı olmadığını düşündüren bir bulgudur. Ancak adaylar tüm dönem verisine bakılarak seçildiğinden, bu karşılaştırma tek başına tarafsız bir doğrulama testi değildir. Binom testi için hesaplanan p değerleri de bu seçim etkisini ortadan kaldırmaz.
 
-## 📁 Repo Yapısı
+## Önceki FDR kontrollü çalışma
 
+Ayrı bir analiz olan discovery.py, 2019/2020–2022/2023 döneminde 9 market ve 45 oran bandını test etti. Benjamini–Hochberg FDR düzeltmesinden geçen aday olmadı. En yüksek gözlenen ROI, KG Var marketinin 1,80–2,00 oran bandında +%2,36 idi (n=148); sonuç istatistiksel olarak anlamlı değildi (ham p=0,3781; BH-düzeltilmiş p=1,0).
 
-Futbol maç verileri ve bahis oranları üzerinde veri kalitesi kontrolleri ile istatistiksel örüntü keşfi için kullanılan çalışma deposu.
+Bu önceki testin ayrıntıları:
+- [Sonuç raporu](docs/RAPOR.md)
+- [Analiz protokolü](docs/protocol.md)
+- [45 testin sonuçları](docs/discovery_results.csv)
 
-## Veri
+**Önemli:** Önceki 45 testin FDR sonucu ile sonraki 534 örüntülük keşif aynı analiz değildir; sonuçları birbirine karıştırılmamalıdır.
 
-- Ana CSV: [`data/csv/DATA.csv`](data/csv/DATA.csv)
-- Analizler, maç skorlarını ve market oranlarını kullanır.
-- Ham veri, keşif analizi sonucuna göre değiştirilmemelidir.
+## Bilimsel karar ve yeniden başlama koşulları
 
-## Son analiz
+Mevcut veriyle keşif çalışması kapatılmıştır. Yeni bir araştırma başlatılacaksa:
 
-2019/2020–2022/2023 sezonlarını kapsayan keşif çalışmasında 9 market ve 45 oran bandı testi değerlendirildi. Benjamini–Hochberg FDR düzeltmesinden geçen aday bulunmadı.
+1. Yeni veya bağımsız bir veri kaynağı kullanılmalı; mümkünse mevcut analizde incelenmemiş maçlar eklenmelidir.
+2. Hipotezler, aday seçme kuralları, örneklem eşikleri ve istatistiksel testler sonuçlara bakılmadan önce sabitlenmelidir.
+3. Çoklu karşılaştırma düzeltmesi önceden belirlenmiş protokole göre uygulanmalıdır.
+4. Doğrulama verisi, keşif veya aday seçimi sırasında kullanılmamalıdır.
+5. Pozitif ROI tek başına yeterli sayılmamalı; örneklem, belirsizlik aralıkları, test sonuçları ve bağımsız dönem performansı birlikte değerlendirilmelidir.
 
-Bu sonuç, incelenen veri ve yöntem kapsamında istatistiksel olarak desteklenen bir bahis avantajı ortaya konamadığı anlamına gelir; piyasanın bütünüyle verimli olduğunu veya başka koşullarda avantaj bulunamayacağını kanıtlamaz.
+## Depo yapısı ve çalıştırma
 
-- [Analiz protokolü](docs/protocol.md): market tanımları, oran filtreleri, bantlar ve istatistiksel yöntem.
-- [Sonuç raporu](docs/RAPOR.md): test sayısı, öne çıkan ROI ve sınırlamalar.
+- data/csv/DATA.csv — ana maç verisi
+- docs/RAPOR.md — önceki 45 testlik FDR kontrollü çalışma
+- docs/protocol.md — önceki çalışmanın analiz protokolü
+- docs/discovery_notes.md — son örüntü keşfinin nihai değerlendirmesi
 
-## Kurulum ve Çalıştırma
+Python 3 ve ilgili analiz bağımlılıkları gerekir. Yerel çalışma kopyanızda discovery.py mevcutsa, depo kök dizininde şu komutlarla çalıştırabilirsiniz:
 
-Python 3 ve analiz için kullanılan bağımlılıklar gerekir. Yerel çalışma kopyanızda `discovery.py` mevcutsa, depo kök dizininden çalıştırın:
-
-```powershell
+\`\`\`powershell
 python -m pip install pandas numpy scipy statsmodels
 python discovery.py
-```
+\`\`\`
 
-Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortamını tamamen yeniden üretilebilir saymayın. Sonuçları karşılaştırmadan önce kullanılan betik sürümünü, parametreleri ve girdi verisini doğrulayın.
+Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortamı bütünüyle yeniden üretilebilir kabul edilmemelidir. Sonuçları karşılaştırmadan önce kullanılan betik sürümünü, parametreleri ve girdi verisini doğrulayın.
 
-## Bilimsel yorumlama
+---
 
-Pozitif ROI tek başına kârlılık kanıtı değildir. Çoklu karşılaştırma düzeltmesi, güven aralıkları ve örneklem büyüklüğü birlikte değerlendirilmelidir. Keşif sonucunda aday bulunmaması, her olası markette veya dönemde avantajın imkânsız olduğunu göstermez.
+## Sorumlu yorumlama
+
+Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. Buradaki “avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
