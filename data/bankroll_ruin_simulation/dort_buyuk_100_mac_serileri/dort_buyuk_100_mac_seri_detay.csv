@@ -1,0 +1,1653 @@
+﻿Takim,Tarih,Ev_Sahibi,Deplasman,Skor,Takim_Maci_Sonucu,Secilen_MS,Secilen_Oran,Bahis_Gecerli,Bahis_Kazandi,Kar_Zarar,Mac_Sira_No,Seri_No,Seri_Ici_Mac_No,Birikimli_Kar_Zarar
+Galatasaray,2014-01-26,Gaziantepspor,Galatasaray,0-0,BERABERE,2,1.3,True,False,-1.0,1,1,1,-1.0
+Galatasaray,2014-02-02,Galatasaray,Bursaspor,6-0,EV,1,1.25,True,True,0.25,2,1,2,-0.75
+Galatasaray,2014-02-08,Galatasaray,Eskişehirspor,3-0,EV,1,1.2,True,True,0.19999999999999996,3,1,3,-0.55
+Galatasaray,2014-02-17,MP Antalyaspor,Galatasaray,2-2,BERABERE,2,1.3,True,False,-1.0,4,1,4,-1.55
+Galatasaray,2014-02-22,Galatasaray,Beşiktaş,1-0,EV,1,1.5,True,True,0.5,5,1,5,-1.05
+Galatasaray,2014-03-02,Çaykur Rizespor,Galatasaray,1-1,BERABERE,2,1.25,True,False,-1.0,6,1,6,-2.05
+Galatasaray,2014-03-08,Galatasaray,Akhisar Belediyespor,6-1,EV,1,1.1,True,True,0.10000000000000009,7,1,7,-1.9499999999999997
+Galatasaray,2014-03-14,Karabükspor,Galatasaray,0-0,BERABERE,2,1.4,True,False,-1.0,8,1,8,-2.9499999999999997
+Galatasaray,2014-03-22,Galatasaray,Kayserispor,0-1,DEP,1,1.1,True,False,-1.0,9,1,9,-3.9499999999999997
+Galatasaray,2014-03-29,Konyaspor,Galatasaray,0-0,BERABERE,2,1.45,True,False,-1.0,10,1,10,-4.949999999999999
+Galatasaray,2014-04-06,Galatasaray,Fenerbahçe,1-0,EV,1,1.95,True,True,0.95,11,1,11,-3.999999999999999
+Galatasaray,2014-04-12,Sivasspor,Galatasaray,2-1,EV,2,1.5,True,False,-1.0,12,1,12,-4.999999999999999
+Galatasaray,2014-04-19,Galatasaray,Kasımpaşa,0-4,DEP,1,1.25,True,False,-1.0,13,1,13,-5.999999999999999
+Galatasaray,2014-04-27,Elazığspor,Galatasaray,0-1,DEP,2,1.6,True,True,0.6000000000000001,14,1,14,-5.399999999999999
+Galatasaray,2014-05-03,Galatasaray,Gençlerbirliği,3-2,EV,1,1.1,True,True,0.10000000000000009,15,1,15,-5.299999999999999
+Galatasaray,2014-05-11,Trabzonspor,Galatasaray,1-4,DEP,2,2.1,True,True,1.1,16,1,16,-4.199999999999999
+Galatasaray,2014-05-17,Galatasaray,Kayseri Erciyesspor,2-1,EV,1,1.05,True,True,0.050000000000000044,17,1,17,-4.1499999999999995
+Galatasaray,2014-08-30,Bursaspor,Galatasaray,0-2,DEP,2,1.75,True,True,0.75,18,1,18,-3.3999999999999995
+Galatasaray,2014-09-13,Galatasaray,Eskişehirspor,0-0,BERABERE,1,1.4,True,False,-1.0,19,1,19,-4.3999999999999995
+Galatasaray,2014-09-20,Balıkesirspor,Galatasaray,2-0,EV,2,1.25,True,False,-1.0,20,1,20,-5.3999999999999995
+Galatasaray,2014-09-26,Galatasaray,Sivasspor,2-1,EV,1,1.3,True,True,0.30000000000000004,21,1,21,-5.1
+Galatasaray,2014-10-04,Kayseri Erciyesspor,Galatasaray,1-2,DEP,2,1.4,True,True,0.3999999999999999,22,1,22,-4.699999999999999
+Galatasaray,2014-10-18,Galatasaray,Fenerbahçe,2-1,EV,1,1.85,True,True,0.8500000000000001,23,1,23,-3.849999999999999
+Galatasaray,2014-10-26,İstanbul Başakşehir,Galatasaray,4-0,EV,2,1.6,True,False,-1.0,24,1,24,-4.85
+Galatasaray,2014-10-31,Galatasaray,Kasımpaşa,2-1,EV,1,1.55,True,True,0.55,25,1,25,-4.3
+Galatasaray,2014-11-08,Karabükspor,Galatasaray,1-2,DEP,2,1.7,True,True,0.7,26,1,26,-3.5999999999999996
+Galatasaray,2014-11-22,Galatasaray,Trabzonspor,0-3,DEP,1,1.5,True,False,-1.0,27,1,27,-4.6
+Galatasaray,2014-11-29,Gaziantepspor,Galatasaray,0-1,DEP,2,1.65,True,True,0.6499999999999999,28,1,28,-3.9499999999999997
+Galatasaray,2014-12-06,Galatasaray,Akhisar Belediyespor,2-1,EV,1,1.2,True,True,0.19999999999999996,29,1,29,-3.75
+Galatasaray,2014-12-13,Torku Konyaspor,Galatasaray,0-5,DEP,2,1.75,True,True,0.75,30,1,30,-3.0
+Galatasaray,2014-12-20,Galatasaray,Mersin İdmanyurdu,3-2,EV,1,1.2,True,True,0.19999999999999996,31,1,31,-2.8
+Galatasaray,2014-12-26,Gençlerbirliği,Galatasaray,1-1,BERABERE,2,1.6,True,False,-1.0,32,1,32,-3.8
+Galatasaray,2015-01-04,Beşiktaş,Galatasaray,0-2,DEP,1,2.0,True,False,-1.0,33,1,33,-4.8
+Galatasaray,2015-01-25,Galatasaray,Çaykur Rizespor,2-0,EV,1,1.15,True,True,0.1499999999999999,34,1,34,-4.65
+Galatasaray,2015-02-01,Galatasaray,Bursaspor,2-2,BERABERE,1,1.5,True,False,-1.0,35,1,35,-5.65
+Galatasaray,2015-02-09,Eskişehirspor,Galatasaray,1-2,DEP,2,2.2,True,True,1.2000000000000002,36,1,36,-4.45
+Galatasaray,2015-02-16,Galatasaray,Balıkesirspor,3-1,EV,1,1.1,True,True,0.10000000000000009,37,1,37,-4.35
+Galatasaray,2015-02-21,Sivasspor,Galatasaray,2-3,DEP,2,1.9,True,True,0.8999999999999999,38,1,38,-3.4499999999999997
+Galatasaray,2015-02-27,Galatasaray,Kayseri Erciyesspor,3-1,EV,1,1.1,True,True,0.10000000000000009,39,1,39,-3.3499999999999996
+Galatasaray,2015-03-08,Fenerbahçe,Galatasaray,1-0,EV,1,1.7,True,True,0.7,40,1,40,-2.6499999999999995
+Galatasaray,2015-03-14,Galatasaray,İstanbul Başakşehir,2-2,BERABERE,1,1.4,True,False,-1.0,41,1,41,-3.6499999999999995
+Galatasaray,2015-03-21,Kasımpaşa,Galatasaray,2-3,DEP,2,2.0,True,True,1.0,42,1,42,-2.6499999999999995
+Galatasaray,2015-04-05,Galatasaray,Karabükspor,4-2,EV,1,1.1,True,True,0.10000000000000009,43,1,43,-2.5499999999999994
+Galatasaray,2015-04-19,Trabzonspor,Galatasaray,2-1,EV,2,2.35,True,False,-1.0,44,1,44,-3.5499999999999994
+Galatasaray,2015-04-26,Galatasaray,Gaziantepspor,1-0,EV,1,1.1,True,True,0.10000000000000009,45,1,45,-3.4499999999999993
+Galatasaray,2015-05-04,Akhisar Belediyespor,Galatasaray,0-2,DEP,2,1.5,True,True,0.5,46,1,46,-2.9499999999999993
+Galatasaray,2015-05-08,Galatasaray,Torku Konyaspor,1-0,EV,1,1.1,True,True,0.10000000000000009,47,1,47,-2.849999999999999
+Galatasaray,2015-05-12,Mersin İdmanyurdu,Galatasaray,0-1,DEP,2,1.25,True,True,0.25,48,1,48,-2.599999999999999
+Galatasaray,2015-05-16,Galatasaray,Gençlerbirliği,1-0,EV,1,1.1,True,True,0.10000000000000009,49,1,49,-2.499999999999999
+Galatasaray,2015-05-24,Galatasaray,Beşiktaş,2-0,EV,1,1.55,True,True,0.55,50,1,50,-1.949999999999999
+Galatasaray,2015-05-30,Çaykur Rizespor,Galatasaray,1-1,BERABERE,2,1.9,True,False,-1.0,51,1,51,-2.9499999999999993
+Galatasaray,2015-08-15,Medicana Sivasspor,Galatasaray,2-2,BERABERE,2,1.8,True,False,-1.0,52,1,52,-3.9499999999999993
+Galatasaray,2015-08-24,Galatasaray,Osmanlıspor FK,1-2,DEP,1,1.2,True,False,-1.0,53,1,53,-4.949999999999999
+Galatasaray,2015-08-29,Torku Konyaspor,Galatasaray,1-4,DEP,2,1.8,True,True,0.8,54,1,54,-4.1499999999999995
+Galatasaray,2015-09-12,Galatasaray,Mersin İdmanyurdu,1-1,BERABERE,1,1.2,True,False,-1.0,55,1,55,-5.1499999999999995
+Galatasaray,2015-09-19,Trabzonspor,Galatasaray,0-1,DEP,2,2.2,True,True,1.2000000000000002,56,1,56,-3.9499999999999993
+Galatasaray,2015-09-26,Galatasaray,Gaziantepspor,2-1,EV,1,1.1,True,True,0.10000000000000009,57,1,57,-3.849999999999999
+Galatasaray,2015-10-03,Medipol Başakşehir,Galatasaray,0-2,DEP,2,1.9,True,True,0.8999999999999999,58,1,58,-2.9499999999999993
+Galatasaray,2015-10-17,Galatasaray,Gençlerbirliği,4-1,EV,1,1.2,True,True,0.19999999999999996,59,1,59,-2.749999999999999
+Galatasaray,2015-10-25,Fenerbahçe,Galatasaray,1-1,BERABERE,1,1.7,True,False,-1.0,60,1,60,-3.749999999999999
+Galatasaray,2015-10-29,Galatasaray,Eskişehirspor,4-0,EV,1,1.2,True,True,0.19999999999999996,61,1,61,-3.549999999999999
+Galatasaray,2015-11-07,Çaykur Rizespor,Galatasaray,4-3,EV,2,1.7,True,False,-1.0,62,1,62,-4.549999999999999
+Galatasaray,2015-11-21,Galatasaray,Antalyaspor,3-3,BERABERE,1,1.25,True,False,-1.0,63,1,63,-5.549999999999999
+Galatasaray,2015-11-29,Kasımpaşa,Galatasaray,2-2,BERABERE,2,1.8,True,False,-1.0,64,1,64,-6.549999999999999
+Galatasaray,2015-12-04,Galatasaray,Bursaspor,3-0,EV,1,1.4,True,True,0.3999999999999999,65,1,65,-6.149999999999999
+Galatasaray,2015-12-14,Beşiktaş,Galatasaray,2-1,EV,1,1.9,True,True,0.8999999999999999,66,1,66,-5.249999999999998
+Galatasaray,2015-12-20,Galatasaray,Akhisar Belediyespor,3-2,EV,1,1.3,True,True,0.30000000000000004,67,1,67,-4.949999999999998
+Galatasaray,2015-12-27,Kayserispor,Galatasaray,1-1,BERABERE,2,2.1,True,False,-1.0,68,1,68,-5.949999999999998
+Galatasaray,2016-01-16,Galatasaray,Medicana Sivasspor,3-1,EV,1,1.35,True,True,0.3500000000000001,69,1,69,-5.599999999999998
+Galatasaray,2016-01-23,Osmanlıspor FK,Galatasaray,3-2,EV,2,1.85,True,False,-1.0,70,1,70,-6.599999999999998
+Galatasaray,2016-02-06,Galatasaray,Torku Konyaspor,0-0,BERABERE,1,1.25,True,False,-1.0,71,1,71,-7.599999999999998
+Galatasaray,2016-02-13,Mersin İdmanyurdu,Galatasaray,2-1,EV,2,1.45,True,False,-1.0,72,1,72,-8.599999999999998
+Galatasaray,2016-02-21,Galatasaray,Trabzonspor,2-1,EV,1,1.4,True,True,0.3999999999999999,73,1,73,-8.199999999999998
+Galatasaray,2016-02-28,Gaziantepspor,Galatasaray,2-0,EV,2,1.8,True,False,-1.0,74,1,74,-9.199999999999998
+Galatasaray,2016-03-06,Galatasaray,Medipol Başakşehir,3-3,BERABERE,1,1.8,True,False,-1.0,75,1,75,-10.199999999999998
+Galatasaray,2016-03-13,Gençlerbirliği,Galatasaray,1-1,BERABERE,2,1.9,True,False,-1.0,76,1,76,-11.199999999999998
+Galatasaray,2016-04-02,Eskişehirspor,Galatasaray,4-3,EV,2,2.0,True,False,-1.0,77,1,77,-12.199999999999998
+Galatasaray,2016-04-09,Galatasaray,Çaykur Rizespor,1-1,BERABERE,1,1.4,True,False,-1.0,78,1,78,-13.199999999999998
+Galatasaray,2016-04-13,Galatasaray,Fenerbahçe,0-0,BERABERE,2,1.7,True,False,-1.0,79,1,79,-14.199999999999998
+Galatasaray,2016-04-16,Antalyaspor,Galatasaray,4-2,EV,2,2.15,True,False,-1.0,80,1,80,-15.199999999999998
+Galatasaray,2016-04-24,Galatasaray,Kasımpaşa,4-1,EV,1,1.85,True,True,0.8500000000000001,81,1,81,-14.349999999999998
+Galatasaray,2016-04-29,Bursaspor,Galatasaray,1-1,BERABERE,1,2.1,True,False,-1.0,82,1,82,-15.349999999999998
+Galatasaray,2016-05-08,Galatasaray,Beşiktaş,0-1,DEP,2,1.5,True,True,0.5,83,1,83,-14.849999999999998
+Galatasaray,2016-05-15,Akhisar Belediyespor,Galatasaray,1-2,DEP,2,1.95,True,True,0.95,84,1,84,-13.899999999999999
+Galatasaray,2016-05-19,Galatasaray,Kayserispor,6-0,EV,1,1.25,True,True,0.25,85,1,85,-13.649999999999999
+Galatasaray,2016-08-22,Galatasaray,Karabükspor,1-0,EV,1,1.35,True,True,0.3500000000000001,86,1,86,-13.299999999999999
+Galatasaray,2016-08-27,Akhisar Belediyespor,Galatasaray,1-3,DEP,2,1.8,True,True,0.8,87,1,87,-12.499999999999998
+Galatasaray,2016-09-10,Kayserispor,Galatasaray,1-1,BERABERE,2,1.85,True,False,-1.0,88,1,88,-13.499999999999998
+Galatasaray,2016-09-17,Galatasaray,Çaykur Rizespor,2-0,EV,1,1.15,True,True,0.1499999999999999,89,1,89,-13.349999999999998
+Galatasaray,2016-09-24,Beşiktaş,Galatasaray,2-2,BERABERE,1,1.7,True,False,-1.0,90,1,90,-14.349999999999998
+Galatasaray,2016-10-02,Galatasaray,Antalyaspor,3-1,EV,1,1.25,True,True,0.25,91,1,91,-14.099999999999998
+Galatasaray,2016-10-15,Gençlerbirliği,Galatasaray,0-1,DEP,2,2.0,True,True,1.0,92,1,92,-13.099999999999998
+Galatasaray,2016-10-22,Galatasaray,Trabzonspor,0-1,DEP,1,1.35,True,False,-1.0,93,1,93,-14.099999999999998
+Galatasaray,2016-10-29,Adanaspor,Galatasaray,0-1,DEP,2,1.4,True,True,0.3999999999999999,94,1,94,-13.699999999999998
+Galatasaray,2016-11-04,Galatasaray,Medipol Başakşehir,1-2,DEP,1,1.75,True,False,-1.0,95,1,95,-14.699999999999998
+Galatasaray,2016-11-20,Fenerbahçe,Galatasaray,2-0,EV,1,1.6,True,True,0.6000000000000001,96,1,96,-14.099999999999998
+Galatasaray,2016-11-25,Galatasaray,Bursaspor,3-1,EV,1,1.45,True,True,0.44999999999999996,97,1,97,-13.649999999999999
+Galatasaray,2016-12-04,Kasımpaşa,Galatasaray,1-2,DEP,2,1.65,True,True,0.6499999999999999,98,1,98,-12.999999999999998
+Galatasaray,2016-12-11,Galatasaray,Gaziantepspor,3-1,EV,1,1.2,True,True,0.19999999999999996,99,1,99,-12.799999999999999
+Galatasaray,2016-12-18,Osmanlıspor FK,Galatasaray,2-2,BERABERE,1,2.3,True,False,-1.0,100,1,100,-13.799999999999999
+Galatasaray,2016-12-25,Galatasaray,Aytemiz Alanyaspor,5-1,EV,1,1.2,True,True,0.19999999999999996,101,2,1,-13.6
+Galatasaray,2017-01-14,Atiker Konyaspor,Galatasaray,0-1,DEP,2,2.2,True,True,1.2000000000000002,102,2,2,-12.399999999999999
+Galatasaray,2017-01-21,Karabükspor,Galatasaray,2-1,EV,2,1.8,True,False,-1.0,103,2,3,-13.399999999999999
+Galatasaray,2017-01-28,Galatasaray,Akhisar Belediyespor,6-0,EV,1,1.2,True,True,0.19999999999999996,104,2,4,-13.2
+Galatasaray,2017-02-12,Galatasaray,Kayserispor,1-2,DEP,1,1.2,True,False,-1.0,105,2,5,-14.2
+Galatasaray,2017-02-18,Çaykur Rizespor,Galatasaray,1-1,BERABERE,2,1.6,True,False,-1.0,106,2,6,-15.2
+Galatasaray,2017-02-27,Galatasaray,Beşiktaş,0-1,DEP,1,2.3,True,False,-1.0,107,2,7,-16.2
+Galatasaray,2017-03-06,Antalyaspor,Galatasaray,2-3,DEP,2,1.95,True,True,0.95,108,2,8,-15.25
+Galatasaray,2017-03-11,Galatasaray,Gençlerbirliği,3-2,EV,1,1.25,True,True,0.25,109,2,9,-15.0
+Galatasaray,2017-03-18,Trabzonspor,Galatasaray,2-0,EV,1,2.0,True,True,1.0,110,2,10,-14.0
+Galatasaray,2017-04-03,Galatasaray,Adanaspor,4-0,EV,1,1.15,True,True,0.1499999999999999,111,2,11,-13.85
+Galatasaray,2017-04-10,Medipol Başakşehir,Galatasaray,4-0,EV,1,2.1,True,True,1.1,112,2,12,-12.75
+Galatasaray,2017-04-23,Galatasaray,Fenerbahçe,0-1,DEP,1,2.1,True,False,-1.0,113,2,13,-13.75
+Galatasaray,2017-05-01,Bursaspor,Galatasaray,0-5,DEP,2,1.6,True,True,0.6000000000000001,114,2,14,-13.15
+Galatasaray,2017-05-06,Galatasaray,Kasımpaşa,1-3,DEP,1,1.3,True,False,-1.0,115,2,15,-14.15
+Galatasaray,2017-05-14,Gaziantepspor,Galatasaray,1-2,DEP,2,1.55,True,True,0.55,116,2,16,-13.6
+Galatasaray,2017-05-19,Galatasaray,Osmanlıspor FK,2-0,EV,1,1.25,True,True,0.25,117,2,17,-13.35
+Galatasaray,2017-05-29,Aytemiz Alanyaspor,Galatasaray,2-3,DEP,2,1.45,True,True,0.44999999999999996,118,2,18,-12.9
+Galatasaray,2017-06-03,Galatasaray,Atiker Konyaspor,2-1,EV,1,1.1,True,True,0.10000000000000009,119,2,19,-12.8
+Galatasaray,2017-08-14,Galatasaray,Kayserispor,4-1,EV,1,1.35,True,True,0.3500000000000001,120,2,20,-12.450000000000001
+Galatasaray,2017-08-19,Osmanlıspor FK,Galatasaray,1-3,DEP,2,1.7,True,True,0.7,121,2,21,-11.750000000000002
+Galatasaray,2017-08-25,Galatasaray,Sivasspor,3-0,EV,1,1.15,True,True,0.1499999999999999,122,2,22,-11.600000000000001
+Galatasaray,2017-09-10,Antalyaspor,Galatasaray,1-1,BERABERE,2,1.7,True,False,-1.0,123,2,23,-12.600000000000001
+Galatasaray,2017-09-16,Galatasaray,Kasımpaşa,2-0,EV,1,1.2,True,True,0.19999999999999996,124,2,24,-12.400000000000002
+Galatasaray,2017-09-24,Bursaspor,Galatasaray,1-2,DEP,2,1.55,True,True,0.55,125,2,25,-11.850000000000001
+Galatasaray,2017-09-30,Galatasaray,Karabükspor,3-2,EV,1,1.15,True,True,0.1499999999999999,126,2,26,-11.700000000000001
+Galatasaray,2017-10-14,Atiker Konyaspor,Galatasaray,0-2,DEP,2,1.4,True,True,0.3999999999999999,127,2,27,-11.3
+Galatasaray,2017-10-22,Galatasaray,Fenerbahçe,0-0,BERABERE,1,1.7,True,False,-1.0,128,2,28,-12.3
+Galatasaray,2017-10-29,Trabzonspor,Galatasaray,2-1,EV,2,1.6,True,False,-1.0,129,2,29,-13.3
+Galatasaray,2017-11-03,Galatasaray,Gençlerbirliği,5-1,EV,1,1.15,True,True,0.1499999999999999,130,2,30,-13.15
+Galatasaray,2017-11-18,Medipol Başakşehir,Galatasaray,5-1,EV,2,2.1,True,False,-1.0,131,2,31,-14.15
+Galatasaray,2017-11-25,Galatasaray,Aytemiz Alanyaspor,2-0,EV,1,1.25,True,True,0.25,132,2,32,-13.9
+Galatasaray,2017-12-02,Beşiktaş,Galatasaray,3-0,EV,1,1.65,True,True,0.6499999999999999,133,2,33,-13.25
+Galatasaray,2017-12-09,Galatasaray,Akhisarspor,4-2,EV,1,1.15,True,True,0.1499999999999999,134,2,34,-13.1
+Galatasaray,2017-12-17,Yeni Malatyaspor,Galatasaray,2-1,EV,2,1.45,True,False,-1.0,135,2,35,-14.1
+Galatasaray,2017-12-24,Galatasaray,Göztepe,3-1,EV,1,1.2,True,True,0.19999999999999996,136,2,36,-13.9
+Galatasaray,2018-01-22,Kayserispor,Galatasaray,1-3,DEP,2,2.0,True,True,1.0,137,2,37,-12.9
+Galatasaray,2018-01-27,Galatasaray,Osmanlıspor FK,2-0,EV,1,1.25,True,True,0.25,138,2,38,-12.65
+Galatasaray,2018-02-04,Sivasspor,Galatasaray,2-1,EV,2,1.7,True,False,-1.0,139,2,39,-13.65
+Galatasaray,2018-02-12,Galatasaray,Antalyaspor,3-0,EV,1,1.05,True,True,0.050000000000000044,140,2,40,-13.6
+Galatasaray,2018-02-18,Kasımpaşa,Galatasaray,2-1,EV,2,1.4,True,False,-1.0,141,2,41,-14.6
+Galatasaray,2018-02-23,Galatasaray,Bursaspor,5-0,EV,1,1.15,True,True,0.1499999999999999,142,2,42,-14.45
+Galatasaray,2018-03-03,Karabükspor,Galatasaray,0-7,DEP,2,1.1,True,True,0.10000000000000009,143,2,43,-14.35
+Galatasaray,2018-03-11,Galatasaray,Atiker Konyaspor,2-1,EV,1,1.1,True,True,0.10000000000000009,144,2,44,-14.25
+Galatasaray,2018-03-17,Fenerbahçe,Galatasaray,0-0,BERABERE,1,1.85,True,False,-1.0,145,2,45,-15.25
+Galatasaray,2018-04-01,Galatasaray,Trabzonspor,2-1,EV,1,1.35,True,True,0.3500000000000001,146,2,46,-14.9
+Galatasaray,2018-04-09,Gençlerbirliği,Galatasaray,1-0,EV,2,1.35,True,False,-1.0,147,2,47,-15.9
+Galatasaray,2018-04-15,Galatasaray,Medipol Başakşehir,2-0,EV,1,1.5,True,True,0.5,148,2,48,-15.4
+Galatasaray,2018-04-21,Aytemiz Alanyaspor,Galatasaray,2-3,DEP,2,1.45,True,True,0.44999999999999996,149,2,49,-14.950000000000001
+Galatasaray,2018-04-29,Galatasaray,Beşiktaş,2-0,EV,1,2.0,True,True,1.0,150,2,50,-13.950000000000001
+Galatasaray,2018-05-06,Akhisarspor,Galatasaray,1-2,DEP,2,1.25,True,True,0.25,151,2,51,-13.700000000000001
+Galatasaray,2018-05-12,Galatasaray,Yeni Malatyaspor,2-0,EV,1,1.05,True,True,0.050000000000000044,152,2,52,-13.65
+Galatasaray,2018-05-19,Göztepe,Galatasaray,0-1,DEP,2,1.25,True,True,0.25,153,2,53,-13.4
+Galatasaray,2018-08-10,MKE Ankaragücü,Galatasaray,1-3,DEP,2,1.5,True,True,0.5,154,2,54,-12.9
+Galatasaray,2018-08-19,Galatasaray,Göztepe,1-0,EV,1,1.15,True,True,0.1499999999999999,155,2,55,-12.75
+Galatasaray,2018-08-27,Galatasaray,Alanyaspor,6-0,EV,1,1.15,True,True,0.1499999999999999,156,2,56,-12.6
+Galatasaray,2018-09-01,Trabzonspor,Galatasaray,4-0,EV,2,1.85,True,False,-1.0,157,2,57,-13.6
+Galatasaray,2018-09-14,Galatasaray,Kasımpaşa,4-1,EV,1,1.25,True,True,0.25,158,2,58,-13.35
+Galatasaray,2018-09-23,Akhisarspor,Galatasaray,3-0,EV,2,1.45,True,False,-1.0,159,2,59,-14.35
+Galatasaray,2018-09-28,Galatasaray,BB Erzurumspor,1-0,EV,1,1.15,True,True,0.1499999999999999,160,2,60,-14.2
+Galatasaray,2018-10-06,Antalyaspor,Galatasaray,0-1,DEP,2,1.5,True,True,0.5,161,2,61,-13.7
+Galatasaray,2018-10-19,Galatasaray,Bursaspor,1-1,BERABERE,1,1.35,True,False,-1.0,162,2,62,-14.7
+Galatasaray,2018-10-28,Yeni Malatyaspor,Galatasaray,2-0,EV,2,2.0,True,False,-1.0,163,2,63,-15.7
+Galatasaray,2018-11-02,Galatasaray,Fenerbahçe,2-2,BERABERE,1,1.75,True,False,-1.0,164,2,64,-16.7
+Galatasaray,2018-11-10,Kayserispor,Galatasaray,0-3,DEP,2,2.3,True,True,1.2999999999999998,165,2,65,-15.399999999999999
+Galatasaray,2018-11-23,Galatasaray,Atiker Konyaspor,1-1,BERABERE,1,1.6,True,False,-1.0,166,2,66,-16.4
+Galatasaray,2018-12-02,Beşiktaş,Galatasaray,1-0,EV,1,1.7,True,True,0.7,167,2,67,-15.7
+Galatasaray,2018-12-08,Galatasaray,Çaykur Rizespor,2-2,BERABERE,1,1.3,True,False,-1.0,168,2,68,-16.7
+Galatasaray,2018-12-15,Medipol Başakşehir,Galatasaray,1-1,BERABERE,1,1.8,True,False,-1.0,169,2,69,-17.7
+Galatasaray,2018-12-23,Galatasaray,Sivasspor,4-2,EV,1,1.4,True,True,0.3999999999999999,170,2,70,-17.3
+Galatasaray,2019-01-19,Galatasaray,MKE Ankaragücü,6-0,EV,1,1.15,True,True,0.1499999999999999,171,2,71,-17.150000000000002
+Galatasaray,2019-01-26,Göztepe,Galatasaray,0-1,DEP,2,2.0,True,True,1.0,172,2,72,-16.150000000000002
+Galatasaray,2019-02-02,Alanyaspor,Galatasaray,1-1,BERABERE,2,1.95,True,False,-1.0,173,2,73,-17.150000000000002
+Galatasaray,2019-02-10,Galatasaray,Trabzonspor,3-1,EV,1,1.35,True,True,0.3500000000000001,174,2,74,-16.8
+Galatasaray,2019-02-17,Kasımpaşa,Galatasaray,1-4,DEP,2,1.6,True,True,0.6000000000000001,175,2,75,-16.2
+Galatasaray,2019-02-24,Galatasaray,Akhisarspor,1-0,EV,1,1.15,True,True,0.1499999999999999,176,2,76,-16.05
+Galatasaray,2019-03-03,BB Erzurumspor,Galatasaray,1-1,BERABERE,2,1.8,True,False,-1.0,177,2,77,-17.05
+Galatasaray,2019-03-11,Galatasaray,Antalyaspor,5-0,EV,1,1.15,True,True,0.1499999999999999,178,2,78,-16.900000000000002
+Galatasaray,2019-03-17,Bursaspor,Galatasaray,2-3,DEP,2,2.0,True,True,1.0,179,2,79,-15.900000000000002
+Galatasaray,2019-04-06,Galatasaray,Yeni Malatyaspor,3-0,EV,1,1.2,True,True,0.19999999999999996,180,2,80,-15.700000000000003
+Galatasaray,2019-04-14,Fenerbahçe,Galatasaray,1-1,BERABERE,1,2.1,True,False,-1.0,181,2,81,-16.700000000000003
+Galatasaray,2019-04-20,Galatasaray,Kayserispor,3-1,EV,1,1.15,True,True,0.1499999999999999,182,2,82,-16.550000000000004
+Galatasaray,2019-04-29,Atiker Konyaspor,Galatasaray,0-0,BERABERE,2,1.45,True,False,-1.0,183,2,83,-17.550000000000004
+Galatasaray,2019-05-05,Galatasaray,Beşiktaş,2-0,EV,1,1.7,True,True,0.7,184,2,84,-16.850000000000005
+Galatasaray,2019-05-11,Çaykur Rizespor,Galatasaray,2-3,DEP,2,1.5,True,True,0.5,185,2,85,-16.350000000000005
+Galatasaray,2019-05-19,Galatasaray,Medipol Başakşehir,2-1,EV,1,1.6,True,True,0.6000000000000001,186,2,86,-15.750000000000005
+Galatasaray,2019-05-24,Sivasspor,Galatasaray,4-3,EV,1,1.95,True,True,0.95,187,2,87,-14.800000000000006
+Galatasaray,2019-08-16,Denizlispor,Galatasaray,2-0,EV,2,1.6,True,False,-1.0,188,2,88,-15.800000000000006
+Galatasaray,2019-08-25,Galatasaray,Konyaspor,1-1,BERABERE,1,1.25,True,False,-1.0,189,2,89,-16.800000000000004
+Galatasaray,2019-08-30,Kayserispor,Galatasaray,2-3,DEP,2,1.55,True,True,0.55,190,2,90,-16.250000000000004
+Galatasaray,2019-09-13,Galatasaray,Kasımpaşa,1-0,EV,1,1.18,True,True,0.17999999999999994,191,2,91,-16.070000000000004
+Galatasaray,2019-09-22,Yeni Malatyaspor,Galatasaray,1-1,BERABERE,2,2.0,True,False,-1.0,192,2,92,-17.070000000000004
+Galatasaray,2019-09-28,Galatasaray,Fenerbahçe,0-0,BERABERE,1,1.8,True,False,-1.0,193,2,93,-18.070000000000004
+Galatasaray,2019-10-05,Gençlerbirliği,Galatasaray,0-0,BERABERE,2,2.0,True,False,-1.0,194,2,94,-19.070000000000004
+Galatasaray,2019-10-18,Galatasaray,Sivasspor,3-2,EV,1,1.5,True,True,0.5,195,2,95,-18.570000000000004
+Galatasaray,2019-10-27,Beşiktaş,Galatasaray,1-0,EV,2,2.05,True,False,-1.0,196,2,96,-19.570000000000004
+Galatasaray,2019-11-01,Galatasaray,Çaykur Rizespor,2-0,EV,1,1.3,True,True,0.30000000000000004,197,2,97,-19.270000000000003
+Galatasaray,2019-11-09,Gaziantep FK,Galatasaray,0-2,DEP,2,2.1,True,True,1.1,198,2,98,-18.17
+Galatasaray,2019-11-22,Galatasaray,Başakşehir FK,0-1,DEP,1,2.3,True,False,-1.0,199,2,99,-19.17
+Galatasaray,2019-12-01,Trabzonspor,Galatasaray,1-1,BERABERE,1,1.95,True,False,-1.0,200,2,100,-20.17
+Galatasaray,2019-12-07,Galatasaray,Alanyaspor,1-0,EV,1,1.7,True,True,0.7,201,3,1,-19.470000000000002
+Galatasaray,2019-12-14,Galatasaray,MKE Ankaragücü,2-2,BERABERE,1,1.15,True,False,-1.0,202,3,2,-20.470000000000002
+Galatasaray,2019-12-21,Göztepe,Galatasaray,2-1,EV,2,2.1,True,False,-1.0,203,3,3,-21.470000000000002
+Galatasaray,2019-12-28,Galatasaray,Antalyaspor,5-0,EV,1,1.3,True,True,0.30000000000000004,204,3,4,-21.17
+Galatasaray,2020-01-19,Galatasaray,Denizlispor,2-1,EV,1,1.25,True,True,0.25,205,3,5,-20.92
+Galatasaray,2020-01-26,Konyaspor,Galatasaray,0-3,DEP,2,1.9,True,True,0.8999999999999999,206,3,6,-20.020000000000003
+Galatasaray,2020-02-02,Galatasaray,Kayserispor,4-1,EV,1,1.15,True,True,0.1499999999999999,207,3,7,-19.870000000000005
+Galatasaray,2020-02-09,Kasımpaşa,Galatasaray,0-3,DEP,2,1.55,True,True,0.55,208,3,8,-19.320000000000004
+Galatasaray,2020-02-16,Galatasaray,Yeni Malatyaspor,1-0,EV,1,1.3,True,True,0.30000000000000004,209,3,9,-19.020000000000003
+Galatasaray,2020-02-23,Fenerbahçe,Galatasaray,1-3,DEP,1,1.9,True,False,-1.0,210,3,10,-20.020000000000003
+Galatasaray,2020-03-01,Galatasaray,Gençlerbirliği,3-0,EV,1,1.18,True,True,0.17999999999999994,211,3,11,-19.840000000000003
+Galatasaray,2020-03-08,Sivasspor,Galatasaray,2-2,BERABERE,2,2.1,True,False,-1.0,212,3,12,-20.840000000000003
+Galatasaray,2020-03-15,Galatasaray,Beşiktaş,0-0,BERABERE,1,1.8,True,False,-1.0,213,3,13,-21.840000000000003
+Galatasaray,2020-06-14,Çaykur Rizespor,Galatasaray,2-0,EV,2,1.3,True,False,-1.0,214,3,14,-22.840000000000003
+Galatasaray,2020-06-21,Galatasaray,Gaziantep FK,3-3,BERABERE,1,1.3,True,False,-1.0,215,3,15,-23.840000000000003
+Galatasaray,2020-06-28,Başakşehir FK,Galatasaray,1-1,BERABERE,1,1.67,True,False,-1.0,216,3,16,-24.840000000000003
+Galatasaray,2020-07-05,Galatasaray,Trabzonspor,1-3,DEP,2,2.2,True,True,1.2000000000000002,217,3,17,-23.640000000000004
+Galatasaray,2020-07-08,Alanyaspor,Galatasaray,4-1,EV,1,2.1,True,True,1.1,218,3,18,-22.540000000000003
+Galatasaray,2020-07-12,MKE Ankaragücü,Galatasaray,1-0,EV,2,1.62,True,False,-1.0,219,3,19,-23.540000000000003
+Galatasaray,2020-07-18,Galatasaray,Göztepe,3-1,EV,1,1.3,True,True,0.30000000000000004,220,3,20,-23.240000000000002
+Galatasaray,2020-07-24,Antalyaspor,Galatasaray,2-2,BERABERE,2,1.85,True,False,-1.0,221,3,21,-24.240000000000002
+Galatasaray,2020-09-12,Galatasaray,Gaziantep FK,3-1,EV,1,1.42,True,True,0.41999999999999993,222,3,22,-23.82
+Galatasaray,2020-09-20,Başakşehir FK,Galatasaray,0-2,DEP,1,2.3,True,False,-1.0,223,3,23,-24.82
+Galatasaray,2020-09-27,Galatasaray,Fenerbahçe,0-0,BERABERE,1,2.0,True,False,-1.0,224,3,24,-25.82
+Galatasaray,2020-10-04,Kasımpaşa,Galatasaray,1-0,EV,2,1.58,True,False,-1.0,225,3,25,-26.82
+Galatasaray,2020-10-19,Galatasaray,Alanyaspor,1-2,DEP,1,1.95,True,False,-1.0,226,3,26,-27.82
+Galatasaray,2020-10-24,BB Erzurumspor,Galatasaray,1-2,DEP,2,1.95,True,True,0.95,227,3,27,-26.87
+Galatasaray,2020-10-31,Galatasaray,MKE Ankaragücü,1-0,EV,1,1.2,True,True,0.19999999999999996,228,3,28,-26.67
+Galatasaray,2020-11-08,Sivasspor,Galatasaray,1-2,DEP,2,2.25,True,True,1.25,229,3,29,-25.42
+Galatasaray,2020-11-23,Galatasaray,Kayserispor,1-1,BERABERE,1,1.3,True,False,-1.0,230,3,30,-26.42
+Galatasaray,2020-11-28,Çaykur Rizespor,Galatasaray,0-4,DEP,2,2.1,True,True,1.1,231,3,31,-25.32
+Galatasaray,2020-12-18,Fatih Karagümrük,Galatasaray,2-1,EV,2,1.55,True,False,-1.0,232,3,32,-26.32
+Galatasaray,2020-12-22,Galatasaray,Göztepe,3-1,EV,1,1.3,True,True,0.30000000000000004,233,3,33,-26.02
+Galatasaray,2020-12-26,Trabzonspor,Galatasaray,0-2,DEP,2,1.9,True,True,0.8999999999999999,234,3,34,-25.12
+Galatasaray,2021-01-02,Galatasaray,Antalyaspor,0-0,BERABERE,1,1.4,True,False,-1.0,235,3,35,-26.12
+Galatasaray,2021-01-05,Konyaspor,Galatasaray,4-3,EV,2,1.95,True,False,-1.0,236,3,36,-27.12
+Galatasaray,2021-01-09,Galatasaray,Gençlerbirliği,6-0,EV,1,1.28,True,True,0.28,237,3,37,-26.84
+Galatasaray,2021-01-17,Beşiktaş,Galatasaray,2-0,EV,1,2.35,True,True,1.35,238,3,38,-25.49
+Galatasaray,2021-01-20,Galatasaray,Denizlispor,6-1,EV,1,1.28,True,True,0.28,239,3,39,-25.209999999999997
+Galatasaray,2021-01-24,Yeni Malatyaspor,Galatasaray,0-1,DEP,2,1.7,True,True,0.7,240,3,40,-24.509999999999998
+Galatasaray,2021-01-29,Gaziantep FK,Galatasaray,1-2,DEP,2,1.62,True,True,0.6200000000000001,241,3,41,-23.889999999999997
+Galatasaray,2021-02-02,Galatasaray,Başakşehir FK,3-0,EV,1,1.45,True,True,0.44999999999999996,242,3,42,-23.439999999999998
+Galatasaray,2021-02-06,Fenerbahçe,Galatasaray,0-1,DEP,1,2.15,True,False,-1.0,243,3,43,-24.439999999999998
+Galatasaray,2021-02-14,Galatasaray,Kasımpaşa,2-1,EV,1,1.42,True,True,0.41999999999999993,244,3,44,-24.019999999999996
+Galatasaray,2021-02-20,Alanyaspor,Galatasaray,0-1,DEP,2,2.15,True,True,1.15,245,3,45,-22.869999999999997
+Galatasaray,2021-02-27,Galatasaray,BB Erzurumspor,2-0,EV,1,1.25,True,True,0.25,246,3,46,-22.619999999999997
+Galatasaray,2021-03-03,MKE Ankaragücü,Galatasaray,2-1,EV,2,1.42,True,False,-1.0,247,3,47,-23.619999999999997
+Galatasaray,2021-03-07,Galatasaray,Sivasspor,2-2,BERABERE,1,1.5,True,False,-1.0,248,3,48,-24.619999999999997
+Galatasaray,2021-03-13,Kayserispor,Galatasaray,0-3,DEP,2,1.52,True,True,0.52,249,3,49,-24.099999999999998
+Galatasaray,2021-03-19,Galatasaray,Çaykur Rizespor,3-4,DEP,1,1.28,True,False,-1.0,250,3,50,-25.099999999999998
+Galatasaray,2021-04-10,Galatasaray,Fatih Karagümrük,1-1,BERABERE,1,1.52,True,False,-1.0,251,3,51,-26.099999999999998
+Galatasaray,2021-04-17,Göztepe,Galatasaray,1-3,DEP,2,1.7,True,True,0.7,252,3,52,-25.4
+Galatasaray,2021-04-21,Galatasaray,Trabzonspor,1-1,BERABERE,1,1.8,True,False,-1.0,253,3,53,-26.4
+Galatasaray,2021-04-24,Antalyaspor,Galatasaray,0-1,DEP,2,1.5,True,True,0.5,254,3,54,-25.9
+Galatasaray,2021-04-28,Galatasaray,Konyaspor,1-0,EV,1,1.28,True,True,0.28,255,3,55,-25.619999999999997
+Galatasaray,2021-05-02,Gençlerbirliği,Galatasaray,0-2,DEP,2,1.38,True,True,0.3799999999999999,256,3,56,-25.24
+Galatasaray,2021-05-08,Galatasaray,Beşiktaş,3-1,EV,1,2.1,True,True,1.1,257,3,57,-24.139999999999997
+Galatasaray,2021-05-11,Denizlispor,Galatasaray,1-4,DEP,2,1.1,True,True,0.10000000000000009,258,3,58,-24.039999999999996
+Galatasaray,2021-05-15,Galatasaray,Yeni Malatyaspor,3-1,EV,1,1.1,True,True,0.10000000000000009,259,3,59,-23.939999999999994
+Galatasaray,2021-08-16,Giresunspor,Galatasaray,0-2,DEP,2,1.58,True,True,0.5800000000000001,260,3,60,-23.359999999999992
+Galatasaray,2021-08-29,Kasımpaşa,Galatasaray,2-2,BERABERE,2,1.59,True,False,-1.0,261,3,61,-24.359999999999992
+Galatasaray,2021-09-12,Trabzonspor,Galatasaray,2-2,BERABERE,1,1.96,True,False,-1.0,262,3,62,-25.359999999999992
+Galatasaray,2021-09-19,Galatasaray,Alanyaspor,0-1,DEP,1,1.36,True,False,-1.0,263,3,63,-26.359999999999992
+Galatasaray,2021-09-22,Kayserispor,Galatasaray,3-0,EV,2,1.64,True,False,-1.0,264,3,64,-27.359999999999992
+Galatasaray,2021-09-26,Galatasaray,Göztepe,2-1,EV,1,1.4,True,True,0.3999999999999999,265,3,65,-26.959999999999994
+Galatasaray,2021-10-03,Çaykur Rizespor,Galatasaray,2-3,DEP,2,1.5,True,True,0.5,266,3,66,-26.459999999999994
+Galatasaray,2021-10-17,Galatasaray,Konyaspor,1-0,EV,1,1.41,True,True,0.4099999999999999,267,3,67,-26.049999999999994
+Galatasaray,2021-10-25,Beşiktaş,Galatasaray,2-1,EV,1,1.86,True,True,0.8600000000000001,268,3,68,-25.189999999999994
+Galatasaray,2021-10-31,Galatasaray,Gaziantep FK,2-0,EV,1,1.34,True,True,0.3400000000000001,269,3,69,-24.849999999999994
+Galatasaray,2021-11-07,Fatih Karagümrük,Galatasaray,1-1,BERABERE,2,1.78,True,False,-1.0,270,3,70,-25.849999999999994
+Galatasaray,2021-11-21,Galatasaray,Fenerbahçe,1-2,DEP,1,1.94,True,False,-1.0,271,3,71,-26.849999999999994
+Galatasaray,2021-11-28,Yeni Malatyaspor,Galatasaray,0-0,BERABERE,2,1.67,True,False,-1.0,272,3,72,-27.849999999999994
+Galatasaray,2021-12-04,Galatasaray,Altay,2-2,BERABERE,1,1.28,True,False,-1.0,273,3,73,-28.849999999999994
+Galatasaray,2021-12-13,Sivasspor,Galatasaray,1-0,EV,2,2.27,True,False,-1.0,274,3,74,-29.849999999999994
+Galatasaray,2021-12-18,Galatasaray,Başakşehir FK,1-1,BERABERE,1,2.04,True,False,-1.0,275,3,75,-30.849999999999994
+Galatasaray,2021-12-21,Adana Demirspor,Galatasaray,2-0,EV,1,2.25,True,True,1.25,276,3,76,-29.599999999999994
+Galatasaray,2021-12-25,Galatasaray,Antalyaspor,2-0,EV,1,1.52,True,True,0.52,277,3,77,-29.079999999999995
+Galatasaray,2022-01-08,Galatasaray,Giresunspor,0-1,DEP,1,1.66,True,False,-1.0,278,3,78,-30.079999999999995
+Galatasaray,2022-01-20,Galatasaray,Kasımpaşa,1-3,DEP,1,1.68,True,False,-1.0,279,3,79,-31.079999999999995
+Galatasaray,2022-01-23,Galatasaray,Trabzonspor,1-2,DEP,1,2.13,True,False,-1.0,280,3,80,-32.08
+Galatasaray,2022-02-06,Alanyaspor,Galatasaray,1-1,BERABERE,1,2.14,True,False,-1.0,281,3,81,-33.08
+Galatasaray,2022-02-12,Galatasaray,Kayserispor,1-1,BERABERE,1,1.42,True,False,-1.0,282,3,82,-34.08
+Galatasaray,2022-02-21,Göztepe,Galatasaray,2-3,DEP,2,2.15,True,True,1.15,283,3,83,-32.93
+Galatasaray,2022-02-27,Galatasaray,Çaykur Rizespor,4-2,EV,1,1.31,True,True,0.31000000000000005,284,3,84,-32.62
+Galatasaray,2022-03-05,Konyaspor,Galatasaray,2-0,EV,1,2.13,True,True,1.13,285,3,85,-31.49
+Galatasaray,2022-03-14,Galatasaray,Beşiktaş,2-1,EV,1,1.96,True,True,0.96,286,3,86,-30.529999999999998
+Galatasaray,2022-03-20,Gaziantep FK,Galatasaray,3-1,EV,2,2.25,True,False,-1.0,287,3,87,-31.529999999999998
+Galatasaray,2022-04-02,Galatasaray,Fatih Karagümrük,2-0,EV,1,1.43,True,True,0.42999999999999994,288,3,88,-31.099999999999998
+Galatasaray,2022-04-10,Fenerbahçe,Galatasaray,2-0,EV,1,1.87,True,True,0.8700000000000001,289,3,89,-30.229999999999997
+Galatasaray,2022-04-18,Galatasaray,Yeni Malatyaspor,2-0,EV,1,1.05,True,True,0.050000000000000044,290,3,90,-30.179999999999996
+Galatasaray,2022-04-24,Altay,Galatasaray,0-1,DEP,2,1.75,True,True,0.75,291,3,91,-29.429999999999996
+Galatasaray,2022-05-01,Galatasaray,Sivasspor,2-3,DEP,1,1.68,True,False,-1.0,292,3,92,-30.429999999999996
+Galatasaray,2022-05-07,Başakşehir FK,Galatasaray,0-0,BERABERE,1,1.68,True,False,-1.0,293,3,93,-31.429999999999996
+Galatasaray,2022-05-16,Galatasaray,Adana Demirspor,3-2,EV,1,1.73,True,True,0.73,294,3,94,-30.699999999999996
+Galatasaray,2022-05-20,Antalyaspor,Galatasaray,1-1,BERABERE,1,1.83,True,False,-1.0,295,3,95,-31.699999999999996
+Galatasaray,2022-08-07,Antalyaspor,Galatasaray,0-1,DEP,1,2.24,True,False,-1.0,296,3,96,-32.699999999999996
+Galatasaray,2022-08-13,Galatasaray,Giresunspor,0-1,DEP,1,1.33,True,False,-1.0,297,3,97,-33.699999999999996
+Galatasaray,2022-08-19,Ümraniyespor,Galatasaray,0-1,DEP,2,1.55,True,True,0.55,298,3,98,-33.15
+Galatasaray,2022-08-28,Trabzonspor,Galatasaray,0-0,BERABERE,1,2.31,True,False,-1.0,299,3,99,-34.15
+Galatasaray,2022-09-05,Galatasaray,Gaziantep FK,2-1,EV,1,1.42,True,True,0.41999999999999993,300,3,100,-33.73
+Galatasaray,2022-09-11,Kasımpaşa,Galatasaray,2-3,DEP,2,1.53,True,True,0.53,301,4,1,-33.199999999999996
+Galatasaray,2022-09-16,Galatasaray,Konyaspor,2-1,EV,1,1.58,True,True,0.5800000000000001,302,4,2,-32.62
+Galatasaray,2022-10-01,Adana Demirspor,Galatasaray,0-0,BERABERE,2,2.11,True,False,-1.0,303,4,3,-33.62
+Galatasaray,2022-10-15,Kayserispor,Galatasaray,2-1,EV,2,1.7,True,False,-1.0,304,4,4,-34.62
+Galatasaray,2022-10-23,Galatasaray,Alanyaspor,2-2,BERABERE,1,1.24,True,False,-1.0,305,4,5,-35.62
+Galatasaray,2022-10-28,Fatih Karagümrük,Galatasaray,0-2,DEP,2,1.62,True,True,0.6200000000000001,306,4,6,-35.0
+Galatasaray,2022-11-05,Galatasaray,Beşiktaş,2-1,EV,1,1.77,True,True,0.77,307,4,7,-34.23
+Galatasaray,2022-11-12,Başakşehir FK,Galatasaray,0-7,DEP,2,1.98,True,True,0.98,308,4,8,-33.25
+Galatasaray,2022-12-25,Galatasaray,İstanbulspor,2-1,EV,1,1.07,True,True,0.07000000000000006,309,4,9,-33.18
+Galatasaray,2022-12-29,Sivasspor,Galatasaray,1-2,DEP,2,1.5,True,True,0.5,310,4,10,-32.68
+Galatasaray,2023-01-04,Galatasaray,MKE Ankaragücü,2-1,EV,1,1.25,True,True,0.25,311,4,11,-32.43
+Galatasaray,2023-01-08,Fenerbahçe,Galatasaray,0-3,DEP,1,1.92,True,False,-1.0,312,4,12,-33.43
+Galatasaray,2023-01-21,Galatasaray,Antalyaspor,2-1,EV,1,1.17,True,True,0.16999999999999993,313,4,13,-33.26
+Galatasaray,2023-01-28,Giresunspor,Galatasaray,0-4,DEP,2,1.26,True,True,0.26,314,4,14,-33.0
+Galatasaray,2023-02-01,Galatasaray,Ümraniyespor,3-2,EV,1,1.08,True,True,0.08000000000000007,315,4,15,-32.92
+Galatasaray,2023-02-05,Galatasaray,Trabzonspor,2-1,EV,1,1.46,True,True,0.45999999999999996,316,4,16,-32.46
+Galatasaray,2023-03-11,Galatasaray,Kasımpaşa,1-0,EV,1,1.25,True,True,0.25,317,4,17,-32.21
+Galatasaray,2023-03-17,Konyaspor,Galatasaray,2-1,EV,2,1.62,True,False,-1.0,318,4,18,-33.21
+Galatasaray,2023-04-01,Galatasaray,Adana Demirspor,2-0,EV,1,1.23,True,True,0.22999999999999998,319,4,19,-32.980000000000004
+Galatasaray,2023-04-14,Galatasaray,Kayserispor,6-0,EV,1,1.13,True,True,0.1299999999999999,320,4,20,-32.85
+Galatasaray,2023-04-18,Alanyaspor,Galatasaray,1-4,DEP,2,1.26,True,True,0.26,321,4,21,-32.59
+Galatasaray,2023-04-23,Galatasaray,Fatih Karagümrük,3-3,BERABERE,1,1.12,True,False,-1.0,322,4,22,-33.59
+Galatasaray,2023-04-30,Beşiktaş,Galatasaray,3-1,EV,2,2.1,True,False,-1.0,323,4,23,-34.59
+Galatasaray,2023-05-08,Galatasaray,Başakşehir FK,1-0,EV,1,1.21,True,True,0.20999999999999996,324,4,24,-34.38
+Galatasaray,2023-05-16,İstanbulspor,Galatasaray,0-2,DEP,2,1.09,True,True,0.09000000000000008,325,4,25,-34.29
+Galatasaray,2023-05-20,Galatasaray,Sivasspor,2-0,EV,1,1.05,True,True,0.050000000000000044,326,4,26,-34.24
+Galatasaray,2023-05-30,MKE Ankaragücü,Galatasaray,1-4,DEP,2,1.43,True,True,0.42999999999999994,327,4,27,-33.81
+Galatasaray,2023-06-04,Galatasaray,Fenerbahçe,3-0,EV,1,1.82,True,True,0.8200000000000001,328,4,28,-32.99
+Galatasaray,2023-08-12,Kayserispor,Galatasaray,0-0,BERABERE,2,1.35,True,False,-1.0,329,4,29,-33.99
+Galatasaray,2023-08-19,Galatasaray,Trabzonspor,2-0,EV,1,1.53,True,True,0.53,330,4,30,-33.46
+Galatasaray,2023-09-02,Gaziantep FK,Galatasaray,0-3,DEP,2,1.3,True,True,0.30000000000000004,331,4,31,-33.160000000000004
+Galatasaray,2023-09-16,Galatasaray,Samsunspor,4-2,EV,1,1.24,True,True,0.24,332,4,32,-32.92
+Galatasaray,2023-09-23,Başakşehir FK,Galatasaray,1-2,DEP,2,1.67,True,True,0.6699999999999999,333,4,33,-32.25
+Galatasaray,2023-09-26,İstanbulspor,Galatasaray,0-1,DEP,2,1.11,True,True,0.1100000000000001,334,4,34,-32.14
+Galatasaray,2023-09-30,Galatasaray,MKE Ankaragücü,2-1,EV,1,1.09,True,True,0.09000000000000008,335,4,35,-32.05
+Galatasaray,2023-10-07,Antalyaspor,Galatasaray,0-2,DEP,2,1.54,True,True,0.54,336,4,36,-31.509999999999998
+Galatasaray,2023-10-21,Galatasaray,Beşiktaş,2-1,EV,1,1.47,True,True,0.47,337,4,37,-31.04
+Galatasaray,2023-10-28,Çaykur Rizespor,Galatasaray,0-1,DEP,2,1.19,True,True,0.18999999999999995,338,4,38,-30.849999999999998
+Galatasaray,2023-11-03,Galatasaray,Kasımpaşa,2-1,EV,1,1.07,True,True,0.07000000000000006,339,4,39,-30.779999999999998
+Galatasaray,2023-11-25,Galatasaray,Alanyaspor,4-0,EV,1,1.09,True,True,0.09000000000000008,340,4,40,-30.689999999999998
+Galatasaray,2023-12-02,Pendikspor,Galatasaray,0-2,DEP,2,1.15,True,True,0.1499999999999999,341,4,41,-30.54
+Galatasaray,2023-12-08,Galatasaray,Adana Demirspor,3-1,EV,1,1.14,True,True,0.1399999999999999,342,4,42,-30.4
+Galatasaray,2023-12-20,Galatasaray,Fatih Karagümrük,1-0,EV,1,1.13,True,True,0.1299999999999999,343,4,43,-30.27
+Galatasaray,2023-12-24,Fenerbahçe,Galatasaray,0-0,BERABERE,1,1.92,True,False,-1.0,344,4,44,-31.27
+Galatasaray,2024-01-07,Galatasaray,Konyaspor,3-0,EV,1,1.15,True,True,0.1499999999999999,345,4,45,-31.12
+Galatasaray,2024-01-11,Sivasspor,Galatasaray,1-1,BERABERE,2,1.49,True,False,-1.0,346,4,46,-32.120000000000005
+Galatasaray,2024-01-15,Galatasaray,Kayserispor,2-1,EV,1,1.06,True,True,0.06000000000000005,347,4,47,-32.06
+Galatasaray,2024-01-21,Trabzonspor,Galatasaray,1-5,DEP,2,1.61,True,True,0.6100000000000001,348,4,48,-31.450000000000003
+Galatasaray,2024-01-29,Galatasaray,Gaziantep FK,2-1,EV,1,1.05,True,True,0.050000000000000044,349,4,49,-31.400000000000002
+Galatasaray,2024-02-02,Samsunspor,Galatasaray,0-2,DEP,2,1.45,True,True,0.44999999999999996,350,4,50,-30.950000000000003
+Galatasaray,2024-02-10,Galatasaray,Başakşehir FK,2-0,EV,1,1.18,True,True,0.17999999999999994,351,4,51,-30.770000000000003
+Galatasaray,2024-02-18,MKE Ankaragücü,Galatasaray,0-3,DEP,2,1.54,True,True,0.54,352,4,52,-30.230000000000004
+Galatasaray,2024-02-26,Galatasaray,Antalyaspor,2-1,EV,1,1.17,True,True,0.16999999999999993,353,4,53,-30.060000000000002
+Galatasaray,2024-03-03,Beşiktaş,Galatasaray,0-1,DEP,2,1.86,True,True,0.8600000000000001,354,4,54,-29.200000000000003
+Galatasaray,2024-03-08,Galatasaray,Çaykur Rizespor,6-2,EV,1,1.13,True,True,0.1299999999999999,355,4,55,-29.070000000000004
+Galatasaray,2024-03-17,Kasımpaşa,Galatasaray,3-4,DEP,2,1.34,True,True,0.3400000000000001,356,4,56,-28.730000000000004
+Galatasaray,2024-04-15,Alanyaspor,Galatasaray,0-4,DEP,2,1.31,True,True,0.31000000000000005,357,4,57,-28.420000000000005
+Galatasaray,2024-04-21,Galatasaray,Pendikspor,4-1,EV,1,1.1,True,True,0.10000000000000009,358,4,58,-28.320000000000004
+Galatasaray,2024-04-26,Adana Demirspor,Galatasaray,0-3,DEP,2,1.29,True,True,0.29000000000000004,359,4,59,-28.030000000000005
+Galatasaray,2024-05-12,Fatih Karagümrük,Galatasaray,2-3,DEP,2,1.27,True,True,0.27,360,4,60,-27.760000000000005
+Galatasaray,2024-05-19,Galatasaray,Fenerbahçe,0-1,DEP,1,2.0,True,False,-1.0,361,4,61,-28.760000000000005
+Galatasaray,2024-05-26,Konyaspor,Galatasaray,1-3,DEP,2,1.56,True,True,0.56,362,4,62,-28.200000000000006
+Galatasaray,2024-08-16,Konyaspor,Galatasaray,1-2,DEP,2,1.51,True,True,0.51,363,4,63,-27.690000000000005
+Galatasaray,2024-08-31,Adana Demirspor,Galatasaray,1-5,DEP,2,1.2,True,True,0.19999999999999996,364,4,64,-27.490000000000006
+Galatasaray,2024-09-14,Galatasaray,Çaykur Rizespor,5-0,EV,1,1.18,True,True,0.17999999999999994,365,4,65,-27.310000000000006
+Galatasaray,2024-09-17,Galatasaray,Gaziantep FK,3-1,EV,1,1.09,True,True,0.09000000000000008,366,4,66,-27.220000000000006
+Galatasaray,2024-09-21,Fenerbahçe,Galatasaray,1-3,DEP,1,1.98,True,False,-1.0,367,4,67,-28.220000000000006
+Galatasaray,2024-09-28,Galatasaray,Kasımpaşa,3-3,BERABERE,1,1.17,True,False,-1.0,368,4,68,-29.220000000000006
+Galatasaray,2024-10-06,Galatasaray,Alanyaspor,1-0,EV,1,1.15,True,True,0.1499999999999999,369,4,69,-29.070000000000007
+Galatasaray,2024-10-19,Antalyaspor,Galatasaray,0-3,DEP,2,1.34,True,True,0.3400000000000001,370,4,70,-28.730000000000008
+Galatasaray,2024-10-28,Galatasaray,Beşiktaş,2-1,EV,1,1.55,True,True,0.55,371,4,71,-28.180000000000007
+Galatasaray,2024-11-10,Galatasaray,Samsunspor,3-2,EV,1,1.24,True,True,0.24,372,4,72,-27.94000000000001
+Galatasaray,2024-11-23,Bodrum FK,Galatasaray,0-1,DEP,2,1.23,True,True,0.22999999999999998,373,4,73,-27.710000000000008
+Galatasaray,2024-12-01,Galatasaray,Eyüpspor,2-2,BERABERE,1,1.05,True,False,-1.0,374,4,74,-28.710000000000008
+Galatasaray,2024-12-08,Sivasspor,Galatasaray,2-3,DEP,2,1.11,True,True,0.1100000000000001,375,4,75,-28.60000000000001
+Galatasaray,2024-12-16,Galatasaray,Trabzonspor,4-3,EV,1,1.21,True,True,0.20999999999999996,376,4,76,-28.390000000000008
+Galatasaray,2024-12-22,Kayserispor,Galatasaray,1-5,DEP,2,1.2,True,True,0.19999999999999996,377,4,77,-28.19000000000001
+Galatasaray,2025-01-04,Galatasaray,Göztepe,2-1,EV,1,1.14,True,True,0.1399999999999999,378,4,78,-28.050000000000008
+Galatasaray,2025-01-12,Başakşehir FK,Galatasaray,1-2,DEP,2,1.42,True,True,0.41999999999999993,379,4,79,-27.63000000000001
+Galatasaray,2025-01-25,Galatasaray,Konyaspor,1-0,EV,1,1.08,True,True,0.08000000000000007,380,4,80,-27.55000000000001
+Galatasaray,2025-02-03,Gaziantep FK,Galatasaray,0-1,DEP,2,1.28,True,True,0.28,381,4,81,-27.27000000000001
+Galatasaray,2025-02-17,Çaykur Rizespor,Galatasaray,1-2,DEP,2,1.54,True,True,0.54,382,4,82,-26.73000000000001
+Galatasaray,2025-02-24,Galatasaray,Fenerbahçe,0-0,BERABERE,1,2.03,True,False,-1.0,383,4,83,-27.73000000000001
+Galatasaray,2025-03-02,Kasımpaşa,Galatasaray,3-3,BERABERE,2,1.44,True,False,-1.0,384,4,84,-28.73000000000001
+Galatasaray,2025-03-09,Alanyaspor,Galatasaray,1-2,DEP,2,1.42,True,True,0.41999999999999993,385,4,85,-28.31000000000001
+Galatasaray,2025-03-14,Galatasaray,Antalyaspor,4-0,EV,1,1.09,True,True,0.09000000000000008,386,4,86,-28.22000000000001
+Galatasaray,2025-03-29,Beşiktaş,Galatasaray,2-1,EV,2,1.94,True,False,-1.0,387,4,87,-29.22000000000001
+Galatasaray,2025-04-11,Samsunspor,Galatasaray,0-2,DEP,2,1.43,True,True,0.42999999999999994,388,4,88,-28.79000000000001
+Galatasaray,2025-04-18,Galatasaray,Bodrum FK,2-0,EV,1,1.11,True,True,0.1100000000000001,389,4,89,-28.68000000000001
+Galatasaray,2025-04-27,Eyüpspor,Galatasaray,1-5,DEP,2,1.28,True,True,0.28,390,4,90,-28.40000000000001
+Galatasaray,2025-05-10,Trabzonspor,Galatasaray,0-2,DEP,2,1.36,True,True,0.3600000000000001,391,4,91,-28.04000000000001
+Galatasaray,2025-05-18,Galatasaray,Kayserispor,3-0,EV,1,1.05,True,True,0.050000000000000044,392,4,92,-27.99000000000001
+Galatasaray,2025-05-24,Göztepe,Galatasaray,0-2,DEP,2,1.94,True,True,0.94,393,4,93,-27.050000000000008
+Galatasaray,2025-05-30,Galatasaray,Başakşehir FK,2-0,EV,1,1.28,True,True,0.28,394,4,94,-26.770000000000007
+Galatasaray,2025-08-08,Gaziantep FK,Galatasaray,0-3,DEP,2,1.24,True,True,0.24,395,4,95,-26.53000000000001
+Galatasaray,2025-08-24,Kayserispor,Galatasaray,0-4,DEP,2,1.24,True,True,0.24,396,4,96,-26.29000000000001
+Galatasaray,2025-08-30,Galatasaray,Çaykur Rizespor,3-1,EV,1,1.07,True,True,0.07000000000000006,397,4,97,-26.22000000000001
+Galatasaray,2025-09-13,Eyüpspor,Galatasaray,0-2,DEP,2,1.17,True,True,0.16999999999999993,398,4,98,-26.05000000000001
+Galatasaray,2025-09-22,Galatasaray,Konyaspor,3-1,EV,1,1.13,True,True,0.1299999999999999,399,4,99,-25.920000000000012
+Galatasaray,2025-09-26,Alanyaspor,Galatasaray,0-1,DEP,2,1.28,True,True,0.28,400,4,100,-25.64000000000001
+Galatasaray,2025-10-04,Galatasaray,Beşiktaş,1-1,BERABERE,1,1.51,True,False,-1.0,401,5,1,-26.64000000000001
+Galatasaray,2025-10-18,Başakşehir FK,Galatasaray,1-2,DEP,2,1.47,True,True,0.47,402,5,2,-26.170000000000012
+Galatasaray,2025-10-26,Galatasaray,Göztepe,3-1,EV,1,1.21,True,True,0.20999999999999996,403,5,3,-25.96000000000001
+Galatasaray,2025-11-01,Galatasaray,Trabzonspor,0-0,BERABERE,1,1.28,True,False,-1.0,404,5,4,-26.96000000000001
+Galatasaray,2025-11-09,Kocaelispor,Galatasaray,1-0,EV,2,1.29,True,False,-1.0,405,5,5,-27.96000000000001
+Galatasaray,2025-11-22,Galatasaray,Gençlerbirliği,3-2,EV,1,1.08,True,True,0.08000000000000007,406,5,6,-27.88000000000001
+Galatasaray,2025-12-01,Fenerbahçe,Galatasaray,1-1,BERABERE,1,1.92,True,False,-1.0,407,5,7,-28.88000000000001
+Galatasaray,2025-12-05,Galatasaray,Samsunspor,3-2,EV,1,1.3,True,True,0.30000000000000004,408,5,8,-28.58000000000001
+Galatasaray,2025-12-13,Antalyaspor,Galatasaray,1-4,DEP,2,1.23,True,True,0.22999999999999998,409,5,9,-28.35000000000001
+Galatasaray,2025-12-21,Galatasaray,Kasımpaşa,3-0,EV,1,1.13,True,True,0.1299999999999999,410,5,10,-28.22000000000001
+Fenerbahçe,2014-01-27,Fenerbahçe,Konyaspor,2-1,EV,1,1.05,True,True,0.050000000000000044,1,1,1,0.050000000000000044
+Fenerbahçe,2014-02-01,Eskişehirspor,Fenerbahçe,2-1,EV,2,1.7,True,False,-1.0,2,1,2,-0.95
+Fenerbahçe,2014-02-09,Sivasspor,Fenerbahçe,2-0,EV,2,1.6,True,False,-1.0,3,1,3,-1.95
+Fenerbahçe,2014-02-16,Fenerbahçe,Kasımpaşa,2-1,EV,1,1.2,True,True,0.19999999999999996,4,1,4,-1.75
+Fenerbahçe,2014-02-24,Elazığspor,Fenerbahçe,1-1,BERABERE,2,1.4,True,False,-1.0,5,1,5,-2.75
+Fenerbahçe,2014-03-01,Fenerbahçe,Gençlerbirliği,2-0,EV,1,1.1,True,True,0.10000000000000009,6,1,6,-2.65
+Fenerbahçe,2014-03-10,Trabzonspor,Fenerbahçe,0-3,DEP,2,1.65,True,True,0.6499999999999999,7,1,7,-2.0
+Fenerbahçe,2014-03-16,Fenerbahçe,Kayseri Erciyesspor,2-1,EV,1,1.1,True,True,0.10000000000000009,8,1,8,-1.9
+Fenerbahçe,2014-03-24,Gaziantepspor,Fenerbahçe,0-3,DEP,2,1.7,True,True,0.7,9,1,9,-1.2
+Fenerbahçe,2014-03-31,Fenerbahçe,Bursaspor,3-0,EV,1,1.1,True,True,0.10000000000000009,10,1,10,-1.0999999999999999
+Fenerbahçe,2014-04-06,Galatasaray,Fenerbahçe,1-0,EV,1,1.95,True,True,0.95,11,1,11,-0.1499999999999999
+Fenerbahçe,2014-04-13,Fenerbahçe,MP Antalyaspor,4-1,EV,1,1.1,True,True,0.10000000000000009,12,1,12,-0.04999999999999982
+Fenerbahçe,2014-04-20,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,2.15,True,False,-1.0,13,1,13,-1.0499999999999998
+Fenerbahçe,2014-04-27,Fenerbahçe,Çaykur Rizespor,0-0,BERABERE,1,1.1,True,False,-1.0,14,1,14,-2.05
+Fenerbahçe,2014-05-04,Akhisar Belediyespor,Fenerbahçe,3-1,EV,2,1.55,True,False,-1.0,15,1,15,-3.05
+Fenerbahçe,2014-05-09,Fenerbahçe,Karabükspor,4-0,EV,1,1.3,True,True,0.30000000000000004,16,1,16,-2.75
+Fenerbahçe,2014-05-16,Kayserispor,Fenerbahçe,0-2,DEP,2,1.6,True,True,0.6000000000000001,17,1,17,-2.15
+Fenerbahçe,2014-08-31,Fenerbahçe,Karabükspor,3-2,EV,1,1.2,True,True,0.19999999999999996,18,1,18,-1.95
+Fenerbahçe,2014-09-14,Trabzonspor,Fenerbahçe,0-0,BERABERE,2,2.1,True,False,-1.0,19,1,19,-2.95
+Fenerbahçe,2014-09-21,Fenerbahçe,Gaziantepspor,1-0,EV,1,1.15,True,True,0.1499999999999999,20,1,20,-2.8000000000000003
+Fenerbahçe,2014-09-28,Akhisar Belediyespor,Fenerbahçe,2-0,EV,2,1.45,True,False,-1.0,21,1,21,-3.8000000000000003
+Fenerbahçe,2014-10-04,Fenerbahçe,Torku Konyaspor,2-1,EV,1,1.2,True,True,0.19999999999999996,22,1,22,-3.6000000000000005
+Fenerbahçe,2014-10-18,Galatasaray,Fenerbahçe,2-1,EV,1,1.85,True,True,0.8500000000000001,23,1,23,-2.7500000000000004
+Fenerbahçe,2014-10-25,Fenerbahçe,Gençlerbirliği,2-1,EV,1,1.15,True,True,0.1499999999999999,24,1,24,-2.6000000000000005
+Fenerbahçe,2014-11-02,Beşiktaş,Fenerbahçe,0-2,DEP,1,2.2,True,False,-1.0,25,1,25,-3.6000000000000005
+Fenerbahçe,2014-11-08,Fenerbahçe,Çaykur Rizespor,2-1,EV,1,1.15,True,True,0.1499999999999999,26,1,26,-3.4500000000000006
+Fenerbahçe,2014-11-24,Bursaspor,Fenerbahçe,1-1,BERABERE,2,2.2,True,False,-1.0,27,1,27,-4.450000000000001
+Fenerbahçe,2014-11-30,Fenerbahçe,Eskişehirspor,2-2,BERABERE,1,1.2,True,False,-1.0,28,1,28,-5.450000000000001
+Fenerbahçe,2014-12-06,Balıkesirspor,Fenerbahçe,0-1,DEP,2,1.25,True,True,0.25,29,1,29,-5.200000000000001
+Fenerbahçe,2014-12-12,Fenerbahçe,Sivasspor,4-1,EV,1,1.2,True,True,0.19999999999999996,30,1,30,-5.000000000000001
+Fenerbahçe,2014-12-19,Kayseri Erciyesspor,Fenerbahçe,0-1,DEP,2,1.45,True,True,0.44999999999999996,31,1,31,-4.550000000000001
+Fenerbahçe,2014-12-27,Fenerbahçe,Mersin İdmanyurdu,1-0,EV,1,1.15,True,True,0.1499999999999999,32,1,32,-4.4
+Fenerbahçe,2015-01-03,Fenerbahçe,İstanbul Başakşehir,2-0,EV,1,1.3,True,True,0.30000000000000004,33,1,33,-4.1000000000000005
+Fenerbahçe,2015-01-24,Kasımpaşa,Fenerbahçe,0-3,DEP,2,1.8,True,True,0.8,34,1,34,-3.3000000000000007
+Fenerbahçe,2015-01-31,Karabükspor,Fenerbahçe,1-2,DEP,2,1.5,True,True,0.5,35,1,35,-2.8000000000000007
+Fenerbahçe,2015-02-07,Fenerbahçe,Trabzonspor,0-0,BERABERE,1,1.5,True,False,-1.0,36,1,36,-3.8000000000000007
+Fenerbahçe,2015-02-14,Gaziantepspor,Fenerbahçe,0-5,DEP,2,1.45,True,True,0.44999999999999996,37,1,37,-3.3500000000000005
+Fenerbahçe,2015-02-23,Fenerbahçe,Akhisar Belediyespor,1-2,DEP,1,1.1,True,False,-1.0,38,1,38,-4.3500000000000005
+Fenerbahçe,2015-02-28,Torku Konyaspor,Fenerbahçe,1-1,BERABERE,2,1.45,True,False,-1.0,39,1,39,-5.3500000000000005
+Fenerbahçe,2015-03-08,Fenerbahçe,Galatasaray,1-0,EV,1,1.7,True,True,0.7,40,1,40,-4.65
+Fenerbahçe,2015-03-15,Gençlerbirliği,Fenerbahçe,2-1,EV,2,1.4,True,False,-1.0,41,1,41,-5.65
+Fenerbahçe,2015-03-22,Fenerbahçe,Beşiktaş,1-0,EV,1,1.6,True,True,0.6000000000000001,42,1,42,-5.050000000000001
+Fenerbahçe,2015-04-04,Çaykur Rizespor,Fenerbahçe,1-5,DEP,2,1.55,True,True,0.55,43,1,43,-4.500000000000001
+Fenerbahçe,2015-04-20,Fenerbahçe,Bursaspor,1-0,EV,1,1.3,True,True,0.30000000000000004,44,1,44,-4.200000000000001
+Fenerbahçe,2015-04-25,Eskişehirspor,Fenerbahçe,1-1,BERABERE,2,1.5,True,False,-1.0,45,1,45,-5.200000000000001
+Fenerbahçe,2015-05-02,Fenerbahçe,Balıkesirspor,4-3,EV,1,1.05,True,True,0.050000000000000044,46,1,46,-5.150000000000001
+Fenerbahçe,2015-05-09,Sivasspor,Fenerbahçe,2-3,DEP,2,1.45,True,True,0.44999999999999996,47,1,47,-4.700000000000001
+Fenerbahçe,2015-05-13,Fenerbahçe,Kayseri Erciyesspor,1-1,BERABERE,1,1.05,True,False,-1.0,48,1,48,-5.700000000000001
+Fenerbahçe,2015-05-17,Mersin İdmanyurdu,Fenerbahçe,0-1,DEP,2,1.3,True,True,0.30000000000000004,49,1,49,-5.400000000000001
+Fenerbahçe,2015-05-25,İstanbul Başakşehir,Fenerbahçe,2-2,BERABERE,2,1.75,True,False,-1.0,50,1,50,-6.400000000000001
+Fenerbahçe,2015-05-30,Fenerbahçe,Kasımpaşa,2-0,EV,1,1.7,True,True,0.7,51,1,51,-5.700000000000001
+Fenerbahçe,2015-08-14,Fenerbahçe,Eskişehirspor,2-0,EV,1,1.2,True,True,0.19999999999999996,52,1,52,-5.500000000000001
+Fenerbahçe,2015-08-23,Çaykur Rizespor,Fenerbahçe,1-1,BERABERE,2,1.55,True,False,-1.0,53,1,53,-6.500000000000001
+Fenerbahçe,2015-08-30,Fenerbahçe,Antalyaspor,2-1,EV,1,1.1,True,True,0.10000000000000009,54,1,54,-6.4
+Fenerbahçe,2015-09-13,Kasımpaşa,Fenerbahçe,0-1,DEP,2,1.65,True,True,0.6499999999999999,55,1,55,-5.75
+Fenerbahçe,2015-09-20,Fenerbahçe,Bursaspor,2-1,EV,1,1.35,True,True,0.3500000000000001,56,1,56,-5.4
+Fenerbahçe,2015-09-27,Beşiktaş,Fenerbahçe,3-2,EV,1,2.1,True,True,1.1,57,1,57,-4.300000000000001
+Fenerbahçe,2015-10-04,Fenerbahçe,Akhisar Belediyespor,2-2,BERABERE,1,1.1,True,False,-1.0,58,1,58,-5.300000000000001
+Fenerbahçe,2015-10-18,Kayserispor,Fenerbahçe,0-1,DEP,2,1.6,True,True,0.6000000000000001,59,1,59,-4.700000000000001
+Fenerbahçe,2015-10-25,Fenerbahçe,Galatasaray,1-1,BERABERE,1,1.7,True,False,-1.0,60,1,60,-5.700000000000001
+Fenerbahçe,2015-10-29,Osmanlıspor FK,Fenerbahçe,0-1,DEP,2,1.6,True,True,0.6000000000000001,61,1,61,-5.100000000000001
+Fenerbahçe,2015-11-08,Fenerbahçe,Torku Konyaspor,1-0,EV,1,1.15,True,True,0.1499999999999999,62,1,62,-4.950000000000001
+Fenerbahçe,2015-11-21,Mersin İdmanyurdu,Fenerbahçe,1-3,DEP,2,1.3,True,True,0.30000000000000004,63,1,63,-4.650000000000001
+Fenerbahçe,2015-11-30,Fenerbahçe,Trabzonspor,2-0,EV,1,1.25,True,True,0.25,64,1,64,-4.400000000000001
+Fenerbahçe,2015-12-06,Gaziantepspor,Fenerbahçe,2-2,BERABERE,2,1.25,True,False,-1.0,65,1,65,-5.400000000000001
+Fenerbahçe,2015-12-13,Fenerbahçe,Medipol Başakşehir,1-0,EV,1,1.3,True,True,0.30000000000000004,66,1,66,-5.100000000000001
+Fenerbahçe,2015-12-20,Gençlerbirliği,Fenerbahçe,0-1,DEP,2,1.4,True,True,0.3999999999999999,67,1,67,-4.700000000000001
+Fenerbahçe,2015-12-28,Fenerbahçe,Medicana Sivasspor,2-1,EV,1,1.1,True,True,0.10000000000000009,68,1,68,-4.600000000000001
+Fenerbahçe,2016-01-18,Eskişehirspor,Fenerbahçe,0-3,DEP,2,1.3,True,True,0.30000000000000004,69,1,69,-4.300000000000002
+Fenerbahçe,2016-01-24,Fenerbahçe,Çaykur Rizespor,2-1,EV,1,1.15,True,True,0.1499999999999999,70,1,70,-4.150000000000002
+Fenerbahçe,2016-02-05,Antalyaspor,Fenerbahçe,4-2,EV,2,1.35,True,False,-1.0,71,1,71,-5.150000000000002
+Fenerbahçe,2016-02-12,Fenerbahçe,Kasımpaşa,3-1,EV,1,1.25,True,True,0.25,72,1,72,-4.900000000000002
+Fenerbahçe,2016-02-20,Bursaspor,Fenerbahçe,0-0,BERABERE,2,1.65,True,False,-1.0,73,1,73,-5.900000000000002
+Fenerbahçe,2016-02-29,Fenerbahçe,Beşiktaş,2-0,EV,1,1.8,True,True,0.8,74,1,74,-5.100000000000002
+Fenerbahçe,2016-03-06,Akhisar Belediyespor,Fenerbahçe,0-3,DEP,2,1.55,True,True,0.55,75,1,75,-4.5500000000000025
+Fenerbahçe,2016-03-13,Fenerbahçe,Kayserispor,1-0,EV,1,1.1,True,True,0.10000000000000009,76,1,76,-4.450000000000003
+Fenerbahçe,2016-04-03,Fenerbahçe,Osmanlıspor FK,0-0,BERABERE,1,1.2,True,False,-1.0,77,1,77,-5.450000000000003
+Fenerbahçe,2016-04-09,Torku Konyaspor,Fenerbahçe,2-1,EV,2,1.6,True,False,-1.0,78,1,78,-6.450000000000003
+Fenerbahçe,2016-04-13,Galatasaray,Fenerbahçe,0-0,BERABERE,2,1.7,True,False,-1.0,79,1,79,-7.450000000000003
+Fenerbahçe,2016-04-17,Fenerbahçe,Mersin İdmanyurdu,4-1,EV,1,1.1,True,True,0.10000000000000009,80,1,80,-7.350000000000003
+Fenerbahçe,2016-04-24,Trabzonspor,Fenerbahçe,0-4,DEP,2,1.45,True,True,0.44999999999999996,81,1,81,-6.900000000000003
+Fenerbahçe,2016-05-01,Fenerbahçe,Gaziantepspor,3-0,EV,1,1.1,True,True,0.10000000000000009,82,1,82,-6.8000000000000025
+Fenerbahçe,2016-05-09,Medipol Başakşehir,Fenerbahçe,2-1,EV,2,1.5,True,False,-1.0,83,1,83,-7.8000000000000025
+Fenerbahçe,2016-05-15,Fenerbahçe,Gençlerbirliği,2-1,EV,1,1.15,True,True,0.1499999999999999,84,1,84,-7.650000000000002
+Fenerbahçe,2016-05-19,Medicana Sivasspor,Fenerbahçe,2-2,BERABERE,1,2.1,True,False,-1.0,85,1,85,-8.650000000000002
+Fenerbahçe,2016-08-21,Medipol Başakşehir,Fenerbahçe,1-0,EV,2,1.8,True,False,-1.0,86,1,86,-9.650000000000002
+Fenerbahçe,2016-08-28,Fenerbahçe,Kayserispor,3-3,BERABERE,1,1.15,True,False,-1.0,87,1,87,-10.650000000000002
+Fenerbahçe,2016-09-11,Fenerbahçe,Bursaspor,0-1,DEP,1,1.2,True,False,-1.0,88,1,88,-11.650000000000002
+Fenerbahçe,2016-09-19,Kasımpaşa,Fenerbahçe,1-5,DEP,2,1.4,True,True,0.3999999999999999,89,1,89,-11.250000000000002
+Fenerbahçe,2016-09-25,Fenerbahçe,Gaziantepspor,2-1,EV,1,1.1,True,True,0.10000000000000009,90,1,90,-11.150000000000002
+Fenerbahçe,2016-10-02,Osmanlıspor FK,Fenerbahçe,1-1,BERABERE,2,1.7,True,False,-1.0,91,1,91,-12.150000000000002
+Fenerbahçe,2016-10-16,Fenerbahçe,Aytemiz Alanyaspor,1-1,BERABERE,1,1.05,True,False,-1.0,92,1,92,-13.150000000000002
+Fenerbahçe,2016-10-24,Atiker Konyaspor,Fenerbahçe,0-1,DEP,2,1.8,True,True,0.8,93,1,93,-12.350000000000001
+Fenerbahçe,2016-10-30,Fenerbahçe,Karabükspor,5-0,EV,1,1.15,True,True,0.1499999999999999,94,1,94,-12.200000000000001
+Fenerbahçe,2016-11-06,Akhisar Belediyespor,Fenerbahçe,1-3,DEP,2,1.4,True,True,0.3999999999999999,95,1,95,-11.8
+Fenerbahçe,2016-11-20,Fenerbahçe,Galatasaray,2-0,EV,1,1.6,True,True,0.6000000000000001,96,1,96,-11.200000000000001
+Fenerbahçe,2016-11-27,Çaykur Rizespor,Fenerbahçe,1-5,DEP,2,1.35,True,True,0.3500000000000001,97,1,97,-10.850000000000001
+Fenerbahçe,2016-12-03,Fenerbahçe,Beşiktaş,0-0,BERABERE,1,1.7,True,False,-1.0,98,1,98,-11.850000000000001
+Fenerbahçe,2016-12-12,Antalyaspor,Fenerbahçe,1-0,EV,2,1.45,True,False,-1.0,99,1,99,-12.850000000000001
+Fenerbahçe,2016-12-19,Fenerbahçe,Gençlerbirliği,3-0,EV,1,1.25,True,True,0.25,100,1,100,-12.600000000000001
+Fenerbahçe,2016-12-26,Trabzonspor,Fenerbahçe,0-3,DEP,2,1.55,True,True,0.55,101,2,1,-12.05
+Fenerbahçe,2017-01-15,Fenerbahçe,Adanaspor,2-2,BERABERE,1,1.05,True,False,-1.0,102,2,2,-13.05
+Fenerbahçe,2017-01-22,Fenerbahçe,Medipol Başakşehir,1-0,EV,1,1.6,True,True,0.6000000000000001,103,2,3,-12.450000000000001
+Fenerbahçe,2017-01-29,Kayserispor,Fenerbahçe,4-1,EV,2,1.25,True,False,-1.0,104,2,4,-13.450000000000001
+Fenerbahçe,2017-02-11,Bursaspor,Fenerbahçe,1-1,BERABERE,2,1.6,True,False,-1.0,105,2,5,-14.450000000000001
+Fenerbahçe,2017-02-19,Fenerbahçe,Kasımpaşa,0-0,BERABERE,1,1.15,True,False,-1.0,106,2,6,-15.450000000000001
+Fenerbahçe,2017-02-26,Gaziantepspor,Fenerbahçe,1-1,BERABERE,2,1.4,True,False,-1.0,107,2,7,-16.450000000000003
+Fenerbahçe,2017-03-05,Fenerbahçe,Osmanlıspor FK,1-0,EV,1,1.55,True,True,0.55,108,2,8,-15.900000000000002
+Fenerbahçe,2017-03-10,Aytemiz Alanyaspor,Fenerbahçe,2-3,DEP,2,1.5,True,True,0.5,109,2,9,-15.400000000000002
+Fenerbahçe,2017-03-17,Fenerbahçe,Atiker Konyaspor,2-3,DEP,1,1.2,True,False,-1.0,110,2,10,-16.400000000000002
+Fenerbahçe,2017-04-01,Karabükspor,Fenerbahçe,0-1,DEP,2,1.8,True,True,0.8,111,2,11,-15.600000000000001
+Fenerbahçe,2017-04-09,Fenerbahçe,Akhisar Belediyespor,3-1,EV,1,1.2,True,True,0.19999999999999996,112,2,12,-15.400000000000002
+Fenerbahçe,2017-04-23,Galatasaray,Fenerbahçe,0-1,DEP,1,2.1,True,False,-1.0,113,2,13,-16.400000000000002
+Fenerbahçe,2017-04-30,Fenerbahçe,Çaykur Rizespor,2-1,EV,1,1.2,True,True,0.19999999999999996,114,2,14,-16.200000000000003
+Fenerbahçe,2017-05-07,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,1.6,True,False,-1.0,115,2,15,-17.200000000000003
+Fenerbahçe,2017-05-13,Fenerbahçe,Antalyaspor,0-1,DEP,1,1.4,True,False,-1.0,116,2,16,-18.200000000000003
+Fenerbahçe,2017-05-22,Gençlerbirliği,Fenerbahçe,1-2,DEP,2,1.75,True,True,0.75,117,2,17,-17.450000000000003
+Fenerbahçe,2017-05-27,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.55,True,False,-1.0,118,2,18,-18.450000000000003
+Fenerbahçe,2017-06-03,Adanaspor,Fenerbahçe,1-3,DEP,2,1.2,True,True,0.19999999999999996,119,2,19,-18.250000000000004
+Fenerbahçe,2017-08-12,Göztepe,Fenerbahçe,2-2,BERABERE,2,1.5,True,False,-1.0,120,2,20,-19.250000000000004
+Fenerbahçe,2017-08-20,Fenerbahçe,Trabzonspor,2-2,BERABERE,1,1.55,True,False,-1.0,121,2,21,-20.250000000000004
+Fenerbahçe,2017-08-27,Gençlerbirliği,Fenerbahçe,1-2,DEP,2,1.6,True,True,0.6000000000000001,122,2,22,-19.650000000000002
+Fenerbahçe,2017-09-09,Fenerbahçe,Medipol Başakşehir,2-3,DEP,1,1.8,True,False,-1.0,123,2,23,-20.650000000000002
+Fenerbahçe,2017-09-17,Aytemiz Alanyaspor,Fenerbahçe,1-4,DEP,2,1.75,True,True,0.75,124,2,24,-19.900000000000002
+Fenerbahçe,2017-09-23,Fenerbahçe,Beşiktaş,2-1,EV,1,2.2,True,True,1.2000000000000002,125,2,25,-18.700000000000003
+Fenerbahçe,2017-09-29,Akhisarspor,Fenerbahçe,1-0,EV,2,1.75,True,False,-1.0,126,2,26,-19.700000000000003
+Fenerbahçe,2017-10-15,Fenerbahçe,Yeni Malatyaspor,3-1,EV,1,1.25,True,True,0.25,127,2,27,-19.450000000000003
+Fenerbahçe,2017-10-22,Galatasaray,Fenerbahçe,0-0,BERABERE,1,1.7,True,False,-1.0,128,2,28,-20.450000000000003
+Fenerbahçe,2017-10-30,Fenerbahçe,Kayserispor,3-3,BERABERE,1,1.3,True,False,-1.0,129,2,29,-21.450000000000003
+Fenerbahçe,2017-11-04,Osmanlıspor FK,Fenerbahçe,1-1,BERABERE,2,1.8,True,False,-1.0,130,2,30,-22.450000000000003
+Fenerbahçe,2017-11-19,Fenerbahçe,Sivasspor,4-1,EV,1,1.45,True,True,0.44999999999999996,131,2,31,-22.000000000000004
+Fenerbahçe,2017-11-26,Antalyaspor,Fenerbahçe,0-1,DEP,2,1.75,True,True,0.75,132,2,32,-21.250000000000004
+Fenerbahçe,2017-12-03,Fenerbahçe,Kasımpaşa,4-2,EV,1,1.25,True,True,0.25,133,2,33,-21.000000000000004
+Fenerbahçe,2017-12-08,Bursaspor,Fenerbahçe,0-1,DEP,2,1.75,True,True,0.75,134,2,34,-20.250000000000004
+Fenerbahçe,2017-12-18,Fenerbahçe,Karabükspor,2-0,EV,1,1.1,True,True,0.10000000000000009,135,2,35,-20.150000000000002
+Fenerbahçe,2017-12-23,Atiker Konyaspor,Fenerbahçe,1-1,BERABERE,2,1.55,True,False,-1.0,136,2,36,-21.150000000000002
+Fenerbahçe,2018-01-20,Fenerbahçe,Göztepe,2-1,EV,1,1.2,True,True,0.19999999999999996,137,2,37,-20.950000000000003
+Fenerbahçe,2018-01-28,Trabzonspor,Fenerbahçe,1-1,BERABERE,1,2.1,True,False,-1.0,138,2,38,-21.950000000000003
+Fenerbahçe,2018-02-03,Fenerbahçe,Gençlerbirliği,2-2,BERABERE,1,1.25,True,False,-1.0,139,2,39,-22.950000000000003
+Fenerbahçe,2018-02-11,Medipol Başakşehir,Fenerbahçe,0-2,DEP,1,1.95,True,False,-1.0,140,2,40,-23.950000000000003
+Fenerbahçe,2018-02-17,Fenerbahçe,Aytemiz Alanyaspor,3-0,EV,1,1.2,True,True,0.19999999999999996,141,2,41,-23.750000000000004
+Fenerbahçe,2018-02-25,Beşiktaş,Fenerbahçe,3-1,EV,1,1.9,True,True,0.8999999999999999,142,2,42,-22.850000000000005
+Fenerbahçe,2018-03-04,Fenerbahçe,Akhisarspor,2-3,DEP,1,1.15,True,False,-1.0,143,2,43,-23.850000000000005
+Fenerbahçe,2018-03-11,Yeni Malatyaspor,Fenerbahçe,0-2,DEP,2,1.6,True,True,0.6000000000000001,144,2,44,-23.250000000000004
+Fenerbahçe,2018-03-17,Fenerbahçe,Galatasaray,0-0,BERABERE,1,1.85,True,False,-1.0,145,2,45,-24.250000000000004
+Fenerbahçe,2018-04-02,Kayserispor,Fenerbahçe,0-5,DEP,2,1.35,True,True,0.3500000000000001,146,2,46,-23.900000000000002
+Fenerbahçe,2018-04-08,Fenerbahçe,Osmanlıspor FK,2-0,EV,1,1.2,True,True,0.19999999999999996,147,2,47,-23.700000000000003
+Fenerbahçe,2018-04-14,Sivasspor,Fenerbahçe,1-2,DEP,2,1.55,True,True,0.55,148,2,48,-23.150000000000002
+Fenerbahçe,2018-04-23,Fenerbahçe,Antalyaspor,4-1,EV,1,1.1,True,True,0.10000000000000009,149,2,49,-23.05
+Fenerbahçe,2018-04-28,Kasımpaşa,Fenerbahçe,1-4,DEP,2,1.25,True,True,0.25,150,2,50,-22.8
+Fenerbahçe,2018-05-06,Fenerbahçe,Bursaspor,2-1,EV,1,1.1,True,True,0.10000000000000009,151,2,51,-22.7
+Fenerbahçe,2018-05-19,Fenerbahçe,Atiker Konyaspor,3-2,EV,1,1.1,True,True,0.10000000000000009,152,2,52,-22.599999999999998
+Fenerbahçe,2018-08-11,Fenerbahçe,Bursaspor,2-1,EV,1,1.25,True,True,0.25,153,2,53,-22.349999999999998
+Fenerbahçe,2018-08-18,Yeni Malatyaspor,Fenerbahçe,1-0,EV,2,1.5,True,False,-1.0,154,2,54,-23.349999999999998
+Fenerbahçe,2018-08-25,Göztepe,Fenerbahçe,1-0,EV,2,1.6,True,False,-1.0,155,2,55,-24.349999999999998
+Fenerbahçe,2018-09-01,Fenerbahçe,Kayserispor,2-3,DEP,1,1.25,True,False,-1.0,156,2,56,-25.349999999999998
+Fenerbahçe,2018-09-16,Atiker Konyaspor,Fenerbahçe,0-1,DEP,2,1.75,True,True,0.75,157,2,57,-24.599999999999998
+Fenerbahçe,2018-09-24,Fenerbahçe,Beşiktaş,1-1,BERABERE,2,2.1,True,False,-1.0,158,2,58,-25.599999999999998
+Fenerbahçe,2018-09-30,Çaykur Rizespor,Fenerbahçe,3-0,EV,2,1.7,True,False,-1.0,159,2,59,-26.599999999999998
+Fenerbahçe,2018-10-07,Fenerbahçe,Medipol Başakşehir,0-0,BERABERE,1,2.0,True,False,-1.0,160,2,60,-27.599999999999998
+Fenerbahçe,2018-10-20,Sivasspor,Fenerbahçe,0-0,BERABERE,2,1.95,True,False,-1.0,161,2,61,-28.599999999999998
+Fenerbahçe,2018-10-28,Fenerbahçe,MKE Ankaragücü,1-3,DEP,1,1.25,True,False,-1.0,162,2,62,-29.599999999999998
+Fenerbahçe,2018-11-02,Galatasaray,Fenerbahçe,2-2,BERABERE,1,1.75,True,False,-1.0,163,2,63,-30.599999999999998
+Fenerbahçe,2018-11-11,Fenerbahçe,Alanyaspor,2-0,EV,1,1.25,True,True,0.25,164,2,64,-30.349999999999998
+Fenerbahçe,2018-11-25,Trabzonspor,Fenerbahçe,2-1,EV,1,2.15,True,True,1.15,165,2,65,-29.2
+Fenerbahçe,2018-12-03,Fenerbahçe,Kasımpaşa,2-2,BERABERE,1,1.7,True,False,-1.0,166,2,66,-30.2
+Fenerbahçe,2018-12-09,Akhisarspor,Fenerbahçe,3-0,EV,2,1.8,True,False,-1.0,167,2,67,-31.2
+Fenerbahçe,2018-12-17,Fenerbahçe,BB Erzurumspor,2-2,BERABERE,1,1.3,True,False,-1.0,168,2,68,-32.2
+Fenerbahçe,2018-12-24,Antalyaspor,Fenerbahçe,0-0,BERABERE,2,1.6,True,False,-1.0,169,2,69,-33.2
+Fenerbahçe,2019-01-21,Bursaspor,Fenerbahçe,1-1,BERABERE,2,2.3,True,False,-1.0,170,2,70,-34.2
+Fenerbahçe,2019-01-28,Fenerbahçe,Yeni Malatyaspor,3-2,EV,1,1.55,True,True,0.55,171,2,71,-33.650000000000006
+Fenerbahçe,2019-02-01,Fenerbahçe,Göztepe,2-0,EV,1,1.5,True,True,0.5,172,2,72,-33.150000000000006
+Fenerbahçe,2019-02-08,Kayserispor,Fenerbahçe,1-0,EV,2,1.9,True,False,-1.0,173,2,73,-34.150000000000006
+Fenerbahçe,2019-02-16,Fenerbahçe,Atiker Konyaspor,1-1,BERABERE,1,1.65,True,False,-1.0,174,2,74,-35.150000000000006
+Fenerbahçe,2019-02-25,Beşiktaş,Fenerbahçe,3-3,BERABERE,1,1.65,True,False,-1.0,175,2,75,-36.150000000000006
+Fenerbahçe,2019-03-02,Fenerbahçe,Çaykur Rizespor,3-2,EV,1,1.35,True,True,0.3500000000000001,176,2,76,-35.800000000000004
+Fenerbahçe,2019-03-09,Medipol Başakşehir,Fenerbahçe,2-1,EV,1,1.85,True,True,0.8500000000000001,177,2,77,-34.95
+Fenerbahçe,2019-03-15,Fenerbahçe,Sivasspor,2-1,EV,1,1.3,True,True,0.30000000000000004,178,2,78,-34.650000000000006
+Fenerbahçe,2019-04-07,MKE Ankaragücü,Fenerbahçe,1-1,BERABERE,2,1.65,True,False,-1.0,179,2,79,-35.650000000000006
+Fenerbahçe,2019-04-14,Fenerbahçe,Galatasaray,1-1,BERABERE,1,2.1,True,False,-1.0,180,2,80,-36.650000000000006
+Fenerbahçe,2019-04-21,Alanyaspor,Fenerbahçe,1-0,EV,1,2.15,True,True,1.15,181,2,81,-35.50000000000001
+Fenerbahçe,2019-04-27,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.7,True,False,-1.0,182,2,82,-36.50000000000001
+Fenerbahçe,2019-05-04,Kasımpaşa,Fenerbahçe,1-3,DEP,2,1.7,True,True,0.7,183,2,83,-35.800000000000004
+Fenerbahçe,2019-05-11,Fenerbahçe,Akhisarspor,2-1,EV,1,1.2,True,True,0.19999999999999996,184,2,84,-35.6
+Fenerbahçe,2019-05-20,BB Erzurumspor,Fenerbahçe,0-1,DEP,1,2.0,True,False,-1.0,185,2,85,-36.6
+Fenerbahçe,2019-05-26,Fenerbahçe,Antalyaspor,3-1,EV,1,1.3,True,True,0.30000000000000004,186,2,86,-36.300000000000004
+Fenerbahçe,2019-08-19,Fenerbahçe,Gaziantep FK,5-0,EV,1,1.3,True,True,0.30000000000000004,187,2,87,-36.00000000000001
+Fenerbahçe,2019-08-24,Başakşehir FK,Fenerbahçe,1-2,DEP,1,2.3,True,False,-1.0,188,2,88,-37.00000000000001
+Fenerbahçe,2019-09-01,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.5,True,False,-1.0,189,2,89,-38.00000000000001
+Fenerbahçe,2019-09-16,Alanyaspor,Fenerbahçe,3-1,EV,2,2.1,True,False,-1.0,190,2,90,-39.00000000000001
+Fenerbahçe,2019-09-21,Fenerbahçe,MKE Ankaragücü,2-1,EV,1,1.08,True,True,0.08000000000000007,191,2,91,-38.92000000000001
+Fenerbahçe,2019-09-28,Galatasaray,Fenerbahçe,0-0,BERABERE,1,1.8,True,False,-1.0,192,2,92,-39.92000000000001
+Fenerbahçe,2019-10-04,Fenerbahçe,Antalyaspor,0-1,DEP,1,1.3,True,False,-1.0,193,2,93,-40.92000000000001
+Fenerbahçe,2019-10-20,Denizlispor,Fenerbahçe,1-2,DEP,2,1.75,True,True,0.75,194,2,94,-40.17000000000001
+Fenerbahçe,2019-10-26,Fenerbahçe,Konyaspor,5-1,EV,1,1.38,True,True,0.3799999999999999,195,2,95,-39.790000000000006
+Fenerbahçe,2019-11-03,Kayserispor,Fenerbahçe,1-0,EV,2,1.4,True,False,-1.0,196,2,96,-40.790000000000006
+Fenerbahçe,2019-11-08,Fenerbahçe,Kasımpaşa,3-2,EV,1,1.28,True,True,0.28,197,2,97,-40.510000000000005
+Fenerbahçe,2019-11-24,Yeni Malatyaspor,Fenerbahçe,0-0,BERABERE,2,2.2,True,False,-1.0,198,2,98,-41.510000000000005
+Fenerbahçe,2019-11-30,Göztepe,Fenerbahçe,2-2,BERABERE,2,1.9,True,False,-1.0,199,2,99,-42.510000000000005
+Fenerbahçe,2019-12-06,Fenerbahçe,Gençlerbirliği,5-2,EV,1,1.25,True,True,0.25,200,2,100,-42.260000000000005
+Fenerbahçe,2019-12-15,Sivasspor,Fenerbahçe,3-1,EV,1,2.2,True,True,1.2000000000000002,201,3,1,-41.06
+Fenerbahçe,2019-12-22,Fenerbahçe,Beşiktaş,3-1,EV,1,1.85,True,True,0.8500000000000001,202,3,2,-40.21
+Fenerbahçe,2019-12-29,Çaykur Rizespor,Fenerbahçe,1-2,DEP,2,1.5,True,True,0.5,203,3,3,-39.71
+Fenerbahçe,2020-01-18,Gaziantep FK,Fenerbahçe,0-2,DEP,2,1.52,True,True,0.52,204,3,4,-39.19
+Fenerbahçe,2020-01-25,Fenerbahçe,Başakşehir FK,2-0,EV,1,1.75,True,True,0.75,205,3,5,-38.44
+Fenerbahçe,2020-02-01,Trabzonspor,Fenerbahçe,2-1,EV,2,2.15,True,False,-1.0,206,3,6,-39.44
+Fenerbahçe,2020-02-08,Fenerbahçe,Alanyaspor,1-1,BERABERE,1,1.55,True,False,-1.0,207,3,7,-40.44
+Fenerbahçe,2020-02-15,MKE Ankaragücü,Fenerbahçe,2-1,EV,2,1.3,True,False,-1.0,208,3,8,-41.44
+Fenerbahçe,2020-02-23,Fenerbahçe,Galatasaray,1-3,DEP,1,1.9,True,False,-1.0,209,3,9,-42.44
+Fenerbahçe,2020-02-29,Antalyaspor,Fenerbahçe,2-2,BERABERE,2,1.8,True,False,-1.0,210,3,10,-43.44
+Fenerbahçe,2020-03-07,Fenerbahçe,Denizlispor,2-2,BERABERE,1,1.28,True,False,-1.0,211,3,11,-44.44
+Fenerbahçe,2020-03-14,Konyaspor,Fenerbahçe,1-0,EV,2,1.85,True,False,-1.0,212,3,12,-45.44
+Fenerbahçe,2020-06-12,Fenerbahçe,Kayserispor,2-1,EV,1,1.42,True,True,0.41999999999999993,213,3,13,-45.019999999999996
+Fenerbahçe,2020-06-21,Kasımpaşa,Fenerbahçe,2-0,EV,2,1.95,True,False,-1.0,214,3,14,-46.019999999999996
+Fenerbahçe,2020-06-27,Fenerbahçe,Yeni Malatyaspor,3-2,EV,1,1.42,True,True,0.41999999999999993,215,3,15,-45.599999999999994
+Fenerbahçe,2020-07-04,Fenerbahçe,Göztepe,2-1,EV,1,1.52,True,True,0.52,216,3,16,-45.07999999999999
+Fenerbahçe,2020-07-07,Gençlerbirliği,Fenerbahçe,1-1,BERABERE,2,1.65,True,False,-1.0,217,3,17,-46.07999999999999
+Fenerbahçe,2020-07-12,Fenerbahçe,Sivasspor,1-2,DEP,1,1.9,True,False,-1.0,218,3,18,-47.07999999999999
+Fenerbahçe,2020-07-19,Beşiktaş,Fenerbahçe,2-0,EV,1,1.62,True,True,0.6200000000000001,219,3,19,-46.459999999999994
+Fenerbahçe,2020-07-25,Fenerbahçe,Çaykur Rizespor,3-1,EV,1,2.15,True,True,1.15,220,3,20,-45.309999999999995
+Fenerbahçe,2020-09-11,Çaykur Rizespor,Fenerbahçe,1-2,DEP,2,1.55,True,True,0.55,221,3,21,-44.76
+Fenerbahçe,2020-09-27,Galatasaray,Fenerbahçe,0-0,BERABERE,1,2.0,True,False,-1.0,222,3,22,-45.76
+Fenerbahçe,2020-10-03,Fenerbahçe,Fatih Karagümrük,2-1,EV,1,1.35,True,True,0.3500000000000001,223,3,23,-45.41
+Fenerbahçe,2020-10-18,Göztepe,Fenerbahçe,2-3,DEP,2,1.8,True,True,0.8,224,3,24,-44.61
+Fenerbahçe,2020-10-25,Fenerbahçe,Trabzonspor,3-1,EV,1,1.55,True,True,0.55,225,3,25,-44.06
+Fenerbahçe,2020-11-02,Antalyaspor,Fenerbahçe,1-2,DEP,2,1.42,True,True,0.41999999999999993,226,3,26,-43.64
+Fenerbahçe,2020-11-07,Fenerbahçe,Konyaspor,0-2,DEP,1,1.28,True,False,-1.0,227,3,27,-44.64
+Fenerbahçe,2020-11-21,Gençlerbirliği,Fenerbahçe,1-5,DEP,2,1.42,True,True,0.41999999999999993,228,3,28,-44.22
+Fenerbahçe,2020-11-29,Fenerbahçe,Beşiktaş,3-4,DEP,1,1.67,True,False,-1.0,229,3,29,-45.22
+Fenerbahçe,2020-12-06,Denizlispor,Fenerbahçe,0-2,DEP,2,1.5,True,True,0.5,230,3,30,-44.72
+Fenerbahçe,2020-12-12,Fenerbahçe,Yeni Malatyaspor,0-3,DEP,1,1.32,True,False,-1.0,231,3,31,-45.72
+Fenerbahçe,2020-12-19,Gaziantep FK,Fenerbahçe,3-1,EV,2,1.7,True,False,-1.0,232,3,32,-46.72
+Fenerbahçe,2020-12-23,Fenerbahçe,Başakşehir FK,4-1,EV,1,2.25,True,True,1.25,233,3,33,-45.47
+Fenerbahçe,2021-01-04,Kasımpaşa,Fenerbahçe,0-3,DEP,2,1.58,True,True,0.5800000000000001,234,3,34,-44.89
+Fenerbahçe,2021-01-07,Fenerbahçe,Alanyaspor,2-1,EV,1,1.85,True,True,0.8500000000000001,235,3,35,-44.04
+Fenerbahçe,2021-01-11,BB Erzurumspor,Fenerbahçe,0-3,DEP,2,1.55,True,True,0.55,236,3,36,-43.49
+Fenerbahçe,2021-01-18,Fenerbahçe,MKE Ankaragücü,3-1,EV,1,1.35,True,True,0.3500000000000001,237,3,37,-43.14
+Fenerbahçe,2021-01-21,Sivasspor,Fenerbahçe,1-1,BERABERE,2,2.2,True,False,-1.0,238,3,38,-44.14
+Fenerbahçe,2021-01-25,Fenerbahçe,Kayserispor,3-0,EV,1,1.3,True,True,0.30000000000000004,239,3,39,-43.84
+Fenerbahçe,2021-01-30,Fenerbahçe,Çaykur Rizespor,1-0,EV,1,1.3,True,True,0.30000000000000004,240,3,40,-43.540000000000006
+Fenerbahçe,2021-02-06,Fenerbahçe,Galatasaray,0-1,DEP,1,2.15,True,False,-1.0,241,3,41,-44.540000000000006
+Fenerbahçe,2021-02-13,Fatih Karagümrük,Fenerbahçe,1-2,DEP,2,1.6,True,True,0.6000000000000001,242,3,42,-43.940000000000005
+Fenerbahçe,2021-02-21,Fenerbahçe,Göztepe,0-1,DEP,1,1.38,True,False,-1.0,243,3,43,-44.940000000000005
+Fenerbahçe,2021-02-28,Trabzonspor,Fenerbahçe,0-1,DEP,1,2.2,True,False,-1.0,244,3,44,-45.940000000000005
+Fenerbahçe,2021-03-04,Fenerbahçe,Antalyaspor,1-1,BERABERE,1,1.45,True,False,-1.0,245,3,45,-46.940000000000005
+Fenerbahçe,2021-03-08,Konyaspor,Fenerbahçe,0-3,DEP,2,1.62,True,True,0.6200000000000001,246,3,46,-46.32000000000001
+Fenerbahçe,2021-03-14,Fenerbahçe,Gençlerbirliği,1-2,DEP,1,1.22,True,False,-1.0,247,3,47,-47.32000000000001
+Fenerbahçe,2021-03-21,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,1.8,True,False,-1.0,248,3,48,-48.32000000000001
+Fenerbahçe,2021-04-05,Fenerbahçe,Denizlispor,1-0,EV,1,1.25,True,True,0.25,249,3,49,-48.07000000000001
+Fenerbahçe,2021-04-08,Yeni Malatyaspor,Fenerbahçe,1-1,BERABERE,2,1.58,True,False,-1.0,250,3,50,-49.07000000000001
+Fenerbahçe,2021-04-12,Fenerbahçe,Gaziantep FK,3-1,EV,1,1.28,True,True,0.28,251,3,51,-48.790000000000006
+Fenerbahçe,2021-04-18,Başakşehir FK,Fenerbahçe,1-2,DEP,2,1.85,True,True,0.8500000000000001,252,3,52,-47.940000000000005
+Fenerbahçe,2021-04-25,Fenerbahçe,Kasımpaşa,3-2,EV,1,1.5,True,True,0.5,253,3,53,-47.440000000000005
+Fenerbahçe,2021-04-29,Alanyaspor,Fenerbahçe,0-0,BERABERE,2,1.85,True,False,-1.0,254,3,54,-48.440000000000005
+Fenerbahçe,2021-05-03,Fenerbahçe,BB Erzurumspor,3-1,EV,1,1.22,True,True,0.21999999999999997,255,3,55,-48.220000000000006
+Fenerbahçe,2021-05-08,MKE Ankaragücü,Fenerbahçe,1-2,DEP,2,1.45,True,True,0.44999999999999996,256,3,56,-47.77
+Fenerbahçe,2021-05-11,Fenerbahçe,Sivasspor,1-2,DEP,1,1.35,True,False,-1.0,257,3,57,-48.77
+Fenerbahçe,2021-05-15,Kayserispor,Fenerbahçe,1-2,DEP,2,1.52,True,True,0.52,258,3,58,-48.25
+Fenerbahçe,2021-08-15,Adana Demirspor,Fenerbahçe,0-1,DEP,1,2.15,True,False,-1.0,259,3,59,-49.25
+Fenerbahçe,2021-08-22,Fenerbahçe,Antalyaspor,2-0,EV,1,1.51,True,True,0.51,260,3,60,-48.74
+Fenerbahçe,2021-08-29,Altay,Fenerbahçe,0-2,DEP,2,2.15,True,True,1.15,261,3,61,-47.59
+Fenerbahçe,2021-09-12,Fenerbahçe,Sivasspor,1-1,BERABERE,1,1.38,True,False,-1.0,262,3,62,-48.59
+Fenerbahçe,2021-09-19,Başakşehir FK,Fenerbahçe,2-0,EV,2,1.96,True,False,-1.0,263,3,63,-49.59
+Fenerbahçe,2021-09-23,Fenerbahçe,Giresunspor,2-1,EV,1,1.29,True,True,0.29000000000000004,264,3,64,-49.300000000000004
+Fenerbahçe,2021-10-03,Fenerbahçe,Kasımpaşa,2-1,EV,1,1.48,True,True,0.48,265,3,65,-48.82000000000001
+Fenerbahçe,2021-10-17,Trabzonspor,Fenerbahçe,3-1,EV,1,2.08,True,True,1.08,266,3,66,-47.74000000000001
+Fenerbahçe,2021-10-24,Fenerbahçe,Alanyaspor,1-2,DEP,1,1.66,True,False,-1.0,267,3,67,-48.74000000000001
+Fenerbahçe,2021-10-30,Konyaspor,Fenerbahçe,2-1,EV,2,1.93,True,False,-1.0,268,3,68,-49.74000000000001
+Fenerbahçe,2021-11-07,Fenerbahçe,Kayserispor,2-2,BERABERE,1,1.27,True,False,-1.0,269,3,69,-50.74000000000001
+Fenerbahçe,2021-11-21,Galatasaray,Fenerbahçe,1-2,DEP,1,1.94,True,False,-1.0,270,3,70,-51.74000000000001
+Fenerbahçe,2021-11-29,Göztepe,Fenerbahçe,1-1,BERABERE,2,1.99,True,False,-1.0,271,3,71,-52.74000000000001
+Fenerbahçe,2021-12-05,Fenerbahçe,Çaykur Rizespor,4-0,EV,1,1.24,True,True,0.24,272,3,72,-52.50000000000001
+Fenerbahçe,2021-12-13,Gaziantep FK,Fenerbahçe,3-2,EV,2,1.72,True,False,-1.0,273,3,73,-53.50000000000001
+Fenerbahçe,2021-12-19,Fenerbahçe,Beşiktaş,2-2,BERABERE,1,2.03,True,False,-1.0,274,3,74,-54.50000000000001
+Fenerbahçe,2021-12-22,Fatih Karagümrük,Fenerbahçe,1-1,BERABERE,2,1.8,True,False,-1.0,275,3,75,-55.50000000000001
+Fenerbahçe,2021-12-26,Fenerbahçe,Yeni Malatyaspor,2-0,EV,1,1.22,True,True,0.21999999999999997,276,3,76,-55.28000000000001
+Fenerbahçe,2022-01-10,Fenerbahçe,Adana Demirspor,1-2,DEP,1,1.52,True,False,-1.0,277,3,77,-56.28000000000001
+Fenerbahçe,2022-01-15,Antalyaspor,Fenerbahçe,1-1,BERABERE,2,1.99,True,False,-1.0,278,3,78,-57.28000000000001
+Fenerbahçe,2022-01-19,Fenerbahçe,Altay,2-1,EV,1,1.32,True,True,0.32000000000000006,279,3,79,-56.96000000000001
+Fenerbahçe,2022-01-22,Sivasspor,Fenerbahçe,1-1,BERABERE,2,2.38,True,False,-1.0,280,3,80,-57.96000000000001
+Fenerbahçe,2022-02-05,Fenerbahçe,Başakşehir FK,0-1,DEP,1,1.99,True,False,-1.0,281,3,81,-58.96000000000001
+Fenerbahçe,2022-02-12,Giresunspor,Fenerbahçe,1-2,DEP,2,2.2,True,True,1.2000000000000002,282,3,82,-57.760000000000005
+Fenerbahçe,2022-02-28,Kasımpaşa,Fenerbahçe,1-2,DEP,2,2.22,True,True,1.2200000000000002,283,3,83,-56.540000000000006
+Fenerbahçe,2022-03-06,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,2.07,True,False,-1.0,284,3,84,-57.540000000000006
+Fenerbahçe,2022-03-13,Alanyaspor,Fenerbahçe,2-5,DEP,2,2.15,True,True,1.15,285,3,85,-56.39000000000001
+Fenerbahçe,2022-03-20,Fenerbahçe,Konyaspor,2-1,EV,1,1.44,True,True,0.43999999999999995,286,3,86,-55.95000000000001
+Fenerbahçe,2022-04-02,Kayserispor,Fenerbahçe,0-4,DEP,2,1.69,True,True,0.69,287,3,87,-55.26000000000001
+Fenerbahçe,2022-04-10,Fenerbahçe,Galatasaray,2-0,EV,1,1.87,True,True,0.8700000000000001,288,3,88,-54.390000000000015
+Fenerbahçe,2022-04-16,Fenerbahçe,Göztepe,2-0,EV,1,1.23,True,True,0.22999999999999998,289,3,89,-54.16000000000002
+Fenerbahçe,2022-04-22,Çaykur Rizespor,Fenerbahçe,0-6,DEP,2,1.44,True,True,0.43999999999999995,290,3,90,-53.72000000000002
+Fenerbahçe,2022-04-29,Fenerbahçe,Gaziantep FK,3-2,EV,1,1.2,True,True,0.19999999999999996,291,3,91,-53.52000000000002
+Fenerbahçe,2022-05-08,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,2.07,True,False,-1.0,292,3,92,-54.52000000000002
+Fenerbahçe,2022-05-15,Fenerbahçe,Fatih Karagümrük,0-0,BERABERE,1,1.5,True,False,-1.0,293,3,93,-55.52000000000002
+Fenerbahçe,2022-05-21,Yeni Malatyaspor,Fenerbahçe,0-5,DEP,2,1.11,True,True,0.1100000000000001,294,3,94,-55.41000000000002
+Fenerbahçe,2022-08-08,Fenerbahçe,Ümraniyespor,3-3,BERABERE,1,1.13,True,False,-1.0,295,3,95,-56.41000000000002
+Fenerbahçe,2022-08-15,Kasımpaşa,Fenerbahçe,0-6,DEP,2,1.76,True,True,0.76,296,3,96,-55.65000000000002
+Fenerbahçe,2022-08-22,Fenerbahçe,Adana Demirspor,4-2,EV,1,1.5,True,True,0.5,297,3,97,-55.15000000000002
+Fenerbahçe,2022-08-29,Konyaspor,Fenerbahçe,1-0,EV,2,1.67,True,False,-1.0,298,3,98,-56.15000000000002
+Fenerbahçe,2022-09-03,Fenerbahçe,Kayserispor,2-0,EV,1,1.27,True,True,0.27,299,3,99,-55.88000000000002
+Fenerbahçe,2022-09-18,Fenerbahçe,Alanyaspor,5-0,EV,1,1.38,True,True,0.3799999999999999,300,3,100,-55.500000000000014
+Fenerbahçe,2022-10-02,Beşiktaş,Fenerbahçe,0-0,BERABERE,1,2.23,True,False,-1.0,301,4,1,-56.500000000000014
+Fenerbahçe,2022-10-09,Fenerbahçe,Fatih Karagümrük,5-4,EV,1,1.25,True,True,0.25,302,4,2,-56.250000000000014
+Fenerbahçe,2022-10-17,MKE Ankaragücü,Fenerbahçe,0-3,DEP,2,1.66,True,True,0.6599999999999999,303,4,3,-55.59000000000002
+Fenerbahçe,2022-10-22,Fenerbahçe,Başakşehir FK,1-0,EV,1,1.65,True,True,0.6499999999999999,304,4,4,-54.94000000000002
+Fenerbahçe,2022-10-30,İstanbulspor,Fenerbahçe,2-5,DEP,2,1.3,True,True,0.30000000000000004,305,4,5,-54.64000000000002
+Fenerbahçe,2022-11-07,Fenerbahçe,Sivasspor,1-0,EV,1,1.17,True,True,0.16999999999999993,306,4,6,-54.47000000000002
+Fenerbahçe,2022-11-12,Fenerbahçe,Giresunspor,1-2,DEP,1,1.2,True,False,-1.0,307,4,7,-55.47000000000002
+Fenerbahçe,2022-12-24,Trabzonspor,Fenerbahçe,2-0,EV,2,2.22,True,False,-1.0,308,4,8,-56.47000000000002
+Fenerbahçe,2023-01-03,Antalyaspor,Fenerbahçe,1-2,DEP,2,1.61,True,True,0.6100000000000001,309,4,9,-55.86000000000002
+Fenerbahçe,2023-01-08,Fenerbahçe,Galatasaray,0-3,DEP,1,1.92,True,False,-1.0,310,4,10,-56.86000000000002
+Fenerbahçe,2023-01-15,Gaziantep FK,Fenerbahçe,1-2,DEP,2,1.53,True,True,0.53,311,4,11,-56.33000000000002
+Fenerbahçe,2023-01-23,Ümraniyespor,Fenerbahçe,1-2,DEP,2,1.25,True,True,0.25,312,4,12,-56.08000000000002
+Fenerbahçe,2023-01-29,Fenerbahçe,Kasımpaşa,5-1,EV,1,1.17,True,True,0.16999999999999993,313,4,13,-55.91000000000002
+Fenerbahçe,2023-02-02,Adana Demirspor,Fenerbahçe,1-1,BERABERE,2,1.78,True,False,-1.0,314,4,14,-56.91000000000002
+Fenerbahçe,2023-02-25,Fenerbahçe,Konyaspor,4-0,EV,1,1.25,True,True,0.25,315,4,15,-56.66000000000002
+Fenerbahçe,2023-03-04,Kayserispor,Fenerbahçe,1-2,DEP,2,1.56,True,True,0.56,316,4,16,-56.100000000000016
+Fenerbahçe,2023-03-19,Alanyaspor,Fenerbahçe,1-3,DEP,2,1.44,True,True,0.43999999999999995,317,4,17,-55.66000000000002
+Fenerbahçe,2023-04-02,Fenerbahçe,Beşiktaş,2-4,DEP,1,1.81,True,False,-1.0,318,4,18,-56.66000000000002
+Fenerbahçe,2023-04-10,Fatih Karagümrük,Fenerbahçe,1-2,DEP,2,1.32,True,True,0.32000000000000006,319,4,19,-56.34000000000002
+Fenerbahçe,2023-04-15,Fenerbahçe,MKE Ankaragücü,2-1,EV,1,1.21,True,True,0.20999999999999996,320,4,20,-56.13000000000002
+Fenerbahçe,2023-04-19,Başakşehir FK,Fenerbahçe,1-2,DEP,2,1.72,True,True,0.72,321,4,21,-55.41000000000002
+Fenerbahçe,2023-04-24,Fenerbahçe,İstanbulspor,3-3,BERABERE,1,1.05,True,False,-1.0,322,4,22,-56.41000000000002
+Fenerbahçe,2023-04-29,Sivasspor,Fenerbahçe,1-3,DEP,2,1.78,True,True,0.78,323,4,23,-55.63000000000002
+Fenerbahçe,2023-05-07,Giresunspor,Fenerbahçe,1-1,BERABERE,2,1.4,True,False,-1.0,324,4,24,-56.63000000000002
+Fenerbahçe,2023-05-18,Fenerbahçe,Trabzonspor,3-1,EV,1,1.26,True,True,0.26,325,4,25,-56.37000000000002
+Fenerbahçe,2023-05-30,Fenerbahçe,Antalyaspor,2-0,EV,1,1.21,True,True,0.20999999999999996,326,4,26,-56.16000000000002
+Fenerbahçe,2023-06-04,Galatasaray,Fenerbahçe,3-0,EV,1,1.82,True,True,0.8200000000000001,327,4,27,-55.34000000000002
+Fenerbahçe,2023-08-13,Fenerbahçe,Gaziantep FK,2-1,EV,1,1.12,True,True,0.1200000000000001,328,4,28,-55.22000000000002
+Fenerbahçe,2023-08-21,Samsunspor,Fenerbahçe,0-2,DEP,2,1.62,True,True,0.6200000000000001,329,4,29,-54.60000000000002
+Fenerbahçe,2023-09-03,MKE Ankaragücü,Fenerbahçe,0-1,DEP,2,1.54,True,True,0.54,330,4,30,-54.060000000000024
+Fenerbahçe,2023-09-17,Fenerbahçe,Antalyaspor,3-2,EV,1,1.25,True,True,0.25,331,4,31,-53.810000000000024
+Fenerbahçe,2023-09-24,Alanyaspor,Fenerbahçe,0-1,DEP,2,1.42,True,True,0.41999999999999993,332,4,32,-53.39000000000002
+Fenerbahçe,2023-09-28,Fenerbahçe,Başakşehir FK,4-0,EV,1,1.19,True,True,0.18999999999999995,333,4,33,-53.200000000000024
+Fenerbahçe,2023-10-01,Fenerbahçe,Çaykur Rizespor,5-0,EV,1,1.12,True,True,0.1200000000000001,334,4,34,-53.08000000000003
+Fenerbahçe,2023-10-08,Kasımpaşa,Fenerbahçe,0-2,DEP,2,1.25,True,True,0.25,335,4,35,-52.83000000000003
+Fenerbahçe,2023-10-29,Pendikspor,Fenerbahçe,0-5,DEP,2,1.15,True,True,0.1499999999999999,336,4,36,-52.68000000000003
+Fenerbahçe,2023-11-04,Fenerbahçe,Trabzonspor,2-3,DEP,1,1.2,True,False,-1.0,337,4,37,-53.68000000000003
+Fenerbahçe,2023-11-12,Adana Demirspor,Fenerbahçe,0-0,BERABERE,2,1.71,True,False,-1.0,338,4,38,-54.68000000000003
+Fenerbahçe,2023-11-26,Fenerbahçe,Fatih Karagümrük,2-1,EV,1,1.09,True,True,0.09000000000000008,339,4,39,-54.590000000000025
+Fenerbahçe,2023-12-04,Fenerbahçe,Sivasspor,4-1,EV,1,1.07,True,True,0.07000000000000006,340,4,40,-54.520000000000024
+Fenerbahçe,2023-12-09,Beşiktaş,Fenerbahçe,1-3,DEP,2,1.63,True,True,0.6299999999999999,341,4,41,-53.89000000000002
+Fenerbahçe,2023-12-20,Kayserispor,Fenerbahçe,3-4,DEP,2,1.38,True,True,0.3799999999999999,342,4,42,-53.51000000000002
+Fenerbahçe,2023-12-24,Fenerbahçe,Galatasaray,0-0,BERABERE,1,1.92,True,False,-1.0,343,4,43,-54.51000000000002
+Fenerbahçe,2024-01-07,İstanbulspor,Fenerbahçe,1-5,DEP,2,1.06,True,True,0.06000000000000005,344,4,44,-54.45000000000002
+Fenerbahçe,2024-01-10,Fenerbahçe,Konyaspor,7-1,EV,1,1.07,True,True,0.07000000000000006,345,4,45,-54.38000000000002
+Fenerbahçe,2024-01-14,Gaziantep FK,Fenerbahçe,0-1,DEP,2,1.19,True,True,0.18999999999999995,346,4,46,-54.19000000000002
+Fenerbahçe,2024-01-21,Fenerbahçe,Samsunspor,1-1,BERABERE,1,1.08,True,False,-1.0,347,4,47,-55.19000000000002
+Fenerbahçe,2024-01-24,Başakşehir FK,Fenerbahçe,0-1,DEP,2,1.31,True,True,0.31000000000000005,348,4,48,-54.88000000000002
+Fenerbahçe,2024-01-28,Fenerbahçe,MKE Ankaragücü,2-1,EV,1,1.06,True,True,0.06000000000000005,349,4,49,-54.820000000000014
+Fenerbahçe,2024-02-03,Antalyaspor,Fenerbahçe,0-2,DEP,2,1.35,True,True,0.3500000000000001,350,4,50,-54.47000000000001
+Fenerbahçe,2024-02-11,Fenerbahçe,Alanyaspor,2-2,BERABERE,1,1.06,True,False,-1.0,351,4,51,-55.47000000000001
+Fenerbahçe,2024-02-17,Çaykur Rizespor,Fenerbahçe,1-3,DEP,2,1.27,True,True,0.27,352,4,52,-55.20000000000001
+Fenerbahçe,2024-02-24,Fenerbahçe,Kasımpaşa,2-1,EV,1,1.08,True,True,0.08000000000000007,353,4,53,-55.12000000000001
+Fenerbahçe,2024-03-10,Fenerbahçe,Pendikspor,4-1,EV,1,1.08,True,True,0.08000000000000007,354,4,54,-55.04000000000001
+Fenerbahçe,2024-03-17,Trabzonspor,Fenerbahçe,2-3,DEP,2,1.82,True,True,0.8200000000000001,355,4,55,-54.22000000000001
+Fenerbahçe,2024-04-03,Fenerbahçe,Adana Demirspor,4-2,EV,1,1.14,True,True,0.1399999999999999,356,4,56,-54.08000000000001
+Fenerbahçe,2024-04-14,Fatih Karagümrük,Fenerbahçe,1-2,DEP,2,1.28,True,True,0.28,357,4,57,-53.80000000000001
+Fenerbahçe,2024-04-22,Sivasspor,Fenerbahçe,2-2,BERABERE,2,1.15,True,False,-1.0,358,4,58,-54.80000000000001
+Fenerbahçe,2024-04-27,Fenerbahçe,Beşiktaş,2-1,EV,1,1.25,True,True,0.25,359,4,59,-54.55000000000001
+Fenerbahçe,2024-05-06,Konyaspor,Fenerbahçe,0-0,BERABERE,2,1.28,True,False,-1.0,360,4,60,-55.55000000000001
+Fenerbahçe,2024-05-12,Fenerbahçe,Kayserispor,3-0,EV,1,1.05,True,True,0.050000000000000044,361,4,61,-55.500000000000014
+Fenerbahçe,2024-05-19,Galatasaray,Fenerbahçe,0-1,DEP,1,2.0,True,False,-1.0,362,4,62,-56.500000000000014
+Fenerbahçe,2024-08-10,Fenerbahçe,Adana Demirspor,1-0,EV,1,1.05,True,True,0.050000000000000044,363,4,63,-56.45000000000002
+Fenerbahçe,2024-08-17,Göztepe,Fenerbahçe,2-2,BERABERE,2,1.49,True,False,-1.0,364,4,64,-57.45000000000002
+Fenerbahçe,2024-08-25,Çaykur Rizespor,Fenerbahçe,0-5,DEP,2,1.54,True,True,0.54,365,4,65,-56.91000000000002
+Fenerbahçe,2024-08-30,Fenerbahçe,Alanyaspor,3-0,EV,1,1.16,True,True,0.15999999999999992,366,4,66,-56.75000000000002
+Fenerbahçe,2024-09-15,Kasımpaşa,Fenerbahçe,0-2,DEP,2,1.32,True,True,0.32000000000000006,367,4,67,-56.43000000000002
+Fenerbahçe,2024-09-21,Fenerbahçe,Galatasaray,1-3,DEP,1,1.98,True,False,-1.0,368,4,68,-57.43000000000002
+Fenerbahçe,2024-09-29,Antalyaspor,Fenerbahçe,0-2,DEP,2,1.29,True,True,0.29000000000000004,369,4,69,-57.14000000000002
+Fenerbahçe,2024-10-20,Samsunspor,Fenerbahçe,2-2,BERABERE,2,1.7,True,False,-1.0,370,4,70,-58.14000000000002
+Fenerbahçe,2024-10-27,Fenerbahçe,Bodrum FK,2-0,EV,1,1.14,True,True,0.1399999999999999,371,4,71,-58.00000000000002
+Fenerbahçe,2024-11-03,Trabzonspor,Fenerbahçe,2-3,DEP,2,1.66,True,True,0.6599999999999999,372,4,72,-57.340000000000025
+Fenerbahçe,2024-11-10,Fenerbahçe,Sivasspor,4-0,EV,1,1.05,True,True,0.050000000000000044,373,4,73,-57.29000000000003
+Fenerbahçe,2024-11-23,Kayserispor,Fenerbahçe,2-6,DEP,2,1.32,True,True,0.32000000000000006,374,4,74,-56.97000000000003
+Fenerbahçe,2024-12-02,Fenerbahçe,Gaziantep FK,3-1,EV,1,1.05,True,True,0.050000000000000044,375,4,75,-56.92000000000003
+Fenerbahçe,2024-12-07,Beşiktaş,Fenerbahçe,1-0,EV,2,1.67,True,False,-1.0,376,4,76,-57.92000000000003
+Fenerbahçe,2024-12-15,Fenerbahçe,Başakşehir FK,3-1,EV,1,1.28,True,True,0.28,377,4,77,-57.64000000000003
+Fenerbahçe,2024-12-20,Eyüpspor,Fenerbahçe,1-1,BERABERE,2,1.38,True,False,-1.0,378,4,78,-58.64000000000003
+Fenerbahçe,2025-01-13,Konyaspor,Fenerbahçe,2-3,DEP,2,1.23,True,True,0.22999999999999998,379,4,79,-58.41000000000003
+Fenerbahçe,2025-01-19,Adana Demirspor,Fenerbahçe,0-4,DEP,2,1.05,True,True,0.050000000000000044,380,4,80,-58.360000000000035
+Fenerbahçe,2025-01-26,Fenerbahçe,Göztepe,3-2,EV,1,1.44,True,True,0.43999999999999995,381,4,81,-57.92000000000004
+Fenerbahçe,2025-02-02,Fenerbahçe,Çaykur Rizespor,3-2,EV,1,1.19,True,True,0.18999999999999995,382,4,82,-57.73000000000004
+Fenerbahçe,2025-02-09,Alanyaspor,Fenerbahçe,0-2,DEP,2,1.36,True,True,0.3600000000000001,383,4,83,-57.37000000000004
+Fenerbahçe,2025-02-16,Fenerbahçe,Kasımpaşa,3-1,EV,1,1.12,True,True,0.1200000000000001,384,4,84,-57.25000000000004
+Fenerbahçe,2025-02-24,Galatasaray,Fenerbahçe,0-0,BERABERE,1,2.03,True,False,-1.0,385,4,85,-58.25000000000004
+Fenerbahçe,2025-03-02,Fenerbahçe,Antalyaspor,3-0,EV,1,1.09,True,True,0.09000000000000008,386,4,86,-58.16000000000004
+Fenerbahçe,2025-03-16,Fenerbahçe,Samsunspor,0-0,BERABERE,1,1.24,True,False,-1.0,387,4,87,-59.16000000000004
+Fenerbahçe,2025-03-28,Bodrum FK,Fenerbahçe,2-4,DEP,2,1.26,True,True,0.26,388,4,88,-58.90000000000004
+Fenerbahçe,2025-04-06,Fenerbahçe,Trabzonspor,4-1,EV,1,1.29,True,True,0.29000000000000004,389,4,89,-58.61000000000004
+Fenerbahçe,2025-04-13,Sivasspor,Fenerbahçe,1-3,DEP,2,1.33,True,True,0.33000000000000007,390,4,90,-58.280000000000044
+Fenerbahçe,2025-04-26,Gaziantep FK,Fenerbahçe,1-3,DEP,2,1.29,True,True,0.29000000000000004,391,4,91,-57.990000000000045
+Fenerbahçe,2025-05-04,Fenerbahçe,Beşiktaş,0-1,DEP,1,1.34,True,False,-1.0,392,4,92,-58.990000000000045
+Fenerbahçe,2025-05-09,Başakşehir FK,Fenerbahçe,1-4,DEP,2,1.55,True,True,0.55,393,4,93,-58.44000000000005
+Fenerbahçe,2025-05-18,Fenerbahçe,Eyüpspor,2-1,EV,1,1.14,True,True,0.1399999999999999,394,4,94,-58.30000000000005
+Fenerbahçe,2025-05-31,Fenerbahçe,Konyaspor,2-1,EV,1,1.12,True,True,0.1200000000000001,395,4,95,-58.18000000000005
+Fenerbahçe,2025-08-16,Göztepe,Fenerbahçe,0-0,BERABERE,2,1.65,True,False,-1.0,396,4,96,-59.18000000000005
+Fenerbahçe,2025-08-23,Fenerbahçe,Kocaelispor,3-1,EV,1,1.12,True,True,0.1200000000000001,397,4,97,-59.06000000000005
+Fenerbahçe,2025-08-31,Gençlerbirliği,Fenerbahçe,1-3,DEP,2,1.31,True,True,0.31000000000000005,398,4,98,-58.75000000000005
+Fenerbahçe,2025-09-14,Fenerbahçe,Trabzonspor,1-0,EV,1,1.25,True,True,0.25,399,4,99,-58.50000000000005
+Fenerbahçe,2025-09-17,Fenerbahçe,Alanyaspor,2-2,BERABERE,1,1.1,True,False,-1.0,400,4,100,-59.50000000000005
+Fenerbahçe,2025-09-21,Kasımpaşa,Fenerbahçe,1-1,BERABERE,2,1.19,True,False,-1.0,401,5,1,-60.50000000000005
+Fenerbahçe,2025-09-28,Fenerbahçe,Antalyaspor,2-0,EV,1,1.08,True,True,0.08000000000000007,402,5,2,-60.42000000000005
+Fenerbahçe,2025-10-05,Samsunspor,Fenerbahçe,0-0,BERABERE,2,1.54,True,False,-1.0,403,5,3,-61.42000000000005
+Fenerbahçe,2025-10-19,Fenerbahçe,Fatih Karagümrük,2-1,EV,1,1.1,True,True,0.10000000000000009,404,5,4,-61.32000000000005
+Fenerbahçe,2025-10-27,Gaziantep FK,Fenerbahçe,0-4,DEP,2,1.47,True,True,0.47,405,5,5,-60.85000000000005
+Fenerbahçe,2025-11-02,Beşiktaş,Fenerbahçe,2-3,DEP,2,1.87,True,True,0.8700000000000001,406,5,6,-59.980000000000054
+Fenerbahçe,2025-11-09,Fenerbahçe,Kayserispor,4-2,EV,1,1.09,True,True,0.09000000000000008,407,5,7,-59.89000000000005
+Fenerbahçe,2025-11-23,Çaykur Rizespor,Fenerbahçe,2-5,DEP,2,1.44,True,True,0.43999999999999995,408,5,8,-59.45000000000005
+Fenerbahçe,2025-12-01,Fenerbahçe,Galatasaray,1-1,BERABERE,1,1.92,True,False,-1.0,409,5,9,-60.45000000000005
+Fenerbahçe,2025-12-06,Başakşehir FK,Fenerbahçe,1-1,BERABERE,2,1.61,True,False,-1.0,410,5,10,-61.45000000000005
+Fenerbahçe,2025-12-15,Fenerbahçe,Konyaspor,4-0,EV,1,1.1,True,True,0.10000000000000009,411,5,11,-61.35000000000005
+Fenerbahçe,2025-12-20,Eyüpspor,Fenerbahçe,0-3,DEP,2,1.33,True,True,0.33000000000000007,412,5,12,-61.02000000000005
+Beşiktaş,2014-01-25,Trabzonspor,Beşiktaş,1-1,BERABERE,1,2.55,True,False,-1.0,1,1,1,-1.0
+Beşiktaş,2014-01-31,Beşiktaş,Kayseri Erciyesspor,3-2,EV,1,1.1,True,True,0.10000000000000009,2,1,2,-0.8999999999999999
+Beşiktaş,2014-02-07,Gaziantepspor,Beşiktaş,1-2,DEP,2,2.0,True,True,1.0,3,1,3,0.10000000000000009
+Beşiktaş,2014-02-11,Kasımpaşa,Beşiktaş,0-3,DEP,2,2.05,True,True,1.0499999999999998,4,1,4,1.15
+Beşiktaş,2014-02-16,Beşiktaş,Bursaspor,1-0,EV,1,1.5,True,True,0.5,5,1,5,1.65
+Beşiktaş,2014-02-22,Galatasaray,Beşiktaş,1-0,EV,1,1.5,True,True,0.5,6,1,6,2.15
+Beşiktaş,2014-02-28,Beşiktaş,MP Antalyaspor,0-0,BERABERE,1,1.2,True,False,-1.0,7,1,7,1.15
+Beşiktaş,2014-03-09,Beşiktaş,Eskişehirspor,1-0,EV,1,1.45,True,True,0.44999999999999996,8,1,8,1.5999999999999999
+Beşiktaş,2014-03-15,Çaykur Rizespor,Beşiktaş,2-2,BERABERE,2,2.1,True,False,-1.0,9,1,9,0.5999999999999999
+Beşiktaş,2014-03-23,Beşiktaş,Akhisar Belediyespor,3-0,EV,1,1.3,True,True,0.30000000000000004,10,1,10,0.8999999999999999
+Beşiktaş,2014-03-28,Karabükspor,Beşiktaş,1-0,EV,2,2.15,True,False,-1.0,11,1,11,-0.10000000000000009
+Beşiktaş,2014-04-05,Beşiktaş,Kayserispor,2-1,EV,1,1.3,True,True,0.30000000000000004,12,1,12,0.19999999999999996
+Beşiktaş,2014-04-11,Konyaspor,Beşiktaş,1-1,BERABERE,2,1.75,True,False,-1.0,13,1,13,-0.8
+Beşiktaş,2014-04-20,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,2.15,True,False,-1.0,14,1,14,-1.8
+Beşiktaş,2014-04-27,Sivasspor,Beşiktaş,3-0,EV,2,1.85,True,False,-1.0,15,1,15,-2.8
+Beşiktaş,2014-05-03,Beşiktaş,Kasımpaşa,2-1,EV,1,1.75,True,True,0.75,16,1,16,-2.05
+Beşiktaş,2014-05-11,Elazığspor,Beşiktaş,0-1,DEP,2,2.1,True,True,1.1,17,1,17,-0.9499999999999997
+Beşiktaş,2014-05-17,Beşiktaş,Gençlerbirliği,1-1,BERABERE,1,1.1,True,False,-1.0,18,1,18,-1.9499999999999997
+Beşiktaş,2014-08-30,Mersin İdmanyurdu,Beşiktaş,0-1,DEP,2,1.7,True,True,0.7,19,1,19,-1.2499999999999998
+Beşiktaş,2014-09-15,Beşiktaş,Çaykur Rizespor,1-1,BERABERE,1,1.35,True,False,-1.0,20,1,20,-2.25
+Beşiktaş,2014-09-22,Bursaspor,Beşiktaş,0-1,DEP,2,2.2,True,True,1.2000000000000002,21,1,21,-1.0499999999999998
+Beşiktaş,2014-09-27,Beşiktaş,Eskişehirspor,1-1,BERABERE,1,1.3,True,False,-1.0,22,1,22,-2.05
+Beşiktaş,2014-10-05,Balıkesirspor,Beşiktaş,0-1,DEP,2,1.45,True,True,0.44999999999999996,23,1,23,-1.5999999999999999
+Beşiktaş,2014-10-19,Beşiktaş,Sivasspor,3-2,EV,1,1.4,True,True,0.3999999999999999,24,1,24,-1.2
+Beşiktaş,2014-10-27,Kayseri Erciyesspor,Beşiktaş,3-2,EV,2,1.55,True,False,-1.0,25,1,25,-2.2
+Beşiktaş,2014-11-02,Beşiktaş,Fenerbahçe,0-2,DEP,1,2.2,True,False,-1.0,26,1,26,-3.2
+Beşiktaş,2014-11-09,İstanbul Başakşehir,Beşiktaş,1-2,DEP,2,2.0,True,True,1.0,27,1,27,-2.2
+Beşiktaş,2014-11-23,Beşiktaş,Kasımpaşa,2-0,EV,1,1.7,True,True,0.7,28,1,28,-1.5000000000000002
+Beşiktaş,2014-12-01,Karabükspor,Beşiktaş,1-2,DEP,2,1.75,True,True,0.75,29,1,29,-0.7500000000000002
+Beşiktaş,2014-12-07,Beşiktaş,Trabzonspor,3-0,EV,1,1.75,True,True,0.75,30,1,30,-2.220446049250313e-16
+Beşiktaş,2014-12-14,Gaziantepspor,Beşiktaş,0-1,DEP,2,1.5,True,True,0.5,31,1,31,0.4999999999999998
+Beşiktaş,2014-12-21,Beşiktaş,Akhisar Belediyespor,3-1,EV,1,1.2,True,True,0.19999999999999996,32,1,32,0.6999999999999997
+Beşiktaş,2014-12-28,Torku Konyaspor,Beşiktaş,1-2,DEP,2,1.6,True,True,0.6000000000000001,33,1,33,1.2999999999999998
+Beşiktaş,2015-01-04,Beşiktaş,Galatasaray,0-2,DEP,1,2.0,True,False,-1.0,34,1,34,0.2999999999999998
+Beşiktaş,2015-01-26,Gençlerbirliği,Beşiktaş,0-2,DEP,2,1.8,True,True,0.8,35,1,35,1.0999999999999999
+Beşiktaş,2015-02-01,Beşiktaş,Mersin İdmanyurdu,2-1,EV,1,1.15,True,True,0.1499999999999999,36,1,36,1.2499999999999998
+Beşiktaş,2015-02-08,Çaykur Rizespor,Beşiktaş,1-2,DEP,2,1.6,True,True,0.6000000000000001,37,1,37,1.8499999999999999
+Beşiktaş,2015-02-15,Beşiktaş,Bursaspor,3-2,EV,1,1.7,True,True,0.7,38,1,38,2.55
+Beşiktaş,2015-02-22,Eskişehirspor,Beşiktaş,1-0,EV,2,2.2,True,False,-1.0,39,1,39,1.5499999999999998
+Beşiktaş,2015-03-01,Beşiktaş,Balıkesirspor,2-2,BERABERE,1,1.1,True,False,-1.0,40,1,40,0.5499999999999998
+Beşiktaş,2015-03-08,Sivasspor,Beşiktaş,0-1,DEP,2,2.1,True,True,1.1,41,1,41,1.65
+Beşiktaş,2015-03-15,Beşiktaş,Kayseri Erciyesspor,5-1,EV,1,1.2,True,True,0.19999999999999996,42,1,42,1.8499999999999999
+Beşiktaş,2015-03-22,Fenerbahçe,Beşiktaş,1-0,EV,1,1.6,True,True,0.6000000000000001,43,1,43,2.45
+Beşiktaş,2015-04-06,Beşiktaş,İstanbul Başakşehir,0-0,BERABERE,1,1.4,True,False,-1.0,44,1,44,1.4500000000000002
+Beşiktaş,2015-04-18,Kasımpaşa,Beşiktaş,1-5,DEP,2,1.9,True,True,0.8999999999999999,45,1,45,2.35
+Beşiktaş,2015-04-27,Beşiktaş,Karabükspor,2-1,EV,1,1.3,True,True,0.30000000000000004,46,1,46,2.6500000000000004
+Beşiktaş,2015-05-03,Trabzonspor,Beşiktaş,0-2,DEP,2,2.2,True,True,1.2000000000000002,47,1,47,3.8500000000000005
+Beşiktaş,2015-05-10,Beşiktaş,Gaziantepspor,1-1,BERABERE,1,1.05,True,False,-1.0,48,1,48,2.8500000000000005
+Beşiktaş,2015-05-14,Akhisar Belediyespor,Beşiktaş,1-1,BERABERE,2,1.25,True,False,-1.0,49,1,49,1.8500000000000005
+Beşiktaş,2015-05-18,Beşiktaş,Torku Konyaspor,0-1,DEP,1,1.05,True,False,-1.0,50,1,50,0.8500000000000005
+Beşiktaş,2015-05-24,Galatasaray,Beşiktaş,2-0,EV,1,1.55,True,True,0.55,51,1,51,1.4000000000000006
+Beşiktaş,2015-05-29,Beşiktaş,Gençlerbirliği,2-1,EV,1,1.75,True,True,0.75,52,1,52,2.1500000000000004
+Beşiktaş,2015-08-16,Mersin İdmanyurdu,Beşiktaş,2-5,DEP,2,1.7,True,True,0.7,53,1,53,2.8500000000000005
+Beşiktaş,2015-08-22,Beşiktaş,Trabzonspor,1-2,DEP,1,1.45,True,False,-1.0,54,1,54,1.8500000000000005
+Beşiktaş,2015-08-28,Gaziantepspor,Beşiktaş,0-4,DEP,2,1.4,True,True,0.3999999999999999,55,1,55,2.2500000000000004
+Beşiktaş,2015-09-13,Beşiktaş,Medipol Başakşehir,2-0,EV,1,1.5,True,True,0.5,56,1,56,2.7500000000000004
+Beşiktaş,2015-09-21,Gençlerbirliği,Beşiktaş,1-1,BERABERE,2,1.6,True,False,-1.0,57,1,57,1.7500000000000004
+Beşiktaş,2015-09-27,Beşiktaş,Fenerbahçe,3-2,EV,1,2.1,True,True,1.1,58,1,58,2.8500000000000005
+Beşiktaş,2015-10-04,Eskişehirspor,Beşiktaş,1-2,DEP,2,1.6,True,True,0.6000000000000001,59,1,59,3.4500000000000006
+Beşiktaş,2015-10-18,Beşiktaş,Çaykur Rizespor,1-0,EV,1,1.2,True,True,0.19999999999999996,60,1,60,3.6500000000000004
+Beşiktaş,2015-10-26,Antalyaspor,Beşiktaş,1-5,DEP,2,1.7,True,True,0.7,61,1,61,4.3500000000000005
+Beşiktaş,2015-10-30,Beşiktaş,Kasımpaşa,3-3,BERABERE,1,1.3,True,False,-1.0,62,1,62,3.3500000000000005
+Beşiktaş,2015-11-08,Bursaspor,Beşiktaş,0-1,DEP,2,1.8,True,True,0.8,63,1,63,4.15
+Beşiktaş,2015-11-22,Beşiktaş,Medicana Sivasspor,2-0,EV,1,1.15,True,True,0.1499999999999999,64,1,64,4.300000000000001
+Beşiktaş,2015-11-29,Beşiktaş,Akhisar Belediyespor,0-2,DEP,1,1.2,True,False,-1.0,65,1,65,3.3000000000000007
+Beşiktaş,2015-12-05,Kayserispor,Beşiktaş,1-2,DEP,2,1.7,True,True,0.7,66,1,66,4.000000000000001
+Beşiktaş,2015-12-14,Beşiktaş,Galatasaray,2-1,EV,1,1.9,True,True,0.8999999999999999,67,1,67,4.9
+Beşiktaş,2015-12-21,Osmanlıspor FK,Beşiktaş,2-3,DEP,2,1.7,True,True,0.7,68,1,68,5.6000000000000005
+Beşiktaş,2015-12-27,Beşiktaş,Torku Konyaspor,4-0,EV,1,1.15,True,True,0.1499999999999999,69,1,69,5.75
+Beşiktaş,2016-02-07,Beşiktaş,Gaziantepspor,4-0,EV,1,1.1,True,True,0.10000000000000009,70,1,70,5.85
+Beşiktaş,2016-02-14,Medipol Başakşehir,Beşiktaş,2-2,BERABERE,2,1.85,True,False,-1.0,71,1,71,4.85
+Beşiktaş,2016-02-17,Beşiktaş,Mersin İdmanyurdu,1-0,EV,1,1.1,True,True,0.10000000000000009,72,1,72,4.949999999999999
+Beşiktaş,2016-02-22,Beşiktaş,Gençlerbirliği,1-0,EV,1,1.2,True,True,0.19999999999999996,73,1,73,5.1499999999999995
+Beşiktaş,2016-02-29,Fenerbahçe,Beşiktaş,2-0,EV,1,1.8,True,True,0.8,74,1,74,5.949999999999999
+Beşiktaş,2016-03-07,Beşiktaş,Eskişehirspor,3-1,EV,1,1.15,True,True,0.1499999999999999,75,1,75,6.1
+Beşiktaş,2016-03-12,Çaykur Rizespor,Beşiktaş,1-2,DEP,2,1.4,True,True,0.3999999999999999,76,1,76,6.5
+Beşiktaş,2016-03-15,Trabzonspor,Beşiktaş,0-2,DEP,2,1.55,True,True,0.55,77,1,77,7.05
+Beşiktaş,2016-03-19,Beşiktaş,Antalyaspor,1-0,EV,1,1.2,True,True,0.19999999999999996,78,1,78,7.25
+Beşiktaş,2016-04-04,Kasımpaşa,Beşiktaş,2-1,EV,2,1.45,True,False,-1.0,79,1,79,6.25
+Beşiktaş,2016-04-11,Beşiktaş,Bursaspor,3-2,EV,1,1.25,True,True,0.25,80,1,80,6.5
+Beşiktaş,2016-04-16,Medicana Sivasspor,Beşiktaş,1-2,DEP,2,1.4,True,True,0.3999999999999999,81,1,81,6.9
+Beşiktaş,2016-04-23,Akhisar Belediyespor,Beşiktaş,3-3,BERABERE,2,1.35,True,False,-1.0,82,1,82,5.9
+Beşiktaş,2016-04-30,Beşiktaş,Kayserispor,4-0,EV,1,1.1,True,True,0.10000000000000009,83,1,83,6.0
+Beşiktaş,2016-05-08,Galatasaray,Beşiktaş,0-1,DEP,2,1.5,True,True,0.5,84,1,84,6.5
+Beşiktaş,2016-05-15,Beşiktaş,Osmanlıspor FK,3-1,EV,1,1.25,True,True,0.25,85,1,85,6.75
+Beşiktaş,2016-05-18,Torku Konyaspor,Beşiktaş,2-1,EV,2,2.1,True,False,-1.0,86,1,86,5.75
+Beşiktaş,2016-08-20,Beşiktaş,Aytemiz Alanyaspor,4-1,EV,1,1.15,True,True,0.1499999999999999,87,1,87,5.9
+Beşiktaş,2016-08-26,Atiker Konyaspor,Beşiktaş,2-2,BERABERE,2,1.7,True,False,-1.0,88,1,88,4.9
+Beşiktaş,2016-09-10,Beşiktaş,Karabükspor,3-1,EV,1,1.2,True,True,0.19999999999999996,89,1,89,5.1000000000000005
+Beşiktaş,2016-09-18,Akhisar Belediyespor,Beşiktaş,0-2,DEP,2,1.6,True,True,0.6000000000000001,90,1,90,5.700000000000001
+Beşiktaş,2016-09-24,Beşiktaş,Galatasaray,2-2,BERABERE,1,1.7,True,False,-1.0,91,1,91,4.700000000000001
+Beşiktaş,2016-10-01,Çaykur Rizespor,Beşiktaş,0-1,DEP,2,1.4,True,True,0.3999999999999999,92,1,92,5.100000000000001
+Beşiktaş,2016-10-15,Kayserispor,Beşiktaş,0-1,DEP,2,1.5,True,True,0.5,93,1,93,5.600000000000001
+Beşiktaş,2016-10-23,Beşiktaş,Antalyaspor,3-0,EV,1,1.15,True,True,0.1499999999999999,94,1,94,5.750000000000002
+Beşiktaş,2016-10-28,Gençlerbirliği,Beşiktaş,1-1,BERABERE,2,1.75,True,False,-1.0,95,1,95,4.750000000000002
+Beşiktaş,2016-11-05,Beşiktaş,Trabzonspor,2-1,EV,1,1.25,True,True,0.25,96,1,96,5.000000000000002
+Beşiktaş,2016-11-19,Adanaspor,Beşiktaş,1-2,DEP,2,1.2,True,True,0.19999999999999996,97,1,97,5.200000000000002
+Beşiktaş,2016-11-26,Beşiktaş,Medipol Başakşehir,1-1,BERABERE,1,1.55,True,False,-1.0,98,1,98,4.200000000000002
+Beşiktaş,2016-12-03,Fenerbahçe,Beşiktaş,0-0,BERABERE,1,1.7,True,False,-1.0,99,1,99,3.200000000000002
+Beşiktaş,2016-12-10,Beşiktaş,Bursaspor,2-1,EV,1,1.35,True,True,0.3500000000000001,100,1,100,3.550000000000002
+Beşiktaş,2016-12-17,Kasımpaşa,Beşiktaş,2-1,EV,2,1.35,True,False,-1.0,101,2,1,2.550000000000002
+Beşiktaş,2016-12-24,Beşiktaş,Gaziantepspor,1-0,EV,1,1.15,True,True,0.1499999999999999,102,2,2,2.700000000000002
+Beşiktaş,2017-01-16,Osmanlıspor FK,Beşiktaş,0-2,DEP,2,1.9,True,True,0.8999999999999999,103,2,3,3.600000000000002
+Beşiktaş,2017-01-23,Aytemiz Alanyaspor,Beşiktaş,1-4,DEP,2,1.25,True,True,0.25,104,2,4,3.850000000000002
+Beşiktaş,2017-01-30,Beşiktaş,Atiker Konyaspor,5-1,EV,1,1.25,True,True,0.25,105,2,5,4.100000000000001
+Beşiktaş,2017-02-10,Karabükspor,Beşiktaş,2-1,EV,2,1.4,True,False,-1.0,106,2,6,3.1000000000000014
+Beşiktaş,2017-02-19,Beşiktaş,Akhisar Belediyespor,3-1,EV,1,1.15,True,True,0.1499999999999999,107,2,7,3.2500000000000013
+Beşiktaş,2017-02-27,Galatasaray,Beşiktaş,0-1,DEP,1,2.3,True,False,-1.0,108,2,8,2.2500000000000013
+Beşiktaş,2017-03-04,Beşiktaş,Çaykur Rizespor,1-0,EV,1,1.1,True,True,0.10000000000000009,109,2,9,2.3500000000000014
+Beşiktaş,2017-03-12,Beşiktaş,Kayserispor,2-2,BERABERE,1,1.2,True,False,-1.0,110,2,10,1.3500000000000014
+Beşiktaş,2017-03-19,Antalyaspor,Beşiktaş,0-0,BERABERE,2,1.55,True,False,-1.0,111,2,11,0.3500000000000014
+Beşiktaş,2017-04-02,Beşiktaş,Gençlerbirliği,3-0,EV,1,1.25,True,True,0.25,112,2,12,0.6000000000000014
+Beşiktaş,2017-04-08,Trabzonspor,Beşiktaş,3-4,DEP,2,2.1,True,True,1.1,113,2,13,1.7000000000000015
+Beşiktaş,2017-04-24,Beşiktaş,Adanaspor,3-2,EV,1,1.05,True,True,0.050000000000000044,114,2,14,1.7500000000000016
+Beşiktaş,2017-04-30,Medipol Başakşehir,Beşiktaş,3-1,EV,2,1.8,True,False,-1.0,115,2,15,0.7500000000000016
+Beşiktaş,2017-05-07,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,1.6,True,False,-1.0,116,2,16,-0.24999999999999845
+Beşiktaş,2017-05-15,Bursaspor,Beşiktaş,0-2,DEP,2,1.15,True,True,0.1499999999999999,117,2,17,-0.09999999999999853
+Beşiktaş,2017-05-20,Beşiktaş,Kasımpaşa,4-1,EV,1,1.1,True,True,0.10000000000000009,118,2,18,1.5543122344752192e-15
+Beşiktaş,2017-05-28,Gaziantepspor,Beşiktaş,0-4,DEP,2,1.05,True,True,0.050000000000000044,119,2,19,0.0500000000000016
+Beşiktaş,2017-06-03,Beşiktaş,Osmanlıspor FK,4-0,EV,1,1.15,True,True,0.1499999999999999,120,2,20,0.2000000000000015
+Beşiktaş,2017-08-13,Beşiktaş,Antalyaspor,2-0,EV,1,1.2,True,True,0.19999999999999996,121,2,21,0.40000000000000147
+Beşiktaş,2017-08-18,Kasımpaşa,Beşiktaş,2-2,BERABERE,2,1.45,True,False,-1.0,122,2,22,-0.5999999999999985
+Beşiktaş,2017-08-26,Beşiktaş,Bursaspor,2-1,EV,1,1.2,True,True,0.19999999999999996,123,2,23,-0.3999999999999986
+Beşiktaş,2017-09-09,Karabükspor,Beşiktaş,0-1,DEP,2,1.65,True,True,0.6499999999999999,124,2,24,0.25000000000000133
+Beşiktaş,2017-09-18,Beşiktaş,Atiker Konyaspor,2-0,EV,1,1.25,True,True,0.25,125,2,25,0.5000000000000013
+Beşiktaş,2017-09-23,Fenerbahçe,Beşiktaş,2-1,EV,1,2.2,True,True,1.2000000000000002,126,2,26,1.7000000000000015
+Beşiktaş,2017-10-01,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.55,True,False,-1.0,127,2,27,0.7000000000000015
+Beşiktaş,2017-10-13,Gençlerbirliği,Beşiktaş,2-1,EV,2,1.4,True,False,-1.0,128,2,28,-0.2999999999999985
+Beşiktaş,2017-10-23,Beşiktaş,Medipol Başakşehir,1-1,BERABERE,1,1.5,True,False,-1.0,129,2,29,-1.2999999999999985
+Beşiktaş,2017-10-28,Aytemiz Alanyaspor,Beşiktaş,1-2,DEP,2,1.5,True,True,0.5,130,2,30,-0.7999999999999985
+Beşiktaş,2017-11-05,Göztepe,Beşiktaş,1-3,DEP,2,1.5,True,True,0.5,131,2,31,-0.2999999999999985
+Beşiktaş,2017-11-17,Beşiktaş,Akhisarspor,0-0,BERABERE,1,1.25,True,False,-1.0,132,2,32,-1.2999999999999985
+Beşiktaş,2017-11-25,Yeni Malatyaspor,Beşiktaş,0-0,BERABERE,2,1.35,True,False,-1.0,133,2,33,-2.2999999999999985
+Beşiktaş,2017-12-02,Beşiktaş,Galatasaray,3-0,EV,1,1.65,True,True,0.6499999999999999,134,2,34,-1.6499999999999986
+Beşiktaş,2017-12-10,Kayserispor,Beşiktaş,1-1,BERABERE,2,1.5,True,False,-1.0,135,2,35,-2.6499999999999986
+Beşiktaş,2017-12-17,Beşiktaş,Osmanlıspor FK,5-1,EV,1,1.1,True,True,0.10000000000000009,136,2,36,-2.5499999999999985
+Beşiktaş,2017-12-23,Sivasspor,Beşiktaş,2-1,EV,2,1.4,True,False,-1.0,137,2,37,-3.5499999999999985
+Beşiktaş,2018-01-21,Antalyaspor,Beşiktaş,1-2,DEP,2,1.3,True,True,0.30000000000000004,138,2,38,-3.2499999999999982
+Beşiktaş,2018-01-26,Beşiktaş,Kasımpaşa,2-1,EV,1,1.05,True,True,0.050000000000000044,139,2,39,-3.1999999999999984
+Beşiktaş,2018-02-02,Bursaspor,Beşiktaş,2-2,BERABERE,2,1.4,True,False,-1.0,140,2,40,-4.199999999999998
+Beşiktaş,2018-02-10,Beşiktaş,Karabükspor,5-0,EV,1,1.05,True,True,0.050000000000000044,141,2,41,-4.149999999999999
+Beşiktaş,2018-02-16,Atiker Konyaspor,Beşiktaş,1-1,BERABERE,2,1.45,True,False,-1.0,142,2,42,-5.149999999999999
+Beşiktaş,2018-02-25,Beşiktaş,Fenerbahçe,3-1,EV,1,1.9,True,True,0.8999999999999999,143,2,43,-4.249999999999998
+Beşiktaş,2018-03-05,Trabzonspor,Beşiktaş,0-2,DEP,2,1.75,True,True,0.75,144,2,44,-3.4999999999999982
+Beşiktaş,2018-03-10,Beşiktaş,Gençlerbirliği,1-0,EV,1,1.15,True,True,0.1499999999999999,145,2,45,-3.3499999999999983
+Beşiktaş,2018-03-18,Medipol Başakşehir,Beşiktaş,1-0,EV,2,1.95,True,False,-1.0,146,2,46,-4.349999999999998
+Beşiktaş,2018-03-31,Beşiktaş,Aytemiz Alanyaspor,1-0,EV,1,1.15,True,True,0.1499999999999999,147,2,47,-4.1999999999999975
+Beşiktaş,2018-04-07,Beşiktaş,Göztepe,5-1,EV,1,1.1,True,True,0.10000000000000009,148,2,48,-4.099999999999998
+Beşiktaş,2018-04-13,Akhisarspor,Beşiktaş,0-3,DEP,2,1.25,True,True,0.25,149,2,49,-3.849999999999998
+Beşiktaş,2018-04-22,Beşiktaş,Yeni Malatyaspor,3-1,EV,1,1.1,True,True,0.10000000000000009,150,2,50,-3.749999999999998
+Beşiktaş,2018-04-29,Galatasaray,Beşiktaş,2-0,EV,1,2.0,True,True,1.0,151,2,51,-2.749999999999998
+Beşiktaş,2018-05-07,Beşiktaş,Kayserispor,2-0,EV,1,1.1,True,True,0.10000000000000009,152,2,52,-2.6499999999999977
+Beşiktaş,2018-05-13,Osmanlıspor FK,Beşiktaş,2-3,DEP,2,1.6,True,True,0.6000000000000001,153,2,53,-2.0499999999999976
+Beşiktaş,2018-05-19,Beşiktaş,Sivasspor,5-1,EV,1,1.1,True,True,0.10000000000000009,154,2,54,-1.9499999999999975
+Beşiktaş,2018-08-12,Beşiktaş,Akhisarspor,2-1,EV,1,1.25,True,True,0.25,155,2,55,-1.6999999999999975
+Beşiktaş,2018-08-19,BB Erzurumspor,Beşiktaş,1-3,DEP,2,1.35,True,True,0.3500000000000001,156,2,56,-1.3499999999999974
+Beşiktaş,2018-08-26,Beşiktaş,Antalyaspor,2-3,DEP,1,1.1,True,False,-1.0,157,2,57,-2.3499999999999974
+Beşiktaş,2018-09-02,Bursaspor,Beşiktaş,1-1,BERABERE,2,1.45,True,False,-1.0,158,2,58,-3.3499999999999974
+Beşiktaş,2018-09-15,Beşiktaş,Yeni Malatyaspor,2-1,EV,1,1.15,True,True,0.1499999999999999,159,2,59,-3.1999999999999975
+Beşiktaş,2018-09-24,Fenerbahçe,Beşiktaş,1-1,BERABERE,2,2.1,True,False,-1.0,160,2,60,-4.1999999999999975
+Beşiktaş,2018-09-29,Beşiktaş,Kayserispor,2-0,EV,1,1.15,True,True,0.1499999999999999,161,2,61,-4.049999999999997
+Beşiktaş,2018-10-07,Atiker Konyaspor,Beşiktaş,2-2,BERABERE,2,1.65,True,False,-1.0,162,2,62,-5.049999999999997
+Beşiktaş,2018-10-21,Göztepe,Beşiktaş,2-0,EV,2,1.8,True,False,-1.0,163,2,63,-6.049999999999997
+Beşiktaş,2018-10-29,Beşiktaş,Çaykur Rizespor,4-1,EV,1,1.15,True,True,0.1499999999999999,164,2,64,-5.899999999999997
+Beşiktaş,2018-11-03,Medipol Başakşehir,Beşiktaş,1-0,EV,1,2.0,True,True,1.0,165,2,65,-4.899999999999997
+Beşiktaş,2018-11-11,Beşiktaş,Sivasspor,1-2,DEP,1,1.25,True,False,-1.0,166,2,66,-5.899999999999997
+Beşiktaş,2018-11-24,MKE Ankaragücü,Beşiktaş,1-4,DEP,2,1.65,True,True,0.6499999999999999,167,2,67,-5.2499999999999964
+Beşiktaş,2018-12-02,Beşiktaş,Galatasaray,1-0,EV,1,1.7,True,True,0.7,168,2,68,-4.549999999999996
+Beşiktaş,2018-12-07,Alanyaspor,Beşiktaş,0-0,BERABERE,2,1.8,True,False,-1.0,169,2,69,-5.549999999999996
+Beşiktaş,2018-12-16,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.75,True,False,-1.0,170,2,70,-6.549999999999996
+Beşiktaş,2018-12-22,Kasımpaşa,Beşiktaş,4-1,EV,2,2.0,True,False,-1.0,171,2,71,-7.549999999999996
+Beşiktaş,2019-01-18,Akhisarspor,Beşiktaş,0-3,DEP,2,1.7,True,True,0.7,172,2,72,-6.849999999999996
+Beşiktaş,2019-01-25,Beşiktaş,BB Erzurumspor,1-1,BERABERE,1,1.25,True,False,-1.0,173,2,73,-7.849999999999996
+Beşiktaş,2019-02-03,Antalyaspor,Beşiktaş,2-6,DEP,2,1.55,True,True,0.55,174,2,74,-7.299999999999996
+Beşiktaş,2019-02-09,Beşiktaş,Bursaspor,2-0,EV,1,1.45,True,True,0.44999999999999996,175,2,75,-6.849999999999996
+Beşiktaş,2019-02-15,Yeni Malatyaspor,Beşiktaş,1-2,DEP,2,1.75,True,True,0.75,176,2,76,-6.099999999999996
+Beşiktaş,2019-02-25,Beşiktaş,Fenerbahçe,3-3,BERABERE,1,1.65,True,False,-1.0,177,2,77,-7.099999999999996
+Beşiktaş,2019-03-02,Kayserispor,Beşiktaş,2-2,BERABERE,2,1.75,True,False,-1.0,178,2,78,-8.099999999999996
+Beşiktaş,2019-03-10,Beşiktaş,Atiker Konyaspor,3-2,EV,1,1.35,True,True,0.3500000000000001,179,2,79,-7.7499999999999964
+Beşiktaş,2019-03-16,Beşiktaş,Göztepe,1-0,EV,1,1.3,True,True,0.30000000000000004,180,2,80,-7.449999999999997
+Beşiktaş,2019-04-08,Çaykur Rizespor,Beşiktaş,2-7,DEP,2,1.9,True,True,0.8999999999999999,181,2,81,-6.549999999999997
+Beşiktaş,2019-04-13,Beşiktaş,Medipol Başakşehir,2-1,EV,1,2.15,True,True,1.15,182,2,82,-5.399999999999997
+Beşiktaş,2019-04-22,Sivasspor,Beşiktaş,1-2,DEP,2,1.65,True,True,0.6499999999999999,183,2,83,-4.7499999999999964
+Beşiktaş,2019-04-28,Beşiktaş,MKE Ankaragücü,4-1,EV,1,1.2,True,True,0.19999999999999996,184,2,84,-4.549999999999996
+Beşiktaş,2019-05-05,Galatasaray,Beşiktaş,2-0,EV,1,1.7,True,True,0.7,185,2,85,-3.849999999999996
+Beşiktaş,2019-05-13,Beşiktaş,Alanyaspor,2-1,EV,1,1.3,True,True,0.30000000000000004,186,2,86,-3.5499999999999963
+Beşiktaş,2019-05-18,Trabzonspor,Beşiktaş,2-1,EV,2,2.1,True,False,-1.0,187,2,87,-4.549999999999996
+Beşiktaş,2019-05-24,Beşiktaş,Kasımpaşa,3-2,EV,1,1.15,True,True,0.1499999999999999,188,2,88,-4.399999999999997
+Beşiktaş,2019-08-17,Sivasspor,Beşiktaş,3-0,EV,2,2.15,True,False,-1.0,189,2,89,-5.399999999999997
+Beşiktaş,2019-08-23,Beşiktaş,Göztepe,3-0,EV,1,1.4,True,True,0.3999999999999999,190,2,90,-4.9999999999999964
+Beşiktaş,2019-08-31,Beşiktaş,Çaykur Rizespor,1-1,BERABERE,1,1.55,True,False,-1.0,191,2,91,-5.9999999999999964
+Beşiktaş,2019-09-14,Gaziantep FK,Beşiktaş,3-2,EV,2,1.95,True,False,-1.0,192,2,92,-6.9999999999999964
+Beşiktaş,2019-09-23,Beşiktaş,Başakşehir FK,1-1,BERABERE,1,2.0,True,False,-1.0,193,2,93,-7.9999999999999964
+Beşiktaş,2019-09-29,Trabzonspor,Beşiktaş,4-1,EV,1,1.85,True,True,0.8500000000000001,194,2,94,-7.149999999999997
+Beşiktaş,2019-10-06,Beşiktaş,Alanyaspor,2-0,EV,1,1.85,True,True,0.8500000000000001,195,2,95,-6.299999999999997
+Beşiktaş,2019-10-19,MKE Ankaragücü,Beşiktaş,0-0,BERABERE,2,1.55,True,False,-1.0,196,2,96,-7.299999999999997
+Beşiktaş,2019-10-27,Beşiktaş,Galatasaray,1-0,EV,2,2.05,True,False,-1.0,197,2,97,-8.299999999999997
+Beşiktaş,2019-11-02,Antalyaspor,Beşiktaş,1-2,DEP,2,2.0,True,True,1.0,198,2,98,-7.299999999999997
+Beşiktaş,2019-11-10,Beşiktaş,Denizlispor,1-0,EV,1,1.35,True,True,0.3500000000000001,199,2,99,-6.9499999999999975
+Beşiktaş,2019-11-23,Konyaspor,Beşiktaş,0-1,DEP,2,1.8,True,True,0.8,200,2,100,-6.149999999999998
+Beşiktaş,2019-12-02,Beşiktaş,Kayserispor,4-1,EV,1,1.1,True,True,0.10000000000000009,201,3,1,-6.049999999999997
+Beşiktaş,2019-12-08,Kasımpaşa,Beşiktaş,2-3,DEP,2,1.58,True,True,0.5800000000000001,202,3,2,-5.469999999999997
+Beşiktaş,2019-12-15,Beşiktaş,Yeni Malatyaspor,0-2,DEP,1,1.4,True,False,-1.0,203,3,3,-6.469999999999997
+Beşiktaş,2019-12-22,Fenerbahçe,Beşiktaş,3-1,EV,1,1.85,True,True,0.8500000000000001,204,3,4,-5.619999999999997
+Beşiktaş,2019-12-27,Beşiktaş,Gençlerbirliği,4-1,EV,1,1.38,True,True,0.3799999999999999,205,3,5,-5.2399999999999975
+Beşiktaş,2020-01-19,Beşiktaş,Sivasspor,1-2,DEP,1,1.67,True,False,-1.0,206,3,6,-6.2399999999999975
+Beşiktaş,2020-01-26,Göztepe,Beşiktaş,2-1,EV,1,2.05,True,True,1.0499999999999998,207,3,7,-5.189999999999998
+Beşiktaş,2020-02-01,Çaykur Rizespor,Beşiktaş,1-2,DEP,2,1.95,True,True,0.95,208,3,8,-4.2399999999999975
+Beşiktaş,2020-02-08,Beşiktaş,Gaziantep FK,3-0,EV,1,1.3,True,True,0.30000000000000004,209,3,9,-3.9399999999999977
+Beşiktaş,2020-02-14,Başakşehir FK,Beşiktaş,1-0,EV,1,1.95,True,True,0.95,210,3,10,-2.9899999999999975
+Beşiktaş,2020-02-22,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.85,True,False,-1.0,211,3,11,-3.9899999999999975
+Beşiktaş,2020-02-28,Alanyaspor,Beşiktaş,1-2,DEP,1,2.05,True,False,-1.0,212,3,12,-4.9899999999999975
+Beşiktaş,2020-03-06,Beşiktaş,MKE Ankaragücü,2-1,EV,1,1.18,True,True,0.17999999999999994,213,3,13,-4.809999999999998
+Beşiktaş,2020-03-15,Galatasaray,Beşiktaş,0-0,BERABERE,1,1.8,True,False,-1.0,214,3,14,-5.809999999999998
+Beşiktaş,2020-06-13,Beşiktaş,Antalyaspor,1-2,DEP,1,1.6,True,False,-1.0,215,3,15,-6.809999999999998
+Beşiktaş,2020-06-20,Denizlispor,Beşiktaş,1-5,DEP,2,1.7,True,True,0.7,216,3,16,-6.109999999999998
+Beşiktaş,2020-06-26,Beşiktaş,Konyaspor,3-0,EV,1,1.6,True,True,0.6000000000000001,217,3,17,-5.509999999999998
+Beşiktaş,2020-07-06,Kayserispor,Beşiktaş,3-1,EV,2,1.45,True,False,-1.0,218,3,18,-6.509999999999998
+Beşiktaş,2020-07-09,Beşiktaş,Kasımpaşa,3-2,EV,1,1.45,True,True,0.44999999999999996,219,3,19,-6.059999999999998
+Beşiktaş,2020-07-13,Yeni Malatyaspor,Beşiktaş,0-1,DEP,2,1.9,True,True,0.8999999999999999,220,3,20,-5.159999999999998
+Beşiktaş,2020-07-19,Beşiktaş,Fenerbahçe,2-0,EV,1,1.62,True,True,0.6200000000000001,221,3,21,-4.539999999999998
+Beşiktaş,2020-07-25,Gençlerbirliği,Beşiktaş,0-3,DEP,2,1.42,True,True,0.41999999999999993,222,3,22,-4.119999999999998
+Beşiktaş,2020-09-13,Trabzonspor,Beşiktaş,1-3,DEP,1,1.85,True,False,-1.0,223,3,23,-5.119999999999998
+Beşiktaş,2020-09-19,Beşiktaş,Antalyaspor,1-1,BERABERE,1,1.5,True,False,-1.0,224,3,24,-6.119999999999998
+Beşiktaş,2020-09-27,Konyaspor,Beşiktaş,4-1,EV,2,2.25,True,False,-1.0,225,3,25,-7.119999999999998
+Beşiktaş,2020-10-04,Beşiktaş,Gençlerbirliği,0-1,DEP,1,1.45,True,False,-1.0,226,3,26,-8.119999999999997
+Beşiktaş,2020-10-26,Denizlispor,Beşiktaş,2-3,DEP,2,1.9,True,True,0.8999999999999999,227,3,27,-7.219999999999997
+Beşiktaş,2020-11-01,Beşiktaş,Yeni Malatyaspor,1-0,EV,1,1.55,True,True,0.55,228,3,28,-6.669999999999997
+Beşiktaş,2020-11-06,Gaziantep FK,Beşiktaş,3-1,EV,2,1.67,True,False,-1.0,229,3,29,-7.669999999999997
+Beşiktaş,2020-11-21,Beşiktaş,Başakşehir FK,3-2,EV,2,2.0,True,False,-1.0,230,3,30,-8.669999999999998
+Beşiktaş,2020-11-29,Fenerbahçe,Beşiktaş,3-4,DEP,1,1.67,True,False,-1.0,231,3,31,-9.669999999999998
+Beşiktaş,2020-12-04,Beşiktaş,Kasımpaşa,3-0,EV,1,1.58,True,True,0.5800000000000001,232,3,32,-9.089999999999998
+Beşiktaş,2020-12-13,Alanyaspor,Beşiktaş,2-1,EV,2,2.15,True,False,-1.0,233,3,33,-10.089999999999998
+Beşiktaş,2020-12-20,Beşiktaş,BB Erzurumspor,4-0,EV,1,1.25,True,True,0.25,234,3,34,-9.839999999999998
+Beşiktaş,2020-12-24,MKE Ankaragücü,Beşiktaş,0-1,DEP,2,1.65,True,True,0.6499999999999999,235,3,35,-9.189999999999998
+Beşiktaş,2020-12-28,Beşiktaş,Sivasspor,3-0,EV,1,1.85,True,True,0.8500000000000001,236,3,36,-8.339999999999998
+Beşiktaş,2021-01-03,Kayserispor,Beşiktaş,0-2,DEP,2,1.65,True,True,0.6499999999999999,237,3,37,-7.689999999999998
+Beşiktaş,2021-01-06,Beşiktaş,Çaykur Rizespor,6-0,EV,1,1.42,True,True,0.41999999999999993,238,3,38,-7.269999999999998
+Beşiktaş,2021-01-17,Beşiktaş,Galatasaray,2-0,EV,1,2.35,True,True,1.35,239,3,39,-5.919999999999998
+Beşiktaş,2021-01-21,Fatih Karagümrük,Beşiktaş,1-4,DEP,2,1.55,True,True,0.55,240,3,40,-5.369999999999998
+Beşiktaş,2021-01-24,Beşiktaş,Göztepe,2-1,EV,1,1.38,True,True,0.3799999999999999,241,3,41,-4.989999999999998
+Beşiktaş,2021-01-31,Beşiktaş,Trabzonspor,1-2,DEP,1,1.67,True,False,-1.0,242,3,42,-5.989999999999998
+Beşiktaş,2021-02-03,Antalyaspor,Beşiktaş,1-1,BERABERE,2,1.45,True,False,-1.0,243,3,43,-6.989999999999998
+Beşiktaş,2021-02-07,Beşiktaş,Konyaspor,1-0,EV,1,1.3,True,True,0.30000000000000004,244,3,44,-6.689999999999999
+Beşiktaş,2021-02-15,Gençlerbirliği,Beşiktaş,0-3,DEP,2,1.32,True,True,0.32000000000000006,245,3,45,-6.369999999999998
+Beşiktaş,2021-02-26,Beşiktaş,Denizlispor,3-0,EV,1,1.2,True,True,0.19999999999999996,246,3,46,-6.169999999999998
+Beşiktaş,2021-03-02,Yeni Malatyaspor,Beşiktaş,0-1,DEP,2,1.4,True,True,0.3999999999999999,247,3,47,-5.769999999999998
+Beşiktaş,2021-03-06,Beşiktaş,Gaziantep FK,2-1,EV,1,1.25,True,True,0.25,248,3,48,-5.519999999999998
+Beşiktaş,2021-03-12,Başakşehir FK,Beşiktaş,2-3,DEP,2,1.65,True,True,0.6499999999999999,249,3,49,-4.869999999999997
+Beşiktaş,2021-03-21,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,1.8,True,False,-1.0,250,3,50,-5.869999999999997
+Beşiktaş,2021-04-04,Kasımpaşa,Beşiktaş,1-0,EV,2,1.62,True,False,-1.0,251,3,51,-6.869999999999997
+Beşiktaş,2021-04-07,Beşiktaş,Alanyaspor,3-0,EV,1,1.55,True,True,0.55,252,3,52,-6.319999999999998
+Beşiktaş,2021-04-11,BB Erzurumspor,Beşiktaş,2-4,DEP,2,1.75,True,True,0.75,253,3,53,-5.569999999999998
+Beşiktaş,2021-04-16,Beşiktaş,MKE Ankaragücü,2-2,BERABERE,1,1.28,True,False,-1.0,254,3,54,-6.569999999999998
+Beşiktaş,2021-04-20,Sivasspor,Beşiktaş,0-0,BERABERE,2,1.75,True,False,-1.0,255,3,55,-7.569999999999998
+Beşiktaş,2021-04-24,Beşiktaş,Kayserispor,3-1,EV,1,1.32,True,True,0.32000000000000006,256,3,56,-7.249999999999997
+Beşiktaş,2021-04-28,Çaykur Rizespor,Beşiktaş,2-3,DEP,2,1.42,True,True,0.41999999999999993,257,3,57,-6.829999999999997
+Beşiktaş,2021-05-08,Galatasaray,Beşiktaş,3-1,EV,1,2.1,True,True,1.1,258,3,58,-5.729999999999997
+Beşiktaş,2021-05-11,Beşiktaş,Fatih Karagümrük,1-2,DEP,1,1.3,True,False,-1.0,259,3,59,-6.729999999999997
+Beşiktaş,2021-05-15,Göztepe,Beşiktaş,1-2,DEP,2,1.22,True,True,0.21999999999999997,260,3,60,-6.509999999999997
+Beşiktaş,2021-08-13,Beşiktaş,Çaykur Rizespor,3-0,EV,1,1.35,True,True,0.3500000000000001,261,3,61,-6.159999999999997
+Beşiktaş,2021-08-21,Gaziantep FK,Beşiktaş,0-0,BERABERE,2,1.5,True,False,-1.0,262,3,62,-7.159999999999997
+Beşiktaş,2021-08-28,Beşiktaş,Fatih Karagümrük,1-0,EV,1,1.36,True,True,0.3600000000000001,263,3,63,-6.799999999999996
+Beşiktaş,2021-09-11,Beşiktaş,Yeni Malatyaspor,3-0,EV,1,1.19,True,True,0.18999999999999995,264,3,64,-6.609999999999996
+Beşiktaş,2021-09-18,Antalyaspor,Beşiktaş,2-3,DEP,2,2.02,True,True,1.02,265,3,65,-5.589999999999996
+Beşiktaş,2021-09-21,Beşiktaş,Adana Demirspor,3-3,BERABERE,1,1.28,True,False,-1.0,266,3,66,-6.589999999999996
+Beşiktaş,2021-09-24,Altay,Beşiktaş,2-1,EV,2,2.22,True,False,-1.0,267,3,67,-7.589999999999996
+Beşiktaş,2021-10-02,Beşiktaş,Sivasspor,2-1,EV,1,1.82,True,True,0.8200000000000001,268,3,68,-6.769999999999996
+Beşiktaş,2021-10-15,Başakşehir FK,Beşiktaş,3-2,EV,2,2.12,True,False,-1.0,269,3,69,-7.769999999999996
+Beşiktaş,2021-10-25,Beşiktaş,Galatasaray,2-1,EV,1,1.86,True,True,0.8600000000000001,270,3,70,-6.909999999999996
+Beşiktaş,2021-11-06,Beşiktaş,Trabzonspor,1-2,DEP,1,1.76,True,False,-1.0,271,3,71,-7.909999999999996
+Beşiktaş,2021-11-20,Alanyaspor,Beşiktaş,2-0,EV,2,2.0,True,False,-1.0,272,3,72,-8.909999999999997
+Beşiktaş,2021-11-27,Beşiktaş,Giresunspor,0-4,DEP,1,1.51,True,False,-1.0,273,3,73,-9.909999999999997
+Beşiktaş,2021-12-03,Kasımpaşa,Beşiktaş,1-1,BERABERE,2,1.73,True,False,-1.0,274,3,74,-10.909999999999997
+Beşiktaş,2021-12-12,Beşiktaş,Kayserispor,4-2,EV,1,1.26,True,True,0.26,275,3,75,-10.649999999999997
+Beşiktaş,2021-12-19,Fenerbahçe,Beşiktaş,2-2,BERABERE,1,2.03,True,False,-1.0,276,3,76,-11.649999999999997
+Beşiktaş,2021-12-23,Beşiktaş,Göztepe,2-1,EV,1,1.35,True,True,0.3500000000000001,277,3,77,-11.299999999999997
+Beşiktaş,2021-12-27,Konyaspor,Beşiktaş,1-0,EV,2,2.23,True,False,-1.0,278,3,78,-12.299999999999997
+Beşiktaş,2022-01-09,Çaykur Rizespor,Beşiktaş,2-2,BERABERE,2,2.0,True,False,-1.0,279,3,79,-13.299999999999997
+Beşiktaş,2022-01-14,Beşiktaş,Gaziantep FK,1-0,EV,1,1.42,True,True,0.41999999999999993,280,3,80,-12.879999999999997
+Beşiktaş,2022-01-18,Fatih Karagümrük,Beşiktaş,0-1,DEP,2,1.5,True,True,0.5,281,3,81,-12.379999999999997
+Beşiktaş,2022-01-22,Yeni Malatyaspor,Beşiktaş,1-1,BERABERE,2,1.49,True,False,-1.0,282,3,82,-13.379999999999997
+Beşiktaş,2022-02-06,Beşiktaş,Antalyaspor,0-0,BERABERE,1,1.63,True,False,-1.0,283,3,83,-14.379999999999997
+Beşiktaş,2022-02-14,Adana Demirspor,Beşiktaş,1-1,BERABERE,1,2.1,True,False,-1.0,284,3,84,-15.379999999999997
+Beşiktaş,2022-02-19,Beşiktaş,Altay,1-0,EV,1,1.38,True,True,0.3799999999999999,285,3,85,-14.999999999999996
+Beşiktaş,2022-02-26,Sivasspor,Beşiktaş,2-3,DEP,2,2.32,True,True,1.3199999999999998,286,3,86,-13.679999999999996
+Beşiktaş,2022-03-07,Beşiktaş,Başakşehir FK,2-2,BERABERE,1,2.06,True,False,-1.0,287,3,87,-14.679999999999996
+Beşiktaş,2022-03-14,Galatasaray,Beşiktaş,2-1,EV,1,1.96,True,True,0.96,288,3,88,-13.719999999999995
+Beşiktaş,2022-04-03,Trabzonspor,Beşiktaş,1-1,BERABERE,1,1.82,True,False,-1.0,289,3,89,-14.719999999999995
+Beşiktaş,2022-04-09,Beşiktaş,Alanyaspor,4-1,EV,1,1.51,True,True,0.51,290,3,90,-14.209999999999996
+Beşiktaş,2022-04-17,Giresunspor,Beşiktaş,0-0,BERABERE,2,1.96,True,False,-1.0,291,3,91,-15.209999999999996
+Beşiktaş,2022-04-25,Beşiktaş,Kasımpaşa,0-3,DEP,1,1.62,True,False,-1.0,292,3,92,-16.209999999999994
+Beşiktaş,2022-05-01,Kayserispor,Beşiktaş,2-3,DEP,2,1.9,True,True,0.8999999999999999,293,3,93,-15.309999999999993
+Beşiktaş,2022-05-08,Beşiktaş,Fenerbahçe,1-1,BERABERE,1,2.07,True,False,-1.0,294,3,94,-16.309999999999995
+Beşiktaş,2022-05-15,Göztepe,Beşiktaş,0-2,DEP,2,1.36,True,True,0.3600000000000001,295,3,95,-15.949999999999996
+Beşiktaş,2022-05-21,Beşiktaş,Konyaspor,1-1,BERABERE,1,1.69,True,False,-1.0,296,3,96,-16.949999999999996
+Beşiktaş,2022-08-06,Beşiktaş,Kayserispor,1-0,EV,1,1.34,True,True,0.3400000000000001,297,3,97,-16.609999999999996
+Beşiktaş,2022-08-14,Alanyaspor,Beşiktaş,3-3,BERABERE,2,2.14,True,False,-1.0,298,3,98,-17.609999999999996
+Beşiktaş,2022-08-21,Beşiktaş,Fatih Karagümrük,4-1,EV,1,1.54,True,True,0.54,299,3,99,-17.069999999999997
+Beşiktaş,2022-08-29,Beşiktaş,Sivasspor,3-1,EV,1,1.34,True,True,0.3400000000000001,300,3,100,-16.729999999999997
+Beşiktaş,2022-09-04,MKE Ankaragücü,Beşiktaş,2-3,DEP,2,1.5,True,True,0.5,301,4,1,-16.229999999999997
+Beşiktaş,2022-09-12,Beşiktaş,Başakşehir FK,0-1,DEP,1,2.02,True,False,-1.0,302,4,2,-17.229999999999997
+Beşiktaş,2022-09-17,İstanbulspor,Beşiktaş,2-2,BERABERE,2,1.27,True,False,-1.0,303,4,3,-18.229999999999997
+Beşiktaş,2022-10-02,Beşiktaş,Fenerbahçe,0-0,BERABERE,1,2.23,True,False,-1.0,304,4,4,-19.229999999999997
+Beşiktaş,2022-10-08,Giresunspor,Beşiktaş,0-1,DEP,2,1.6,True,True,0.6000000000000001,305,4,5,-18.629999999999995
+Beşiktaş,2022-10-16,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.82,True,False,-1.0,306,4,6,-19.629999999999995
+Beşiktaş,2022-10-30,Beşiktaş,Ümraniyespor,5-2,EV,1,1.16,True,True,0.15999999999999992,307,4,7,-19.469999999999995
+Beşiktaş,2022-11-05,Galatasaray,Beşiktaş,2-1,EV,1,1.77,True,True,0.77,308,4,8,-18.699999999999996
+Beşiktaş,2022-12-25,Gaziantep FK,Beşiktaş,1-1,BERABERE,2,1.54,True,False,-1.0,309,4,9,-19.699999999999996
+Beşiktaş,2022-12-29,Beşiktaş,Adana Demirspor,1-0,EV,1,1.58,True,True,0.5800000000000001,310,4,10,-19.119999999999997
+Beşiktaş,2023-01-07,Beşiktaş,Kasımpaşa,2-1,EV,1,1.56,True,True,0.56,311,4,11,-18.56
+Beşiktaş,2023-01-14,Konyaspor,Beşiktaş,1-2,DEP,2,2.26,True,True,1.2599999999999998,312,4,12,-17.299999999999997
+Beşiktaş,2023-01-22,Kayserispor,Beşiktaş,0-2,DEP,2,1.86,True,True,0.8600000000000001,313,4,13,-16.439999999999998
+Beşiktaş,2023-01-27,Beşiktaş,Alanyaspor,3-0,EV,1,1.42,True,True,0.41999999999999993,314,4,14,-16.019999999999996
+Beşiktaş,2023-01-31,Fatih Karagümrük,Beşiktaş,1-1,BERABERE,2,1.65,True,False,-1.0,315,4,15,-17.019999999999996
+Beşiktaş,2023-02-04,Sivasspor,Beşiktaş,1-0,EV,2,1.98,True,False,-1.0,316,4,16,-18.019999999999996
+Beşiktaş,2023-02-26,Beşiktaş,Antalyaspor,0-0,BERABERE,1,1.34,True,False,-1.0,317,4,17,-19.019999999999996
+Beşiktaş,2023-03-05,Beşiktaş,MKE Ankaragücü,2-1,EV,1,1.41,True,True,0.4099999999999999,318,4,18,-18.609999999999996
+Beşiktaş,2023-03-12,Başakşehir FK,Beşiktaş,0-2,DEP,2,2.06,True,True,1.06,319,4,19,-17.549999999999997
+Beşiktaş,2023-03-18,Beşiktaş,İstanbulspor,3-1,EV,1,1.12,True,True,0.1200000000000001,320,4,20,-17.429999999999996
+Beşiktaş,2023-04-02,Fenerbahçe,Beşiktaş,2-4,DEP,1,1.81,True,False,-1.0,321,4,21,-18.429999999999996
+Beşiktaş,2023-04-09,Beşiktaş,Giresunspor,3-1,EV,1,1.23,True,True,0.22999999999999998,322,4,22,-18.199999999999996
+Beşiktaş,2023-04-16,Trabzonspor,Beşiktaş,0-0,BERABERE,2,2.23,True,False,-1.0,323,4,23,-19.199999999999996
+Beşiktaş,2023-04-22,Ümraniyespor,Beşiktaş,0-2,DEP,2,1.43,True,True,0.42999999999999994,324,4,24,-18.769999999999996
+Beşiktaş,2023-04-30,Beşiktaş,Galatasaray,3-1,EV,2,2.1,True,False,-1.0,325,4,25,-19.769999999999996
+Beşiktaş,2023-05-06,Antalyaspor,Beşiktaş,1-3,DEP,2,2.0,True,True,1.0,326,4,26,-18.769999999999996
+Beşiktaş,2023-05-21,Adana Demirspor,Beşiktaş,1-4,DEP,2,2.11,True,True,1.1099999999999999,327,4,27,-17.659999999999997
+Beşiktaş,2023-06-03,Kasımpaşa,Beşiktaş,2-5,DEP,2,1.48,True,True,0.48,328,4,28,-17.179999999999996
+Beşiktaş,2023-06-07,Beşiktaş,Konyaspor,3-3,BERABERE,1,1.15,True,False,-1.0,329,4,29,-18.179999999999996
+Beşiktaş,2023-08-14,Fatih Karagümrük,Beşiktaş,0-1,DEP,2,1.4,True,True,0.3999999999999999,330,4,30,-17.779999999999998
+Beşiktaş,2023-08-20,Beşiktaş,Pendikspor,1-1,BERABERE,1,1.13,True,False,-1.0,331,4,31,-18.779999999999998
+Beşiktaş,2023-09-03,Beşiktaş,Sivasspor,2-0,EV,1,1.21,True,True,0.20999999999999996,332,4,32,-18.569999999999997
+Beşiktaş,2023-09-17,Trabzonspor,Beşiktaş,3-0,EV,2,1.95,True,False,-1.0,333,4,33,-19.569999999999997
+Beşiktaş,2023-09-24,Beşiktaş,Kayserispor,2-1,EV,1,1.2,True,True,0.19999999999999996,334,4,34,-19.369999999999997
+Beşiktaş,2023-09-27,Adana Demirspor,Beşiktaş,4-2,EV,2,1.84,True,False,-1.0,335,4,35,-20.369999999999997
+Beşiktaş,2023-10-01,Konyaspor,Beşiktaş,0-2,DEP,2,2.04,True,True,1.04,336,4,36,-19.33
+Beşiktaş,2023-10-08,Beşiktaş,İstanbulspor,2-0,EV,1,1.09,True,True,0.09000000000000008,337,4,37,-19.24
+Beşiktaş,2023-10-21,Galatasaray,Beşiktaş,2-1,EV,1,1.47,True,True,0.47,338,4,38,-18.77
+Beşiktaş,2023-10-30,Beşiktaş,Gaziantep FK,2-0,EV,1,1.36,True,True,0.3600000000000001,339,4,39,-18.41
+Beşiktaş,2023-11-05,Antalyaspor,Beşiktaş,3-2,EV,1,2.23,True,True,1.23,340,4,40,-17.18
+Beşiktaş,2023-11-12,Beşiktaş,Başakşehir FK,1-0,EV,1,1.56,True,True,0.56,341,4,41,-16.62
+Beşiktaş,2023-11-26,Samsunspor,Beşiktaş,1-2,DEP,2,2.02,True,True,1.02,342,4,42,-15.600000000000001
+Beşiktaş,2023-12-03,MKE Ankaragücü,Beşiktaş,1-1,BERABERE,2,1.93,True,False,-1.0,343,4,43,-16.6
+Beşiktaş,2023-12-09,Beşiktaş,Fenerbahçe,1-3,DEP,2,1.63,True,True,0.6299999999999999,344,4,44,-15.970000000000002
+Beşiktaş,2023-12-21,Beşiktaş,Alanyaspor,1-3,DEP,1,1.45,True,False,-1.0,345,4,45,-16.970000000000002
+Beşiktaş,2024-01-05,Beşiktaş,Kasımpaşa,1-3,DEP,1,1.46,True,False,-1.0,346,4,46,-17.970000000000002
+Beşiktaş,2024-01-09,Çaykur Rizespor,Beşiktaş,0-4,DEP,1,2.14,True,False,-1.0,347,4,47,-18.970000000000002
+Beşiktaş,2024-01-13,Beşiktaş,Fatih Karagümrük,3-0,EV,1,1.68,True,True,0.6799999999999999,348,4,48,-18.290000000000003
+Beşiktaş,2024-01-20,Pendikspor,Beşiktaş,4-0,EV,2,1.72,True,False,-1.0,349,4,49,-19.290000000000003
+Beşiktaş,2024-01-23,Beşiktaş,Adana Demirspor,0-0,BERABERE,1,1.41,True,False,-1.0,350,4,50,-20.290000000000003
+Beşiktaş,2024-01-28,Sivasspor,Beşiktaş,1-0,EV,2,2.0,True,False,-1.0,351,4,51,-21.290000000000003
+Beşiktaş,2024-02-04,Beşiktaş,Trabzonspor,2-0,EV,1,1.74,True,True,0.74,352,4,52,-20.550000000000004
+Beşiktaş,2024-02-12,Kayserispor,Beşiktaş,0-0,BERABERE,2,1.9,True,False,-1.0,353,4,53,-21.550000000000004
+Beşiktaş,2024-02-19,Beşiktaş,Konyaspor,2-0,EV,1,1.38,True,True,0.3799999999999999,354,4,54,-21.170000000000005
+Beşiktaş,2024-02-25,İstanbulspor,Beşiktaş,0-2,DEP,2,1.33,True,True,0.33000000000000007,355,4,55,-20.840000000000003
+Beşiktaş,2024-03-03,Beşiktaş,Galatasaray,0-1,DEP,2,1.86,True,True,0.8600000000000001,356,4,56,-19.980000000000004
+Beşiktaş,2024-03-11,Gaziantep FK,Beşiktaş,2-0,EV,2,1.88,True,False,-1.0,357,4,57,-20.980000000000004
+Beşiktaş,2024-03-16,Beşiktaş,Antalyaspor,1-2,DEP,1,1.72,True,False,-1.0,358,4,58,-21.980000000000004
+Beşiktaş,2024-04-04,Başakşehir FK,Beşiktaş,1-1,BERABERE,2,2.31,True,False,-1.0,359,4,59,-22.980000000000004
+Beşiktaş,2024-04-13,Beşiktaş,Samsunspor,1-1,BERABERE,1,1.57,True,False,-1.0,360,4,60,-23.980000000000004
+Beşiktaş,2024-04-19,Beşiktaş,MKE Ankaragücü,2-0,EV,1,1.58,True,True,0.5800000000000001,361,4,61,-23.400000000000006
+Beşiktaş,2024-04-27,Fenerbahçe,Beşiktaş,2-1,EV,1,1.25,True,True,0.25,362,4,62,-23.150000000000006
+Beşiktaş,2024-05-03,Beşiktaş,Çaykur Rizespor,3-2,EV,1,1.53,True,True,0.53,363,4,63,-22.620000000000005
+Beşiktaş,2024-05-12,Alanyaspor,Beşiktaş,1-1,BERABERE,2,2.07,True,False,-1.0,364,4,64,-23.620000000000005
+Beşiktaş,2024-05-26,Kasımpaşa,Beşiktaş,2-1,EV,1,2.04,True,True,1.04,365,4,65,-22.580000000000005
+Beşiktaş,2024-08-11,Samsunspor,Beşiktaş,0-2,DEP,2,1.74,True,True,0.74,366,4,66,-21.840000000000007
+Beşiktaş,2024-08-18,Beşiktaş,Antalyaspor,4-2,EV,1,1.21,True,True,0.20999999999999996,367,4,67,-21.630000000000006
+Beşiktaş,2024-09-01,Beşiktaş,Sivasspor,2-0,EV,1,1.17,True,True,0.16999999999999993,368,4,68,-21.460000000000008
+Beşiktaş,2024-09-15,Trabzonspor,Beşiktaş,1-1,BERABERE,2,2.17,True,False,-1.0,369,4,69,-22.460000000000008
+Beşiktaş,2024-09-22,Beşiktaş,Eyüpspor,2-1,EV,1,1.25,True,True,0.25,370,4,70,-22.210000000000008
+Beşiktaş,2024-09-30,Kayserispor,Beşiktaş,0-3,DEP,2,1.44,True,True,0.43999999999999995,371,4,71,-21.770000000000007
+Beşiktaş,2024-10-06,Gaziantep FK,Beşiktaş,1-1,BERABERE,2,1.58,True,False,-1.0,372,4,72,-22.770000000000007
+Beşiktaş,2024-10-20,Beşiktaş,Konyaspor,2-0,EV,1,1.31,True,True,0.31000000000000005,373,4,73,-22.460000000000008
+Beşiktaş,2024-10-28,Galatasaray,Beşiktaş,2-1,EV,1,1.55,True,True,0.55,374,4,74,-21.910000000000007
+Beşiktaş,2024-11-02,Beşiktaş,Kasımpaşa,1-3,DEP,1,1.39,True,False,-1.0,375,4,75,-22.910000000000007
+Beşiktaş,2024-11-10,Başakşehir FK,Beşiktaş,0-0,BERABERE,2,1.94,True,False,-1.0,376,4,76,-23.910000000000007
+Beşiktaş,2024-11-24,Beşiktaş,Göztepe,2-4,DEP,1,1.48,True,False,-1.0,377,4,77,-24.910000000000007
+Beşiktaş,2024-12-07,Beşiktaş,Fenerbahçe,1-0,EV,2,1.67,True,False,-1.0,378,4,78,-25.910000000000007
+Beşiktaş,2024-12-16,Adana Demirspor,Beşiktaş,2-1,EV,2,1.31,True,False,-1.0,379,4,79,-26.910000000000007
+Beşiktaş,2024-12-21,Beşiktaş,Alanyaspor,1-1,BERABERE,1,1.58,True,False,-1.0,380,4,80,-27.910000000000007
+Beşiktaş,2025-01-03,Çaykur Rizespor,Beşiktaş,1-1,BERABERE,1,2.25,True,False,-1.0,381,4,81,-28.910000000000007
+Beşiktaş,2025-01-11,Beşiktaş,Bodrum FK,2-1,EV,1,1.37,True,True,0.3700000000000001,382,4,82,-28.540000000000006
+Beşiktaş,2025-01-18,Beşiktaş,Samsunspor,0-0,BERABERE,1,1.63,True,False,-1.0,383,4,83,-29.540000000000006
+Beşiktaş,2025-01-26,Antalyaspor,Beşiktaş,1-1,BERABERE,2,1.65,True,False,-1.0,384,4,84,-30.540000000000006
+Beşiktaş,2025-02-08,Sivasspor,Beşiktaş,0-2,DEP,2,1.73,True,True,0.73,385,4,85,-29.810000000000006
+Beşiktaş,2025-02-15,Beşiktaş,Trabzonspor,2-1,EV,1,1.62,True,True,0.6200000000000001,386,4,86,-29.190000000000005
+Beşiktaş,2025-02-21,Eyüpspor,Beşiktaş,1-3,DEP,2,2.06,True,True,1.06,387,4,87,-28.130000000000006
+Beşiktaş,2025-03-01,Beşiktaş,Kayserispor,2-0,EV,1,1.35,True,True,0.3500000000000001,388,4,88,-27.780000000000005
+Beşiktaş,2025-03-10,Beşiktaş,Gaziantep FK,1-2,DEP,1,1.24,True,False,-1.0,389,4,89,-28.780000000000005
+Beşiktaş,2025-03-15,Konyaspor,Beşiktaş,1-0,EV,2,1.91,True,False,-1.0,390,4,90,-29.780000000000005
+Beşiktaş,2025-03-29,Beşiktaş,Galatasaray,2-1,EV,2,1.94,True,False,-1.0,391,4,91,-30.780000000000005
+Beşiktaş,2025-04-07,Kasımpaşa,Beşiktaş,1-1,BERABERE,2,1.71,True,False,-1.0,392,4,92,-31.780000000000005
+Beşiktaş,2025-04-12,Beşiktaş,Başakşehir FK,0-2,DEP,1,1.65,True,False,-1.0,393,4,93,-32.78
+Beşiktaş,2025-04-19,Göztepe,Beşiktaş,1-1,BERABERE,2,2.21,True,False,-1.0,394,4,94,-33.78
+Beşiktaş,2025-05-04,Fenerbahçe,Beşiktaş,0-1,DEP,1,1.34,True,False,-1.0,395,4,95,-34.78
+Beşiktaş,2025-05-18,Alanyaspor,Beşiktaş,1-1,BERABERE,2,1.9,True,False,-1.0,396,4,96,-35.78
+Beşiktaş,2025-05-25,Beşiktaş,Çaykur Rizespor,1-2,DEP,1,1.26,True,False,-1.0,397,4,97,-36.78
+Beşiktaş,2025-06-01,Bodrum FK,Beşiktaş,0-4,DEP,2,1.46,True,True,0.45999999999999996,398,4,98,-36.32
+Beşiktaş,2025-08-17,Beşiktaş,Eyüpspor,2-1,EV,1,1.34,True,True,0.3400000000000001,399,4,99,-35.98
+Beşiktaş,2025-08-31,Alanyaspor,Beşiktaş,2-0,EV,2,1.77,True,False,-1.0,400,4,100,-36.98
+Beşiktaş,2025-09-13,Beşiktaş,Başakşehir FK,2-1,EV,1,1.51,True,True,0.51,401,5,1,-36.47
+Beşiktaş,2025-09-19,Göztepe,Beşiktaş,3-0,EV,1,2.07,True,True,1.0699999999999998,402,5,2,-35.4
+Beşiktaş,2025-09-24,Kayserispor,Beşiktaş,0-4,DEP,2,1.39,True,True,0.3899999999999999,403,5,3,-35.01
+Beşiktaş,2025-09-29,Beşiktaş,Kocaelispor,3-1,EV,1,1.21,True,True,0.20999999999999996,404,5,4,-34.8
+Beşiktaş,2025-10-04,Galatasaray,Beşiktaş,1-1,BERABERE,1,1.51,True,False,-1.0,405,5,5,-35.8
+Beşiktaş,2025-10-18,Beşiktaş,Gençlerbirliği,1-2,DEP,1,1.12,True,False,-1.0,406,5,6,-36.8
+Beşiktaş,2025-10-22,Konyaspor,Beşiktaş,0-2,DEP,2,2.02,True,True,1.02,407,5,7,-35.779999999999994
+Beşiktaş,2025-10-26,Kasımpaşa,Beşiktaş,1-1,BERABERE,2,1.5,True,False,-1.0,408,5,8,-36.779999999999994
+Beşiktaş,2025-11-02,Beşiktaş,Fenerbahçe,2-3,DEP,2,1.87,True,True,0.8700000000000001,409,5,9,-35.91
+Beşiktaş,2025-11-08,Antalyaspor,Beşiktaş,1-3,DEP,2,1.52,True,True,0.52,410,5,10,-35.38999999999999
+Beşiktaş,2025-11-23,Beşiktaş,Samsunspor,1-1,BERABERE,1,1.75,True,False,-1.0,411,5,11,-36.38999999999999
+Beşiktaş,2025-11-30,Fatih Karagümrük,Beşiktaş,0-2,DEP,2,1.49,True,True,0.49,412,5,12,-35.89999999999999
+Beşiktaş,2025-12-08,Beşiktaş,Gaziantep FK,2-2,BERABERE,1,1.25,True,False,-1.0,413,5,13,-36.89999999999999
+Beşiktaş,2025-12-14,Trabzonspor,Beşiktaş,3-3,BERABERE,2,2.21,True,False,-1.0,414,5,14,-37.89999999999999
+Beşiktaş,2025-12-20,Beşiktaş,Çaykur Rizespor,1-0,EV,1,1.7,True,True,0.7,415,5,15,-37.19999999999999
+Trabzonspor,2014-01-25,Trabzonspor,Beşiktaş,1-1,BERABERE,1,2.55,True,False,-1.0,1,1,1,-1.0
+Trabzonspor,2014-02-03,Çaykur Rizespor,Trabzonspor,0-0,BERABERE,2,1.85,True,False,-1.0,2,1,2,-2.0
+Trabzonspor,2014-02-09,Trabzonspor,Akhisar Belediyespor,2-4,DEP,1,1.4,True,False,-1.0,3,1,3,-3.0
+Trabzonspor,2014-02-15,Karabükspor,Trabzonspor,2-2,BERABERE,1,2.1,True,False,-1.0,4,1,4,-4.0
+Trabzonspor,2014-02-23,Trabzonspor,Kayserispor,2-1,EV,1,1.5,True,True,0.5,5,1,5,-3.5
+Trabzonspor,2014-03-02,Konyaspor,Trabzonspor,0-0,BERABERE,1,2.2,True,False,-1.0,6,1,6,-4.5
+Trabzonspor,2014-03-10,Trabzonspor,Fenerbahçe,0-3,DEP,2,1.65,True,True,0.6499999999999999,7,1,7,-3.85
+Trabzonspor,2014-03-16,Sivasspor,Trabzonspor,0-4,DEP,1,2.1,True,False,-1.0,8,1,8,-4.85
+Trabzonspor,2014-03-21,Trabzonspor,Kasımpaşa,0-0,BERABERE,1,1.7,True,False,-1.0,9,1,9,-5.85
+Trabzonspor,2014-03-29,Elazığspor,Trabzonspor,0-0,BERABERE,2,2.2,True,False,-1.0,10,1,10,-6.85
+Trabzonspor,2014-04-07,Trabzonspor,Gençlerbirliği,3-0,EV,1,1.5,True,True,0.5,11,1,11,-6.35
+Trabzonspor,2014-04-13,Eskişehirspor,Trabzonspor,2-2,BERABERE,1,1.95,True,False,-1.0,12,1,12,-7.35
+Trabzonspor,2014-04-18,Kayseri Erciyesspor,Trabzonspor,0-5,DEP,1,2.35,True,False,-1.0,13,1,13,-8.35
+Trabzonspor,2014-04-26,Trabzonspor,Gaziantepspor,2-1,EV,1,1.3,True,True,0.30000000000000004,14,1,14,-8.049999999999999
+Trabzonspor,2014-05-04,Bursaspor,Trabzonspor,2-2,BERABERE,1,2.2,True,False,-1.0,15,1,15,-9.049999999999999
+Trabzonspor,2014-05-11,Trabzonspor,Galatasaray,1-4,DEP,2,2.1,True,True,1.1,16,1,16,-7.949999999999999
+Trabzonspor,2014-05-18,MP Antalyaspor,Trabzonspor,0-2,DEP,2,1.45,True,True,0.44999999999999996,17,1,17,-7.499999999999999
+Trabzonspor,2014-08-31,Kayseri Erciyesspor,Trabzonspor,0-0,BERABERE,2,2.2,True,False,-1.0,18,1,18,-8.5
+Trabzonspor,2014-09-14,Trabzonspor,Fenerbahçe,0-0,BERABERE,2,2.1,True,False,-1.0,19,1,19,-9.5
+Trabzonspor,2014-09-22,İstanbul Başakşehir,Trabzonspor,1-1,BERABERE,2,2.0,True,False,-1.0,20,1,20,-10.5
+Trabzonspor,2014-09-27,Trabzonspor,Kasımpaşa,1-1,BERABERE,1,2.0,True,False,-1.0,21,1,21,-11.5
+Trabzonspor,2014-10-05,Karabükspor,Trabzonspor,3-0,EV,2,2.2,True,False,-1.0,22,1,22,-12.5
+Trabzonspor,2014-10-19,Trabzonspor,Mersin İdmanyurdu,3-1,EV,1,1.6,True,True,0.6000000000000001,23,1,23,-11.9
+Trabzonspor,2014-10-26,Trabzonspor,Gaziantepspor,4-4,BERABERE,1,1.3,True,False,-1.0,24,1,24,-12.9
+Trabzonspor,2014-11-01,Akhisar Belediyespor,Trabzonspor,1-1,BERABERE,1,2.2,True,False,-1.0,25,1,25,-13.9
+Trabzonspor,2014-11-09,Trabzonspor,Torku Konyaspor,3-2,EV,1,1.45,True,True,0.44999999999999996,26,1,26,-13.450000000000001
+Trabzonspor,2014-11-22,Galatasaray,Trabzonspor,0-3,DEP,1,1.5,True,False,-1.0,27,1,27,-14.450000000000001
+Trabzonspor,2014-12-01,Trabzonspor,Gençlerbirliği,4-1,EV,1,1.25,True,True,0.25,28,1,28,-14.200000000000001
+Trabzonspor,2014-12-07,Beşiktaş,Trabzonspor,3-0,EV,1,1.75,True,True,0.75,29,1,29,-13.450000000000001
+Trabzonspor,2014-12-15,Trabzonspor,Çaykur Rizespor,3-2,EV,1,1.15,True,True,0.1499999999999999,30,1,30,-13.3
+Trabzonspor,2014-12-21,Bursaspor,Trabzonspor,3-3,BERABERE,1,2.1,True,False,-1.0,31,1,31,-14.3
+Trabzonspor,2014-12-29,Trabzonspor,Eskişehirspor,1-4,DEP,1,1.4,True,False,-1.0,32,1,32,-15.3
+Trabzonspor,2015-01-05,Balıkesirspor,Trabzonspor,2-2,BERABERE,2,1.5,True,False,-1.0,33,1,33,-16.3
+Trabzonspor,2015-01-23,Trabzonspor,Sivasspor,3-1,EV,1,1.5,True,True,0.5,34,1,34,-15.8
+Trabzonspor,2015-01-30,Trabzonspor,Kayseri Erciyesspor,2-1,EV,1,1.3,True,True,0.30000000000000004,35,1,35,-15.5
+Trabzonspor,2015-02-07,Fenerbahçe,Trabzonspor,0-0,BERABERE,1,1.5,True,False,-1.0,36,1,36,-16.5
+Trabzonspor,2015-02-15,Trabzonspor,İstanbul Başakşehir,3-2,EV,1,1.7,True,True,0.7,37,1,37,-15.8
+Trabzonspor,2015-02-22,Kasımpaşa,Trabzonspor,1-1,BERABERE,1,2.1,True,False,-1.0,38,1,38,-16.8
+Trabzonspor,2015-03-02,Trabzonspor,Karabükspor,3-2,EV,1,1.5,True,True,0.5,39,1,39,-16.3
+Trabzonspor,2015-03-09,Mersin İdmanyurdu,Trabzonspor,1-5,DEP,2,2.1,True,True,1.1,40,1,40,-15.200000000000001
+Trabzonspor,2015-03-16,Gaziantepspor,Trabzonspor,2-0,EV,2,1.75,True,False,-1.0,41,1,41,-16.200000000000003
+Trabzonspor,2015-03-22,Trabzonspor,Akhisar Belediyespor,2-0,EV,1,1.4,True,True,0.3999999999999999,42,1,42,-15.800000000000002
+Trabzonspor,2015-04-05,Torku Konyaspor,Trabzonspor,1-0,EV,2,2.2,True,False,-1.0,43,1,43,-16.800000000000004
+Trabzonspor,2015-04-19,Trabzonspor,Galatasaray,2-1,EV,2,2.35,True,False,-1.0,44,1,44,-17.800000000000004
+Trabzonspor,2015-04-26,Gençlerbirliği,Trabzonspor,1-1,BERABERE,2,1.9,True,False,-1.0,45,1,45,-18.800000000000004
+Trabzonspor,2015-05-03,Trabzonspor,Beşiktaş,0-2,DEP,2,2.2,True,True,1.2000000000000002,46,1,46,-17.600000000000005
+Trabzonspor,2015-05-10,Çaykur Rizespor,Trabzonspor,0-2,DEP,2,1.9,True,True,0.8999999999999999,47,1,47,-16.700000000000006
+Trabzonspor,2015-05-13,Trabzonspor,Bursaspor,1-0,EV,1,2.1,True,True,1.1,48,1,48,-15.600000000000007
+Trabzonspor,2015-05-17,Eskişehirspor,Trabzonspor,2-0,EV,2,1.75,True,False,-1.0,49,1,49,-16.60000000000001
+Trabzonspor,2015-05-23,Trabzonspor,Balıkesirspor,3-2,EV,1,1.05,True,True,0.050000000000000044,50,1,50,-16.550000000000008
+Trabzonspor,2015-05-30,Sivasspor,Trabzonspor,1-1,BERABERE,2,1.6,True,False,-1.0,51,1,51,-17.550000000000008
+Trabzonspor,2015-08-15,Trabzonspor,Bursaspor,1-0,EV,1,1.8,True,True,0.8,52,1,52,-16.750000000000007
+Trabzonspor,2015-08-22,Beşiktaş,Trabzonspor,1-2,DEP,1,1.45,True,False,-1.0,53,1,53,-17.750000000000007
+Trabzonspor,2015-08-30,Trabzonspor,Akhisar Belediyespor,2-2,BERABERE,1,1.4,True,False,-1.0,54,1,54,-18.750000000000007
+Trabzonspor,2015-09-14,Kayserispor,Trabzonspor,0-1,DEP,1,2.2,True,False,-1.0,55,1,55,-19.750000000000007
+Trabzonspor,2015-09-19,Trabzonspor,Galatasaray,0-1,DEP,2,2.2,True,True,1.2000000000000002,56,1,56,-18.550000000000008
+Trabzonspor,2015-09-26,Osmanlıspor FK,Trabzonspor,3-1,EV,2,1.9,True,False,-1.0,57,1,57,-19.550000000000008
+Trabzonspor,2015-10-02,Trabzonspor,Torku Konyaspor,1-2,DEP,1,1.35,True,False,-1.0,58,1,58,-20.550000000000008
+Trabzonspor,2015-10-19,Mersin İdmanyurdu,Trabzonspor,3-2,EV,2,1.8,True,False,-1.0,59,1,59,-21.550000000000008
+Trabzonspor,2015-10-24,Medicana Sivasspor,Trabzonspor,0-2,DEP,2,2.0,True,True,1.0,60,1,60,-20.550000000000008
+Trabzonspor,2015-10-28,Trabzonspor,Gaziantepspor,2-2,BERABERE,1,1.3,True,False,-1.0,61,1,61,-21.550000000000008
+Trabzonspor,2015-11-07,Medipol Başakşehir,Trabzonspor,1-0,EV,1,2.1,True,True,1.1,62,1,62,-20.450000000000006
+Trabzonspor,2015-11-22,Trabzonspor,Gençlerbirliği,1-0,EV,1,1.45,True,True,0.44999999999999996,63,1,63,-20.000000000000007
+Trabzonspor,2015-11-30,Fenerbahçe,Trabzonspor,2-0,EV,1,1.25,True,True,0.25,64,1,64,-19.750000000000007
+Trabzonspor,2015-12-07,Trabzonspor,Eskişehirspor,3-1,EV,1,1.45,True,True,0.44999999999999996,65,1,65,-19.300000000000008
+Trabzonspor,2015-12-12,Çaykur Rizespor,Trabzonspor,3-0,EV,2,2.1,True,False,-1.0,66,1,66,-20.300000000000008
+Trabzonspor,2015-12-19,Trabzonspor,Antalyaspor,3-0,EV,1,1.6,True,True,0.6000000000000001,67,1,67,-19.700000000000006
+Trabzonspor,2015-12-26,Kasımpaşa,Trabzonspor,1-1,BERABERE,1,1.9,True,False,-1.0,68,1,68,-20.700000000000006
+Trabzonspor,2016-01-17,Bursaspor,Trabzonspor,4-2,EV,1,2.0,True,True,1.0,69,1,69,-19.700000000000006
+Trabzonspor,2016-02-07,Akhisar Belediyespor,Trabzonspor,2-1,EV,1,2.2,True,True,1.2000000000000002,70,1,70,-18.500000000000007
+Trabzonspor,2016-02-15,Trabzonspor,Kayserispor,2-1,EV,1,1.65,True,True,0.6499999999999999,71,1,71,-17.85000000000001
+Trabzonspor,2016-02-21,Galatasaray,Trabzonspor,2-1,EV,1,1.4,True,True,0.3999999999999999,72,1,72,-17.45000000000001
+Trabzonspor,2016-02-27,Trabzonspor,Osmanlıspor FK,1-2,DEP,2,1.9,True,True,0.8999999999999999,73,1,73,-16.55000000000001
+Trabzonspor,2016-03-06,Torku Konyaspor,Trabzonspor,2-0,EV,1,1.9,True,True,0.8999999999999999,74,1,74,-15.650000000000011
+Trabzonspor,2016-03-11,Trabzonspor,Mersin İdmanyurdu,1-0,EV,1,1.55,True,True,0.55,75,1,75,-15.10000000000001
+Trabzonspor,2016-03-15,Trabzonspor,Beşiktaş,0-2,DEP,2,1.55,True,True,0.55,76,1,76,-14.55000000000001
+Trabzonspor,2016-03-19,Trabzonspor,Medicana Sivasspor,1-0,EV,1,2.0,True,True,1.0,77,1,77,-13.55000000000001
+Trabzonspor,2016-04-02,Gaziantepspor,Trabzonspor,0-1,DEP,2,2.2,True,True,1.2000000000000002,78,1,78,-12.350000000000009
+Trabzonspor,2016-04-10,Trabzonspor,Medipol Başakşehir,1-1,BERABERE,1,2.2,True,False,-1.0,79,1,79,-13.350000000000009
+Trabzonspor,2016-04-18,Gençlerbirliği,Trabzonspor,3-1,EV,1,1.9,True,True,0.8999999999999999,80,1,80,-12.450000000000008
+Trabzonspor,2016-04-24,Trabzonspor,Fenerbahçe,0-4,DEP,2,1.45,True,True,0.44999999999999996,81,1,81,-12.000000000000009
+Trabzonspor,2016-04-30,Eskişehirspor,Trabzonspor,1-0,EV,1,1.5,True,True,0.5,82,1,82,-11.500000000000009
+Trabzonspor,2016-05-08,Trabzonspor,Çaykur Rizespor,6-0,EV,2,2.2,True,False,-1.0,83,1,83,-12.500000000000009
+Trabzonspor,2016-05-13,Antalyaspor,Trabzonspor,7-0,EV,1,1.7,True,True,0.7,84,1,84,-11.80000000000001
+Trabzonspor,2016-05-19,Trabzonspor,Kasımpaşa,0-6,DEP,2,1.55,True,True,0.55,85,1,85,-11.250000000000009
+Trabzonspor,2016-08-20,Trabzonspor,Kasımpaşa,2-0,EV,1,1.9,True,True,0.8999999999999999,86,1,86,-10.350000000000009
+Trabzonspor,2016-08-27,Gaziantepspor,Trabzonspor,1-0,EV,2,1.8,True,False,-1.0,87,1,87,-11.350000000000009
+Trabzonspor,2016-09-11,Trabzonspor,Osmanlıspor FK,0-2,DEP,1,1.8,True,False,-1.0,88,1,88,-12.350000000000009
+Trabzonspor,2016-09-17,Aytemiz Alanyaspor,Trabzonspor,3-0,EV,2,1.75,True,False,-1.0,89,1,89,-13.350000000000009
+Trabzonspor,2016-09-24,Trabzonspor,Atiker Konyaspor,1-0,EV,1,1.8,True,True,0.8,90,1,90,-12.550000000000008
+Trabzonspor,2016-10-01,Karabükspor,Trabzonspor,4-0,EV,1,2.2,True,True,1.2000000000000002,91,1,91,-11.350000000000009
+Trabzonspor,2016-10-16,Trabzonspor,Akhisar Belediyespor,0-0,BERABERE,1,1.8,True,False,-1.0,92,1,92,-12.350000000000009
+Trabzonspor,2016-10-22,Galatasaray,Trabzonspor,0-1,DEP,1,1.35,True,False,-1.0,93,1,93,-13.350000000000009
+Trabzonspor,2016-10-30,Trabzonspor,Çaykur Rizespor,2-2,BERABERE,1,1.5,True,False,-1.0,94,1,94,-14.350000000000009
+Trabzonspor,2016-11-05,Beşiktaş,Trabzonspor,2-1,EV,1,1.25,True,True,0.25,95,1,95,-14.100000000000009
+Trabzonspor,2016-11-21,Trabzonspor,Antalyaspor,0-1,DEP,1,1.55,True,False,-1.0,96,1,96,-15.100000000000009
+Trabzonspor,2016-11-27,Gençlerbirliği,Trabzonspor,0-0,BERABERE,1,1.95,True,False,-1.0,97,1,97,-16.10000000000001
+Trabzonspor,2016-12-05,Kayserispor,Trabzonspor,0-1,DEP,1,2.2,True,False,-1.0,98,1,98,-17.10000000000001
+Trabzonspor,2016-12-09,Trabzonspor,Adanaspor,4-1,EV,1,1.3,True,True,0.30000000000000004,99,1,99,-16.800000000000008
+Trabzonspor,2016-12-17,Medipol Başakşehir,Trabzonspor,1-0,EV,1,1.55,True,True,0.55,100,1,100,-16.250000000000007
+Trabzonspor,2016-12-26,Trabzonspor,Fenerbahçe,0-3,DEP,2,1.55,True,True,0.55,101,2,1,-15.700000000000006
+Trabzonspor,2017-01-13,Bursaspor,Trabzonspor,1-2,DEP,1,1.8,True,False,-1.0,102,2,2,-16.700000000000006
+Trabzonspor,2017-01-22,Kasımpaşa,Trabzonspor,0-1,DEP,1,2.15,True,False,-1.0,103,2,3,-17.700000000000006
+Trabzonspor,2017-01-29,Trabzonspor,Gaziantepspor,4-0,EV,1,1.3,True,True,0.30000000000000004,104,2,4,-17.400000000000006
+Trabzonspor,2017-02-11,Osmanlıspor FK,Trabzonspor,0-1,DEP,1,1.9,True,False,-1.0,105,2,5,-18.400000000000006
+Trabzonspor,2017-02-20,Trabzonspor,Aytemiz Alanyaspor,0-0,BERABERE,1,1.4,True,False,-1.0,106,2,6,-19.400000000000006
+Trabzonspor,2017-02-25,Atiker Konyaspor,Trabzonspor,1-1,BERABERE,2,2.2,True,False,-1.0,107,2,7,-20.400000000000006
+Trabzonspor,2017-03-03,Trabzonspor,Karabükspor,1-0,EV,1,1.55,True,True,0.55,108,2,8,-19.850000000000005
+Trabzonspor,2017-03-13,Akhisar Belediyespor,Trabzonspor,1-3,DEP,2,2.1,True,True,1.1,109,2,9,-18.750000000000004
+Trabzonspor,2017-03-18,Trabzonspor,Galatasaray,2-0,EV,1,2.0,True,True,1.0,110,2,10,-17.750000000000004
+Trabzonspor,2017-04-02,Çaykur Rizespor,Trabzonspor,0-1,DEP,2,2.1,True,True,1.1,111,2,11,-16.650000000000002
+Trabzonspor,2017-04-08,Trabzonspor,Beşiktaş,3-4,DEP,2,2.1,True,True,1.1,112,2,12,-15.550000000000002
+Trabzonspor,2017-04-22,Antalyaspor,Trabzonspor,0-3,DEP,2,2.1,True,True,1.1,113,2,13,-14.450000000000003
+Trabzonspor,2017-04-29,Trabzonspor,Gençlerbirliği,0-0,BERABERE,1,1.3,True,False,-1.0,114,2,14,-15.450000000000003
+Trabzonspor,2017-05-06,Trabzonspor,Kayserispor,2-3,DEP,1,1.4,True,False,-1.0,115,2,15,-16.450000000000003
+Trabzonspor,2017-05-13,Adanaspor,Trabzonspor,1-1,BERABERE,2,1.4,True,False,-1.0,116,2,16,-17.450000000000003
+Trabzonspor,2017-05-21,Trabzonspor,Medipol Başakşehir,0-0,BERABERE,2,2.0,True,False,-1.0,117,2,17,-18.450000000000003
+Trabzonspor,2017-05-27,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.55,True,False,-1.0,118,2,18,-19.450000000000003
+Trabzonspor,2017-06-03,Trabzonspor,Bursaspor,1-2,DEP,1,1.9,True,False,-1.0,119,2,19,-20.450000000000003
+Trabzonspor,2017-08-13,Trabzonspor,Atiker Konyaspor,2-1,EV,1,1.4,True,True,0.3999999999999999,120,2,20,-20.050000000000004
+Trabzonspor,2017-08-20,Fenerbahçe,Trabzonspor,2-2,BERABERE,1,1.55,True,False,-1.0,121,2,21,-21.050000000000004
+Trabzonspor,2017-08-26,Göztepe,Trabzonspor,3-2,EV,2,1.7,True,False,-1.0,122,2,22,-22.050000000000004
+Trabzonspor,2017-09-10,Trabzonspor,Gençlerbirliği,3-1,EV,1,1.4,True,True,0.3999999999999999,123,2,23,-21.650000000000006
+Trabzonspor,2017-09-17,Medipol Başakşehir,Trabzonspor,2-2,BERABERE,1,1.7,True,False,-1.0,124,2,24,-22.650000000000006
+Trabzonspor,2017-09-22,Trabzonspor,Aytemiz Alanyaspor,3-4,DEP,1,1.25,True,False,-1.0,125,2,25,-23.650000000000006
+Trabzonspor,2017-10-01,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.55,True,False,-1.0,126,2,26,-24.650000000000006
+Trabzonspor,2017-10-15,Trabzonspor,Akhisarspor,1-6,DEP,1,1.45,True,False,-1.0,127,2,27,-25.650000000000006
+Trabzonspor,2017-10-21,Yeni Malatyaspor,Trabzonspor,1-0,EV,2,1.8,True,False,-1.0,128,2,28,-26.650000000000006
+Trabzonspor,2017-10-29,Trabzonspor,Galatasaray,2-1,EV,2,1.6,True,False,-1.0,129,2,29,-27.650000000000006
+Trabzonspor,2017-11-04,Kayserispor,Trabzonspor,0-0,BERABERE,2,2.2,True,False,-1.0,130,2,30,-28.650000000000006
+Trabzonspor,2017-11-19,Trabzonspor,Osmanlıspor FK,4-3,EV,1,1.45,True,True,0.44999999999999996,131,2,31,-28.200000000000006
+Trabzonspor,2017-11-26,Sivasspor,Trabzonspor,1-2,DEP,1,2.2,True,False,-1.0,132,2,32,-29.200000000000006
+Trabzonspor,2017-12-04,Trabzonspor,Antalyaspor,3-0,EV,1,1.4,True,True,0.3999999999999999,133,2,33,-28.800000000000008
+Trabzonspor,2017-12-09,Kasımpaşa,Trabzonspor,0-3,DEP,2,2.0,True,True,1.0,134,2,34,-27.800000000000008
+Trabzonspor,2017-12-16,Trabzonspor,Bursaspor,1-0,EV,1,1.35,True,True,0.3500000000000001,135,2,35,-27.450000000000006
+Trabzonspor,2017-12-24,Karabükspor,Trabzonspor,1-1,BERABERE,2,1.6,True,False,-1.0,136,2,36,-28.450000000000006
+Trabzonspor,2018-01-21,Atiker Konyaspor,Trabzonspor,2-2,BERABERE,2,2.2,True,False,-1.0,137,2,37,-29.450000000000006
+Trabzonspor,2018-01-28,Trabzonspor,Fenerbahçe,1-1,BERABERE,1,2.1,True,False,-1.0,138,2,38,-30.450000000000006
+Trabzonspor,2018-02-05,Trabzonspor,Göztepe,0-0,BERABERE,1,1.5,True,False,-1.0,139,2,39,-31.450000000000006
+Trabzonspor,2018-02-10,Gençlerbirliği,Trabzonspor,0-0,BERABERE,2,2.25,True,False,-1.0,140,2,40,-32.45
+Trabzonspor,2018-02-18,Trabzonspor,Medipol Başakşehir,0-1,DEP,1,2.3,True,False,-1.0,141,2,41,-33.45
+Trabzonspor,2018-02-24,Aytemiz Alanyaspor,Trabzonspor,1-2,DEP,2,2.0,True,True,1.0,142,2,42,-32.45
+Trabzonspor,2018-03-05,Trabzonspor,Beşiktaş,0-2,DEP,2,1.75,True,True,0.75,143,2,43,-31.700000000000003
+Trabzonspor,2018-03-12,Akhisarspor,Trabzonspor,1-3,DEP,1,2.25,True,False,-1.0,144,2,44,-32.7
+Trabzonspor,2018-03-18,Trabzonspor,Yeni Malatyaspor,4-1,EV,1,1.45,True,True,0.44999999999999996,145,2,45,-32.25
+Trabzonspor,2018-04-01,Galatasaray,Trabzonspor,2-1,EV,1,1.35,True,True,0.3500000000000001,146,2,46,-31.9
+Trabzonspor,2018-04-07,Trabzonspor,Kayserispor,4-0,EV,1,1.5,True,True,0.5,147,2,47,-31.4
+Trabzonspor,2018-04-16,Osmanlıspor FK,Trabzonspor,3-3,BERABERE,1,2.1,True,False,-1.0,148,2,48,-32.4
+Trabzonspor,2018-04-21,Trabzonspor,Sivasspor,0-2,DEP,1,1.45,True,False,-1.0,149,2,49,-33.4
+Trabzonspor,2018-04-28,Antalyaspor,Trabzonspor,1-2,DEP,1,2.1,True,False,-1.0,150,2,50,-34.4
+Trabzonspor,2018-05-05,Trabzonspor,Kasımpaşa,2-5,DEP,1,1.25,True,False,-1.0,151,2,51,-35.4
+Trabzonspor,2018-05-13,Bursaspor,Trabzonspor,1-3,DEP,1,1.7,True,False,-1.0,152,2,52,-36.4
+Trabzonspor,2018-05-18,Trabzonspor,Karabükspor,3-0,EV,1,1.02,True,True,0.020000000000000018,153,2,53,-36.379999999999995
+Trabzonspor,2018-08-12,Medipol Başakşehir,Trabzonspor,2-0,EV,1,1.6,True,True,0.6000000000000001,154,2,54,-35.779999999999994
+Trabzonspor,2018-08-17,Trabzonspor,Sivasspor,3-1,EV,1,1.45,True,True,0.44999999999999996,155,2,55,-35.32999999999999
+Trabzonspor,2018-08-25,MKE Ankaragücü,Trabzonspor,2-2,BERABERE,2,2.15,True,False,-1.0,156,2,56,-36.32999999999999
+Trabzonspor,2018-09-01,Trabzonspor,Galatasaray,4-0,EV,2,1.85,True,False,-1.0,157,2,57,-37.32999999999999
+Trabzonspor,2018-09-17,Alanyaspor,Trabzonspor,1-0,EV,2,1.9,True,False,-1.0,158,2,58,-38.32999999999999
+Trabzonspor,2018-09-22,Trabzonspor,Göztepe,1-2,DEP,1,1.45,True,False,-1.0,159,2,59,-39.32999999999999
+Trabzonspor,2018-09-29,Trabzonspor,Kasımpaşa,4-2,EV,1,1.6,True,True,0.6000000000000001,160,2,60,-38.72999999999999
+Trabzonspor,2018-10-07,Akhisarspor,Trabzonspor,1-3,DEP,2,1.95,True,True,0.95,161,2,61,-37.77999999999999
+Trabzonspor,2018-10-22,Trabzonspor,BB Erzurumspor,0-0,BERABERE,1,1.3,True,False,-1.0,162,2,62,-38.77999999999999
+Trabzonspor,2018-10-27,Antalyaspor,Trabzonspor,1-1,BERABERE,2,1.8,True,False,-1.0,163,2,63,-39.77999999999999
+Trabzonspor,2018-11-04,Trabzonspor,Bursaspor,1-1,BERABERE,1,1.55,True,False,-1.0,164,2,64,-40.77999999999999
+Trabzonspor,2018-11-09,Yeni Malatyaspor,Trabzonspor,5-0,EV,2,2.1,True,False,-1.0,165,2,65,-41.77999999999999
+Trabzonspor,2018-11-25,Trabzonspor,Fenerbahçe,2-1,EV,1,2.15,True,True,1.15,166,2,66,-40.62999999999999
+Trabzonspor,2018-12-01,Kayserispor,Trabzonspor,0-2,DEP,2,1.8,True,True,0.8,167,2,67,-39.82999999999999
+Trabzonspor,2018-12-08,Trabzonspor,Atiker Konyaspor,3-0,EV,1,1.65,True,True,0.6499999999999999,168,2,68,-39.17999999999999
+Trabzonspor,2018-12-16,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.75,True,False,-1.0,169,2,69,-40.17999999999999
+Trabzonspor,2018-12-23,Trabzonspor,Çaykur Rizespor,4-1,EV,1,1.5,True,True,0.5,170,2,70,-39.67999999999999
+Trabzonspor,2019-01-20,Trabzonspor,Medipol Başakşehir,2-4,DEP,2,2.0,True,True,1.0,171,2,71,-38.67999999999999
+Trabzonspor,2019-01-27,Sivasspor,Trabzonspor,1-1,BERABERE,2,2.25,True,False,-1.0,172,2,72,-39.67999999999999
+Trabzonspor,2019-02-02,Trabzonspor,MKE Ankaragücü,1-0,EV,1,1.2,True,True,0.19999999999999996,173,2,73,-39.47999999999999
+Trabzonspor,2019-02-10,Galatasaray,Trabzonspor,3-1,EV,1,1.35,True,True,0.3500000000000001,174,2,74,-39.12999999999999
+Trabzonspor,2019-02-17,Trabzonspor,Alanyaspor,0-2,DEP,1,1.7,True,False,-1.0,175,2,75,-40.12999999999999
+Trabzonspor,2019-02-22,Göztepe,Trabzonspor,1-3,DEP,1,2.15,True,False,-1.0,176,2,76,-41.12999999999999
+Trabzonspor,2019-03-04,Kasımpaşa,Trabzonspor,2-2,BERABERE,2,2.0,True,False,-1.0,177,2,77,-42.12999999999999
+Trabzonspor,2019-03-09,Trabzonspor,Akhisarspor,2-1,EV,1,1.4,True,True,0.3999999999999999,178,2,78,-41.72999999999999
+Trabzonspor,2019-03-16,BB Erzurumspor,Trabzonspor,0-1,DEP,1,2.1,True,False,-1.0,179,2,79,-42.72999999999999
+Trabzonspor,2019-04-05,Trabzonspor,Antalyaspor,4-1,EV,1,1.4,True,True,0.3999999999999999,180,2,80,-42.32999999999999
+Trabzonspor,2019-04-12,Bursaspor,Trabzonspor,0-1,DEP,1,2.15,True,False,-1.0,181,2,81,-43.32999999999999
+Trabzonspor,2019-04-20,Trabzonspor,Yeni Malatyaspor,2-1,EV,1,1.4,True,True,0.3999999999999999,182,2,82,-42.92999999999999
+Trabzonspor,2019-04-27,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.7,True,False,-1.0,183,2,83,-43.92999999999999
+Trabzonspor,2019-05-06,Trabzonspor,Kayserispor,4-2,EV,1,1.4,True,True,0.3999999999999999,184,2,84,-43.529999999999994
+Trabzonspor,2019-05-12,Atiker Konyaspor,Trabzonspor,2-2,BERABERE,2,2.2,True,False,-1.0,185,2,85,-44.529999999999994
+Trabzonspor,2019-05-18,Trabzonspor,Beşiktaş,2-1,EV,2,2.1,True,False,-1.0,186,2,86,-45.529999999999994
+Trabzonspor,2019-05-24,Çaykur Rizespor,Trabzonspor,2-3,DEP,2,2.0,True,True,1.0,187,2,87,-44.529999999999994
+Trabzonspor,2019-08-18,Kasımpaşa,Trabzonspor,1-1,BERABERE,2,1.8,True,False,-1.0,188,2,88,-45.529999999999994
+Trabzonspor,2019-08-25,Trabzonspor,Yeni Malatyaspor,2-1,EV,1,1.4,True,True,0.3999999999999999,189,2,89,-45.129999999999995
+Trabzonspor,2019-09-01,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,1.5,True,False,-1.0,190,2,90,-46.129999999999995
+Trabzonspor,2019-09-15,Trabzonspor,Gençlerbirliği,2-2,BERABERE,1,1.6,True,False,-1.0,191,2,91,-47.129999999999995
+Trabzonspor,2019-09-23,Sivasspor,Trabzonspor,2-1,EV,1,1.85,True,True,0.8500000000000001,192,2,92,-46.279999999999994
+Trabzonspor,2019-09-29,Trabzonspor,Beşiktaş,4-1,EV,1,1.85,True,True,0.8500000000000001,193,2,93,-45.42999999999999
+Trabzonspor,2019-10-06,Çaykur Rizespor,Trabzonspor,1-2,DEP,2,2.3,True,True,1.2999999999999998,194,2,94,-44.129999999999995
+Trabzonspor,2019-10-19,Trabzonspor,Gaziantep FK,4-1,EV,1,1.45,True,True,0.44999999999999996,195,2,95,-43.67999999999999
+Trabzonspor,2019-10-28,Başakşehir FK,Trabzonspor,2-2,BERABERE,1,1.65,True,False,-1.0,196,2,96,-44.67999999999999
+Trabzonspor,2019-11-02,Trabzonspor,Göztepe,0-1,DEP,1,1.8,True,False,-1.0,197,2,97,-45.67999999999999
+Trabzonspor,2019-11-10,Trabzonspor,Alanyaspor,1-0,EV,1,2.3,True,True,1.2999999999999998,198,2,98,-44.379999999999995
+Trabzonspor,2019-11-23,MKE Ankaragücü,Trabzonspor,0-3,DEP,2,1.9,True,True,0.8999999999999999,199,2,99,-43.48
+Trabzonspor,2019-12-01,Trabzonspor,Galatasaray,1-1,BERABERE,1,1.95,True,False,-1.0,200,2,100,-44.48
+Trabzonspor,2019-12-08,Antalyaspor,Trabzonspor,1-3,DEP,2,2.0,True,True,1.0,201,3,1,-43.48
+Trabzonspor,2019-12-16,Trabzonspor,Denizlispor,1-2,DEP,1,1.3,True,False,-1.0,202,3,2,-44.48
+Trabzonspor,2019-12-23,Konyaspor,Trabzonspor,0-1,DEP,2,1.9,True,True,0.8999999999999999,203,3,3,-43.58
+Trabzonspor,2019-12-28,Trabzonspor,Kayserispor,6-2,EV,1,1.06,True,True,0.06000000000000005,204,3,4,-43.519999999999996
+Trabzonspor,2020-01-19,Trabzonspor,Kasımpaşa,6-0,EV,1,1.4,True,True,0.3999999999999999,205,3,5,-43.12
+Trabzonspor,2020-02-01,Trabzonspor,Fenerbahçe,2-1,EV,2,2.15,True,False,-1.0,206,3,6,-44.12
+Trabzonspor,2020-02-08,Gençlerbirliği,Trabzonspor,0-2,DEP,2,1.8,True,True,0.8,207,3,7,-43.32
+Trabzonspor,2020-02-16,Trabzonspor,Sivasspor,2-1,EV,1,1.67,True,True,0.6699999999999999,208,3,8,-42.65
+Trabzonspor,2020-02-22,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.85,True,False,-1.0,209,3,9,-43.65
+Trabzonspor,2020-02-29,Trabzonspor,Çaykur Rizespor,5-2,EV,1,1.45,True,True,0.44999999999999996,210,3,10,-43.199999999999996
+Trabzonspor,2020-03-07,Gaziantep FK,Trabzonspor,1-1,BERABERE,2,1.7,True,False,-1.0,211,3,11,-44.199999999999996
+Trabzonspor,2020-03-11,Yeni Malatyaspor,Trabzonspor,1-3,DEP,2,1.5,True,True,0.5,212,3,12,-43.699999999999996
+Trabzonspor,2020-03-15,Trabzonspor,Başakşehir FK,1-1,BERABERE,1,2.0,True,False,-1.0,213,3,13,-44.699999999999996
+Trabzonspor,2020-06-12,Göztepe,Trabzonspor,1-3,DEP,2,1.85,True,True,0.8500000000000001,214,3,14,-43.849999999999994
+Trabzonspor,2020-06-22,Alanyaspor,Trabzonspor,2-2,BERABERE,2,2.1,True,False,-1.0,215,3,15,-44.849999999999994
+Trabzonspor,2020-06-27,Trabzonspor,MKE Ankaragücü,1-1,BERABERE,1,1.2,True,False,-1.0,216,3,16,-45.849999999999994
+Trabzonspor,2020-07-05,Galatasaray,Trabzonspor,1-3,DEP,2,2.2,True,True,1.2000000000000002,217,3,17,-44.64999999999999
+Trabzonspor,2020-07-08,Trabzonspor,Antalyaspor,2-2,BERABERE,1,1.15,True,False,-1.0,218,3,18,-45.64999999999999
+Trabzonspor,2020-07-13,Denizlispor,Trabzonspor,2-1,EV,2,1.55,True,False,-1.0,219,3,19,-46.64999999999999
+Trabzonspor,2020-07-19,Trabzonspor,Konyaspor,3-4,DEP,1,1.52,True,False,-1.0,220,3,20,-47.64999999999999
+Trabzonspor,2020-07-25,Kayserispor,Trabzonspor,1-2,DEP,2,1.75,True,True,0.75,221,3,21,-46.89999999999999
+Trabzonspor,2020-09-13,Trabzonspor,Beşiktaş,1-3,DEP,1,1.85,True,False,-1.0,222,3,22,-47.89999999999999
+Trabzonspor,2020-09-19,Denizlispor,Trabzonspor,0-0,BERABERE,2,1.85,True,False,-1.0,223,3,23,-48.89999999999999
+Trabzonspor,2020-09-26,Trabzonspor,Yeni Malatyaspor,3-1,EV,1,1.58,True,True,0.5800000000000001,224,3,24,-48.31999999999999
+Trabzonspor,2020-10-02,Gaziantep FK,Trabzonspor,1-1,BERABERE,2,2.0,True,False,-1.0,225,3,25,-49.31999999999999
+Trabzonspor,2020-10-17,Trabzonspor,Başakşehir FK,0-2,DEP,1,2.3,True,False,-1.0,226,3,26,-50.31999999999999
+Trabzonspor,2020-10-25,Fenerbahçe,Trabzonspor,3-1,EV,1,1.55,True,True,0.55,227,3,27,-49.769999999999996
+Trabzonspor,2020-10-30,Trabzonspor,Kasımpaşa,3-4,DEP,1,1.7,True,False,-1.0,228,3,28,-50.769999999999996
+Trabzonspor,2020-11-07,Alanyaspor,Trabzonspor,1-1,BERABERE,1,1.52,True,False,-1.0,229,3,29,-51.769999999999996
+Trabzonspor,2020-11-22,Trabzonspor,BB Erzurumspor,1-0,EV,1,1.42,True,True,0.41999999999999993,230,3,30,-51.349999999999994
+Trabzonspor,2020-11-27,MKE Ankaragücü,Trabzonspor,0-1,DEP,2,1.85,True,True,0.8500000000000001,231,3,31,-50.49999999999999
+Trabzonspor,2020-12-07,Trabzonspor,Sivasspor,1-1,BERABERE,1,1.9,True,False,-1.0,232,3,32,-51.49999999999999
+Trabzonspor,2020-12-12,Kayserispor,Trabzonspor,0-0,BERABERE,2,1.7,True,False,-1.0,233,3,33,-52.49999999999999
+Trabzonspor,2020-12-19,Trabzonspor,Çaykur Rizespor,2-1,EV,1,1.85,True,True,0.8500000000000001,234,3,34,-51.64999999999999
+Trabzonspor,2020-12-26,Trabzonspor,Galatasaray,0-2,DEP,2,1.9,True,True,0.8999999999999999,235,3,35,-50.74999999999999
+Trabzonspor,2021-01-03,Fatih Karagümrük,Trabzonspor,1-2,DEP,2,2.2,True,True,1.2000000000000002,236,3,36,-49.54999999999999
+Trabzonspor,2021-01-06,Trabzonspor,Göztepe,1-0,EV,1,1.6,True,True,0.6000000000000001,237,3,37,-48.94999999999999
+Trabzonspor,2021-01-16,Antalyaspor,Trabzonspor,1-1,BERABERE,2,1.95,True,False,-1.0,238,3,38,-49.94999999999999
+Trabzonspor,2021-01-19,Trabzonspor,Konyaspor,3-1,EV,1,1.6,True,True,0.6000000000000001,239,3,39,-49.34999999999999
+Trabzonspor,2021-01-23,Gençlerbirliği,Trabzonspor,1-2,DEP,2,1.6,True,True,0.6000000000000001,240,3,40,-48.749999999999986
+Trabzonspor,2021-01-31,Beşiktaş,Trabzonspor,1-2,DEP,1,1.67,True,False,-1.0,241,3,41,-49.749999999999986
+Trabzonspor,2021-02-04,Trabzonspor,Denizlispor,1-0,EV,1,1.4,True,True,0.3999999999999999,242,3,42,-49.34999999999999
+Trabzonspor,2021-02-08,Yeni Malatyaspor,Trabzonspor,0-2,DEP,2,1.7,True,True,0.7,243,3,43,-48.649999999999984
+Trabzonspor,2021-02-13,Trabzonspor,Gaziantep FK,1-0,EV,1,1.48,True,True,0.48,244,3,44,-48.16999999999999
+Trabzonspor,2021-02-19,Başakşehir FK,Trabzonspor,0-1,DEP,1,1.8,True,False,-1.0,245,3,45,-49.16999999999999
+Trabzonspor,2021-02-28,Trabzonspor,Fenerbahçe,0-1,DEP,1,2.2,True,False,-1.0,246,3,46,-50.16999999999999
+Trabzonspor,2021-03-04,Kasımpaşa,Trabzonspor,1-2,DEP,2,1.75,True,True,0.75,247,3,47,-49.41999999999999
+Trabzonspor,2021-03-08,Trabzonspor,Alanyaspor,1-3,DEP,1,1.9,True,False,-1.0,248,3,48,-50.41999999999999
+Trabzonspor,2021-03-14,BB Erzurumspor,Trabzonspor,0-0,BERABERE,2,1.85,True,False,-1.0,249,3,49,-51.41999999999999
+Trabzonspor,2021-03-20,Trabzonspor,MKE Ankaragücü,4-1,EV,1,1.45,True,True,0.44999999999999996,250,3,50,-50.969999999999985
+Trabzonspor,2021-04-03,Sivasspor,Trabzonspor,0-0,BERABERE,1,2.35,True,False,-1.0,251,3,51,-51.969999999999985
+Trabzonspor,2021-04-06,Trabzonspor,Kayserispor,1-1,BERABERE,1,1.52,True,False,-1.0,252,3,52,-52.969999999999985
+Trabzonspor,2021-04-10,Çaykur Rizespor,Trabzonspor,0-0,BERABERE,2,2.0,True,False,-1.0,253,3,53,-53.969999999999985
+Trabzonspor,2021-04-21,Galatasaray,Trabzonspor,1-1,BERABERE,1,1.8,True,False,-1.0,254,3,54,-54.969999999999985
+Trabzonspor,2021-04-24,Trabzonspor,Fatih Karagümrük,2-0,EV,1,1.42,True,True,0.41999999999999993,255,3,55,-54.54999999999998
+Trabzonspor,2021-04-28,Göztepe,Trabzonspor,1-1,BERABERE,2,1.85,True,False,-1.0,256,3,56,-55.54999999999998
+Trabzonspor,2021-05-08,Trabzonspor,Antalyaspor,2-1,EV,1,1.58,True,True,0.5800000000000001,257,3,57,-54.969999999999985
+Trabzonspor,2021-05-11,Konyaspor,Trabzonspor,1-1,BERABERE,2,2.05,True,False,-1.0,258,3,58,-55.969999999999985
+Trabzonspor,2021-05-15,Trabzonspor,Gençlerbirliği,2-1,EV,1,1.62,True,True,0.6200000000000001,259,3,59,-55.34999999999999
+Trabzonspor,2021-08-16,Yeni Malatyaspor,Trabzonspor,1-5,DEP,2,1.7,True,True,0.7,260,3,60,-54.649999999999984
+Trabzonspor,2021-08-23,Trabzonspor,Sivasspor,2-1,EV,1,1.43,True,True,0.42999999999999994,261,3,61,-54.219999999999985
+Trabzonspor,2021-08-29,Giresunspor,Trabzonspor,0-1,DEP,2,1.85,True,True,0.8500000000000001,262,3,62,-53.36999999999998
+Trabzonspor,2021-09-12,Trabzonspor,Galatasaray,2-2,BERABERE,1,1.96,True,False,-1.0,263,3,63,-54.36999999999998
+Trabzonspor,2021-09-18,Kasımpaşa,Trabzonspor,0-1,DEP,2,1.53,True,True,0.53,264,3,64,-53.83999999999998
+Trabzonspor,2021-09-23,Konyaspor,Trabzonspor,2-2,BERABERE,2,2.0,True,False,-1.0,265,3,65,-54.83999999999998
+Trabzonspor,2021-09-27,Trabzonspor,Alanyaspor,1-1,BERABERE,1,1.57,True,False,-1.0,266,3,66,-55.83999999999998
+Trabzonspor,2021-10-02,Kayserispor,Trabzonspor,1-2,DEP,2,1.79,True,True,0.79,267,3,67,-55.04999999999998
+Trabzonspor,2021-10-17,Trabzonspor,Fenerbahçe,3-1,EV,1,2.08,True,True,1.08,268,3,68,-53.969999999999985
+Trabzonspor,2021-10-23,Göztepe,Trabzonspor,0-1,DEP,2,1.9,True,True,0.8999999999999999,269,3,69,-53.069999999999986
+Trabzonspor,2021-10-29,Trabzonspor,Çaykur Rizespor,2-1,EV,1,1.24,True,True,0.24,270,3,70,-52.829999999999984
+Trabzonspor,2021-11-06,Beşiktaş,Trabzonspor,1-2,DEP,1,1.76,True,False,-1.0,271,3,71,-53.829999999999984
+Trabzonspor,2021-11-22,Trabzonspor,Gaziantep FK,3-0,EV,1,1.51,True,True,0.51,272,3,72,-53.319999999999986
+Trabzonspor,2021-11-28,Fatih Karagümrük,Trabzonspor,0-2,DEP,2,1.82,True,True,0.8200000000000001,273,3,73,-52.499999999999986
+Trabzonspor,2021-12-04,Trabzonspor,Adana Demirspor,2-0,EV,1,1.72,True,True,0.72,274,3,74,-51.77999999999999
+Trabzonspor,2021-12-11,Antalyaspor,Trabzonspor,2-1,EV,2,2.07,True,False,-1.0,275,3,75,-52.77999999999999
+Trabzonspor,2021-12-21,Altay,Trabzonspor,1-2,DEP,2,1.8,True,True,0.8,276,3,76,-51.97999999999999
+Trabzonspor,2021-12-25,Trabzonspor,Başakşehir FK,0-0,BERABERE,1,2.03,True,False,-1.0,277,3,77,-52.97999999999999
+Trabzonspor,2022-01-07,Trabzonspor,Yeni Malatyaspor,1-0,EV,1,1.21,True,True,0.20999999999999996,278,3,78,-52.76999999999999
+Trabzonspor,2022-01-15,Sivasspor,Trabzonspor,1-1,BERABERE,2,2.29,True,False,-1.0,279,3,79,-53.76999999999999
+Trabzonspor,2022-01-19,Trabzonspor,Giresunspor,1-1,BERABERE,1,1.58,True,False,-1.0,280,3,80,-54.76999999999999
+Trabzonspor,2022-01-23,Galatasaray,Trabzonspor,1-2,DEP,1,2.13,True,False,-1.0,281,3,81,-55.76999999999999
+Trabzonspor,2022-02-05,Trabzonspor,Kasımpaşa,1-0,EV,1,1.53,True,True,0.53,282,3,82,-55.23999999999999
+Trabzonspor,2022-02-13,Trabzonspor,Konyaspor,2-1,EV,1,1.64,True,True,0.6399999999999999,283,3,83,-54.59999999999999
+Trabzonspor,2022-02-20,Alanyaspor,Trabzonspor,0-4,DEP,1,2.21,True,False,-1.0,284,3,84,-55.59999999999999
+Trabzonspor,2022-02-25,Trabzonspor,Kayserispor,3-2,EV,1,1.37,True,True,0.3700000000000001,285,3,85,-55.22999999999999
+Trabzonspor,2022-03-06,Fenerbahçe,Trabzonspor,1-1,BERABERE,1,2.07,True,False,-1.0,286,3,86,-56.22999999999999
+Trabzonspor,2022-03-12,Trabzonspor,Göztepe,4-2,EV,1,1.5,True,True,0.5,287,3,87,-55.72999999999999
+Trabzonspor,2022-03-18,Çaykur Rizespor,Trabzonspor,3-2,EV,2,1.56,True,False,-1.0,288,3,88,-56.72999999999999
+Trabzonspor,2022-04-03,Trabzonspor,Beşiktaş,1-1,BERABERE,1,1.82,True,False,-1.0,289,3,89,-57.72999999999999
+Trabzonspor,2022-04-09,Gaziantep FK,Trabzonspor,0-0,BERABERE,2,2.0,True,False,-1.0,290,3,90,-58.72999999999999
+Trabzonspor,2022-04-15,Trabzonspor,Fatih Karagümrük,1-1,BERABERE,1,1.33,True,False,-1.0,291,3,91,-59.72999999999999
+Trabzonspor,2022-04-23,Adana Demirspor,Trabzonspor,1-3,DEP,1,1.98,True,False,-1.0,292,3,92,-60.72999999999999
+Trabzonspor,2022-04-30,Trabzonspor,Antalyaspor,2-2,BERABERE,1,1.53,True,False,-1.0,293,3,93,-61.72999999999999
+Trabzonspor,2022-05-15,Trabzonspor,Altay,2-1,EV,1,1.42,True,True,0.41999999999999993,294,3,94,-61.30999999999999
+Trabzonspor,2022-05-22,Başakşehir FK,Trabzonspor,3-1,EV,1,1.34,True,True,0.3400000000000001,295,3,95,-60.969999999999985
+Trabzonspor,2022-08-05,İstanbulspor,Trabzonspor,0-2,DEP,2,1.45,True,True,0.44999999999999996,296,3,96,-60.51999999999998
+Trabzonspor,2022-08-20,Antalyaspor,Trabzonspor,5-2,EV,1,2.36,True,True,1.3599999999999999,297,3,97,-59.15999999999998
+Trabzonspor,2022-08-28,Trabzonspor,Galatasaray,0-0,BERABERE,1,2.31,True,False,-1.0,298,3,98,-60.15999999999998
+Trabzonspor,2022-09-02,Ümraniyespor,Trabzonspor,0-1,DEP,2,1.77,True,True,0.77,299,3,99,-59.38999999999998
+Trabzonspor,2022-09-12,Adana Demirspor,Trabzonspor,3-2,EV,2,2.29,True,False,-1.0,300,3,100,-60.38999999999998
+Trabzonspor,2022-09-18,Trabzonspor,Gaziantep FK,3-2,EV,1,1.5,True,True,0.5,301,4,1,-59.88999999999998
+Trabzonspor,2022-10-01,Kayserispor,Trabzonspor,1-2,DEP,2,1.83,True,True,0.8300000000000001,302,4,2,-59.05999999999998
+Trabzonspor,2022-10-10,Trabzonspor,Kasımpaşa,0-0,BERABERE,1,1.35,True,False,-1.0,303,4,3,-60.05999999999998
+Trabzonspor,2022-10-16,Beşiktaş,Trabzonspor,2-2,BERABERE,1,1.82,True,False,-1.0,304,4,4,-61.05999999999998
+Trabzonspor,2022-10-22,Trabzonspor,Sivasspor,1-0,EV,1,1.42,True,True,0.41999999999999993,305,4,5,-60.63999999999998
+Trabzonspor,2022-11-06,Trabzonspor,Konyaspor,2-2,BERABERE,1,1.68,True,False,-1.0,306,4,6,-61.63999999999998
+Trabzonspor,2022-11-11,MKE Ankaragücü,Trabzonspor,1-1,BERABERE,2,2.14,True,False,-1.0,307,4,7,-62.63999999999998
+Trabzonspor,2022-12-24,Trabzonspor,Fenerbahçe,2-0,EV,2,2.22,True,False,-1.0,308,4,8,-63.63999999999998
+Trabzonspor,2022-12-28,Fatih Karagümrük,Trabzonspor,4-1,EV,2,1.56,True,False,-1.0,309,4,9,-64.63999999999999
+Trabzonspor,2023-01-05,Trabzonspor,Giresunspor,3-0,EV,1,1.41,True,True,0.4099999999999999,310,4,10,-64.22999999999999
+Trabzonspor,2023-01-09,Alanyaspor,Trabzonspor,5-0,EV,2,1.99,True,False,-1.0,311,4,11,-65.22999999999999
+Trabzonspor,2023-01-14,Trabzonspor,Başakşehir FK,1-0,EV,1,1.74,True,True,0.74,312,4,12,-64.49
+Trabzonspor,2023-01-22,Trabzonspor,İstanbulspor,4-0,EV,1,1.17,True,True,0.16999999999999993,313,4,13,-64.32
+Trabzonspor,2023-02-01,Trabzonspor,Antalyaspor,2-0,EV,1,1.51,True,True,0.51,314,4,14,-63.809999999999995
+Trabzonspor,2023-02-05,Galatasaray,Trabzonspor,2-1,EV,1,1.46,True,True,0.45999999999999996,315,4,15,-63.349999999999994
+Trabzonspor,2023-03-04,Trabzonspor,Ümraniyespor,1-2,DEP,1,1.22,True,False,-1.0,316,4,16,-64.35
+Trabzonspor,2023-03-12,Trabzonspor,Adana Demirspor,4-1,EV,1,1.66,True,True,0.6599999999999999,317,4,17,-63.69
+Trabzonspor,2023-04-01,Trabzonspor,Kayserispor,3-4,DEP,1,1.31,True,False,-1.0,318,4,18,-64.69
+Trabzonspor,2023-04-08,Kasımpaşa,Trabzonspor,2-0,EV,2,2.22,True,False,-1.0,319,4,19,-65.69
+Trabzonspor,2023-04-16,Trabzonspor,Beşiktaş,0-0,BERABERE,2,2.23,True,False,-1.0,320,4,20,-66.69
+Trabzonspor,2023-04-20,Sivasspor,Trabzonspor,4-1,EV,1,2.16,True,True,1.1600000000000001,321,4,21,-65.53
+Trabzonspor,2023-04-29,Konyaspor,Trabzonspor,2-1,EV,1,2.08,True,True,1.08,322,4,22,-64.45
+Trabzonspor,2023-05-08,Trabzonspor,MKE Ankaragücü,2-0,EV,1,1.75,True,True,0.75,323,4,23,-63.7
+Trabzonspor,2023-05-18,Fenerbahçe,Trabzonspor,3-1,EV,1,1.26,True,True,0.26,324,4,24,-63.440000000000005
+Trabzonspor,2023-05-22,Trabzonspor,Fatih Karagümrük,4-1,EV,1,1.35,True,True,0.3500000000000001,325,4,25,-63.09
+Trabzonspor,2023-05-30,Giresunspor,Trabzonspor,2-4,DEP,1,2.12,True,False,-1.0,326,4,26,-64.09
+Trabzonspor,2023-06-03,Trabzonspor,Alanyaspor,5-1,EV,1,1.24,True,True,0.24,327,4,27,-63.85
+Trabzonspor,2023-06-06,Başakşehir FK,Trabzonspor,3-1,EV,1,1.82,True,True,0.8200000000000001,328,4,28,-63.03
+Trabzonspor,2023-08-11,Trabzonspor,Antalyaspor,1-0,EV,1,1.69,True,True,0.69,329,4,29,-62.34
+Trabzonspor,2023-08-19,Galatasaray,Trabzonspor,2-0,EV,1,1.53,True,True,0.53,330,4,30,-61.81
+Trabzonspor,2023-08-26,Trabzonspor,Çaykur Rizespor,2-3,DEP,1,1.53,True,False,-1.0,331,4,31,-62.81
+Trabzonspor,2023-09-01,Kasımpaşa,Trabzonspor,1-5,DEP,2,2.09,True,True,1.0899999999999999,332,4,32,-61.72
+Trabzonspor,2023-09-17,Trabzonspor,Beşiktaş,3-0,EV,2,1.95,True,False,-1.0,333,4,33,-62.72
+Trabzonspor,2023-09-30,Trabzonspor,Pendikspor,2-1,EV,1,1.38,True,True,0.3799999999999999,334,4,34,-62.339999999999996
+Trabzonspor,2023-10-06,Adana Demirspor,Trabzonspor,1-0,EV,1,1.75,True,True,0.75,335,4,35,-61.589999999999996
+Trabzonspor,2023-10-23,Trabzonspor,Alanyaspor,1-0,EV,1,1.5,True,True,0.5,336,4,36,-61.089999999999996
+Trabzonspor,2023-10-29,Fatih Karagümrük,Trabzonspor,0-0,BERABERE,2,2.11,True,False,-1.0,337,4,37,-62.089999999999996
+Trabzonspor,2023-11-04,Fenerbahçe,Trabzonspor,2-3,DEP,1,1.2,True,False,-1.0,338,4,38,-63.089999999999996
+Trabzonspor,2023-11-10,Trabzonspor,Konyaspor,2-1,EV,1,1.42,True,True,0.41999999999999993,339,4,39,-62.669999999999995
+Trabzonspor,2023-11-27,Sivasspor,Trabzonspor,3-3,BERABERE,2,2.01,True,False,-1.0,340,4,40,-63.669999999999995
+Trabzonspor,2023-12-03,Trabzonspor,Kayserispor,0-1,DEP,1,1.42,True,False,-1.0,341,4,41,-64.66999999999999
+Trabzonspor,2023-12-10,Gaziantep FK,Trabzonspor,1-3,DEP,2,1.81,True,True,0.81,342,4,42,-63.859999999999985
+Trabzonspor,2023-12-19,İstanbulspor,Trabzonspor,0-3,DEP,2,1.34,True,True,0.3400000000000001,343,4,43,-63.51999999999998
+Trabzonspor,2023-12-23,Trabzonspor,Başakşehir FK,1-1,BERABERE,1,1.44,True,False,-1.0,344,4,44,-64.51999999999998
+Trabzonspor,2024-01-06,MKE Ankaragücü,Trabzonspor,0-1,DEP,2,1.9,True,True,0.8999999999999999,345,4,45,-63.61999999999998
+Trabzonspor,2024-01-11,Trabzonspor,Samsunspor,2-1,EV,1,1.54,True,True,0.54,346,4,46,-63.079999999999984
+Trabzonspor,2024-01-14,Antalyaspor,Trabzonspor,1-1,BERABERE,1,2.17,True,False,-1.0,347,4,47,-64.07999999999998
+Trabzonspor,2024-01-21,Trabzonspor,Galatasaray,1-5,DEP,2,1.61,True,True,0.6100000000000001,348,4,48,-63.469999999999985
+Trabzonspor,2024-01-25,Çaykur Rizespor,Trabzonspor,1-0,EV,1,2.11,True,True,1.1099999999999999,349,4,49,-62.359999999999985
+Trabzonspor,2024-01-29,Trabzonspor,Kasımpaşa,2-3,DEP,1,1.52,True,False,-1.0,350,4,50,-63.359999999999985
+Trabzonspor,2024-02-04,Beşiktaş,Trabzonspor,2-0,EV,1,1.74,True,True,0.74,351,4,51,-62.61999999999998
+Trabzonspor,2024-02-18,Pendikspor,Trabzonspor,0-2,DEP,2,1.97,True,True,0.97,352,4,52,-61.649999999999984
+Trabzonspor,2024-02-25,Trabzonspor,Adana Demirspor,1-0,EV,1,1.66,True,True,0.6599999999999999,353,4,53,-60.98999999999999
+Trabzonspor,2024-03-04,Alanyaspor,Trabzonspor,3-1,EV,2,2.14,True,False,-1.0,354,4,54,-61.98999999999999
+Trabzonspor,2024-03-09,Trabzonspor,Fatih Karagümrük,5-1,EV,1,1.6,True,True,0.6000000000000001,355,4,55,-61.389999999999986
+Trabzonspor,2024-03-17,Trabzonspor,Fenerbahçe,2-3,DEP,2,1.82,True,True,0.8200000000000001,356,4,56,-60.569999999999986
+Trabzonspor,2024-04-03,Konyaspor,Trabzonspor,1-3,DEP,2,1.98,True,True,0.98,357,4,57,-59.58999999999999
+Trabzonspor,2024-04-12,Trabzonspor,Sivasspor,0-1,DEP,1,1.26,True,False,-1.0,358,4,58,-60.58999999999999
+Trabzonspor,2024-04-20,Kayserispor,Trabzonspor,1-2,DEP,2,1.89,True,True,0.8899999999999999,359,4,59,-59.69999999999999
+Trabzonspor,2024-04-28,Trabzonspor,Gaziantep FK,4-2,EV,1,1.36,True,True,0.3600000000000001,360,4,60,-59.33999999999999
+Trabzonspor,2024-05-04,Samsunspor,Trabzonspor,3-1,EV,1,2.34,True,True,1.3399999999999999,361,4,61,-57.999999999999986
+Trabzonspor,2024-05-12,Trabzonspor,İstanbulspor,3-0,EV,1,1.05,True,True,0.050000000000000044,362,4,62,-57.94999999999999
+Trabzonspor,2024-05-18,Başakşehir FK,Trabzonspor,0-1,DEP,1,1.98,True,False,-1.0,363,4,63,-58.94999999999999
+Trabzonspor,2024-05-26,Trabzonspor,MKE Ankaragücü,4-2,EV,2,2.0,True,False,-1.0,364,4,64,-59.94999999999999
+Trabzonspor,2024-08-11,Sivasspor,Trabzonspor,0-0,BERABERE,2,2.31,True,False,-1.0,365,4,65,-60.94999999999999
+Trabzonspor,2024-09-01,Eyüpspor,Trabzonspor,0-0,BERABERE,1,2.16,True,False,-1.0,366,4,66,-61.94999999999999
+Trabzonspor,2024-09-15,Trabzonspor,Beşiktaş,1-1,BERABERE,2,2.17,True,False,-1.0,367,4,67,-62.94999999999999
+Trabzonspor,2024-09-19,Trabzonspor,Kayserispor,2-2,BERABERE,1,1.42,True,False,-1.0,368,4,68,-63.94999999999999
+Trabzonspor,2024-09-23,Gaziantep FK,Trabzonspor,0-0,BERABERE,2,2.0,True,False,-1.0,369,4,69,-64.94999999999999
+Trabzonspor,2024-09-29,Trabzonspor,Konyaspor,3-2,EV,1,1.63,True,True,0.6299999999999999,370,4,70,-64.32
+Trabzonspor,2024-10-19,Trabzonspor,Başakşehir FK,1-0,EV,1,1.86,True,True,0.8600000000000001,371,4,71,-63.459999999999994
+Trabzonspor,2024-10-26,Göztepe,Trabzonspor,2-1,EV,1,2.15,True,True,1.15,372,4,72,-62.309999999999995
+Trabzonspor,2024-11-03,Trabzonspor,Fenerbahçe,2-3,DEP,2,1.66,True,True,0.6599999999999999,373,4,73,-61.65
+Trabzonspor,2024-11-09,Çaykur Rizespor,Trabzonspor,3-1,EV,1,2.13,True,True,1.13,374,4,74,-60.519999999999996
+Trabzonspor,2024-11-25,Trabzonspor,Adana Demirspor,5-0,EV,1,1.35,True,True,0.3500000000000001,375,4,75,-60.169999999999995
+Trabzonspor,2024-11-30,Alanyaspor,Trabzonspor,2-1,EV,1,1.95,True,True,0.95,376,4,76,-59.21999999999999
+Trabzonspor,2024-12-06,Trabzonspor,Kasımpaşa,2-2,BERABERE,1,1.67,True,False,-1.0,377,4,77,-60.21999999999999
+Trabzonspor,2024-12-16,Galatasaray,Trabzonspor,4-3,EV,1,1.21,True,True,0.20999999999999996,378,4,78,-60.00999999999999
+Trabzonspor,2024-12-22,Trabzonspor,Bodrum FK,1-0,EV,1,1.48,True,True,0.48,379,4,79,-59.529999999999994
+Trabzonspor,2025-01-04,Samsunspor,Trabzonspor,2-1,EV,1,2.02,True,True,1.02,380,4,80,-58.50999999999999
+Trabzonspor,2025-01-12,Trabzonspor,Antalyaspor,5-0,EV,1,1.3,True,True,0.30000000000000004,381,4,81,-58.209999999999994
+Trabzonspor,2025-01-20,Trabzonspor,Sivasspor,4-0,EV,1,1.37,True,True,0.3700000000000001,382,4,82,-57.839999999999996
+Trabzonspor,2025-02-01,Kayserispor,Trabzonspor,0-0,BERABERE,2,1.87,True,False,-1.0,383,4,83,-58.839999999999996
+Trabzonspor,2025-02-10,Trabzonspor,Eyüpspor,1-0,EV,1,1.62,True,True,0.6200000000000001,384,4,84,-58.22
+Trabzonspor,2025-02-15,Beşiktaş,Trabzonspor,2-1,EV,1,1.62,True,True,0.6200000000000001,385,4,85,-57.6
+Trabzonspor,2025-02-23,Trabzonspor,Gaziantep FK,3-2,EV,1,1.4,True,True,0.3999999999999999,386,4,86,-57.2
+Trabzonspor,2025-03-03,Konyaspor,Trabzonspor,1-0,EV,2,2.09,True,False,-1.0,387,4,87,-58.2
+Trabzonspor,2025-03-15,Başakşehir FK,Trabzonspor,0-3,DEP,1,2.06,True,False,-1.0,388,4,88,-59.2
+Trabzonspor,2025-03-29,Trabzonspor,Göztepe,1-1,BERABERE,1,1.91,True,False,-1.0,389,4,89,-60.2
+Trabzonspor,2025-04-06,Fenerbahçe,Trabzonspor,4-1,EV,1,1.29,True,True,0.29000000000000004,390,4,90,-59.910000000000004
+Trabzonspor,2025-04-13,Trabzonspor,Çaykur Rizespor,2-0,EV,1,1.72,True,True,0.72,391,4,91,-59.190000000000005
+Trabzonspor,2025-04-19,Adana Demirspor,Trabzonspor,0-1,DEP,2,1.06,True,True,0.06000000000000005,392,4,92,-59.13
+Trabzonspor,2025-04-27,Trabzonspor,Alanyaspor,4-3,EV,1,1.49,True,True,0.49,393,4,93,-58.64
+Trabzonspor,2025-05-05,Kasımpaşa,Trabzonspor,1-1,BERABERE,1,2.03,True,False,-1.0,394,4,94,-59.64
+Trabzonspor,2025-05-10,Trabzonspor,Galatasaray,0-2,DEP,2,1.36,True,True,0.3600000000000001,395,4,95,-59.28
+Trabzonspor,2025-05-18,Bodrum FK,Trabzonspor,1-1,BERABERE,1,1.63,True,False,-1.0,396,4,96,-60.28
+Trabzonspor,2025-05-25,Trabzonspor,Samsunspor,2-2,BERABERE,1,2.31,True,False,-1.0,397,4,97,-61.28
+Trabzonspor,2025-05-30,Antalyaspor,Trabzonspor,0-2,DEP,2,2.07,True,True,1.0699999999999998,398,4,98,-60.21
+Trabzonspor,2025-08-11,Trabzonspor,Kocaelispor,1-0,EV,1,1.35,True,True,0.3500000000000001,399,4,99,-59.86
+Trabzonspor,2025-08-18,Kasımpaşa,Trabzonspor,0-1,DEP,2,2.02,True,True,1.02,400,4,100,-58.839999999999996
+Trabzonspor,2025-08-24,Trabzonspor,Antalyaspor,1-0,EV,1,1.39,True,True,0.3899999999999999,401,5,1,-58.449999999999996
+Trabzonspor,2025-08-31,Trabzonspor,Samsunspor,1-1,BERABERE,1,1.55,True,False,-1.0,402,5,2,-59.449999999999996
+Trabzonspor,2025-09-14,Fenerbahçe,Trabzonspor,1-0,EV,1,1.25,True,True,0.25,403,5,3,-59.199999999999996
+Trabzonspor,2025-09-20,Trabzonspor,Gaziantep FK,1-1,BERABERE,1,1.51,True,False,-1.0,404,5,4,-60.199999999999996
+Trabzonspor,2025-09-27,Fatih Karagümrük,Trabzonspor,3-4,DEP,2,1.87,True,True,0.8700000000000001,405,5,5,-59.33
+Trabzonspor,2025-10-03,Trabzonspor,Kayserispor,4-0,EV,1,1.26,True,True,0.26,406,5,6,-59.07
+Trabzonspor,2025-10-18,Çaykur Rizespor,Trabzonspor,1-2,DEP,2,2.05,True,True,1.0499999999999998,407,5,7,-58.02
+Trabzonspor,2025-10-25,Trabzonspor,Eyüpspor,2-0,EV,1,1.45,True,True,0.44999999999999996,408,5,8,-57.57
+Trabzonspor,2025-11-01,Galatasaray,Trabzonspor,0-0,BERABERE,1,1.28,True,False,-1.0,409,5,9,-58.57
+Trabzonspor,2025-11-08,Trabzonspor,Alanyaspor,1-1,BERABERE,1,1.51,True,False,-1.0,410,5,10,-59.57
+Trabzonspor,2025-11-24,Başakşehir FK,Trabzonspor,3-4,DEP,1,2.16,True,False,-1.0,411,5,11,-60.57
+Trabzonspor,2025-11-29,Trabzonspor,Konyaspor,3-1,EV,1,1.38,True,True,0.3799999999999999,412,5,12,-60.19
+Trabzonspor,2025-12-07,Göztepe,Trabzonspor,1-2,DEP,1,1.99,True,False,-1.0,413,5,13,-61.19
+Trabzonspor,2025-12-14,Trabzonspor,Beşiktaş,3-3,BERABERE,2,2.21,True,False,-1.0,414,5,14,-62.19
+Trabzonspor,2025-12-22,Gençlerbirliği,Trabzonspor,4-3,EV,2,2.16,True,False,-1.0,415,5,15,-63.19

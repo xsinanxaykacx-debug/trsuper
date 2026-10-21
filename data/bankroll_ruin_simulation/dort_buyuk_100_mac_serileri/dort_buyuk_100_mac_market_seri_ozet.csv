@@ -1,0 +1,41 @@
+﻿Takim,Seri_No,Secilen_MS,Market_Adi,Bahis_Adedi,Kazandi,Kaybetti,Kazanma_Yuzdesi,Ortalama_Oran,Toplam_Kar_Zarar,ROI_Yuzde
+Beşiktaş,1,1,MS1 - Ev sahibi,56,38,18,67.86,1.425,-3.55,-6.34
+Beşiktaş,1,2,MS2 - Deplasman,44,30,14,68.18,1.7216,7.1,16.14
+Beşiktaş,2,1,MS1 - Ev sahibi,55,42,13,76.36,1.3982,1.95,3.55
+Beşiktaş,2,2,MS2 - Deplasman,45,21,24,46.67,1.6378,-11.65,-25.89
+Beşiktaş,3,1,MS1 - Ev sahibi,62,37,25,59.68,1.5923,-5.74,-9.26
+Beşiktaş,3,2,MS2 - Deplasman,38,20,18,52.63,1.7603,-4.84,-12.74
+Beşiktaş,4,1,MS1 - Ev sahibi,53,31,22,58.49,1.5058,-8.26,-15.58
+Beşiktaş,4,2,MS2 - Deplasman,47,20,27,42.55,1.8115,-11.99,-25.51
+Beşiktaş,5,1,MS1 - Ev sahibi,8,4,4,50.0,1.515,-1.51,-18.88
+Beşiktaş,5,2,MS2 - Deplasman,7,5,2,71.43,1.7143,1.29,18.43
+Fenerbahçe,1,1,MS1 - Ev sahibi,56,41,15,73.21,1.3286,-3.1,-5.54
+Fenerbahçe,1,2,MS2 - Deplasman,44,23,21,52.27,1.5489,-9.5,-21.59
+Fenerbahçe,2,1,MS1 - Ev sahibi,63,32,31,50.79,1.503,-18.26,-28.98
+Fenerbahçe,2,2,MS2 - Deplasman,37,16,21,43.24,1.6797,-11.4,-30.81
+Fenerbahçe,3,1,MS1 - Ev sahibi,60,33,27,55.0,1.5887,-9.84,-16.4
+Fenerbahçe,3,2,MS2 - Deplasman,40,22,18,55.0,1.7518,-3.4,-8.5
+Fenerbahçe,4,1,MS1 - Ev sahibi,52,37,15,71.15,1.2925,-7.95,-15.29
+Fenerbahçe,4,2,MS2 - Deplasman,48,37,11,77.08,1.4454,3.95,8.23
+Fenerbahçe,5,1,MS1 - Ev sahibi,5,4,1,80.0,1.258,-0.63,-12.6
+Fenerbahçe,5,2,MS2 - Deplasman,7,4,3,57.14,1.4929,-0.89,-12.71
+Galatasaray,1,1,MS1 - Ev sahibi,56,37,19,66.07,1.3991,-6.8,-12.14
+Galatasaray,1,2,MS2 - Deplasman,44,21,23,47.73,1.7273,-7.0,-15.91
+Galatasaray,2,1,MS1 - Ev sahibi,59,43,16,72.88,1.4369,-1.87,-3.17
+Galatasaray,2,2,MS2 - Deplasman,41,22,19,53.66,1.6915,-4.5,-10.98
+Galatasaray,3,1,MS1 - Ev sahibi,65,34,31,52.31,1.6168,-13.61,-20.94
+Galatasaray,3,2,MS2 - Deplasman,35,20,15,57.14,1.7634,0.05,0.14
+Galatasaray,4,1,MS1 - Ev sahibi,51,42,9,82.35,1.2837,0.04,0.08
+Galatasaray,4,2,MS2 - Deplasman,49,41,8,83.67,1.4449,8.05,16.43
+Galatasaray,5,1,MS1 - Ev sahibi,7,4,3,57.14,1.3471,-2.28,-32.57
+Galatasaray,5,2,MS2 - Deplasman,3,2,1,66.67,1.33,-0.3,-10.0
+Trabzonspor,1,1,MS1 - Ev sahibi,68,37,31,54.41,1.7074,-8.5,-12.5
+Trabzonspor,1,2,MS2 - Deplasman,32,13,19,40.62,1.9188,-7.75,-24.22
+Trabzonspor,2,1,MS1 - Ev sahibi,66,29,37,43.94,1.6412,-21.88,-33.15
+Trabzonspor,2,2,MS2 - Deplasman,34,14,20,41.18,1.9632,-6.35,-18.68
+Trabzonspor,3,1,MS1 - Ev sahibi,60,29,31,48.33,1.6715,-15.52,-25.87
+Trabzonspor,3,2,MS2 - Deplasman,40,22,18,55.0,1.8642,-0.39,-0.97
+Trabzonspor,4,1,MS1 - Ev sahibi,69,47,22,68.12,1.6283,6.14,8.9
+Trabzonspor,4,2,MS2 - Deplasman,31,15,16,48.39,1.9168,-4.59,-14.81
+Trabzonspor,5,1,MS1 - Ev sahibi,11,5,6,45.45,1.5209,-4.27,-38.82
+Trabzonspor,5,2,MS2 - Deplasman,4,2,2,50.0,2.0725,-0.08,-2.0
