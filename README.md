@@ -179,3 +179,55 @@ MS2 oran\u0131 bo\u015f olan ma\u00e7lar, MS2 oran\u0131 gerektiren hesaplamalar
 Bir ma\u00e7ta MS2 oran\u0131n\u0131n bo\u015f olmas\u0131, deplasman galibiyetinin kesin g\u00f6r\u00fcld\u00fc\u011f\u00fcn\u00fc veya oran\u0131n neden yay\u0131mlanmad\u0131\u011f\u0131n\u0131 kan\u0131tlamaz. Ma\u00e7kolik sayfas\u0131nda `-` g\u00f6r\u00fcnmesi de tek ba\u015f\u0131na bahis \u015firketlerinin hi\u00e7bir zaman oran a\u00e7mad\u0131\u011f\u0131n\u0131 g\u00f6stermez.
 
 Bu denetim veri kapsam\u0131n\u0131 belgelemektedir; yeni bir bahis avantaj\u0131 veya k\u00e2rl\u0131 strateji kan\u0131t\u0131 de\u011fildir.
+
+## Dört Büyük Takım — MS Favorisi ve Kasa Simülasyonu
+
+### Araştırmanın Amacı
+
+Bu çalışmada Galatasaray, Fenerbahçe, Beşiktaş ve Trabzonspor maçlarında MS1, MSX ve MS2 oranları arasından en düşük geçerli oranın seçildiği basit bir bahis stratejisi geriye dönük test edilmiştir.
+
+Amaç, her takımın maçlarında aynı seçim kuralı uygulandığında 100 birimlik başlangıç kasasının tarihsel sonuçlar karşısında nasıl değiştiğini incelemektir.
+
+### Simülasyon Kuralları
+
+- Başlangıç kasası: **100 birim**
+- Her takım maçı için sabit bahis: **1 birim**
+- Seçim: MS1, MSX ve MS2 arasındaki en düşük geçerli oran
+- Kazanan bahis: Net kâr, `oran - 1` birim
+- Kaybeden bahis: `-1` birim
+- Geçerli oranı veya sonucu olmayan maçlar simülasyona alınmaz.
+- Maçlar tarih sırasıyla işlenir.
+- Sonuçlar, `data/csv/DATA.csv` dosyasındaki mevcut tarihsel veriye dayanır.
+
+### Sonuçlar
+
+| Sıra | Takım | Geçerli Bahis | Kazandı | Kaybetti | Kazanma Oranı | Toplam Kâr/Zarar | ROI | Son Kasa |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | Galatasaray | 410 | 266 | 144 | %64,88 | -28,22 | -%6,88 | 71,78 |
+| 2 | Beşiktaş | 415 | 248 | 167 | %59,76 | -37,20 | -%8,96 | 62,80 |
+| 3 | Fenerbahçe | 412 | 249 | 163 | %60,44 | -61,02 | -%14,81 | 38,98 |
+| 4 | Trabzonspor | 415 | 213 | 202 | %51,33 | -63,19 | -%15,23 | 36,81 |
+
+**Veri dönemi:** 1 Ocak 2014 başlangıç tarihi; takım bazında son geçerli maçlar 20–22 Aralık 2025 aralığındadır. Galatasaray maçları 21 Aralık 2025'e kadar uzanır.
+
+### Bulgular
+
+- Bu testte en yüksek kalan kasa Galatasaray için görülmüştür: **71,78 birim**.
+- Beşiktaş 62,80 birimle ikinci sıradadır.
+- Fenerbahçe ve Trabzonspor için kalan kasa sırasıyla 38,98 ve 36,81 birimdir.
+- Dört takımın da toplam kâr/zararı negatiftir.
+- Kazanma oranının yüksek olması tek başına kârlılık anlamına gelmez; oranların seviyesi de sonucu belirler.
+
+### Yorum ve Sınırlamalar
+
+Bu sonuçlar, yalnızca kullanılan veri setindeki geçmiş maçları ve belirtilen seçim kuralını yansıtır. Galatasaray'ın bu örneklemde daha iyi sonuç vermesi, gelecekte de aynı performansı göstereceğini kanıtlamaz.
+
+Dört sistem de veri döneminin sonuna ulaşmış, bu simülasyonda başlangıç kasasını tüketmemiştir. Bu nedenle sonuçlardan gerçek bir kasa bitiş tarihi veya gelecekteki dayanma süresi çıkarılamaz.
+
+Bu çalışma, bağımsız ve ileriye dönük doğrulama yapılmadan kârlı bir bahis sistemi bulunduğu şeklinde yorumlanmamalıdır.
+
+### Üretilen Dosyalar
+
+- Simülasyon betiği: `simulasyon_dort_buyuk_ms_banko.py`
+- Özet CSV: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_ozet.csv`
+- Maç bazında ayrıntılar: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_detay.csv`
