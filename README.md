@@ -159,3 +159,23 @@ Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştır
 
 **Önemli sınırlama:** 2014–2019 ve 2020–2025 dönemleri yalnızca istikrarı inceleyen tanısal dönemlerdir; bu dönem karşılaştırması bağımsız kör doğrulama değildir. 2020–2025 verisi önceki keşiflerde de incelendiği için out-of-sample doğrulama olarak sunulmaz. Betik keşif amaçlıdır; aday çıkması bile gelecekte kâr veya bahis avantajı garantisi vermez.
 
+## MS2 oran\u0131 eksik kay\u0131tlar
+
+`data/csv/DATA.csv` dosyas\u0131ndaki MS2 oran\u0131 alan\u0131 ayr\u0131ca denetlenmi\u015ftir.
+
+- \u0130ncelenen toplam ma\u00e7: **7.422**
+- MS2 oran\u0131 bo\u015f ma\u00e7: **20** (yakla\u015f\u0131k %0,27)
+- \u00d6nceki incelemede Ma\u00e7kolik sayfas\u0131nda MS2 oran\u0131 `-` olarak bildirilen ma\u00e7: **4**. Bu kay\u0131tlar bu denetim s\u0131ras\u0131nda ba\u011f\u0131ms\u0131z olarak yeniden do\u011frulanmam\u0131\u015ft\u0131r.
+- D\u0131\u015f kaynak kontrol\u00fc bekleyen ma\u00e7: **16**
+
+Ayr\u0131nt\u0131l\u0131 kay\u0131tlar:
+- [MS2 eksik oran CSV raporu](data_quality_ms2_eksik.csv)
+- [MS2 eksik oran Markdown raporu](data_quality_ms2_eksik.md)
+
+### Analiz a\u00e7\u0131s\u0131ndan yorum
+
+MS2 oran\u0131 bo\u015f olan ma\u00e7lar, MS2 oran\u0131 gerektiren hesaplamalarda ge\u00e7erli oran\u0131 varm\u0131\u015f gibi kullan\u0131lmamal\u0131d\u0131r. Eksik oranlar tahminle doldurulmam\u0131\u015ft\u0131r ve kaynak CSV de\u011fi\u015ftirilmemi\u015ftir.
+
+Bir ma\u00e7ta MS2 oran\u0131n\u0131n bo\u015f olmas\u0131, deplasman galibiyetinin kesin g\u00f6r\u00fcld\u00fc\u011f\u00fcn\u00fc veya oran\u0131n neden yay\u0131mlanmad\u0131\u011f\u0131n\u0131 kan\u0131tlamaz. Ma\u00e7kolik sayfas\u0131nda `-` g\u00f6r\u00fcnmesi de tek ba\u015f\u0131na bahis \u015firketlerinin hi\u00e7bir zaman oran a\u00e7mad\u0131\u011f\u0131n\u0131 g\u00f6stermez.
+
+Bu denetim veri kapsam\u0131n\u0131 belgelemektedir; yeni bir bahis avantaj\u0131 veya k\u00e2rl\u0131 strateji kan\u0131t\u0131 de\u011fildir.

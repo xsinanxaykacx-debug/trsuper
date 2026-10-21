@@ -1,55 +1,34 @@
-﻿# pattern_discovery_v2 — Keşif Notları ve Nihai Değerlendirme
+﻿# pattern_discovery_v2 — Nihai Değerlendirme
 
-## Nihai Değerlendirme (2026-10-21)
+## Araştırmanın Sonucu
 
-### Araştırmanın Sonucu
+Mevcut DATA.csv ve uygulanan analiz yöntemleri kapsamında, bağımsız doğrulamayla desteklenmiş ve genellenebilir kârlı bir bahis örüntüsü bulunamamıştır.
 
-Mevcut `DATA.csv` ve uygulanan analiz yöntemleri kapsamında, bağımsız doğrulamayla desteklenmiş ve genellenebilir kârlı bir bahis örüntüsü bulunamamıştır.
+## Spesifik Oran + Gün Analizi (2026-10-21)
 
-### 16 Pozitif ROI Adayı
+### Metodoloji
+- 2161 spesifik oran+gün kombinasyonu test edildi (n≥5)
+- En yüksek 10 ROI seçildi
+- Erken (2013-2020) / Geç (2021-2025) dönem karşılaştırması yapıldı
 
-- 16 örüntü, tüm veri döneminde pozitif ROI ve en az 60 maç ölçütleriyle seçilmiştir.
-- Erken ve geç dönem karşılaştırmasında 13 örüntünün ROI işareti değişmiştir.
-- Üç örüntünün iki dönemde de ROI'si pozitiftir; ancak örneklem büyüklükleri ve dönemsel sonuçlar bunları doğrulanmış avantaj olarak sınıflandırmak için yeterli değildir.
-- Adaylar tüm dönem verisi incelendikten sonra belirlendiğinden, 2021–2025 bağımsız doğrulama dönemi olarak kullanılamaz.
-- Flip oranı (13/16) tek başına istatistiksel anlamlılık veya kârlı avantajın yokluğu için kesin kanıt sayılmamalıdır. Bağımsızlık ve %50 flip varsayımı altında tek yönlü binom p ≈ 0,0106; iki yönlü p ≈ 0,0213. Adaylar tüm dönem verisi incelenerek seçildiği için bu testin varsayımları da doğrudan karşılanmış sayılmaz.
+### Sonuç
+- 6/10 aday FLIP (işaret değişti)
+- 4/10 aynı yön, ama hepsi n≤11
+- Hiçbiri n≥30 değil
+- Hiçbiri FDR düzeltmesinden geçemez
+- MSX 2.80 Perşembe: +%180 → +%180 (ama n=5)
+- MS2 9.50 Pazar: +%159 → −%100 (FLIP)
+- MS2 4.90 Pazar: +%226 → +%63 (çöküş)
 
-### Çoklu Karşılaştırma
+### Yorum
+"En yüksek ROI'yi seç" mantığı, küçük örneklem nedeniyle şans eseri adaylar üretir. Doğrulama testi bunu kanıtladı.
 
-- Önceki `discovery.py` analizinde 45 test için FDR düzeltmesinden geçen aday bulunmamıştır.
-- `pattern_discovery_v2` kapsamında raporlanan 534 örüntü için FDR düzeltmesi henüz doğrulanmış değildir. Bu örüntüler hakkında kesin bir survivor sayısı, düzeltme hesaplanmadan belirtilmeyecektir.
-
-### Nihai Karar
+## Nihai Karar
 
 Mevcut veri ve mevcut araştırma protokolüyle keşif aşaması kapatılmıştır. Sonuç, tüm olası bahis stratejilerinin kârsız olduğunun kanıtı değil; incelenen yöntemlerle güvenilir bir avantajın gösterilemediğidir.
 
-### Yeniden Başlama Koşulları
-
-1. Yeni veri, mümkünse 2026 sonrası veya bağımsız bir kaynaktan toplanmalıdır.
-2. Hipotezler, adaylar, ölçütler ve istatistiksel testler yeni veriye bakılmadan önce sabitlenmelidir.
-3. Çoklu karşılaştırma düzeltmesi önceden belirlenmiş protokole göre uygulanmalıdır.
-4. Bağımsız doğrulama verisi, keşif ve aday seçimi sırasında kullanılmamalıdır.
-
-### Durum
-
-Mevcut veriyle keşif çalışması kapatıldı. Doğrulanmış kârlı örüntü bulunmadı.
-
----
-
-## Ek: Önceki Deneylerin Kayıtları
-
-### MIN_SAMPLE Deneyi
-
-`MIN_SAMPLE = 30` filtresi kaldırıldığında 14.929 sezon örüntüsü üretildi; %98,4'ü 30 maçtan az, %90'ı 1–9 maç aralığındaydı. Bu sonuç, düşük örneklemli örüntülerin sayısının çok yüksek olduğunu gösterdi. Filtrenin kaldırılması keşif gürültüsünü artırdığından, genel örüntü raporunda minimum örneklem eşiği korundu.
-
-### Teknik Not: PowerShell Locale Hatası
-
-PowerShell `Export-Csv`, yerel ayarlara bağlı olarak ondalıkları virgülle yazabilir. Bu değerlerin `InvariantCulture` ile yeniden okunması, virgül ondalık ayırıcı olarak yorumlanmadığında hatalı sayılara neden olabilir. Düzeltilmiş dönem karşılaştırması, kaynak Python CSV dosyalarındaki sayıları `InvariantCulture` ile okuyarak oluşturuldu.
-
-İncelenen Python hesaplama mantığında bu inceleme sırasında hata tespit edilmedi. Bu, projenin bütün kodunun kapsamlı biçimde hatasız olduğunun kanıtı değildir.
-
-### Geçerli Referanslar
-
-- `docs/RAPOR.md` — FDR kontrollü 45 test, 0 survivor
-- `docs/protocol.md` — analiz protokolü
-- `docs/discovery_results.csv` — 45 testin tamamı
+## Yeniden Başlama Koşulları
+1. Yeni veri (2026+ veya bağımsız kaynak)
+2. Hipotezler önceden sabitlenmeli
+3. FDR protokole göre uygulanmalı
+4. Bağımsız doğrulama verisi keşifte kullanılmamalı
