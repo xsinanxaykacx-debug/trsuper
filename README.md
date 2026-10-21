@@ -1,6 +1,121 @@
 # Maçkolik Bahis Oranları — Örüntü Araştırması
 
 Bu depo, futbol maçlarının geçmiş sonuçları ve bahis oranları arasında **istatistiksel olarak desteklenebilir, bağımsız veride de ayakta kalan bir örüntü bulunup bulunmadığını** araştırır. Amaç yalnızca geçmişte kârlı görünen grupları bulmak değil; tesadüf, aşırı uyum ve çoklu test kaynaklı sahte sonuçları ayırt etmektir.
+
+## İçindekiler
+
+- [🎯 Yönetici Özeti](#-yönetici-özeti)
+- [📋 Araştırma Zaman Çizelgesi — 17 Test/Araştırma Akışı](#-araştırma-zaman-çizelgesi--17-testaraştırma-akışı)
+- [🔬 Öne Çıkan Bulgular](#-öne-çıkan-bulgular)
+  - [🚨 Kazanma oranı ≠ kârlılık](#-kazanma-oranı--kârlılık)
+  - [🎲 MS2 bootstrap = yazı tura](#-ms2-bootstrap--yazı-tura)
+  - [🌊 Yüksek oran zamanla kötüleşiyor](#-yüksek-oran-zamanla-kötüleşiyor)
+  - [💀 Kasa simülasyonu yıkım](#-kasa-simülasyonu-yıkım)
+  - [🔍 Galatasaray en yakın sonuç](#-galatasaray-en-yakın-sonuç)
+  - [📅 TG format değişimi](#-tg-format-değişimi)
+- [🧪 Metodolojik Çerçeve](#-metodolojik-çerçeve)
+- [📊 Vaka Çalışması: Favoriye Bahis](#-vaka-çalışması-favoriye-bahis-stratejisi)
+- [Araştırmanın güncel sonucu](#araştırmanın-güncel-sonucu)
+- [Veri](#veri)
+- [Mevcut araştırmalar ve raporlar](#mevcut-araştırmalar-ve-raporlar)
+- [Sorumlu yorumlama](#sorumlu-yorumlama)
+- [🏆 Nihai Kapanış](#-nihai-kapanış)
+
+## 🎯 Yönetici Özeti
+
+Bu depo, Maçkolik tarihsel maç sonuçları ve oran verilerinde tekrarlanabilir bir bahis avantajı bulunup bulunmadığını araştırır. Şu ana kadarki testlerde **bağımsız doğrulamayla desteklenmiş, genellenebilir ve istatistiksel olarak güvenilir bir kârlı strateji bulunmadı.**
+
+| Ana gösterge | Bulgular |
+|---|---|
+| Araştırma akışları | 17 test/analiz başlığı; bunlar 17 bağımsız deney veya bağımsız örneklem anlamına gelmez |
+| Örüntü keşfi v2 | En az 30 maç içeren 534 örüntü incelendi; 16 aday tüm dönem ROI'si ve örneklem eşiğiyle öne çıktı |
+| Erken/geç dönem istikrarı | 16 adayın 13'ünde ROI işareti değişti; aday seçimi tüm dönem verisine baktığı için bu kör doğrulama değildir |
+| Önceki 45 testlik çalışma | Benjamini–Hochberg FDR düzeltmesinden geçen aday: 0 |
+| TG 4 kategori testi | 137 adaydan FDR q < 0,05 koşulunu sağlayan: 0 |
+| MS2 düşük oran bootstrap kontrolü | ROI yaklaşık +%0,07; %95 aralık sıfırı içeriyor |
+| Yüksek oran stratejileri, 2023–2025 | Strateji A ROI −%45,26; Strateji B ROI −%37,12; iki aralığın da üst sınırı sıfırın altında |
+| Doğrulanmış kârlı strateji | 0 |
+
+**Karar:** Mevcut sonuçlar gerçek parayla uygulanması önerilebilecek doğrulanmış bir avantaj göstermiyor. Bu, her olası stratejinin kârsız olduğunun evrensel kanıtı değildir; yalnızca incelenen veri, filtreler ve yöntemlerle avantaj doğrulanamadı.
+
+## 📋 Araştırma Zaman Çizelgesi — 17 Test/Araştırma Akışı
+
+Aşağıdaki liste depoda yürütülen başlıca test ve analiz akışlarını toplar. Bazıları aynı maçları veya veriyi yeniden kullanır; bu nedenle sayım **17 bağımsız deney** veya 17 ayrı doğrulama kümesi olarak yorumlanmamalıdır.
+
+1. **Favoriye bahis vaka çalışması:** Dört büyük takımın en düşük MS oranına bahis yaklaşımının tarihsel getirisi.
+2. **İlk örüntü keşfi:** Market ve oran bantlarında geçmişte pozitif görünen adayların taranması.
+3. **45 testlik FDR kontrollü çalışma:** 9 market × 5 oran bandı kapsamında çoklu karşılaştırma düzeltmesi.
+4. **2,5 Alt/Üst — haftanın günü:** 29 gün/oran bandı kombinasyonu; FDR'den geçen aday yok.
+5. **KG Var/Yok — haftanın günü:** 70 kombinasyon; FDR'den geçen aday yok.
+6. **MS1/MSX/MS2 — haftanın günü:** Market, gün ve oran bandı kombinasyonlarının FDR kontrollü taraması.
+7. **Örüntü keşfi v2:** 534 örüntü ve dönemler arası ROI istikrarı incelemesi.
+8. **Toplam Gol (TG) 4 kategori:** 0–1, 2–3, 4–6 ve 7+ sonuç grupları; 137 adayda FDR'den geçen yok.
+9. **MS2 eksik oran denetimi:** 7.422 maçta 20 boş MS2 oranı kaydı; tahmini değerle doldurma yapılmadı.
+10. **Dört büyük takım MS favorisi kasa simülasyonu:** 100 birim başlangıç, sabit 1 birim bahis ve kronolojik sonuçlar; dört takımın da tarihsel toplam ROI'si negatif, ancak 2025'e kadar kasa tükenmedi.
+11. **2026–2027 için 100 birim ileri test protokolü:** Geçmiş sonuçlardan ayrı, önceden sabitlenmiş kuralla izlenecek test planı.
+12. **Düşük oranlı strateji bootstrap duyarlılığı:** 2023 sonrası 378 bahis; toplam ROI −%2,38, MS1 −%4,27, MS2 +%0,07; tüm %95 aralıklar sıfırı içeriyor.
+13. **Takım bazlı ileri test karşılaştırması:** Galatasaray'ın nokta ROI'si +%4,46 olsa da %95 aralığı −%5,91 ile +%14,86; doğrulanmış avantaj yok.
+14. **Yüksek oran stratejileri:** Favorinin tersini seçme ve MS1/MSX/MS2 içindeki en yüksek oranı seçme.
+15. **Yüksek oran kırılım analizi:** Yıl, market ve oran bandı kesişimlerinin keşifsel incelemesi.
+16. **Yüksek oran kronolojik doğrulaması:** 2014–2022 geliştirme, 2023–2025 zaman dışı tarihsel test.
+17. **Veri ve şema tutarlılığı kontrolleri:** Skor/market uyumu, tekrar eden kimlikler, eksik oranlar ve dönemsel sütun değişimleri.
+
+Ayrıntılar ve yeniden üretim komutları, ilgili bölüm ve raporlarda verilir. Testler arası veri örtüşmesi ve adayların geçmiş sonuçlara bakılarak seçilmiş olması yorumlarda dikkate alınmalıdır.
+
+## 🔬 Öne Çıkan Bulgular
+
+### 🚨 Kazanma oranı ≠ kârlılık
+
+Bir strateji çok sayıda bahis kazanırken bile düşük oranlar ve kaybedilen bahisler nedeniyle toplamda zarar edebilir. Dört büyük takımın en düşük MS oranına bahis vaka çalışmasında kazanma oranları yaklaşık %51–65 aralığındayken, dört takımın da toplam ROI'si negatifti. Sonuçlar yalnızca kazanma yüzdesiyle değil, net kâr/zarar ve yatırılan toplam tutara göre ROI ile değerlendirilmelidir.
+
+### 🎲 MS2 bootstrap = yazı tura
+
+Düşük oranlı MS2 testinde 555 bahis, 162 kazanç ve 393 kayıp gözlendi; ROI −%17,89 oldu. Ayrı bootstrap duyarlılık kontrolünde 2023 sonrası 378 bahislik düşük oran örnekleminde MS2 nokta ROI'si yalnızca +%0,07 idi; %95 güven aralığı yaklaşık −%11,27 ile +%11,24 arasındaydı ve bootstrap tekrarlarının yaklaşık yarısı pozitifti. Bu, yazı-tura benzeri belirsizliktir; kanıtlanmış bir avantaj değildir.
+
+### 🌊 Yüksek oran zamanla kötüleşiyor
+
+İki yüksek oran stratejisinin de ROI'si zaman dışı tarihsel testte geliştirme dönemine göre daha kötüydü:
+
+| Strateji | 2014–2022 ROI | 2023–2025 ROI | 2023–2025 %95 bootstrap aralığı |
+|---|---:|---:|---:|
+| A — Favorinin tersi MS1/MS2 | −%28,70 | −%45,26 | −%61,23 – −%28,68 |
+| B — MS1/MSX/MS2 içinden en yüksek oran | −%17,47 | −%37,12 | −%54,27 – −%19,14 |
+
+Her iki test aralığının üst sınırı da sıfırın altında. Bu dönem tarihsel zaman dışı kontroldür, canlı ileriye dönük deney değildir.
+
+### 💀 Kasa simülasyonu yıkım
+
+Yüksek oran stratejilerinde 100 birimlik başlangıç kasasıyla, sabit 1 birim bahis simülasyonunda tarihsel kümülatif sonuçlar kasayı neredeyse tamamen tüketti. Favorinin tersini seçen strateji 372 bahis oynayabildi; en yüksek MS1/MSX/MS2 oranını seçen strateji 530 bahis oynayabildi. Her ikisinde de kalan kasa 0,25 birim oldu. Bu simülasyon, tüm tarihsel bahislerin baştan sona aynı kuralla oynandığı varsayımına dayanır; canlı geleceği tahmin etmez.
+
+Dört büyük takımın düşük oranlı favori simülasyonu ayrı bir çalışmadır: bu dört takımın tarihsel serilerinde kasa 2025'e kadar tükenmedi, fakat hepsinin toplam ROI'si negatifti. Bu iki simülasyon farklı stratejilerdir ve karıştırılmamalıdır.
+
+### 🔍 Galatasaray en yakın sonuç
+
+Düşük oranlı takım ileri testinde Galatasaray 100 bahis için +%4,46 nokta ROI gösterdi; ancak %95 güven aralığı −%5,91 ile +%14,86 arasındaydı ve Holm-düzeltilmiş p değeri 0,8007 idi. Bu nedenle Galatasaray sonucu istatistiksel olarak doğrulanmış avantaj değildir ve “Galatasaray'a bahis yap” önerisi olarak yorumlanmamalıdır. Dört takım birleşik örnekleminde tarihsel ROI −%3,07 olarak raporlandı.
+
+### 📅 TG format değişimi
+
+Toplam Gol marketinde eski ve yeni sütun grupları aynı kesintisiz seri olarak doğrulanmış değildir:
+
+- Eski AÜ_2,5_Gol_|_Alt/Üst sütunlarında 3.325 geçerli oran bulunuyor; dönem 11.01.2014–26.08.2019.
+- Yeni 2,5_Alt/Üst_|_Alt/Üst sütunlarında 4.016 geçerli oran bulunuyor; dönem 30.08.2019–28.12.2025.
+- İki sütun grubunun aynı maçta birlikte dolu olduğu kayıt sayısı 0; 27–29 Ağustos 2019 arasında ayrıca veri boşluğu var.
+
+Sütun adları, tarih aralığı ve kapsam eşdeğerliği doğrulanmadan bunları tek seri olarak birleştirmek doğru değildir. TG 0–1/2–3/4–6/7+ pazarlarında da 2014–2019 geçerli oranlı örneklemler üzerinden negatif ROI ve FDR'den geçen sıfır aday raporlandı; 2021 sonrası bağımsız TG doğrulaması mevcut değildir.
+
+## 🧪 Metodolojik Çerçeve
+
+- **Sabit bahis:** Rapor açıkça farklı bir kural belirtmedikçe her geçerli bahis için 1 birim.
+- **ROI:** Toplam net kâr/zarar ÷ toplam bahis tutarı. Kazanma oranı tek başına başarı ölçütü değildir.
+- **Belirsizlik:** Uygun analizlerde %95 güven aralıkları ve/veya bootstrap duyarlılık kontrolleri kullanılır. Güven aralığının sıfırı içermesi, pozitif getirinin doğrulanmadığını gösterir.
+- **Çoklu karşılaştırma:** Birçok market/oran/gün kombinasyonu tarandığında şans eseri pozitif gruplar çıkabilir. Kullanılan çalışmalarda uygun olduğunda Benjamini–Hochberg FDR veya Holm düzeltmesi uygulanır; her keşif çalışmasında aynı düzeltmenin yapıldığı varsayılmamalıdır.
+- **Kronolojik ayrım:** Geçmişteki geliştirme verisi ile daha sonraki tarihsel test dönemi ayrılabilir; ancak bu, canlı ileriye dönük deneyle aynı değildir.
+- **Bootstrap sınırı:** Bootstrap gerçekleşmiş kâr/zararları yeniden örnekleyerek belirsizliği inceler; aday seçimi yanlılığını gidermez ve gelecekteki kârı garanti etmez.
+- **Veri bütünlüğü:** Ham CSV sonuçları iyileştirmek için değiştirilmez; eksik oranlar tahminle doldurulmaz. Skor-market uyumu, tarih aralıkları ve sütun şeması ayrı kontrol edilir.
+- **Bağımsızlık:** Aynı maçları, aynı dönemi veya aynı adayları tekrar kullanan raporlar bağımsız doğrulamalar olarak sayılmaz.
+
+Bu ölçütler, araştırma boyunca pozitif nokta ROI'sinin tek başına “avantaj” olarak sunulmasını önlemek için kullanılır.
+
 ## 📊 Vaka Çalışması: "Favoriye Bahis" Stratejisi
 
 ### Hipotez
@@ -139,65 +254,7 @@ Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortam�
 
 ---
 
-## Sorumlu yorumlama
-
-Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. Buradaki “avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
-
-## Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
-
-Bu iki ayrı çalışma, haftanın günü ile bahis oran bandı arasında geçmiş veride kârlı ve istatistiksel olarak desteklenebilir bir ilişki bulunup bulunmadığını araştırır. Sonuçlar bahis tavsiyesi değildir.
-
-### 2,5 Alt/Üst
-
-- Analiz betiği: `analiz_haftanin_gunu_25ust.py`
-- Sonuç klasörü: `data/pattern_discovery_v2/`
-- İncelenen pazar: 2,5 gol Üst; oran bandı genişliği 0,10.
-- Test edilen, en az 30 maç içeren gün/oran bandı kombinasyonu: 29.
-- Benjamini–Hochberg FDR düzeltmesinden geçen kombinasyon: 0.
-- Koşulları sağlayan doğrulanmış aday: 0.
-- En yüksek pozitif ROI görülen bant: Cuma, 1,60–1,69 oran aralığı; 70 maçta yaklaşık +%0,39 ROI. Güven aralığının alt sınırı negatif ve düzeltilmiş p değeri anlamlı değildir.
-
-Eski `AÜ_2,5_Gol_|_Üst` sütunu ile yeni `2,5_Alt/Üst_|_Üst` sütununun veri kaynakları ve dönem devamlılığı ayrıca doğrulanmadan tek bir kesintisiz seri gibi birleştirilmemiştir.
-
-### KG Var / KG Yok
-
-- Analiz betiği: `analiz_haftanin_gunu_kg.py`
-- Sonuç klasörü: `data/pattern_discovery_kg/`
-- Sonuç etiketleri: `KGVY`; oran sütunları: `Karşılıklı_Gol_|_Var` ve `Karşılıklı_Gol_|_Yok`.
-- Veri dönemi: 11 Ocak 2014–28 Aralık 2025.
-- Her iki KG pazarında kullanılabilir oran bulunan maç sayısı: 7.348.
-- En az 30 maç içeren gün/oran bandı kombinasyonu: 70.
-- FDR düzeltmesinden geçen kombinasyon: 0.
-- Koşulları sağlayan doğrulanmış aday: 0.
-- En yüksek pozitif ROI görülen bant: Cumartesi KG Yok, 2,10–2,19 oran aralığı; 52 maçta yaklaşık +%2,31 ROI. Güven aralığının alt sınırı yaklaşık -%26,88 ve FDR q değeri 1,00 olduğundan bu sonuç kanıtlanmış avantaj sayılmaz.
-
-### Ortak metodolojik karar
-
-Her iki araştırmada da pozitif ROI tek başına yeterli kabul edilmemiştir. Çoklu karşılaştırma düzeltmesi, örneklem büyüklüğü ve ROI belirsizlik aralığı birlikte değerlendirilmiştir. Mevcut testlerde güvenilir ve doğrulanmış bir bahis avantajı bulunamamıştır. Bu sonuç, tüm olası stratejilerin kârsız olduğunu kanıtlamaz.
-
-Sonuç CSV dosyaları test edilen bantları, genel performansı ve aday değerlendirmesini ayrı ayrı saklar. Ham veri üzerinde sonuçları iyileştirmek amacıyla değişiklik yapılmamalıdır.
-
-## Depodaki Ek Araştırma Dosyaları
-
-### Örüntü keşfi
-
-- `discover_patterns.py`: Veri setindeki aday örüntüleri taramak için kullanılan araştırma betiği.
-- `incele_25ust.py`: 2,5 üst marketiyle ilgili veri ve sonuç incelemeleri.
-- `kontrol_25ust_sutunlari.py`: 2,5 üst veri sütunlarını ve kaynak farklılıklarını kontrol etmek için yardımcı betik.
-
-### Sonuç dosyaları
-
-- `data/pattern_discovery/`: Önceki örüntü keşfi çalışmasının çıktıları.
-- `data/pattern_discovery_v2/`: Güncellenmiş örüntü taraması, sezon ve dönem karşılaştırmaları, eşik özetleri ve aday sonuçları.
-- `data/pattern_discovery_kg/`: Karşılıklı Gol Var/Yok marketi için haftanın günü ve oran bandı analizleri.
-
-### Bilimsel değerlendirme
-
-Pozitif ROI tek başına güvenilir bahis avantajı kanıtı değildir. Örneklem büyüklüğü, güven aralığı, p-değeri ve çoklu testler için FDR düzeltmesi birlikte değerlendirilmelidir. Mevcut haftanın günü analizlerinde FDR düzeltmesinden geçen doğrulanmış aday bulunmamıştır. Sonuçlar kesin kazanç veya gelecekteki performans garantisi olarak yorumlanmamalıdır.
-
-Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştırma dosyalarının yayımlanması için otomatik olarak eklenmez.
-
-## MS1 / MSX / MS2 Haftanın Günü Araştırması
+### MS1 / MSX / MS2 Haftanın Günü Araştırması
 
 - Yeni analiz betiği: `analiz_haftanin_gunu_ms1x2.py`
 - Sonuç klasörü: `data/pattern_discovery_ms1x2/`
@@ -211,7 +268,7 @@ Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştır
 
 **Önemli sınırlama:** 2014–2019 ve 2020–2025 dönemleri yalnızca istikrarı inceleyen tanısal dönemlerdir; bu dönem karşılaştırması bağımsız kör doğrulama değildir. 2020–2025 verisi önceki keşiflerde de incelendiği için out-of-sample doğrulama olarak sunulmaz. Betik keşif amaçlıdır; aday çıkması bile gelecekte kâr veya bahis avantajı garantisi vermez.
 
-## MS2 oranı eksik kayıtlar
+### MS2 oranı eksik kayıtlar
 
 `data/csv/DATA.csv` dosyasındaki MS2 oranı alanı ayrıca denetlenmiştir.
 
@@ -232,7 +289,7 @@ Bir maçta MS2 oranının boş olması, deplasman galibiyetinin kesin görüldü
 
 Bu denetim veri kapsamını belgelemektedir; yeni bir bahis avantajı veya kârlı strateji kanıtı değildir.
 
-## Dört Büyük Takım — MS Favorisi ve Kasa Simülasyonu
+### Dört Büyük Takım — MS Favorisi ve Kasa Simülasyonu
 
 ### Araştırmanın Amacı
 
@@ -284,8 +341,7 @@ Bu çalışma, bağımsız ve ileriye dönük doğrulama yapılmadan kârlı bir
 - Özet CSV: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_ozet.csv`
 - Maç bazında ayrıntılar: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_detay.csv`
 
-
-## 2026–2027 İçin 100 Birimlik Kasa İleri Testi
+### 2026–2027 İçin 100 Birimlik Kasa İleri Testi
 
 Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büyük takım birleşik portföyü için tarihsel sonuçları, 100 bahislik aritmetik senaryo ve 2026–2027 ileriye dönük test protokolü ayrı raporda yer alır.
 
@@ -293,8 +349,7 @@ Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büy�
 
 **Önemli:** Galatasaray örneklemindeki +%8,81 tarihsel ROI'nin yaklaşık %95 belirsizlik aralığı sıfırı içerir. 108,81 birim, bu tarihsel nokta ROI'sinin 100 bahiste aynen tekrarlandığı varsayımına dayanan aritmetik senaryodur; kâr beklentisi veya garanti değildir. Dört büyük takımın birleşik örnekleminde tarihsel ROI -%3,07'dir. 2026–2027 sonuçları önceden sabitlenmiş kuralla ileriye dönük test edilmelidir.
 
-
-## Dört Büyük Takım — Yüksek Oran Stratejileri
+### Dört Büyük Takım — Yüksek Oran Stratejileri
 
 İki karşı stratejiyi aynı uygun maç havuzunda test eden betik eklendi:
 
@@ -306,14 +361,12 @@ Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büy�
 
 Bu analizde üç oranın da geçerli olması şartıyla aynı maç havuzu kullanılır; eşit oran durumlarında ilgili strateji bahis yapmaz. Geçmiş performans gelecekteki sonucu garanti etmez.
 
-
 ### Yüksek Oran Stratejileri — Kırılım Analizi
 
 - [Yıl × oran aralığı × seçilen market analiz betiği](analiz_dort_buyuk_yuksek_oran_kirilim.py)
 - Önce `analiz_dort_buyuk_yuksek_oran_stratejileri.py` çalıştırılmalı; bu ikinci betik onun `yuksek_oran_stratejileri_bahis_detay.csv` çıktısını kullanır.
 - Yıllara, oran aralıklarına (1,00–1,99; 2,00–2,49; 2,50–2,99; 3,00–3,49; 3,50–3,99; 4,00–4,99), seçilen MS1/MSX/MS2 marketine ve bunların kesişimlerine göre bahis sayısı, kazanma oranı, ortalama oran, toplam kâr/zarar ve ROI üretir.
 - Kırılım sonuçları keşif amaçlıdır; çok sayıda kombinasyonda tesadüfi pozitif sonuçlar çıkabileceği için bağımsız doğrulama olmadan strateji seçmek için kullanılmamalıdır.
-
 
 ### Yüksek Oran Stratejileri — Kronolojik Doğrulama
 
@@ -472,3 +525,69 @@ Bu bir başarısızlık değil, **bilimsel dürüstlüğün** göstergesidir. Ve
 | **Farklı yöntem** | Quantile bantlar, ML | **Yüksek (p-hacking)** |
 
 **Mevcut analiz tükendi. Sıfırdan başlamak için yeni veri şart.**
+
+#### Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
+
+Bu iki ayrı çalışma, haftanın günü ile bahis oran bandı arasında geçmiş veride kârlı ve istatistiksel olarak desteklenebilir bir ilişki bulunup bulunmadığını araştırır. Sonuçlar bahis tavsiyesi değildir.
+
+### 2,5 Alt/Üst
+
+- Analiz betiği: `analiz_haftanin_gunu_25ust.py`
+- Sonuç klasörü: `data/pattern_discovery_v2/`
+- İncelenen pazar: 2,5 gol Üst; oran bandı genişliği 0,10.
+- Test edilen, en az 30 maç içeren gün/oran bandı kombinasyonu: 29.
+- Benjamini–Hochberg FDR düzeltmesinden geçen kombinasyon: 0.
+- Koşulları sağlayan doğrulanmış aday: 0.
+- En yüksek pozitif ROI görülen bant: Cuma, 1,60–1,69 oran aralığı; 70 maçta yaklaşık +%0,39 ROI. Güven aralığının alt sınırı negatif ve düzeltilmiş p değeri anlamlı değildir.
+
+Eski `AÜ_2,5_Gol_|_Üst` sütunu ile yeni `2,5_Alt/Üst_|_Üst` sütununun veri kaynakları ve dönem devamlılığı ayrıca doğrulanmadan tek bir kesintisiz seri gibi birleştirilmemiştir.
+
+### KG Var / KG Yok
+
+- Analiz betiği: `analiz_haftanin_gunu_kg.py`
+- Sonuç klasörü: `data/pattern_discovery_kg/`
+- Sonuç etiketleri: `KGVY`; oran sütunları: `Karşılıklı_Gol_|_Var` ve `Karşılıklı_Gol_|_Yok`.
+- Veri dönemi: 11 Ocak 2014–28 Aralık 2025.
+- Her iki KG pazarında kullanılabilir oran bulunan maç sayısı: 7.348.
+- En az 30 maç içeren gün/oran bandı kombinasyonu: 70.
+- FDR düzeltmesinden geçen kombinasyon: 0.
+- Koşulları sağlayan doğrulanmış aday: 0.
+- En yüksek pozitif ROI görülen bant: Cumartesi KG Yok, 2,10–2,19 oran aralığı; 52 maçta yaklaşık +%2,31 ROI. Güven aralığının alt sınırı yaklaşık -%26,88 ve FDR q değeri 1,00 olduğundan bu sonuç kanıtlanmış avantaj sayılmaz.
+
+### Ortak metodolojik karar
+
+Her iki araştırmada da pozitif ROI tek başına yeterli kabul edilmemiştir. Çoklu karşılaştırma düzeltmesi, örneklem büyüklüğü ve ROI belirsizlik aralığı birlikte değerlendirilmiştir. Mevcut testlerde güvenilir ve doğrulanmış bir bahis avantajı bulunamamıştır. Bu sonuç, tüm olası stratejilerin kârsız olduğunu kanıtlamaz.
+
+Sonuç CSV dosyaları test edilen bantları, genel performansı ve aday değerlendirmesini ayrı ayrı saklar. Ham veri üzerinde sonuçları iyileştirmek amacıyla değişiklik yapılmamalıdır.
+
+#### Depodaki Ek Araştırma Dosyaları
+
+### Örüntü keşfi
+
+- `discover_patterns.py`: Veri setindeki aday örüntüleri taramak için kullanılan araştırma betiği.
+- `incele_25ust.py`: 2,5 üst marketiyle ilgili veri ve sonuç incelemeleri.
+- `kontrol_25ust_sutunlari.py`: 2,5 üst veri sütunlarını ve kaynak farklılıklarını kontrol etmek için yardımcı betik.
+
+### Sonuç dosyaları
+
+- `data/pattern_discovery/`: Önceki örüntü keşfi çalışmasının çıktıları.
+- `data/pattern_discovery_v2/`: Güncellenmiş örüntü taraması, sezon ve dönem karşılaştırmaları, eşik özetleri ve aday sonuçları.
+- `data/pattern_discovery_kg/`: Karşılıklı Gol Var/Yok marketi için haftanın günü ve oran bandı analizleri.
+
+### Bilimsel değerlendirme
+
+Pozitif ROI tek başına güvenilir bahis avantajı kanıtı değildir. Örneklem büyüklüğü, güven aralığı, p-değeri ve çoklu testler için FDR düzeltmesi birlikte değerlendirilmelidir. Mevcut haftanın günü analizlerinde FDR düzeltmesinden geçen doğrulanmış aday bulunmamıştır. Sonuçlar kesin kazanç veya gelecekteki performans garantisi olarak yorumlanmamalıdır.
+
+Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştırma dosyalarının yayımlanması için otomatik olarak eklenmez.
+
+## Sorumlu yorumlama
+
+Bu depo istatistiksel araştırma amaçlıdır; bahis tavsiyesi veya kâr garantisi sunmaz. Geçmiş performans gelecekteki sonuçları garanti etmez. Buradaki “avantaj bulunamadı” ifadesi, incelenen veri ve yöntemlerle yeterli kanıt elde edilemediği anlamına gelir; tüm olası stratejiler hakkında evrensel bir hüküm değildir.
+
+## 🏆 Nihai Kapanış
+
+Araştırmanın şu anki nihai kararı: **mevcut veri ve testler, bağımsız doğrulamayla desteklenmiş kârlı bir bahis avantajı göstermiyor.** MS2 bootstrap sonucu yazı-tura benzeri belirsizlikte; yüksek oran stratejileri zaman dışı dönemde daha fazla zarar etmiş; TG sütunlarında dönemsel şema değişimi nedeniyle sahte bir kesintisiz seri varsayılmamalı.
+
+Yeni bir çalışma ancak hipotez, veri aralığı, aday seçme kuralı, örneklem eşiği ve istatistiksel testler önceden belirlenerek; keşifte kullanılmamış yeni veride doğrulanmak üzere açılmalıdır. Eski sonuçları gördükten sonra en iyi görünen alt grubu seçmek bağımsız doğrulama değildir.
+
+**Bu depo araştırma ve yöntem denetimi içindir; bahis tavsiyesi, kazanç garantisi veya gelecekteki sonuçların tahmini değildir.**
