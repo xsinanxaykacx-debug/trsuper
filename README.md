@@ -144,3 +144,18 @@ Sonuç CSV dosyaları test edilen bantları, genel performansı ve aday değerle
 Pozitif ROI tek başına güvenilir bahis avantajı kanıtı değildir. Örneklem büyüklüğü, güven aralığı, p-değeri ve çoklu testler için FDR düzeltmesi birlikte değerlendirilmelidir. Mevcut haftanın günü analizlerinde FDR düzeltmesinden geçen doğrulanmış aday bulunmamıştır. Sonuçlar kesin kazanç veya gelecekteki performans garantisi olarak yorumlanmamalıdır.
 
 Ham veri dosyaları, özellikle boyutu büyük olan kaynak veriler, bu araştırma dosyalarının yayımlanması için otomatik olarak eklenmez.
+
+## MS1 / MSX / MS2 Haftanın Günü Araştırması
+
+- Yeni analiz betiği: `analiz_haftanin_gunu_ms1x2.py`
+- Sonuç klasörü: `data/pattern_discovery_ms1x2/`
+- Marketler: MS1 (ev sahibi), MSX (beraberlik), MS2 (deplasman).
+- Tarama: lig, haftanın günü, market ve 0,10 genişliğinde oran bandı; 1,00 dahil, 5,00 hariç.
+- Asgari örneklem: örüntü başına 30 maç; aday incelemesinde en az 60 maç.
+- Raporlar: market kapsamı, haftanın gününe göre genel performans, test edilen örüntüler, adaylar ve sezon ayrıntıları.
+- Çoklu testler için Benjamini–Hochberg FDR düzeltmesi uygulanır. Aday koşulları pozitif ROI, ROI için yaklaşık %95 güven aralığının alt sınırının sıfırın üzerinde olması, FDR q < 0,05 ve erken/geç dönemlerde yeterli örneklemle pozitif ROI gerektirir.
+
+**Çalıştırma:** depo kök dizininde `python analiz_haftanin_gunu_ms1x2.py`.
+
+**Önemli sınırlama:** 2014–2019 ve 2020–2025 dönemleri yalnızca istikrarı inceleyen tanısal dönemlerdir; bu dönem karşılaştırması bağımsız kör doğrulama değildir. 2020–2025 verisi önceki keşiflerde de incelendiği için out-of-sample doğrulama olarak sunulmaz. Betik keşif amaçlıdır; aday çıkması bile gelecekte kâr veya bahis avantajı garantisi vermez.
+
