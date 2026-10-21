@@ -283,3 +283,12 @@ Bu çalışma, bağımsız ve ileriye dönük doğrulama yapılmadan kârlı bir
 - Simülasyon betiği: `simulasyon_dort_buyuk_ms_banko.py`
 - Özet CSV: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_ozet.csv`
 - Maç bazında ayrıntılar: `data/bankroll_ruin_simulation/dort_buyuk/dort_buyuk_ms_favorisi_detay.csv`
+
+
+## 2026–2027 İçin 100 Birimlik Kasa İleri Testi
+
+Düşük MS1/MS2 oranını seçen stratejinin Galatasaray seçimi ve dört büyük takım birleşik portföyü için tarihsel sonuçları, 100 bahislik aritmetik senaryo ve 2026–2027 ileriye dönük test protokolü ayrı raporda yer alır.
+
+- [100 birim kasa ve ileriye dönük test raporu](data/bankroll_ruin_simulation/dort_buyuk_unique/gercek_takim_secimi/2026_2027_100_birim_ileri_test.md)
+
+**Önemli:** Galatasaray örneklemindeki +%8,81 tarihsel ROI'nin yaklaşık %95 belirsizlik aralığı sıfırı içerir. 108,81 birim, bu tarihsel nokta ROI'sinin 100 bahiste aynen tekrarlandığı varsayımına dayanan aritmetik senaryodur; kâr beklentisi veya garanti değildir. Dört büyük takımın birleşik örnekleminde tarihsel ROI -%3,07'dir. 2026–2027 sonuçları önceden sabitlenmiş kuralla ileriye dönük test edilmelidir.
