@@ -1,6 +1,58 @@
 # Maçkolik Bahis Oranları — Örüntü Araştırması
 
 Bu depo, futbol maçlarının geçmiş sonuçları ve bahis oranları arasında **istatistiksel olarak desteklenebilir, bağımsız veride de ayakta kalan bir örüntü bulunup bulunmadığını** araştırır. Amaç yalnızca geçmişte kârlı görünen grupları bulmak değil; tesadüf, aşırı uyum ve çoklu test kaynaklı sahte sonuçları ayırt etmektir.
+## 📊 Vaka Çalışması: "Favoriye Bahis" Stratejisi
+
+### Hipotez
+"Dört büyük takım (Galatasaray, Fenerbahçe, Beşiktaş, Trabzonspor) favori olduğunda, her maça 1 birim sabit bahis basmak uzun vadede kâr getirir."
+
+### Yöntem
+- MS1 veya MS2 (favori taraf) oranı, maç öncesi kapanış oranı
+- Her maça **1 birim sabit bahis**
+- 2014-2025 dönemi, 4 takım × ~410 maç
+- 100 maçlık ardışık serilere bölünmüş (16 seri)
+
+### Sonuçlar (Genel)
+
+| Takım | Maç | Net Kâr/Zarar | ROI |
+|---|---:|---:|---:|
+| Galatasaray | 410 | **−28.22** | −%6.88 |
+| Fenerbahçe | 412 | **−61.02** | −%14.81 |
+| Beşiktaş | 415 | **−37.20** | −%8.96 |
+| Trabzonspor | 415 | **−63.19** | −%15.23 |
+
+### 100 Maçlık Seri Analizi (16 Seri)
+
+| Seri | GS | FB | BJK | TS | Pozitif |
+|---|---:|---:|---:|---:|---:|
+| 1 | −13.80 | −9.40 | **+3.55** | −20.60 | 1/4 |
+| 2 | −6.37 | −29.66 | −9.70 | −28.23 | 0/4 |
+| 3 | −14.20 | −11.80 | −17.60 | −12.90 | 0/4 |
+| 4 | **+8.09** | −10.16 | −13.45 | **+1.55** | 2/4 |
+| **Toplam** | **1/4** | **0/4** | **1/4** | **1/4** | **3/16 (18.75%)** |
+
+**Rastgele beklenti:** ~%45-50 (bahisçi marjı düşüldükten sonra).
+**Gözlenen:** %18.75. **Yani favori bahisleri, rastgele beklentinin çok altında.**
+
+### 🚨 En Kritik Bulgu: Kazanma Oranı ≠ Kârlılık
+
+**Galatasaray 1. Seri:**
+- 100 bahis
+- **58 kazanç** (%58 kazanma oranı)
+- **Sonuç: −13.80 birim zarar**
+
+**Neden?** Favori oranları düşük (1.50-1.80 arası). Bir kayıp (−1.00), iki kazancı (2 × 0.70 = 1.40) siliyor.
+
+**Ders:** "Yüksek kazanma oranı" tuzağına düşmeyin. Gerçek kârlılık, **kazanç × oran − kayıp** hesabıyla ölçülür.
+
+### Yorum
+- **3/16 pozitif seri**, rastgele beklentinin çok altında → favori bahisleri sistematik dezavantaj
+- Pozitif seriler (GS 4, BJK 1, TS 4) **izole başarılar**, diğer serilerde aynı takımlar negatif
+- **Kadro/teknik direktör/piyasa koşulları** seri sonuçlarını etkiliyor
+- Sonuç, **verimli piyasa hipoteziyle tutarlı**: bahisçi marjı + favoriye aşırı talep = negatif beklenti
+
+### ⚠️ Yorumlama Uyarısı
+Bu vaka çalışması, "favori bahisleri işe yaramaz" **kanıtı değil**, "bu dönemde, bu yöntemle, kârlı değil" **gözlemidir**. Pozitif serileri seçip genelleme yapmak **p-hacking**'dir.
 
 ## Araştırmanın güncel sonucu
 
