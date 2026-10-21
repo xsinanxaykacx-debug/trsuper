@@ -3,7 +3,7 @@
 Dört Büyük — 100 maçlık seri analizi.
 
 Her takımın tarih sıralı maçlarında MS1/MSX/MS2 içindeki en düşük geçerli
-oranı seçer. Sonuçları örtüşmeyen 100 bahislik seriler halinde raporlar.
+oranı seçer. Sonuçları örtüşmeyen 100 takım-maçlık seriler halinde raporlar.
 Ham veriye dokunmaz.
 """
 import re
@@ -97,13 +97,13 @@ for team in TEAMS:
             odds = row[f"_oran_{outcome}"]
             if pd.notna(odds) and np.isfinite(odds) and odds > 1.0:
                 options.append((float(odds), outcome))
-        if not options:
-            continue
-
-        odds, pick = min(options, key=lambda item: item[0])
-        won = pick == row["_sonuc"]
-        profit = odds - 1.0 if won else -STAKE
         team_result = "EV" if row["_sonuc"] == "1" else ("DEP" if row["_sonuc"] == "2" else "BERABERE")
+        if options:
+            odds, pick = min(options, key=lambda item: item[0])
+            won = pick == row["_sonuc"]
+            profit = odds - 1.0 if won else -STAKE
+        else:
+            odds, pick, won, profit = np.nan, "", pd.NA, 0.0
         records.append({
             "Takim": team,
             "Tarih": row["_tarih"],
@@ -113,6 +113,7 @@ for team in TEAMS:
             "Takim_Maci_Sonucu": team_result,
             "Secilen_MS": pick,
             "Secilen_Oran": odds,
+            "Bahis_Gecerli": bool(options),
             "Bahis_Kazandi": won,
             "Kar_Zarar": profit,
         })
@@ -126,14 +127,17 @@ for team in TEAMS:
         continue
 
     bets = bets.reset_index(drop=True)
-    bets["Bahis_Sira_No"] = np.arange(1, len(bets) + 1)
-    bets["Seri_No"] = (bets["Bahis_Sira_No"] - 1) // SERIES_SIZE + 1
-    bets["Seri_Ici_Sira"] = (bets["Bahis_Sira_No"] - 1) % SERIES_SIZE + 1
+    bets["Mac_Sira_No"] = np.arange(1, len(bets) + 1)
+    bets["Seri_No"] = (bets["Mac_Sira_No"] - 1) // SERIES_SIZE + 1
+    bets["Seri_Ici_Mac_No"] = (bets["Mac_Sira_No"] - 1) % SERIES_SIZE + 1
     bets["Birikimli_Kar_Zarar"] = bets["Kar_Zarar"].cumsum()
 
     for series_no, block in bets.groupby("Seri_No", sort=True):
         n = len(block)
-        wins = int(block["Bahis_Kazandi"].sum())
+        valid = block["Bahis_Gecerli"]
+        valid_block = block.loc[valid]
+        n_bets = len(valid_block)
+        wins = int(valid_block["Bahis_Kazandi"].sum()) if n_bets else 0
         profit = float(block["Kar_Zarar"].sum())
         # Seri başlangıcında kasa sıfır kabul edilerek, seri içi kâr eğrisi ölçülür.
         equity = block["Kar_Zarar"].cumsum().to_numpy(dtype=float)
@@ -145,36 +149,42 @@ for team in TEAMS:
             "Takim": team,
             "Seri_No": int(series_no),
             "Seri_Tipi": "TAM_SERI" if n == SERIES_SIZE else "KISMI_SERI",
-            "Bahis_Adedi": n,
-            "Baslangic_Bahis_No": int(start["Bahis_Sira_No"]),
-            "Bitis_Bahis_No": int(end["Bahis_Sira_No"]),
+            "Mac_Adedi": n,
+            "Gecerli_Bahis": n_bets,
+            "Oran_Eksik_Gecersiz_Mac": int(n - n_bets),
+            "Baslangic_Mac_No": int(start["Mac_Sira_No"]),
+            "Bitis_Mac_No": int(end["Mac_Sira_No"]),
             "Baslangic_Tarihi": start["Tarih"].strftime("%d-%m-%Y"),
             "Bitis_Tarihi": end["Tarih"].strftime("%d-%m-%Y"),
             "Kazandi": wins,
-            "Kaybetti": n - wins,
-            "Kazanma_Yuzdesi": round(wins / n * 100, 2),
-            "Ortalama_Oran": round(float(block["Secilen_Oran"].mean()), 4),
+            "Kaybetti": n_bets - wins,
+            "Kazanma_Yuzdesi": round(wins / n_bets * 100, 2) if n_bets else np.nan,
+            "Ortalama_Oran": round(float(valid_block["Secilen_Oran"].mean()), 4) if n_bets else np.nan,
             "Toplam_Kar_Zarar": round(profit, 4),
-            "ROI_Yuzde": round(profit / (n * STAKE) * 100, 2),
+            "ROI_Yuzde": round(profit / (n_bets * STAKE) * 100, 2) if n_bets else np.nan,
             "Seri_Ici_Maks_Dusus": round(float(drawdown.max(initial=0.0)), 4),
-            "En_Uzun_Kayip_Serisi": longest_streak(block["Bahis_Kazandi"].tolist(), False),
+            "En_Uzun_Kayip_Serisi": longest_streak(valid_block["Bahis_Kazandi"].tolist(), False),
             "Birikimli_Kar_Zarar_Son": round(float(end["Birikimli_Kar_Zarar"]), 4),
         })
 
     all_details.append(bets)
     full_count = len(bets) // SERIES_SIZE
     rem = len(bets) % SERIES_SIZE
+    valid_bets = bets.loc[bets["Bahis_Gecerli"]]
     team_profit = float(bets["Kar_Zarar"].sum())
+    n_valid = len(valid_bets)
     team_overview.append({
         "Takim": team,
-        "Gecerli_Bahis": len(bets),
+        "Toplam_Takim_Maci": len(bets),
         "Tam_100luk_Seri": full_count,
-        "Kismi_Seri_Bahis": rem,
-        "Kazandi": int(bets["Bahis_Kazandi"].sum()),
-        "Kaybetti": int((~bets["Bahis_Kazandi"]).sum()),
+        "Kismi_Seri_Mac": rem,
+        "Gecerli_Bahis": n_valid,
+        "Oran_Eksik_Gecersiz_Mac": int(len(bets) - n_valid),
+        "Kazandi": int(valid_bets["Bahis_Kazandi"].sum()),
+        "Kaybetti": int(n_valid - valid_bets["Bahis_Kazandi"].sum()),
         "Toplam_Kar_Zarar": round(team_profit, 4),
-        "ROI_Yuzde": round(team_profit / (len(bets) * STAKE) * 100, 2),
-        "Son_Bahis_Tarihi": bets.iloc[-1]["Tarih"].strftime("%d-%m-%Y"),
+        "ROI_Yuzde": round(team_profit / (n_valid * STAKE) * 100, 2) if n_valid else np.nan,
+        "Son_Mac_Tarihi": bets.iloc[-1]["Tarih"].strftime("%d-%m-%Y"),
     })
 
 series_df = pd.DataFrame(all_series)
@@ -190,7 +200,7 @@ overview_df.to_csv(overview_path, index=False, encoding="utf-8-sig")
 
 print("\n=== DÖRT BÜYÜK — 100 MAÇLIK SERİ ANALİZİ ===")
 print("Kural: Her takımın maçlarında MS1/MSX/MS2 içindeki en düşük geçerli oran seçilir.")
-print("Seriler: Tarih sırasıyla, örtüşmeyen 100 geçerli bahislik bloklar; kalan maçlar kısmi seri.")
+print("Seriler: Tarih sırasıyla, örtüşmeyen 100 takım-maçlık bloklar; oranı olmayan maç seride kalır ama bahis hesabına girmez.")
 print("Kâr: Kazanırsa oran - 1, kaybederse -1 birim. Bu analiz tahmin sistemi avantajını kanıtlamaz.\n")
 print("=== GENEL ÖZET ===")
 print(overview_df.to_string(index=False))
