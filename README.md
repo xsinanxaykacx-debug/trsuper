@@ -87,3 +87,37 @@ Betik ve bağımlılık sürümleri depoda yer almıyorsa, çalıştırma ortam�
 ## Bilimsel yorumlama
 
 Pozitif ROI tek başına kârlılık kanıtı değildir. Çoklu karşılaştırma düzeltmesi, güven aralıkları ve örneklem büyüklüğü birlikte değerlendirilmelidir. Keşif sonucunda aday bulunmaması, her olası markette veya dönemde avantajın imkânsız olduğunu göstermez.
+
+## Haftanın Günü Bazlı 2,5 Alt/Üst ve KG Var/Yok Araştırmaları
+
+Bu iki ayrı çalışma, haftanın günü ile bahis oran bandı arasında geçmiş veride kârlı ve istatistiksel olarak desteklenebilir bir ilişki bulunup bulunmadığını araştırır. Sonuçlar bahis tavsiyesi değildir.
+
+### 2,5 Alt/Üst
+
+- Analiz betiği: `analiz_haftanin_gunu_25ust.py`
+- Sonuç klasörü: `data/pattern_discovery_v2/`
+- İncelenen pazar: 2,5 gol Üst; oran bandı genişliği 0,10.
+- Test edilen, en az 30 maç içeren gün/oran bandı kombinasyonu: 29.
+- Benjamini–Hochberg FDR düzeltmesinden geçen kombinasyon: 0.
+- Koşulları sağlayan doğrulanmış aday: 0.
+- En yüksek pozitif ROI görülen bant: Cuma, 1,60–1,69 oran aralığı; 70 maçta yaklaşık +%0,39 ROI. Güven aralığının alt sınırı negatif ve düzeltilmiş p değeri anlamlı değildir.
+
+Eski `AÜ_2,5_Gol_|_Üst` sütunu ile yeni `2,5_Alt/Üst_|_Üst` sütununun veri kaynakları ve dönem devamlılığı ayrıca doğrulanmadan tek bir kesintisiz seri gibi birleştirilmemiştir.
+
+### KG Var / KG Yok
+
+- Analiz betiği: `analiz_haftanin_gunu_kg.py`
+- Sonuç klasörü: `data/pattern_discovery_kg/`
+- Sonuç etiketleri: `KGVY`; oran sütunları: `Karşılıklı_Gol_|_Var` ve `Karşılıklı_Gol_|_Yok`.
+- Veri dönemi: 11 Ocak 2014–28 Aralık 2025.
+- Her iki KG pazarında kullanılabilir oran bulunan maç sayısı: 7.348.
+- En az 30 maç içeren gün/oran bandı kombinasyonu: 70.
+- FDR düzeltmesinden geçen kombinasyon: 0.
+- Koşulları sağlayan doğrulanmış aday: 0.
+- En yüksek pozitif ROI görülen bant: Cumartesi KG Yok, 2,10–2,19 oran aralığı; 52 maçta yaklaşık +%2,31 ROI. Güven aralığının alt sınırı yaklaşık -%26,88 ve FDR q değeri 1,00 olduğundan bu sonuç kanıtlanmış avantaj sayılmaz.
+
+### Ortak metodolojik karar
+
+Her iki araştırmada da pozitif ROI tek başına yeterli kabul edilmemiştir. Çoklu karşılaştırma düzeltmesi, örneklem büyüklüğü ve ROI belirsizlik aralığı birlikte değerlendirilmiştir. Mevcut testlerde güvenilir ve doğrulanmış bir bahis avantajı bulunamamıştır. Bu sonuç, tüm olası stratejilerin kârsız olduğunu kanıtlamaz.
+
+Sonuç CSV dosyaları test edilen bantları, genel performansı ve aday değerlendirmesini ayrı ayrı saklar. Ham veri üzerinde sonuçları iyileştirmek amacıyla değişiklik yapılmamalıdır.
