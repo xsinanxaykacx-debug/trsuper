@@ -1,0 +1,38 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Yedekler
+*_backup.py
+*.bak
+*~
+*.tmp
+*.log
+
+# Kök dizindeki kopyalar (kanonik sürümler scripts/ ve docs/ altında)
+/generate_quality_report.py
+/generate_quality_report_v2.py
+/generate_quality_report_v3.py
+/discovery.py
+/data_quality_report.md
+/discovery_results.csv
+/discovery_survivors.csv
+/odds_integrity_report.md
+
+# Boş üretilen dosyalar
+docs/discovery_survivors.csv
+docs/discovery_strong_candidates.csv
