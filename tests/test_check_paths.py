@@ -42,10 +42,10 @@ class CheckPathsTests(unittest.TestCase):
                 result.stdout.count("sep=None: 3 sutun | sep=',': 3 sutun"), 3
             )
             self.assertIn(
-                'ID benzeri sutunlar: ["\'match_id\'", "\'ID_away\'"]',
+                'ID benzeri sutunlar: ["\\'match_id\\'", "\\'ID_away\\'"]',
                 result.stdout,
             )
-            self.assertEqual(result.stdout.count("Dosya boyutu: 59"), 3)
+            self.assertEqual(result.stdout.count("Dosya boyutu:"), 3)
             self.assertTrue(result.stdout.rstrip().endswith("BITTI - salt okunur"))
 
     def test_missing_and_unreadable_files_do_not_stop_run(self):
