@@ -116,6 +116,117 @@ def evaluate_predictions(frame: pd.DataFrame, p_over: np.ndarray) -> dict:
     }
 
 
+def match_level_betting(frame: pd.DataFrame, p_over: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Return per-match unit profit, bet indicator, and per-match log loss."""
+    y = frame["_y_ou25"].astype(int).to_numpy()
+    p = np.clip(np.asarray(p_over, dtype=float), 1e-7, 1.0 - 1e-7)
+    odds_under = frame["_odd_under25"].to_numpy(dtype=float)
+    odds_over = frame["_odd_over25"].to_numpy(dtype=float)
+
+    ev_under = (1.0 - p) * odds_under - 1.0
+    ev_over = p * odds_over - 1.0
+    choose_over = ev_over > ev_under
+    take = np.maximum(ev_under, ev_over) > EV_THRESHOLD
+
+    chosen_odds = np.where(choose_over, odds_over, odds_under)
+    chosen_side = choose_over.astype(int)
+    profit = np.zeros(len(frame), dtype=float)
+    profit[take] = np.where(
+        y[take] == chosen_side[take],
+        chosen_odds[take] - 1.0,
+        -1.0,
+    )
+    logloss_each = -(y * np.log(p) + (1 - y) * np.log(1.0 - p))
+    return profit, take.astype(bool), logloss_each
+
+
+def paired_bootstrap(
+    frame: pd.DataFrame,
+    predictions: dict[str, np.ndarray],
+    n_bootstrap: int = 1000,
+    seed: int = RANDOM_STATE,
+) -> pd.DataFrame:
+    """Paired match-level bootstrap; ROI is profit per bet, matching evaluate_predictions."""
+    rng = np.random.default_rng(seed)
+    n = len(frame)
+    if n < 2:
+        raise ValueError("Bootstrap için en az iki test maçı gerekli.")
+
+    metrics = {
+        model_id: match_level_betting(frame, predictions[model_id])
+        for model_id, _, _ in MODELS
+    }
+    comparisons = [("A", "B"), ("B", "C")]
+    rows = []
+
+    for old_id, new_id in comparisons:
+        old_profit, old_bet, old_loss = metrics[old_id]
+        new_profit, new_bet, new_loss = metrics[new_id]
+        roi_diffs = np.empty(n_bootstrap, dtype=float)
+        ll_diffs = np.empty(n_bootstrap, dtype=float)
+
+        for b in range(n_bootstrap):
+            idx = rng.integers(0, n, size=n)
+            old_n_bets = int(old_bet[idx].sum())
+            new_n_bets = int(new_bet[idx].sum())
+
+            old_roi = (
+                old_profit[idx].sum() / old_n_bets
+                if old_n_bets else np.nan
+            )
+            new_roi = (
+                new_profit[idx].sum() / new_n_bets
+                if new_n_bets else np.nan
+            )
+            roi_diffs[b] = (new_roi - old_roi) * 100.0
+            ll_diffs[b] = float(np.mean(new_loss[idx] - old_loss[idx]))
+
+        roi_diffs = roi_diffs[np.isfinite(roi_diffs)]
+        ll_diffs = ll_diffs[np.isfinite(ll_diffs)]
+        if len(roi_diffs) < int(n_bootstrap * 0.95):
+            raise RuntimeError(
+                f"{old_id}-{new_id}: geçerli ROI bootstrap örneği yetersiz "
+                f"({len(roi_diffs)}/{n_bootstrap})."
+            )
+
+        roi_low, roi_high = np.percentile(roi_diffs, [2.5, 97.5])
+        ll_low, ll_high = np.percentile(ll_diffs, [2.5, 97.5])
+        roi_point = (
+            new_profit.sum() / new_bet.sum()
+            - old_profit.sum() / old_bet.sum()
+        ) * 100.0
+        ll_point = float(np.mean(new_loss - old_loss))
+
+        rows.append({
+            "comparison": f"{new_id}-{old_id}",
+            "old_model": old_id,
+            "new_model": new_id,
+            "bootstrap_replicates": n_bootstrap,
+            "test_matches": n,
+            "old_bets": int(old_bet.sum()),
+            "new_bets": int(new_bet.sum()),
+            "roi_difference_pp_new_minus_old": roi_point,
+            "roi_ci95_low_pp": float(roi_low),
+            "roi_ci95_high_pp": float(roi_high),
+            "roi_ci_includes_zero": bool(roi_low <= 0.0 <= roi_high),
+            "roi_conclusion": (
+                "Yeni özellikler istatistiksel olarak anlamlı bir fark yaratmadı"
+                if roi_low <= 0.0 <= roi_high
+                else (
+                    "Yeni özellikler gerçekten işe yarıyor"
+                    if roi_low > 0.0
+                    else "Yeni özellikler ROI'yi istatistiksel olarak anlamlı biçimde düşürdü"
+                )
+            ),
+            "logloss_difference_new_minus_old": ll_point,
+            "logloss_ci95_low": float(ll_low),
+            "logloss_ci95_high": float(ll_high),
+            "logloss_ci_includes_zero": bool(ll_low <= 0.0 <= ll_high),
+        })
+
+    return pd.DataFrame(rows)
+
+
 def make_model() -> xgb.XGBClassifier:
     return xgb.XGBClassifier(
         objective="binary:logistic",
@@ -246,6 +357,14 @@ def main() -> None:
             f"| LogLoss={pooled['logloss']:.5f} | bahis={pooled['bets']:4d} "
             f"| ROI={roi_text}"
         )
+
+    print("\\n5. Eşleştirilmiş bootstrap testi (1.000 tekrar)...")
+    bootstrap_df = paired_bootstrap(test, predictions, n_bootstrap=1000, seed=RANDOM_STATE)
+    bootstrap_path = Path("data/csv/bootstrap_ablation_results.csv")
+    bootstrap_path.parent.mkdir(parents=True, exist_ok=True)
+    bootstrap_df.to_csv(bootstrap_path, index=False, encoding="utf-8-sig")
+    print(bootstrap_df.to_string(index=False, float_format=lambda value: f"{value:.5f}"))
+    print(f"Bootstrap sonuç dosyası: {bootstrap_path}")
 
     result_df = pd.DataFrame(results)
     output_path = Path("data/csv/ablation_study_results.csv")
