@@ -15,6 +15,8 @@ from __future__ import annotations
 import asyncio
 import logging
 import os
+from threading import Thread
+
 import joblib
 import re
 import unicodedata
@@ -824,6 +826,37 @@ def build_application(token: str) -> Any:
     return application
 
 
+def create_health_app() -> Any:
+    """Create the minimal HTTP app used by Hugging Face Spaces health checks."""
+    from flask import Flask
+
+    app = Flask("z_kahin_health")
+
+    @app.get("/")
+    @app.get("/health")
+    def health_check() -> tuple[str, int, dict[str, str]]:
+        return "OK", 200, {"Content-Type": "text/plain; charset=utf-8"}
+
+    return app
+
+
+def _run_telegram_polling(application: Any) -> None:
+    """Run Telegram polling in a background thread without installing signal handlers."""
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        application.run_polling(
+            allowed_updates=["message"],
+            stop_signals=None,
+        )
+    except Exception:
+        LOGGER.exception("Telegram polling thread'i beklenmeyen şekilde sonlandı.")
+    finally:
+        asyncio.set_event_loop(None)
+        if not loop.is_closed():
+            loop.close()
+
+
 def main() -> None:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
@@ -833,7 +866,7 @@ def main() -> None:
         )
 
     try:
-        from telegram.ext import Application, CommandHandler
+        from telegram.ext import Application
     except ImportError as exc:
         raise SystemExit(
             "python-telegram-bot kurulu değil. "
@@ -844,27 +877,33 @@ def main() -> None:
         level=os.environ.get("LOG_LEVEL", "INFO").upper(),
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
-    application = build_application(token)
-    LOGGER.info("Z-Kahin Telegram botu başlatılıyor.")
-    webhook_url = os.environ.get("WEBHOOK_URL", "").strip()
-    if webhook_url:
-        from urllib.parse import urlparse
 
-        parsed = urlparse(webhook_url)
-        if parsed.scheme != "https" or not parsed.netloc:
-            raise SystemExit("WEBHOOK_URL geçerli bir https:// URL olmalı.")
-        LOGGER.info("Webhook modu etkin: %s", webhook_url)
-        application.run_webhook(
-            listen=os.environ.get("WEBHOOK_LISTEN", "0.0.0.0"),
-            port=int(os.environ.get("PORT", "8443")),
-            url_path=parsed.path.lstrip("/"),
-            webhook_url=webhook_url,
-            allowed_updates=["message"],
-            secret_token=os.environ.get("TELEGRAM_WEBHOOK_SECRET") or None,
+    application = build_application(token)
+    polling_thread = Thread(
+        target=_run_telegram_polling,
+        args=(application,),
+        name="telegram-polling",
+        daemon=True,
+    )
+    polling_thread.start()
+
+    host = os.environ.get("HTTP_HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", "7860"))
+    health_app = create_health_app()
+    LOGGER.info(
+        "HTTP sağlık sunucusu başlatılıyor: http://%s:%s (/, /health)",
+        host,
+        port,
+    )
+    try:
+        health_app.run(
+            host=host,
+            port=port,
+            threaded=True,
+            use_reloader=False,
         )
-    else:
-        LOGGER.info("WEBHOOK_URL tanımlı değil; polling modu başlatıldı.")
-        application.run_polling(allowed_updates=["message"])
+    except KeyboardInterrupt:
+        LOGGER.info("HTTP sağlık sunucusu kapatılıyor.")
 
 
 if __name__ == "__main__":
