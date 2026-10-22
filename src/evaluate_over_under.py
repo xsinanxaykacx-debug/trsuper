@@ -174,10 +174,12 @@ def main():
         raise ValueError("V1.6 referansında yinelenen maç kimliği var.")
 
     # Test hedefi gerçek skorla hesaplanır; 1X2 etiketi kullanılmaz.
+    home_goals = pd.to_numeric(df_tr["MSE"], errors="coerce")
+    away_goals = pd.to_numeric(df_tr["MSD"], errors="coerce")
+    total_goals = home_goals + away_goals
     df_tr["_y_ou25"] = np.where(
-        df_tr["MSE"].notna() & df_tr["MSD"].notna(),
-        ((pd.to_numeric(df_tr["MSE"], errors="coerce")
-          + pd.to_numeric(df_tr["MSD"], errors="coerce")) > 2.5).astype("int8"),
+        total_goals.notna(),
+        (total_goals > 2.5).astype("int8"),
         np.nan,
     )
 
