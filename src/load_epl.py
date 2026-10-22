@@ -16,6 +16,54 @@ from typing import Iterable
 import pandas as pd
 
 
+# Canonical team names for common historical football-data.co.uk EPL aliases.
+# Keys are matched case-insensitively; unknown names are preserved unchanged.
+EPL_TEAM_NAME_MAPPING = {
+    "man united": "Manchester United",
+    "man utd": "Manchester United",
+    "manchester utd": "Manchester United",
+    "man city": "Manchester City",
+    "nott'm forest": "Nottingham Forest",
+    "nott forest": "Nottingham Forest",
+    "notts forest": "Nottingham Forest",
+    "spurs": "Tottenham Hotspur",
+    "tottenham": "Tottenham Hotspur",
+    "wolves": "Wolverhampton Wanderers",
+    "west brom": "West Bromwich Albion",
+    "west bromwich": "West Bromwich Albion",
+    "newcastle": "Newcastle United",
+    "sheffield united": "Sheffield United",
+    "sheff utd": "Sheffield United",
+    "sheffield wed": "Sheffield Wednesday",
+    "sheff wed": "Sheffield Wednesday",
+    "brighton": "Brighton and Hove Albion",
+    "brighton & hove albion": "Brighton and Hove Albion",
+    "qpr": "Queens Park Rangers",
+    "west ham": "West Ham United",
+    "leeds": "Leeds United",
+    "leicester": "Leicester City",
+    "norwich": "Norwich City",
+    "cardiff": "Cardiff City",
+    "hull": "Hull City",
+    "stoke": "Stoke City",
+    "swansea": "Swansea City",
+    "birmingham": "Birmingham City",
+    "blackburn": "Blackburn Rovers",
+    "bolton": "Bolton Wanderers",
+    "blackpool": "Blackpool",
+    "luton": "Luton Town",
+    "bournemouth": "AFC Bournemouth",
+}
+
+
+def normalize_epl_team_name(value: object) -> object:
+    """Map a known EPL team alias to its canonical name; preserve unknowns."""
+    if pd.isna(value):
+        return value
+    cleaned = str(value).strip()
+    return EPL_TEAM_NAME_MAPPING.get(cleaned.casefold(), cleaned)
+
+
 COLUMN_ALIASES = {
     "date": ("date", "matchdate", "tarih"),
     "home_team": ("hometeam", "home_team", "ev_sahibi"),
@@ -110,8 +158,8 @@ def load_epl_data(
         dayfirst=True,
     )
     df["_date"] = parsed_dates
-    df["Ev_Sahibi"] = raw[columns["home_team"]].astype("string").str.strip()
-    df["Deplasman"] = raw[columns["away_team"]].astype("string").str.strip()
+    df["Ev_Sahibi"] = raw[columns["home_team"]].map(normalize_epl_team_name).astype("string").str.strip()
+    df["Deplasman"] = raw[columns["away_team"]].map(normalize_epl_team_name).astype("string").str.strip()
     df["MSE"] = pd.to_numeric(raw[columns["home_goals"]], errors="coerce")
     df["MSD"] = pd.to_numeric(raw[columns["away_goals"]], errors="coerce")
 
