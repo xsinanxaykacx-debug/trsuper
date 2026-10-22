@@ -1,4 +1,4 @@
-import pickle
+import joblib
 
 import pytest
 
@@ -66,16 +66,15 @@ def test_value_parser_rejects_bad_syntax():
         parse_value_input("/value_ou Galatasaray vs Fenerbahçe 1.80 nope", 2)
 
 
-def test_ev_uses_model_probability_and_market_probability_removes_margin():
+def test_ev_uses_model_probability_and_raw_implied_market_probability():
     rows = calculate_value_rows(
         [0.55, 0.25, 0.20],
         [2.0, 4.0, 5.5],
         ["1", "X", "2"],
     )
     assert [row["ev"] for row in rows] == pytest.approx([0.10, 0.0, 0.10])
-    assert sum(row["market_probability"] for row in rows) == pytest.approx(1.0)
-    assert rows[0]["market_probability"] == pytest.approx(
-        (1 / 2.0) / ((1 / 2.0) + (1 / 4.0) + (1 / 5.5))
+    assert [row["market_probability"] for row in rows] == pytest.approx(
+        [1 / 2.0, 1 / 4.0, 1 / 5.5]
     )
 
 
@@ -117,11 +116,10 @@ def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypat
     predictor = ZKahinPredictor()
     predictor.model_1x2 = object()
     predictor.model_ou25 = object()
-    with cache_path.open("wb") as cache_file:
-        pickle.dump(
-            {"cache_version": CACHE_VERSION, "predictor": predictor},
-            cache_file,
-        )
+    joblib.dump(
+        {"cache_version": CACHE_VERSION, "predictor": predictor},
+        cache_path,
+    )
 
     def fail_if_trained(self):
         raise AssertionError("A valid cache should bypass training")

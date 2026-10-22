@@ -14,7 +14,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import os
-import pickle
+import joblib
 import re
 import unicodedata
 from collections import defaultdict, deque
@@ -120,22 +120,20 @@ def parse_value_input(text: str, odds_count: int) -> tuple[str, str, list[float]
 def calculate_value_rows(
     probabilities: list[float], odds: list[float], labels: list[str]
 ) -> list[dict[str, float | str]]:
-    """Compute EV and market probabilities normalized to remove overround."""
+    """Compute EV and raw implied market probabilities (1 / decimal odds)."""
     if len(probabilities) != len(odds) or len(odds) != len(labels):
         raise ValueError("Olasılık, oran ve seçenek sayıları eşleşmiyor.")
     if any(not np.isfinite(p) or p < 0.0 or p > 1.0 for p in probabilities):
         raise ValueError("Model olasılıkları geçersiz.")
-    implied = [1.0 / odd for odd in odds]
-    total_implied = sum(implied)
     return [
         {
             "label": label,
             "model_probability": float(probability),
-            "market_probability": float(raw_probability / total_implied),
+            "market_probability": float(1.0 / odd),
             "odds": float(odd),
             "ev": float(probability * odd - 1.0),
         }
-        for label, probability, odd, raw_probability in zip(labels, probabilities, odds, implied)
+        for label, probability, odd in zip(labels, probabilities, odds)
     ]
 
 
@@ -660,8 +658,7 @@ def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
     """Load cached models/state, or train and atomically cache them."""
     if cache_path.is_file():
         try:
-            with cache_path.open("rb") as cache_file:
-                payload = pickle.load(cache_file)
+            payload = joblib.load(cache_path)
             if (
                 isinstance(payload, dict)
                 and payload.get("cache_version") == CACHE_VERSION
@@ -679,12 +676,11 @@ def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
     predictor.load_and_train()
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     temporary_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
-    with temporary_path.open("wb") as cache_file:
-        pickle.dump(
-            {"cache_version": CACHE_VERSION, "predictor": predictor},
-            cache_file,
-            protocol=pickle.HIGHEST_PROTOCOL,
-        )
+    joblib.dump(
+        {"cache_version": CACHE_VERSION, "predictor": predictor},
+        temporary_path,
+        compress=3,
+    )
     temporary_path.replace(cache_path)
     LOGGER.info("Model ve tahmin durumu önbelleğe kaydedildi: %s", cache_path)
     return predictor
