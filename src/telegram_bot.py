@@ -4,10 +4,11 @@ Run from the repository root:
     set TELEGRAM_BOT_TOKEN=your_bot_token
     python -m src.telegram_bot
 
-The OU 2.5 model follows the repository's Model C feature protocol. The 1X2
-classifier is trained from the same chronological Elo/form/rest/momentum
-features, without odds as inputs, because future match odds are not supplied
-by the Telegram command. Neither model output is a betting recommendation.
+The OU 2.5 model follows the repository's Model C feature protocol. The bot
+keeps two 1X2 classifiers: an odds-free model for /tahmin and an odds-aware
+model for /value that receives the three supplied 1X2 odds. The odds-aware
+model is trained only on historical matches with all three valid odds. Neither
+model output is a betting recommendation.
 """
 from __future__ import annotations
 
