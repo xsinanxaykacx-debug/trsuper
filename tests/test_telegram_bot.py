@@ -133,6 +133,50 @@ def test_prediction_format_contains_all_markets_and_disclaimer():
     assert DISCLAIMER in message
 
 
+def test_predict_uses_odds_aware_model_when_odds_are_supplied(monkeypatch):
+    import numpy as np
+    import pandas as pd
+
+    class FakeModel:
+        classes_ = np.array([0, 1, 2])
+
+        def __init__(self, probabilities):
+            self.probabilities = np.asarray(probabilities, dtype=float)
+            self.seen = None
+
+        def predict_proba(self, frame):
+            self.seen = frame.copy()
+            return self.probabilities.reshape(1, -1)
+
+    predictor = ZKahinPredictor()
+    predictor.team_names = {
+        normalize_team_name("Galatasaray"): ["Galatasaray"],
+        normalize_team_name("Fenerbahçe"): ["Fenerbahçe"],
+    }
+    predictor.label_encoder.fit(["H", "D", "A"])
+    predictor.label_encoder_odds.fit(["H", "D", "A"])
+    predictor.model_1x2 = FakeModel([0.7, 0.2, 0.1])
+    odds_model = FakeModel([0.2, 0.3, 0.5])
+    predictor.model_1x2_odds = odds_model
+    predictor.model_ou25 = FakeModel([0.4, 0.6])
+    monkeypatch.setattr(
+        predictor,
+        "_make_live_row",
+        lambda home, away: pd.DataFrame([{name: 0.0 for name in MODEL_FEATURES}]),
+    )
+
+    result = predictor.predict("Galatasaray", "Fenerbahçe", [1.95, 3.40, 3.20])
+
+    assert odds_model.seen is not None
+    assert list(odds_model.seen.columns) == ODDS_FEATURES
+    assert odds_model.seen.loc[0, "_odd_H"] == pytest.approx(1.95)
+    assert odds_model.seen.loc[0, "_odd_D"] == pytest.approx(3.40)
+    assert odds_model.seen.loc[0, "_odd_A"] == pytest.approx(3.20)
+    assert result["p_home_win"] == pytest.approx(0.5)
+    assert result["p_draw"] == pytest.approx(0.3)
+    assert result["p_away_win"] == pytest.approx(0.2)
+
+
 def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypatch):
     cache_path = tmp_path / "models" / "zkahin_bot_model.pkl"
     cache_path.parent.mkdir()
