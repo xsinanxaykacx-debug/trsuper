@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-CACHE_VERSION = 2
+CACHE_VERSION = 3
 PICKLE_PATH = Path("data/csv/180k.pkl")
 XLSX_PATH = Path("data/csv/180k.xlsx")
 
@@ -25,6 +25,10 @@ def _build_global_frame(raw: pd.DataFrame) -> pd.DataFrame:
     if missing:
         raise KeyError(f"180k verisinde gerekli sütunlar eksik: {missing}")
 
+    # Hakem alanı varsa standartlaştır; kaynak dosyalarda sütun adı değişebiliyor.
+    referee_candidates = ["HAKEM", "Hakem", "HAKEM_ADI", "Hakem Adı", "REFEREE", "Referee"]
+    referee_source = next((name for name in referee_candidates if name in raw.columns), None)
+
     df = raw.rename(
         columns={
             "TARİH": "Tarih",
@@ -37,6 +41,10 @@ def _build_global_frame(raw: pd.DataFrame) -> pd.DataFrame:
             "25Ü": "_odd_over25",
         }
     ).copy()
+    if referee_source is not None:
+        df["_referee"] = df[referee_source].astype("string").str.strip()
+    else:
+        df["_referee"] = pd.Series(pd.NA, index=df.index, dtype="string")
 
     df["_date"] = pd.to_datetime(df["Tarih"], dayfirst=True, errors="coerce")
     df["_season"] = np.where(
@@ -101,6 +109,7 @@ def _build_global_frame(raw: pd.DataFrame) -> pd.DataFrame:
         "_odd_A",
         "_odd_under25",
         "_odd_over25",
+        "_referee",
     ]
     df = df.dropna(subset=["_date", "_season", "_y", "_y_ou25"])
     return df[columns].reset_index(drop=True)
@@ -119,6 +128,7 @@ def load_global_data(force_rebuild: bool = False) -> pd.DataFrame:
                 "_odd_under25",
                 "_odd_over25",
                 "_y_ou25",
+                "_referee",
                 "_id",
                 "_date",
             }
