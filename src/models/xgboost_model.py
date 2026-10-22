@@ -5,20 +5,21 @@ from sklearn.preprocessing import LabelEncoder
 
 class XGBoostModel:
     def __init__(self):
+        # OPTUNA TARAFINDAN BULUNAN EN IYI PARAMETRELER
         self.model = xgb.XGBClassifier(
             objective='multi:softprob',
             num_class=3,
-            n_estimators=150,     # Aşırı ezberi önlemek için düşürdük
-            max_depth=4,          # Ağacı sığ tuttuk
-            learning_rate=0.05,
-            subsample=0.8,
-            colsample_bytree=0.8,
+            n_estimators=113,
+            max_depth=4,
+            learning_rate=0.051740170398716465,
+            subsample=0.7233647283926316,
+            colsample_bytree=0.8960601302761134,
             random_state=42,
             n_jobs=-1
         )
         self.label_encoder = LabelEncoder()
         
-        # Sızıntısız özellikler + PİYASA ORANLARI EKLENDİ
+        # Kullanacağımız özellikler
         self.features = [
             "elo_h", "elo_a", "elo_diff",
             "form_h_pts_5", "form_h_gf_5", "form_h_ga_5",
@@ -28,7 +29,7 @@ class XGBoostModel:
             "form_h_home_pts", "form_h_home_gf", "form_h_home_ga",
             "form_a_away_pts", "form_a_away_gf", "form_a_away_ga",
             "rest_h", "rest_a", "h2h_home_win_share",
-            "_odd_H", "_odd_D", "_odd_A"  # <--- Piyasa Oranları Burada!
+            "_odd_H", "_odd_D", "_odd_A"
         ]
 
     def fit(self, df: pd.DataFrame, y: np.ndarray):
@@ -41,6 +42,7 @@ class XGBoostModel:
         X = df[self.features].fillna(0)
         probs = self.model.predict_proba(X)
         
+        # Sütunları H, D, A sırasına göre yeniden diziyoruz
         probs_reordered = np.zeros_like(probs)
         for i, label in enumerate(self.label_encoder.classes_):
             if label == "H": probs_reordered[:, 0] = probs[:, i]
