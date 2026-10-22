@@ -10,7 +10,7 @@ def _league_key(value) -> str:
     if pd.isna(value):
         return "__UNKNOWN_LEAGUE__"
     value = str(value).strip()
-    value = re.sub(r"\\s*\\d{4}/\\d{4}\\s*$", "", value).strip()
+    value = re.sub(r"\s*\d{4}/\d{4}\s*$", "", value).strip()
     return value or "__UNKNOWN_LEAGUE__"
 
 
