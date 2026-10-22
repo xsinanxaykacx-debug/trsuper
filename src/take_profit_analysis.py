@@ -72,7 +72,7 @@ def apply_bet(bankroll, row):
 
 def report_loss_runs(df):
     later = df.loc[df["bet_number"] > 67].sort_values("bet_number")
-    print("\\n" + "=" * 110)
+    print("\n" + "=" * 110)
     print("PCT_20 — 67. BAHİSTEN SONRAKİ ARDIŞIK KAYIPLAR")
     print("=" * 110)
     print(f"67. bahis sonrası kayıt: {len(later):,}; kayıp bahis: {int((~later['won']).sum()):,}")
@@ -229,7 +229,7 @@ def main():
     result.to_csv(summary_path, index=False, encoding="utf-8-sig")
     pd.DataFrame(withdrawal_ledger).to_csv(withdrawal_path, index=False, encoding="utf-8-sig")
 
-    print("\\n" + "=" * 125)
+    print("\n" + "=" * 125)
     print("KÂR AL / ZARAR DURDUR SENARYOLARI")
     print("=" * 125)
     cols = ["scenario", "bets_placed", "stop_at_bet", "active_bankroll", "withdrawn",
