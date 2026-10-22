@@ -1,4 +1,3 @@
-import pytest
 import pandas as pd
 from src.load import load_data
 from src.features import calculate_elo_features
