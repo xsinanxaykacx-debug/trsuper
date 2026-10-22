@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/webhook.py": {
+      "includeFiles": "src/**"
+    }
+  },
+  "routes": [
+    {
+      "src": "^/api/webhook/?$",
+      "dest": "/api/webhook.py"
+    }
+  ]
+}

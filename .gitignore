@@ -48,3 +48,8 @@ __pycache__/
 *.pkl
 180k*
 data/csv/180k*
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
