@@ -130,7 +130,7 @@ def simulate_strategy(
     stop_reason = "Sezondaki uygun bahisler tamamlandı."
     ledger: list[dict] = []
 
-    for row in bets.itertuples(index=False):
+    for row in bets.to_dict("records"):
         if bankroll <= EPS:
             bankroll = 0.0
             stopped = True
@@ -138,8 +138,8 @@ def simulate_strategy(
             break
 
         before = bankroll
-        odds = float(row.selected_odds)
-        won = bool(row.won)
+        odds = float(row["selected_odds"])
+        won = bool(row["won"])
         bankroll, stake, profit = settle_bet(before, odds, won)
         placed += 1
         total_staked += stake
@@ -155,14 +155,14 @@ def simulate_strategy(
             "season": season,
             "strategy": strategy,
             "bet_number": placed,
-            "_id": row._id,
-            "_date": row._date,
-            "Ev_Sahibi": row.Ev_Sahibi,
-            "Deplasman": row.Deplasman,
-            "selection": row.selection,
+            "_id": row["_id"],
+            "_date": row["_date"],
+            "Ev_Sahibi": row["Ev_Sahibi"],
+            "Deplasman": row["Deplasman"],
+            "selection": row["selection"],
             "selected_odds": odds,
             "won": won,
-            "estimated_best_ev": float(row.estimated_best_ev),
+            "estimated_best_ev": float(row["estimated_best_ev"]),
             "bankroll_before": before,
             "stake": stake,
             "stake_fraction_pct": STAKE_FRACTION * 100.0,
@@ -207,7 +207,7 @@ def simulate_strategy(
             break
 
     net = bankroll - INITIAL_BANKROLL
-    reached_target = bankroll >= TAKE_PROFIT_TARGET
+    reached_target = peak >= TAKE_PROFIT_TARGET
     summary = {
         "season": season,
         "strategy": strategy,
