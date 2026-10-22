@@ -60,7 +60,8 @@ CURRENT_LEAGUE_KEY = "Dunya"
 def normalize_team_name(value: str) -> str:
     """Case-insensitive, accent-insensitive lookup key for Turkish team names."""
     normalized = unicodedata.normalize("NFKD", str(value).strip().casefold())
-    return "".join(char for char in normalized if not unicodedata.combining(char))
+    plain = "".join(char for char in normalized if not unicodedata.combining(char))
+    return plain.replace("ı", "i")
 
 
 def parse_match_input(text: str) -> tuple[str, str]:
