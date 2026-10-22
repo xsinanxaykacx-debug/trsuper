@@ -169,7 +169,7 @@ def _simulate_strategy(
                 stake = bankroll * full_fraction * float(kelly_multiplier)
 
             # Do not place a bet if the available balance cannot cover it.
-            if stake > bankroll + 1e-9:
+            if stake > bankroll:
                 stopped_early = True
                 stop_reason = (
                     f"Kasa bahis miktarını karşılamıyor (kasa={bankroll:.12g}, "
@@ -184,8 +184,8 @@ def _simulate_strategy(
                 selected_odds = np.nan
                 selected_probability = np.nan
             else:
-                # Guard against harmless floating-point drift.
-                stake = min(float(stake), bankroll)
+                # The prior guard guarantees the wager is fully covered.
+                stake = float(stake)
                 bankroll, profit = _settle(
                     bankroll, stake, selected_odds, bool(won)
                 )
