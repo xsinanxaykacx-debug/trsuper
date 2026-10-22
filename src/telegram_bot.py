@@ -58,7 +58,7 @@ DISCLAIMER = (
 )
 TRAIN_SEASONS_REQUIRED = set(TRAIN_SEASONS)
 CURRENT_LEAGUE_KEY = "Dunya"
-CACHE_PATH = Path(__file__).resolve().parents[1] / "models" / "zkahin_bot_model.pkl"
+CACHE_PATH = Path(os.environ.get("ZKAHIN_CACHE_PATH", str(Path(__file__).resolve().parents[1] / "models" / "zkahin_bot_model.pkl"))).expanduser()
 CACHE_VERSION = 2
 VALUE_THRESHOLD = 0.05
 
@@ -800,7 +800,25 @@ def main() -> None:
     application.add_handler(CommandHandler("yardim", help_command))
     application.add_handler(CommandHandler("hakkinda", about_command))
     LOGGER.info("Z-Kahin Telegram botu başlatılıyor.")
-    application.run_polling(allowed_updates=["message"])
+    webhook_url = os.environ.get("WEBHOOK_URL", "").strip()
+    if webhook_url:
+        from urllib.parse import urlparse
+
+        parsed = urlparse(webhook_url)
+        if parsed.scheme != "https" or not parsed.netloc:
+            raise SystemExit("WEBHOOK_URL geçerli bir https:// URL olmalı.")
+        LOGGER.info("Webhook modu etkin: %s", webhook_url)
+        application.run_webhook(
+            listen=os.environ.get("WEBHOOK_LISTEN", "0.0.0.0"),
+            port=int(os.environ.get("PORT", "8443")),
+            url_path=parsed.path.lstrip("/"),
+            webhook_url=webhook_url,
+            allowed_updates=["message"],
+            secret_token=os.environ.get("TELEGRAM_WEBHOOK_SECRET") or None,
+        )
+    else:
+        LOGGER.info("WEBHOOK_URL tanımlı değil; polling modunda çalışılıyor.")
+        application.run_polling(allowed_updates=["message"])
 
 
 if __name__ == "__main__":
