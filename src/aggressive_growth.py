@@ -118,6 +118,7 @@ def _simulate_strategy(
 ) -> tuple[dict, list[dict]]:
     bankroll = INITIAL_BANKROLL
     peak_bankroll = INITIAL_BANKROLL
+    peak_bankroll_at_bet = 0
     bankroll_path = [bankroll]
     ledger: list[dict] = []
     total_staked = 0.0
@@ -153,7 +154,9 @@ def _simulate_strategy(
         bets_placed += 1
         total_staked += stake
         total_profit += profit
-        peak_bankroll = max(peak_bankroll, bankroll)
+        if bankroll > peak_bankroll:
+            peak_bankroll = bankroll
+            peak_bankroll_at_bet = bets_placed
         bankroll_path.append(bankroll)
 
         ledger.append({
@@ -197,6 +200,9 @@ def _simulate_strategy(
         "bets_placed": bets_placed,
         "eligible_bets_available": int(len(bets)),
         "final_bankroll": bankroll,
+        "max_bankroll": peak_bankroll,
+        "max_bankroll_at_bet": peak_bankroll_at_bet,
+        "target_progress_pct_at_peak": peak_bankroll / TARGET_BANKROLL * 100.0,
         "net_profit": bankroll - INITIAL_BANKROLL,
         "total_staked": total_staked,
         "realized_roi_pct": total_profit / total_staked * 100.0 if total_staked else np.nan,
@@ -296,6 +302,7 @@ def main() -> None:
     display_cols = [
         "strategy", "stake_fraction_pct", "target_reached",
         "target_reached_at_bet", "bets_placed", "final_bankroll",
+        "max_bankroll", "max_bankroll_at_bet", "target_progress_pct_at_peak",
         "net_profit", "total_staked", "realized_roi_pct",
         "max_drawdown_units", "max_drawdown_pct",
     ]
@@ -315,12 +322,17 @@ def main() -> None:
             "ulaşıldığı bahis sonrasında durdurulmuştur."
         )
     else:
-        closest = summary_df.loc[summary_df["final_bankroll"].idxmax()]
+        closest = summary_df.loc[summary_df["max_bankroll"].idxmax()]
         print("\nHEDEFE ULAŞAN STRATEJİ YOK.")
         print(
-            f"100 birimden 10.000 birime en çok yaklaşan: {closest['strategy']} — "
-            f"son kasa {closest['final_bankroll']:,.2f} birim "
-            f"({closest['final_bankroll'] / TARGET_BANKROLL * 100.0:.2f}% hedef)."
+            f"Test boyunca 10.000 birime en çok yaklaşan: {closest['strategy']} — "
+            f"ulaştığı en yüksek kasa {closest['max_bankroll']:,.2f} birim "
+            f"({closest['target_progress_pct_at_peak']:.2f}% hedef), "
+            f"{int(closest['max_bankroll_at_bet'])}. bahis."
+        )
+        print(
+            "Not: Son kasası en yüksek olan strateji ile test boyunca en yüksek "
+            "kasaya ulaşan strateji aynı olmak zorunda değildir."
         )
 
     print(f"\nÖzet CSV: {summary_path}")
