@@ -1,0 +1,57 @@
+name: Export Z-Kahin model
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "GitHub Release etiketi"
+        required: true
+        default: "zkahin-model-v1"
+
+permissions:
+  contents: write
+
+jobs:
+  export-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install model dependencies
+        run: python -m pip install --upgrade pip pandas numpy scipy scikit-learn joblib xgboost
+
+      - name: Retrieve historical data
+        env:
+          MODEL_DATA_URL: ${{ secrets.MODEL_DATA_URL }}
+        run: |
+          set -euo pipefail
+          mkdir -p data/csv
+          if [ -n "${MODEL_DATA_URL}" ]; then
+            curl --fail --location --retry 3 "${MODEL_DATA_URL}" --output data/csv/180k.xlsx
+          elif [ -f data/csv/180k.pkl ] || [ -f data/csv/180k.xlsx ]; then
+            echo "Historical data found in the checkout."
+          else
+            echo "::error::Set repository secret MODEL_DATA_URL to a downloadable 180k.xlsx file, or provide data/csv/180k.pkl / data/csv/180k.xlsx in the checkout."
+            exit 1
+          fi
+
+      - name: Train and export all three models
+        run: python -m src.export_model
+
+      - name: Create release and upload model artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          set -euo pipefail
+          gh release view "${RELEASE_TAG}" >/dev/null 2>&1 || gh release create "${RELEASE_TAG}" --title "Z-Kahin model artifact ${RELEASE_TAG}" --notes "Pre-trained Z-Kahin models: odds-free 1X2, odds-aware 1X2, and Over/Under 2.5."
+          gh release upload "${RELEASE_TAG}" models/zkahin_bot_model.pkl --clobber
+          echo "Uploaded models/zkahin_bot_model.pkl to release ${RELEASE_TAG}"
