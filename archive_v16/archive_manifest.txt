@@ -1,0 +1,110 @@
+==============================================================================
+v1.6 ARŞİV MANİFESTİ
+Üretim zamanı: 2026-10-22 09:19:42
+==============================================================================
+
+KAPSAM: Bu betik hedef dosyaları YALNIZCA OKUR. Tek yazma işlemi
+        bu manifest dosyasıdır (archive_manifest.txt). Hedef
+        dosyaların içeriği değiştirilmez, yeniden adlandırılmaz.
+
+
+Dosya: model_v1_6.py
+  Boyut       : 22,875 bytes
+  mtime       : 2026-10-21 22:35:50
+  SHA256      : 3c774f3f0929dbdbcc71861e450abc81fe0786a7432ed5f26adcd8622ae40df9
+
+Dosya: walkforward_v16_exact.csv
+  Boyut       : 764 bytes
+  mtime       : 2026-10-22 08:22:39
+  SHA256      : b1fb207e8f54d6f3de0e331e61e61d755dd3ab6afd5cf3d4b1343e8f1f55e510
+  Satır × sütun: 10 × 5
+  Sütunlar    : ['season', 'n_fair', 'll_raw_full', 'brier_raw_full', 'acc_raw_full']
+
+Dosya: v16_per_match_predictions.csv
+  Boyut       : 1,154,782 bytes
+  mtime       : 2026-10-22 09:01:24
+  SHA256      : a976921035ab655838ab26ef9fb4e58f860115dcf936ff79d81af5478b32e6ce
+  Satır × sütun: 5854 × 16
+  Sütunlar    : ['match_id', 'season', 'league', 'date', 'home', 'away', 'y', 'odd_H', 'odd_D', 'odd_A', 'p_rf_H', 'p_rf_D', 'p_rf_A', 'p_mkt_H', 'p_mkt_D', 'p_mkt_A']
+
+Dosya: v16_error_segments.csv
+  Boyut       : 658 bytes
+  mtime       : 2026-10-22 09:01:24
+  SHA256      : 8a1931dff87dcb485efe47b45aeb6eef6f7220c4b6f48e08d88708715b1caceb
+  Satır × sütun: 12 × 7
+  Sütunlar    : ['segment_type', 'segment', 'n', 'rf_ll', 'mkt_ll', 'gap', 'small_sample']
+
+Dosya: features_v1.csv
+  Boyut       : 2,180,292 bytes
+  mtime       : 2026-10-21 22:37:26
+  SHA256      : d2672f3ecc65a584f9ac4087a37e4e6658c37f08fc1844c3c05313447eaee57e
+  Satır × sütun: 7422 × 44
+  Sütunlar    : ['match_id', 'date', 'season', 'league', 'home', 'away', 'y', 'odd_H', 'odd_D', 'odd_A', 'elo_h', 'elo_a', 'elo_diff', 'form_h_pts_5', 'form_h_gf_5', 'form_h_ga_5', 'form_a_pts_5', 'form_a_gf_5', 'form_a_ga_5', 'form_h_pts_10', 'form_h_gf_10', 'form_h_ga_10', 'form_a_pts_10', 'form_a_gf_10', 'form_a_ga_10', 'form_h_home_pts', 'form_h_home_gf', 'form_h_home_ga', 'form_a_away_pts', 'form_a_away_gf', 'form_a_away_ga', 'opp_elo_h', 'opp_elo_a', 'rest_h', 'rest_a', 'h2h_current_home_team_win_share', 'league_home_win_share', 'league_draw_share', 'is_super_lig', 'season_match_h', 'season_match_a', 'days_since_season_start', 'has_history_h', 'has_history_a']
+
+==============================================================================
+ÖZET TABLO (manifest sonrası hızlı kontrol)
+==============================================================================
+  dosya                                    durum              satır  sütun  sha256[:16]
+  model_v1_6.py                            OK                     —      —  3c774f3f0929dbdb…
+  walkforward_v16_exact.csv                OK                    10      5  b1fb207e8f54d6f3…
+  v16_per_match_predictions.csv            OK                  5854     16  a976921035ab6558…
+  v16_error_segments.csv                   OK                    12      7  8a1931dff87dcb48…
+  features_v1.csv                          OK                  7422     44  d2672f3ecc65a584…
+
+==============================================================================
+DONDURULMUŞ REFERANS (v1.6, 5854 fair maç)
+==============================================================================
+  RF  LL  : 1.0267     MKT LL  : 0.9927
+  RF  Br  : 0.6154     MKT Br  : 0.5918
+  RF  Acc : 48.61%     MKT Acc : 51.84%
+  n sezon : 10  (2016/17 → 2025/26)
+  n maç   : 5854
+
+==============================================================================
+ARŞİVLENEN DENEYLER (hepsi v1.6'ya karşı, aynı 3 kriter)
+==============================================================================
+  v1.7  stadium_home_win_rate_prior            FAIL
+  v1.8  referee_home_win_rate_prior            FAIL
+  v1.9  coach_home_win_rate_prior              FAIL
+  v2.0  Platt/Isotonic calibration             FAIL
+  v2.1  stadium + referee                      FAIL (1/3)
+  v2.2  squad_stability_home/away_prior        FAIL (0/3)
+
+==============================================================================
+METODOLOJİK NOTLAR
+==============================================================================
+  1. RF'nin ayrışmada %27.1 acc alması, 'bağımsız sinyal yok'
+     anlamına gelmez. %95 GA ve rastgele çizgisi karşılaştırması
+     yapılmadan bu yorum yapılmamalı.
+  2. Altı deneyin başarısız olması, mevcut sütunlardan hiçbir
+     bilgi çıkmayacağını KANITLAMAZ. Sadece bu 6 hipotezin bu
+     kriterleri geçemediğini gösterir.
+  3. walkforward_v16_exact.csv, v1.6 ORİJİNALİNİN kanıtı değil;
+     bu kodun yeniden ürettiği değerlerdir. Orijinal kodla
+     birebir aynlık doğrulanmadı.
+  4. BAHİS SİMÜLASYONU KAPALI. 'RF < MKT tek sezonda' gibi bir
+     eşik başarı ölçütü olarak kullanılmaz: tek sezon tesadüf
+     olabilir; LL üstünlüğü tek başına kârlılığı kanıtlamaz.
+     Bahis simülasyonu için kriterler HENÜZ TANIMLI DEĞİL.
+  5. Yeni veri için '0.005 LL katkısı' bir ÖNCELİKLENDİRME
+     HEDEFİDİR, kesin/gerekli eşik değildir. Mevcut sonuçlar
+     bunun ulaşılabilir olduğunu göstermiyor.
+
+==============================================================================
+SONRAKİ ADIM (bu manifest dışında)
+==============================================================================
+  A) archive_v16/ klasörü oluştur, 5 hedef dosyayı + bu
+     manifesti oraya kopyala.
+  B) Ardından: python .\archive_manifest.py --verify
+     → kaynak vs arşiv hash + satır + sütun eşleşmesi
+
+==============================================================================
+MANIFEST ÜRETİM SONUCU
+==============================================================================
+  Tüm hedef dosyalar OK
+
+>>> MANIFEST: PASS
+
+  NOT: Bu kontrol arşiv doğrulaması DEĞİL — sadece manifest
+       üretiminin temiz olduğunu gösterir. Arşiv doğrulaması
+       ayrı bir adımdır: python .\archive_manifest.py --verify
