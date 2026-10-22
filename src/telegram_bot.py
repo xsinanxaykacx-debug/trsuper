@@ -17,7 +17,6 @@ import logging
 import os
 from threading import Thread
 
-from flask import Flask
 import joblib
 import re
 import unicodedata
@@ -843,6 +842,8 @@ def create_health_app() -> Any:
 
 def _run_telegram_polling(application: Any) -> None:
     """Run Telegram polling in a background thread without installing signal handlers."""
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     try:
         application.run_polling(
             allowed_updates=["message"],
@@ -850,6 +851,10 @@ def _run_telegram_polling(application: Any) -> None:
         )
     except Exception:
         LOGGER.exception("Telegram polling thread'i beklenmeyen şekilde sonlandı.")
+    finally:
+        asyncio.set_event_loop(None)
+        if not loop.is_closed():
+            loop.close()
 
 
 def main() -> None:
