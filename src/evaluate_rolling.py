@@ -90,18 +90,19 @@ def _add_referee_history(matches: pd.DataFrame, features: pd.DataFrame) -> pd.Da
 
     # Same-day matches do not inform each other's referee feature.
     for date, day in work.groupby("_date", sort=True):
-        for row in day.itertuples(index=False):
-            key = row._ref_key
+        # iterrows avoids pandas itertuples renaming columns that start with "_".
+        for _, row in day.iterrows():
+            key = row["_ref_key"]
             n = count.get(key, 0) if pd.notna(key) else 0
             total = rates.get(key, 0.0) if pd.notna(key) else 0.0
             rows.append({
-                "_id": row._id,
+                "_id": row["_id"],
                 "ref_ou_rate": (total / n) if n else np.nan,
                 "ref_match_count": float(n),
             })
-        for row in day.itertuples(index=False):
-            key = row._ref_key
-            target = row._y_ou25
+        for _, row in day.iterrows():
+            key = row["_ref_key"]
+            target = row["_y_ou25"]
             if pd.notna(key) and pd.notna(target):
                 count[key] = count.get(key, 0) + 1
                 rates[key] = rates.get(key, 0.0) + float(target)
