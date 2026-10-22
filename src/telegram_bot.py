@@ -4,10 +4,11 @@ Run from the repository root:
     set TELEGRAM_BOT_TOKEN=your_bot_token
     python -m src.telegram_bot
 
-The OU 2.5 model follows the repository's Model C feature protocol. The 1X2
-classifier is trained from the same chronological Elo/form/rest/momentum
-features, without odds as inputs, because future match odds are not supplied
-by the Telegram command. Neither model output is a betting recommendation.
+The OU 2.5 model follows the repository's Model C feature protocol. The bot
+keeps two 1X2 classifiers: an odds-free model for /tahmin and an odds-aware
+model for /value that receives the three supplied 1X2 odds. The odds-aware
+model is trained only on historical matches with all three valid odds. Neither
+model output is a betting recommendation.
 """
 from __future__ import annotations
 
@@ -50,6 +51,7 @@ BASE_FEATURES = [
     "form_a_away_pts", "form_a_away_gf", "form_a_away_ga",
 ]
 MODEL_FEATURES = BASE_FEATURES + REST_FEATURES + MOMENTUM_FEATURES
+ODDS_FEATURES = MODEL_FEATURES + ["_odd_H", "_odd_D", "_odd_A"]
 DISCLAIMER = (
     "Bu tahminler yapay zeka tarafından üretilmiştir, "
     "kesinlikle yatırım/bahis tavsiyesi değildir."
@@ -57,7 +59,7 @@ DISCLAIMER = (
 TRAIN_SEASONS_REQUIRED = set(TRAIN_SEASONS)
 CURRENT_LEAGUE_KEY = "Dunya"
 CACHE_PATH = Path(__file__).resolve().parents[1] / "models" / "zkahin_bot_model.pkl"
-CACHE_VERSION = 1
+CACHE_VERSION = 2
 VALUE_THRESHOLD = 0.05
 
 
@@ -150,6 +152,20 @@ def make_feature_matrix(frame: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def make_odds_feature_matrix(frame: pd.DataFrame) -> pd.DataFrame:
+    """Build model-C-style pre-match features plus the three 1X2 odds."""
+    missing = [name for name in ODDS_FEATURES if name not in frame.columns]
+    if missing:
+        raise KeyError(f"Oranlı 1X2 model özellikleri eksik: {missing}")
+    values = frame.loc[:, ODDS_FEATURES].replace([np.inf, -np.inf], np.nan)
+    values = values.apply(pd.to_numeric, errors="coerce")
+    if values[["_odd_H", "_odd_D", "_odd_A"]].isna().any().any():
+        raise ValueError("Oranlı 1X2 modeli için üç oran da sayısal olmalı.")
+    if (values[["_odd_H", "_odd_D", "_odd_A"]] <= 1.0).any().any():
+        raise ValueError("Oranlar 1.00'dan büyük olmalı.")
+    return values.fillna(0.0).astype(np.float32)
+
+
 def _league_key(value: Any) -> str:
     if pd.isna(value):
         return "__UNKNOWN_LEAGUE__"
@@ -163,9 +179,11 @@ class ZKahinPredictor:
     def __init__(self) -> None:
         self.matches: pd.DataFrame | None = None
         self.data: pd.DataFrame | None = None
-        self.model_1x2: xgb.XGBClassifier | None = None
+        self.model_1x2: xgb.XGBClassifier | None = None  # oran girişi olmayan /tahmin modeli
+        self.model_1x2_odds: xgb.XGBClassifier | None = None  # oranlı /value modeli
         self.model_ou25: xgb.XGBClassifier | None = None
         self.label_encoder = LabelEncoder()
+        self.label_encoder_odds = LabelEncoder()
         self.team_names: dict[str, list[str]] = {}
         self.elo: dict[tuple[str, str], float] = {}
         self.recent_all: dict[tuple[str, str], deque] = {}
@@ -222,9 +240,8 @@ class ZKahinPredictor:
         model_ou25 = make_model()
         model_ou25.fit(X_train, train["_y_ou25"].astype(int).to_numpy())
 
-        # The repository's legacy XGBoostModel requires 1X2 odds as input
-        # features. Telegram requests do not provide odds, so train a separate
-        # odds-independent multiclass model on the same pre-match feature set.
+        # Oransız model: /tahmin komutunda oran girdisi bulunmadığı için
+        # yalnızca kronolojik maç öncesi özelliklerle eğitilir.
         self.label_encoder = LabelEncoder()
         y_1x2 = self.label_encoder.fit_transform(train["_y"].to_numpy())
         model_1x2 = xgb.XGBClassifier(
@@ -241,13 +258,44 @@ class ZKahinPredictor:
             random_state=42,
             n_jobs=-1,
         )
-        LOGGER.info("Oran bağımsız 1X2 modeli eğitiliyor (%s maç).", len(train))
+        LOGGER.info("Oransız 1X2 modeli eğitiliyor (%s maç).", len(train))
         model_1x2.fit(X_train, y_1x2)
+
+        # Oranlı model: yalnızca maç başlamadan önce mevcut olan ve üç oranı da
+        # geçerli (> 1.00) maçları kullanır. Sonuç etiketi aynı maçın oranlarından
+        # türetilmez; oranlar sadece model girdisidir.
+        odds_valid = (
+            train[["_odd_H", "_odd_D", "_odd_A"]].apply(pd.to_numeric, errors="coerce").notna().all(axis=1)
+            & train[["_odd_H", "_odd_D", "_odd_A"]].apply(pd.to_numeric, errors="coerce").gt(1.0).all(axis=1)
+        )
+        train_odds = train.loc[odds_valid].copy()
+        if len(train_odds) < MIN_TRAIN_ROWS or not train_odds["_y"].isin(["H", "D", "A"]).all():
+            raise RuntimeError(f"Oranlı 1X2 eğitimi için yeterli geçerli maç yok: {len(train_odds)}")
+        X_train_odds = make_odds_feature_matrix(train_odds)
+        self.label_encoder_odds = LabelEncoder()
+        y_1x2_odds = self.label_encoder_odds.fit_transform(train_odds["_y"].to_numpy())
+        model_1x2_odds = xgb.XGBClassifier(
+            objective="multi:softprob",
+            num_class=3,
+            eval_metric="mlogloss",
+            n_estimators=350,
+            max_depth=4,
+            learning_rate=0.04,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            min_child_weight=5,
+            reg_lambda=1.0,
+            random_state=42,
+            n_jobs=-1,
+        )
+        LOGGER.info("Oranlı 1X2 modeli eğitiliyor (%s geçerli oranlı maç).", len(train_odds))
+        model_1x2_odds.fit(X_train_odds, y_1x2_odds)
 
         self.matches = matches
         self.data = data
         self.model_ou25 = model_ou25
         self.model_1x2 = model_1x2
+        self.model_1x2_odds = model_1x2_odds
         self._build_live_state(matches)
         self._build_team_index(matches)
         self.matches = None
@@ -404,8 +452,13 @@ class ZKahinPredictor:
         row["momentum_a_ga"] = row["form_a_ga_5"] - row["form_a_ga_10"]
         return make_feature_matrix(pd.DataFrame([row]))
 
-    def predict(self, home_query: str, away_query: str) -> dict[str, Any]:
-        if self.model_1x2 is None or self.model_ou25 is None:
+    def predict(
+        self,
+        home_query: str,
+        away_query: str,
+        odds_1x2: list[float] | None = None,
+    ) -> dict[str, Any]:
+        if self.model_1x2 is None or self.model_1x2_odds is None or self.model_ou25 is None:
             raise RuntimeError("Modeller henüz yüklenmedi.")
         home = self.resolve_team(home_query)
         away = self.resolve_team(away_query)
@@ -415,10 +468,27 @@ class ZKahinPredictor:
             raise ValueError("Ev sahibi ve deplasman takımları farklı olmalı.")
 
         features = self._make_live_row(home, away)
-        raw_1x2 = self.model_1x2.predict_proba(features)[0]
+        if odds_1x2 is None:
+            model = self.model_1x2
+            encoder = self.label_encoder
+            model_features = features
+        else:
+            if len(odds_1x2) != 3 or any(not np.isfinite(o) or o <= 1.0 for o in odds_1x2):
+                raise ValueError("Oranlı 1X2 modeli için üç geçerli oran (> 1.00) gerekli.")
+            model = self.model_1x2_odds
+            encoder = self.label_encoder_odds
+            model_features = make_odds_feature_matrix(
+                pd.DataFrame([{
+                    **features.iloc[0].to_dict(),
+                    "_odd_H": odds_1x2[0],
+                    "_odd_D": odds_1x2[1],
+                    "_odd_A": odds_1x2[2],
+                }])
+            )
+        raw_1x2 = model.predict_proba(model_features)[0]
         probabilities_by_label = {
-            self.label_encoder.inverse_transform([int(class_id)])[0]: float(probability)
-            for class_id, probability in zip(self.model_1x2.classes_, raw_1x2)
+            encoder.inverse_transform([int(class_id)])[0]: float(probability)
+            for class_id, probability in zip(model.classes_, raw_1x2)
         }
         p_over = float(self.model_ou25.predict_proba(features)[0][1])
         p_over = float(np.clip(p_over, 0.0, 1.0))
@@ -555,7 +625,7 @@ async def value_command(update: Any, context: Any) -> None:
         await message.reply_text("Model henüz hazır değil. Biraz sonra tekrar dene.")
         return
     try:
-        result = await asyncio.to_thread(predictor.predict, home_query, away_query)
+        result = await asyncio.to_thread(predictor.predict, home_query, away_query, odds)
     except ValueError as exc:
         if str(exc) == "UNKNOWN_TEAM":
             await message.reply_text("Takım bulunamadı, lütfen doğru yazdığınızdan emin olun.")
@@ -664,6 +734,7 @@ def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
                 and payload.get("cache_version") == CACHE_VERSION
                 and isinstance(payload.get("predictor"), ZKahinPredictor)
                 and payload["predictor"].model_1x2 is not None
+                and payload["predictor"].model_1x2_odds is not None
                 and payload["predictor"].model_ou25 is not None
             ):
                 LOGGER.info("Model önbellekten yüklendi: %s", cache_path)

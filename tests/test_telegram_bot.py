@@ -6,10 +6,12 @@ from src.telegram_bot import (
     CACHE_VERSION,
     DISCLAIMER,
     MODEL_FEATURES,
+    ODDS_FEATURES,
     ZKahinPredictor,
     calculate_value_rows,
     format_prediction,
     make_feature_matrix,
+    make_odds_feature_matrix,
     normalize_team_name,
     parse_match_input,
     parse_odds,
@@ -90,6 +92,27 @@ def test_feature_matrix_orders_columns_and_replaces_missing_values():
     assert matrix["rest_h"].iloc[0] == 0.0
 
 
+def test_odds_feature_matrix_includes_all_three_odds_and_model_features():
+    import pandas as pd
+
+    row = {name: float(index + 2) for index, name in enumerate(ODDS_FEATURES)}
+    matrix = make_odds_feature_matrix(pd.DataFrame([row]))
+    assert list(matrix.columns) == ODDS_FEATURES
+    assert matrix.shape == (1, len(ODDS_FEATURES))
+    assert matrix.loc[0, "_odd_H"] > 1.0
+    assert matrix.loc[0, "_odd_D"] > 1.0
+    assert matrix.loc[0, "_odd_A"] > 1.0
+
+
+def test_odds_feature_matrix_rejects_invalid_odds():
+    import pandas as pd
+
+    row = {name: 1.5 for name in ODDS_FEATURES}
+    row["_odd_D"] = 1.0
+    with pytest.raises(ValueError, match="1.00'dan büyük"):
+        make_odds_feature_matrix(pd.DataFrame([row]))
+
+
 def test_prediction_format_contains_all_markets_and_disclaimer():
     result = {
         "home": "Galatasaray",
@@ -110,11 +133,56 @@ def test_prediction_format_contains_all_markets_and_disclaimer():
     assert DISCLAIMER in message
 
 
+def test_predict_uses_odds_aware_model_when_odds_are_supplied(monkeypatch):
+    import numpy as np
+    import pandas as pd
+
+    class FakeModel:
+        classes_ = np.array([0, 1, 2])
+
+        def __init__(self, probabilities):
+            self.probabilities = np.asarray(probabilities, dtype=float)
+            self.seen = None
+
+        def predict_proba(self, frame):
+            self.seen = frame.copy()
+            return self.probabilities.reshape(1, -1)
+
+    predictor = ZKahinPredictor()
+    predictor.team_names = {
+        normalize_team_name("Galatasaray"): ["Galatasaray"],
+        normalize_team_name("Fenerbahçe"): ["Fenerbahçe"],
+    }
+    predictor.label_encoder.fit(["H", "D", "A"])
+    predictor.label_encoder_odds.fit(["H", "D", "A"])
+    predictor.model_1x2 = FakeModel([0.7, 0.2, 0.1])
+    odds_model = FakeModel([0.2, 0.3, 0.5])
+    predictor.model_1x2_odds = odds_model
+    predictor.model_ou25 = FakeModel([0.4, 0.6])
+    monkeypatch.setattr(
+        predictor,
+        "_make_live_row",
+        lambda home, away: pd.DataFrame([{name: 0.0 for name in MODEL_FEATURES}]),
+    )
+
+    result = predictor.predict("Galatasaray", "Fenerbahçe", [1.95, 3.40, 3.20])
+
+    assert odds_model.seen is not None
+    assert list(odds_model.seen.columns) == ODDS_FEATURES
+    assert odds_model.seen.loc[0, "_odd_H"] == pytest.approx(1.95)
+    assert odds_model.seen.loc[0, "_odd_D"] == pytest.approx(3.40)
+    assert odds_model.seen.loc[0, "_odd_A"] == pytest.approx(3.20)
+    assert result["p_home_win"] == pytest.approx(0.5)
+    assert result["p_draw"] == pytest.approx(0.3)
+    assert result["p_away_win"] == pytest.approx(0.2)
+
+
 def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypatch):
     cache_path = tmp_path / "models" / "zkahin_bot_model.pkl"
     cache_path.parent.mkdir()
     predictor = ZKahinPredictor()
     predictor.model_1x2 = object()
+    predictor.model_1x2_odds = object()
     predictor.model_ou25 = object()
     joblib.dump(
         {"cache_version": CACHE_VERSION, "predictor": predictor},
@@ -128,4 +196,5 @@ def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypat
     loaded = load_or_train_predictor(cache_path)
     assert isinstance(loaded, ZKahinPredictor)
     assert loaded.model_1x2 is not None
+    assert loaded.model_1x2_odds is not None
     assert loaded.model_ou25 is not None
