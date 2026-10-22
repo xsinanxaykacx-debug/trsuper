@@ -1,0 +1,29 @@
+name: check-paths-tests
+
+on:
+  push:
+    paths:
+      - "scripts/check_paths.py"
+      - "tests/**"
+      - ".github/workflows/check_paths_test.yml"
+  pull_request:
+    paths:
+      - "scripts/check_paths.py"
+      - "tests/**"
+      - ".github/workflows/check_paths_test.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependency
+        run: python -m pip install pandas
+      - name: Run assertions
+        run: python -m unittest discover -s tests -v
