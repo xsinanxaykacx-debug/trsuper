@@ -43,3 +43,8 @@ docs/discovery_strong_candidates.csv
 
 __pycache__/
 *.pyc
+
+*.xlsx
+*.pkl
+180k*
+data/csv/180k*
