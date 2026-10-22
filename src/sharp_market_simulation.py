@@ -145,9 +145,9 @@ def simulate_bankroll(
     total_profit = 0.0
     rows = []
 
-    for row in bets.itertuples(index=False):
-        odds = float(getattr(row, odds_column))
-        won = bool(row.is_win)
+    for _, row in bets.iterrows():
+        odds = float(row[odds_column])
+        won = bool(row["is_win"])
         stake = bankroll * stake_fraction
         if stake <= 0.0 or not np.isfinite(stake):
             raise RuntimeError("Geçersiz kasa/bahis tutarı; simülasyon durduruldu.")
@@ -158,9 +158,9 @@ def simulate_bankroll(
         total_staked += stake
         total_profit += profit
         rows.append({
-            "_id": getattr(row, "_id"),
-            "_date": getattr(row, "_date"),
-            "selected_side": getattr(row, "selected_side"),
+            "_id": row["_id"],
+            "_date": row["_date"],
+            "selected_side": row["selected_side"],
             "is_win": won,
             "odds_used": odds,
             "bankroll_before": bankroll_before,
