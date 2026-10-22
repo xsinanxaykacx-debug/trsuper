@@ -1,4 +1,3 @@
-import pytest
 import numpy as np
 from src.load import load_data
 from src.models.market import MarketModel
