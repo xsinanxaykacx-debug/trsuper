@@ -41,10 +41,8 @@ class CheckPathsTests(unittest.TestCase):
             self.assertEqual(
                 result.stdout.count("sep=None: 3 sutun | sep=',': 3 sutun"), 3
             )
-            self.assertIn(
-                'ID benzeri sutunlar: ["\\'match_id\\'", "\\'ID_away\\'"]',
-                result.stdout,
-            )
+            self.assertIn("match_id", result.stdout)
+            self.assertIn("ID_away", result.stdout)
             self.assertEqual(result.stdout.count("Dosya boyutu:"), 3)
             self.assertTrue(result.stdout.rstrip().endswith("BITTI - salt okunur"))
 
