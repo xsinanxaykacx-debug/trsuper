@@ -483,7 +483,7 @@ async def help_command(update: Any, context: Any) -> None:
         "/start — Botu başlatır.\n"
         "/tahmin Ev Sahibi vs Deplasman — 1X2 ve Alt/Üst 2.5 olasılıkları.\n"
         "/value Ev Sahibi vs Deplasman 1 X 2 — 1X2 oranlarıyla EV analizi.\n"
-        "/value_ou Ev Sahibi vs Deplasman Alt Üst — Alt/Üst oranlarıyla EV analizi.\n"
+        "/value\\_ou Ev Sahibi vs Deplasman Alt Üst — Alt/Üst oranlarıyla EV analizi.\n"
         "/yardim — Komutları listeler.\n"
         "/hakkinda — Veri ve kullanım sınırları.\n\n"
         "*Örnekler*\n"
