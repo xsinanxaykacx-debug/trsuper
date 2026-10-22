@@ -53,3 +53,6 @@ data/csv/180k*
 .env
 .env.*
 !.env.example
+
+# Keep the pre-trained deployment artifact trackable
+!models/zkahin_bot_model.pkl
