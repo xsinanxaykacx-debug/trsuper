@@ -1,0 +1,14 @@
+name: z-kahin
+services:
+  - name: telegram-bot
+    type: web
+    instance: nano
+    regions:
+      - fra
+    ports:
+      - port: 8080
+        protocol: http
+    env:
+      - key: TELEGRAM_BOT_TOKEN
+        value: ""
+        secret: true
