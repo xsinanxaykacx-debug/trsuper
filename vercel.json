@@ -2,7 +2,8 @@
   "version": 2,
   "functions": {
     "api/webhook.py": {
-      "includeFiles": "src/**"
+      "includeFiles": "src/**",
+      "maxDuration": 10
     }
   },
   "routes": [
