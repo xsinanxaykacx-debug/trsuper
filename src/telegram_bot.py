@@ -542,11 +542,158 @@ async def prediction_command(update: Any, context: Any) -> None:
         await message.reply_text(format_prediction(result), parse_mode="Markdown")
 
 
-async def post_init(application: Any) -> None:
-    """Train once at startup without blocking Telegram's event loop."""
-    predictor = ZKahinPredictor()
+async def value_command(update: Any, context: Any) -> None:
+    message = update.effective_message
+    if message is None:
+        return
     try:
-        await asyncio.to_thread(predictor.load_and_train)
+        home_query, away_query, odds = parse_value_input(message.text or "", 3)
+    except ValueError as exc:
+        await message.reply_text(f"⚠️ {exc}")
+        return
+
+    predictor: ZKahinPredictor | None = context.application.bot_data.get("predictor")
+    if predictor is None:
+        await message.reply_text("Model henüz hazır değil. Biraz sonra tekrar dene.")
+        return
+    try:
+        result = await asyncio.to_thread(predictor.predict, home_query, away_query)
+    except ValueError as exc:
+        if str(exc) == "UNKNOWN_TEAM":
+            await message.reply_text("Takım bulunamadı, lütfen doğru yazdığınızdan emin olun.")
+        else:
+            await message.reply_text(f"⚠️ {exc}")
+        return
+    except Exception:
+        LOGGER.exception("1X2 value analizi oluşturulamadı.")
+        await message.reply_text("Value analizi hazırlanırken hata oluştu. Daha sonra tekrar dene.")
+        return
+
+    rows = calculate_value_rows(
+        [result["p_home_win"], result["p_draw"], result["p_away_win"]],
+        odds,
+        ["1 (Ev sahibi)", "X (Beraberlik)", "2 (Deplasman)"],
+    )
+    found = [row for row in rows if row["ev"] > VALUE_THRESHOLD]
+    home = _markdown_escape(result["home"])
+    away = _markdown_escape(result["away"])
+    if found:
+        lines = [f"💰 *VALUE BET BULUNDU!*\n*{home} - {away}*"]
+        for row in found:
+            lines.append(
+                f"\n*{_markdown_escape(str(row['label']))}* — "
+                f"Model: %{row['model_probability'] * 100:.1f}, "
+                f"Piyasa: %{row['market_probability'] * 100:.1f}, "
+                f"EV: {row['ev'] * 100:+.1f}% "
+                f"(oran {row['odds']:.2f})"
+            )
+        lines.extend(["", f"_{DISCLAIMER}_"])
+        await message.reply_text("\n".join(lines), parse_mode="Markdown")
+    else:
+        best = max(rows, key=lambda row: row["ev"])
+        await message.reply_text(
+            f"❌ *Bu oranlarda Value yok.*\n"
+            f"En yüksek EV: {best['ev'] * 100:+.1f}% — {_markdown_escape(str(best['label']))}\n\n"
+            f"_{DISCLAIMER}_",
+            parse_mode="Markdown",
+        )
+
+
+async def value_ou_command(update: Any, context: Any) -> None:
+    message = update.effective_message
+    if message is None:
+        return
+    try:
+        home_query, away_query, odds = parse_value_input(message.text or "", 2)
+    except ValueError as exc:
+        await message.reply_text(f"⚠️ {exc}")
+        return
+
+    predictor: ZKahinPredictor | None = context.application.bot_data.get("predictor")
+    if predictor is None:
+        await message.reply_text("Model henüz hazır değil. Biraz sonra tekrar dene.")
+        return
+    try:
+        result = await asyncio.to_thread(predictor.predict, home_query, away_query)
+    except ValueError as exc:
+        if str(exc) == "UNKNOWN_TEAM":
+            await message.reply_text("Takım bulunamadı, lütfen doğru yazdığınızdan emin olun.")
+        else:
+            await message.reply_text(f"⚠️ {exc}")
+        return
+    except Exception:
+        LOGGER.exception("Alt/Üst value analizi oluşturulamadı.")
+        await message.reply_text("Alt/Üst analizi hazırlanırken hata oluştu. Daha sonra tekrar dene.")
+        return
+
+    rows = calculate_value_rows(
+        [result["p_under25"], result["p_over25"]],
+        odds,
+        ["Alt 2.5", "Üst 2.5"],
+    )
+    found = [row for row in rows if row["ev"] > VALUE_THRESHOLD]
+    home = _markdown_escape(result["home"])
+    away = _markdown_escape(result["away"])
+    if found:
+        lines = [f"💰 *ALT/ÜST VALUE BET BULUNDU!*\n*{home} - {away}*"]
+        for row in found:
+            lines.append(
+                f"\n*{_markdown_escape(str(row['label']))}* — "
+                f"Model: %{row['model_probability'] * 100:.1f}, "
+                f"Piyasa: %{row['market_probability'] * 100:.1f}, "
+                f"EV: {row['ev'] * 100:+.1f}% "
+                f"(oran {row['odds']:.2f})"
+            )
+        lines.extend(["", f"_{DISCLAIMER}_"])
+        await message.reply_text("\n".join(lines), parse_mode="Markdown")
+    else:
+        best = max(rows, key=lambda row: row["ev"])
+        await message.reply_text(
+            f"❌ *Bu oranlarda Value yok.*\n"
+            f"En yüksek EV: {best['ev'] * 100:+.1f}% — {_markdown_escape(str(best['label']))}\n\n"
+            f"_{DISCLAIMER}_",
+            parse_mode="Markdown",
+        )
+
+
+def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
+    """Load cached models/state, or train and atomically cache them."""
+    if cache_path.is_file():
+        try:
+            with cache_path.open("rb") as cache_file:
+                payload = pickle.load(cache_file)
+            if (
+                isinstance(payload, dict)
+                and payload.get("cache_version") == CACHE_VERSION
+                and isinstance(payload.get("predictor"), ZKahinPredictor)
+                and payload["predictor"].model_1x2 is not None
+                and payload["predictor"].model_ou25 is not None
+            ):
+                LOGGER.info("Model önbellekten yüklendi: %s", cache_path)
+                return payload["predictor"]
+            LOGGER.warning("Model önbelleği geçersiz; yeniden eğitilecek.")
+        except Exception:
+            LOGGER.exception("Model önbelleği okunamadı; yeniden eğitilecek.")
+
+    predictor = ZKahinPredictor()
+    predictor.load_and_train()
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+    with temporary_path.open("wb") as cache_file:
+        pickle.dump(
+            {"cache_version": CACHE_VERSION, "predictor": predictor},
+            cache_file,
+            protocol=pickle.HIGHEST_PROTOCOL,
+        )
+    temporary_path.replace(cache_path)
+    LOGGER.info("Model ve tahmin durumu önbelleğe kaydedildi: %s", cache_path)
+    return predictor
+
+
+async def post_init(application: Any) -> None:
+    """Load the cached predictor or train once without blocking the event loop."""
+    try:
+        predictor = await asyncio.to_thread(load_or_train_predictor)
     except Exception:
         LOGGER.exception("Z-Kahin modelleri yüklenemedi.")
         raise
@@ -581,6 +728,8 @@ def main() -> None:
     )
     application.add_handler(CommandHandler("start", start_command))
     application.add_handler(CommandHandler("tahmin", prediction_command))
+    application.add_handler(CommandHandler("value", value_command))
+    application.add_handler(CommandHandler("value_ou", value_ou_command))
     application.add_handler(CommandHandler("yardim", help_command))
     application.add_handler(CommandHandler("hakkinda", about_command))
     LOGGER.info("Z-Kahin Telegram botu başlatılıyor.")
