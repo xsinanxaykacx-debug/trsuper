@@ -1,0 +1,53 @@
+name: Telegram bot cron
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-bot-cron
+  cancel-in-progress: false
+
+jobs:
+  run-bot-once:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository and saved offset
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: Process pending Telegram updates once
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          PYTHONUTF8: "1"
+        run: python scripts/run_bot_once.py
+
+      - name: Persist update offset
+        if: success()
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- last_update.txt; then
+            echo "Offset değişmedi; commit gerekmiyor."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last_update.txt
+          git commit -m "Update Telegram bot offset [skip ci]"
+          git push origin HEAD:main
