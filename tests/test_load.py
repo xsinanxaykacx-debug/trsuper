@@ -1,4 +1,3 @@
-import pytest
 from pathlib import Path
 from src.load import load_data, load_v16_reference
 

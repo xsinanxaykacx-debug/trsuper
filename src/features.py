@@ -1,7 +1,18 @@
+import re
 import pandas as pd
 import numpy as np
 from collections import deque, defaultdict
 from src.load import load_data
+
+
+def _league_key(value) -> str:
+    """Return a season-independent league key for feature-state isolation."""
+    if pd.isna(value):
+        return "__UNKNOWN_LEAGUE__"
+    value = str(value).strip()
+    value = re.sub(r"\s*\d{4}/\d{4}\s*$", "", value).strip()
+    return value or "__UNKNOWN_LEAGUE__"
+
 
 def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 1500.0) -> pd.DataFrame:
     """
@@ -11,6 +22,8 @@ def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 
     """
     df = df.sort_values(["_date", "_id"]).reset_index(drop=True)
     
+    # State keys include the league, so same-named clubs in different leagues
+    # can never share Elo, form, rest, or head-to-head history.
     elo = defaultdict(lambda: base_elo)
     recent_all = defaultdict(lambda: deque(maxlen=10))
     recent_home = defaultdict(lambda: deque(maxlen=10))
@@ -28,8 +41,9 @@ def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 
         # 1. AŞAMA: Günün maçları için özellikleri hesapla (Geçmişe bakarak)
         for r in day_records:
             mid = r["_id"]
-            h = r["Ev_Sahibi"]
-            a = r["Deplasman"]
+            league = _league_key(r.get("Lig/Sezon", r.get("Lig")))
+            h = (league, str(r["Ev_Sahibi"]).strip())
+            a = (league, str(r["Deplasman"]).strip())
             
             e_h = elo[h]
             e_a = elo[a]
@@ -51,7 +65,7 @@ def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 
             
             hk = tuple(sorted([h, a]))
             q_h2h = list(h2h[hk])
-            h2h_share = sum(1 for w in q_h2h if w == h) / len(q_h2h) if q_h2h else np.nan
+            h2h_share = sum(1 for winner in q_h2h if winner == h) / len(q_h2h) if q_h2h else np.nan
             
             feat_rows.append({
                 "_id": mid,
@@ -71,8 +85,9 @@ def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 
         
         for r in day_records:
             mid = r["_id"]
-            h = r["Ev_Sahibi"]
-            a = r["Deplasman"]
+            league = _league_key(r.get("Lig/Sezon", r.get("Lig")))
+            h = (league, str(r["Ev_Sahibi"]).strip())
+            a = (league, str(r["Deplasman"]).strip())
             y = r["_y"]
             
             hg = pd.to_numeric(r["MSE"], errors="coerce")
@@ -101,7 +116,8 @@ def calculate_elo_features(df: pd.DataFrame, K: float = 20.0, base_elo: float = 
             last_dt[a] = day
             
             hk = tuple(sorted([h, a]))
-            h2h[hk].append(y)
+            winner = h if y == "H" else (a if y == "A" else None)
+            h2h[hk].append(winner)
             
         for team, delta in deltas.items():
             elo[team] += delta
