@@ -1,0 +1,201 @@
+Toplam: 7422 satır × 355 sütun
+Tarih aralığı: 2014-01-11 → 2025-12-28
+Sezon sayısı: 13
+
+==============================================================================
+SÜTUN ENVANTERİ
+==============================================================================
+
+[Saat]
+  dtype=str  missing=0.0%  unique=48
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['14:00', '19:00', '13:30', '16:30', '20:00']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Stadyum]
+  dtype=str  missing=0.1%  unique=96
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['Atatürk Olimpiyat', 'Ordu 19 Eylül', 'Denizli Atatürk', 'Kahramanmaraş 12 Şubat', 'Dumlupınar']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Hakem]
+  dtype=str  missing=0.0%  unique=135
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['Kutluhan Bilgiç', 'Serkan Çınar.', 'Özgüç Türkalp', 'Deniz Çoban', 'Bülent Birincioğlu']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Ev_Sahibi_Teknik_Direktör]
+  dtype=str  missing=0.3%  unique=362
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['Cihat Arslan', 'Erkan Sözeri', 'Özcan Bizati', 'Orhan Şerit', 'Ali Nail Durmuş']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=99, 2020/21=99, 2021/22=99, 2022/23=100, 2023/24=100, 2024/25=99, 2025/26=100
+
+[Deplasman_Teknik_Direktör]
+  dtype=str  missing=0.3%  unique=367
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['Hüseyin Kalpar', 'Levent Eriş', 'Hasan Özer', 'Mustafa Bahadır', 'İsmail Ertekin']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=99, 2020/21=99, 2021/22=100, 2022/23=99, 2023/24=99, 2024/25=100, 2025/26=99
+
+[Ev_Kadro]
+  dtype=str  missing=0.0%  unique=7033
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['61 Oğuzhan Bahadır; 15 Orhan Taşdelen; 54 Hüseyin Tok; 82 Veysel Aksu; 5 Mahmut Tekdemir; 7 Edin Visca; 10 Doka; 16 Mustafa Sarp; 63 Fevzi Özkan; 67 Enver Cenk Şahin; 9 Mehmet Batdal', '74 Alişan Şeker; 4 Adem Sağlam; 5 Bakary Soro; 6 Erkan Sekman; 93 Canberk Dilaver; 7 Emre Aygün; 10 Anıl Taşdemir; 59 Guy-Michel Landel; 67 Salih Sefercik; 77 Bilal Türkgüler; 20 Branimir Subasic', '20 Ozan Evrim Özenç; 2 Ömer Kandemir; 27 Süleyman Çelikyurt; 28 Yenal Tuncer; 33 Saşa Yunisoğlu; 58 Mehmet Cansın Çiçek; 5 Bülent Ertuğrul; 8 Onur Alkan; 54 Levent Demiray; 9 Serdar Dursun; 10 Kahe', '13 Ersel Çetinkaya; 3 Ümit Karaal; 52 Serkan Özsoy; 77 Fahrettin Bıyıklı; 7 Adem Aydın; 10 Sinan Turan; 16 Mert Er Estik; 41 Onur Türk; 90 Cumhur Yılmaztürk; 9 Onur Berber; 35 Aytaç Deniz', '41 Metin Erol; 14 Hakan Çevik; 23 Sakıb Aytaç; 26 Batuhan Tur; 48 Murat Özavcı; 6 Ahmet Topal; 10 Mehmet Besler; 13 Cafercan Aksu; 15 Soner Özdemir; 81 Ömürcan Yıldırımlı; 27 Egecan Çevir']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Deplasman_Kadro]
+  dtype=str  missing=0.0%  unique=7111
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['1 Soner Şahin; 4 Fatih Kılıçkaya; 32 Murat Akyüz; 60 Ahmet Burak Solakel; 6 Erdem Şen; 7 Musa Aydın; 11 Musa Sinan Yılmazer; 20 Umar Aminu; 55 Adnan Güngör; 88 Taha Yalçıner; 99 Eldin Adilovic', '55 Yaşar Memişoğullarından; 28 Merthan Açıl; 43 Veli Kızılkaya; 58 İzzet Yıldırım; 10 Talha Mayhoş; 17 Tiago Bezerra; 18 Mehmet Boztepe; 25 Fatih Şen; 27 Marko Vucetic; 50 Can Tamursoylu; 90 Mehmet Sak', '68 Tolga Özgen; 3 Ferit Cömert; 4 Cihan Can; 89 Erkam Reşmen; 94 İsa Akgöl; 5 Ercan Çapar; 11 Ramazan Altıntepe; 27 İbrahim Ferdi Coşkun; 9 Abdullah Halman; 17 Sinan Özkan; 23 Serdar Deliktaş', '46 Ömer Kahveci; 3 Hakan Çinemre; 13 Luiz Henrique; 17 Okan Alkan; 95 Batuhan İşçiler; 7 Zafer Çevik; 8 Taylan Antalyalı; 14 Ferhat Çulcuoğlu; 27 Recep Niyaz; 66 Emre Şahin; 9 Atilla Yıldırım', '15 Emrullah Şalk; 2 Caner Arıcı; 3 İsmail Dinler; 4 Rıza Efendioğlu; 45 Hasan Hatipoğlu; 24 Muhammet Reis; 58 Ertuğrul Arslan; 70 İlhan Depe; 71 Khalifa Jabbie; 10 Ali Öztürk; 12 Kwame Karikari']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Ev_Yedek]
+  dtype=str  missing=0.0%  unique=7349
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['1 Eser Altın; 66 Gençer Cansev; 3 Sedat Ağçay; 34 Tayfun Pektürk; 77 Abdulaziz Solmaz; 11 Murat Yılmaz; 99 İbrahim Yılmaz', '23 Valeriy Fomichev; 2 Mustafa Tuna Kaya; 21 Ufukhan Bayraktar; 8 Selçuk Özkan; 15 Hasan Üçüncü; 17 Ziya Alkurt; 89 Reha Kurt', '95 Ogün Karakaya; 16 Cihan Özkaymak; 17 Sinan Fatih Kaplan; 35 Mert Çakar; 52 Barış Örücü; 80 Şevki Çınar', '46 Hacı Ahmet Kaplan; 87 Mehmet Ballı; 88 Niyazi Erdem; 92 Sadi Karaduman; 95 Süheyl Çetin; 17 Emre Can Karakız; 79 Sinan Kurumuş', '1 Gökhan Köstereli; 2 Musa Dolu; 4 Kemal Bersis Çanak; 18 Veli Akbulut; 22 Hasan Yaşar; 35 Hasan Erbey; 9 Abdi Aktaş']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Deplasman_Yedek]
+  dtype=str  missing=0.0%  unique=7362
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['16 Atilla Özmen; 35 Tuna Üzümcü; 54 Şaban Özel; 5 Turgay Gölbaşı; 8 Serkan Çalık; 22 Arif Şahin; 10 Ekigho Ehiosun', '23 Aykut Kıratlı; 21 Emre Uruç; 14 Ali Zorlu; 36 Ömer Karancı; 99 Ahmet Dereli', '58 Onur Bulut; 22 Olcay Gür; 61 Onur Kalafat; 8 Ali Sakal; 10 Kenan Aslanoğlu; 34 Erhan Şentürk; 77 Yücel Candemir', '34 Ziya Aydın; 4 Taha Can Velioğlu; 10 Mehmet İncebacak; 41 Berkay Samancı; 67 Zekeriya Kacaroğlu; 75 Hüseyin Bilican; 58 Hasan Kaşıkara', '89 Ertuğrul Furkan; 5 Murat Sözgelmez; 6 Aykut Çeviker; 9 Atakora Lalawele; 23 Deniz Vural; 11 Burak Çalık; 77 Okan Deniz']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Seyirci]
+  dtype=str  missing=61.4%  unique=1953
+  Dolu olduğu tarih aralığı: 2014-01-24 → 2025-12-22
+  örnek değerler: ['5.000 kişi', '6.400 kişi', '22.500 kişi', '24.169 kişi', '8.700 kişi']
+  -> 'kişi' suffix temizlenmiş sayısal profil:
+     dolu=2862, min=23.0, max=68514.0, mean=9303.8
+  sezon doluluk %: 2013/14=47, 2014/15=50, 2015/16=97, 2016/17=90, 2017/18=1, 2018/19=0, 2019/20=0, 2020/21=0, 2021/22=36, 2022/23=48, 2023/24=49, 2024/25=46, 2025/26=43
+
+[İY_Skor]
+  dtype=str  missing=0.0%  unique=28
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['1-1', '0-0', '0-1', '1-0', '3-0']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Skor]
+  dtype=str  missing=0.0%  unique=50
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['1-3', '2-0', '1-1', '2-4', '0-2']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[İYE]
+  dtype=int64  missing=0.0%  unique=7
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  min=0  max=6  mean=0.641
+  Integer görünüm: True
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[İYD]
+  dtype=int64  missing=0.0%  unique=7
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  min=0  max=6  mean=0.522
+  Integer görünüm: True
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[MSE]
+  dtype=int64  missing=0.0%  unique=8
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  min=0  max=7  mean=1.502
+  Integer görünüm: True
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[MSD]
+  dtype=int64  missing=0.0%  unique=9
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  min=0  max=8  mean=1.207
+  Integer görünüm: True
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[İYS]
+  dtype=str  missing=0.0%  unique=3
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['X', '2', '1']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[MS]
+  dtype=str  missing=0.0%  unique=3
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['2', '1', 'X']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[TG]
+  dtype=str  missing=0.0%  unique=4
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['4-5', '2-3', '6+', '0-1']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[KGVY]
+  dtype=str  missing=0.0%  unique=2
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['VAR', 'YOK']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Lig/Sezon]
+  dtype=str  missing=0.0%  unique=26
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  örnek değerler: ['Türkiye PTT 1. Lig 2013/2014', 'Türkiye Spor Toto Süper Lig 2013/2014', 'Türkiye Spor Toto Süper Lig 2014/2015', 'Türkiye PTT 1. Lig 2014/2015', 'Türkiye Spor Toto Süper Lig 2015/2016']
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+[Maç_ID]
+  dtype=int64  missing=0.0%  unique=7422
+  Dolu olduğu tarih aralığı: 2014-01-11 → 2025-12-28
+  min=1192351  max=4308992  mean=3067949.011
+  Integer görünüm: True
+  sezon doluluk %: 2013/14=100, 2014/15=100, 2015/16=100, 2016/17=100, 2017/18=100, 2018/19=100, 2019/20=100, 2020/21=100, 2021/22=100, 2022/23=100, 2023/24=100, 2024/25=100, 2025/26=100
+
+==============================================================================
+MAÇ_ID KONTROLÜ
+==============================================================================
+Toplam satır: 7422, unique Maç_ID: 7422
+Tekrarlı Maç_ID sayısı: 0
+
+==============================================================================
+KATEGORİK KARDİNALİTE
+==============================================================================
+  Hakem: unique=135
+  Stadyum: unique=96
+  Ev_Sahibi_Teknik_Direktör: unique=362
+  Deplasman_Teknik_Direktör: unique=367
+  Ev_Sahibi: unique=85
+  Deplasman: unique=85
+
+  Hakem başına maç: medyan=40, mean=55.0, min=1, max=206
+  En az 20 maç yöneten hakem sayısı: 88
+
+  Ev_Sahibi_Teknik_Direktör başına maç: medyan=7, mean=20.4, max=169
+  En az 30 maçlı TD sayısı: 75
+
+  Deplasman_Teknik_Direktör başına maç: medyan=7, mean=20.2, max=169
+  En az 30 maçlı TD sayısı: 74
+
+  Stadyum başına maç: medyan=55, mean=77.2, max=275
+  En az 30 maçlı stadyum sayısı: 62
+
+==============================================================================
+ÖRNEK SATIRLAR (aday sütunlar)
+==============================================================================
+        date                     Lig/Sezon            Ev_Sahibi       Deplasman   Saat                 Stadyum                 Hakem Ev_Sahibi_Teknik_Direktör Deplasman_Teknik_Direktör Seyirci
+0 2014-01-11  Türkiye PTT 1. Lig 2013/2014        İstanbul BBSK      Samsunspor  14:00       Atatürk Olimpiyat       Kutluhan Bilgiç              Cihat Arslan            Hüseyin Kalpar     NaN
+1 2014-01-11  Türkiye PTT 1. Lig 2013/2014             Orduspor       Adanaspor  19:00           Ordu 19 Eylül         Serkan Çınar.              Erkan Sözeri               Levent Eriş     NaN
+2 2014-01-12  Türkiye PTT 1. Lig 2013/2014   Tekden Denizlispor  Gaziantep BBSK  13:30         Denizli Atatürk         Özgüç Türkalp              Özcan Bizati                Hasan Özer     NaN
+3 2014-01-12  Türkiye PTT 1. Lig 2013/2014    Kahramanmaraşspor        Bucaspor  13:30  Kahramanmaraş 12 Şubat           Deniz Çoban               Orhan Şerit           Mustafa Bahadır     NaN
+4 2014-01-12  Türkiye PTT 1. Lig 2013/2014  Tavşanlı Linyitspor   Balıkesirspor  13:30              Dumlupınar    Bülent Birincioğlu           Ali Nail Durmuş            İsmail Ertekin     NaN
+5 2014-01-12  Türkiye PTT 1. Lig 2013/2014          Fethiyespor    1461 Trabzon  16:30            Fethiye İlçe    Abdulkadir Bitigen            Engin İpekoğlu          Cemil Canalioğlu     NaN
+6 2014-01-12  Türkiye PTT 1. Lig 2013/2014            Karşıyaka   Şanlıurfaspor  16:30                Alsancak         Özkan Çeliker              Yusuf Şimşek               Reha Kapsal     NaN
+7 2014-01-12  Türkiye PTT 1. Lig 2013/2014           Manisaspor      Ankaraspor  19:00         Manisa 19 Mayıs  Mustafa Öğretmenoğlu               Kemal Özdeş             Osman Özköylü     NaN
+
+==============================================================================
+ÖN SINIFLANDIRMA
+==============================================================================
+  Saat: maç öncesi bilinir
+  Stadyum: maç öncesi bilinir (sabit tesis)
+  Hakem: maç öncesi bilinir (atama duyurulur)
+  Ev_Sahibi_Teknik_Direktör: maç öncesi bilinir (sezon içi istikrarlı)
+  Deplasman_Teknik_Direktör: maç öncesi bilinir
+  Ev_Kadro: maç öncesi kesin değil (T-60 dk açıklanır)
+  Deplasman_Kadro: maç öncesi kesin değil
+  Ev_Yedek: maç öncesi kesin değil
+  Deplasman_Yedek: maç öncesi kesin değil
+  Seyirci: MAÇ SONRASI (kayıt) — doğrudan kullanılamaz; geçmiş seyirci ortalaması as-of-date türetilebilir

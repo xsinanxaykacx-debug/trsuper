@@ -1,0 +1,148 @@
+==============================================================================
+1. parse_league DAVRANIŞI
+==============================================================================
+   'Türkiye PTT 1. Lig 2013/2014'  (n=171)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye PTT 1. Lig 2014/2015'  (n=306)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye PTT 1. Lig 2015/2016'  (n=305)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Spor Toto 1. Lig 2017/2018'  (n=296)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Spor Toto 1. Lig 2018/2019'  (n=268)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Spor Toto 1. Lig 2020/2021'  (n=303)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Spor Toto Süper Lig 2013/2014'  (n=154)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2014/2015'  (n=306)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2015/2016'  (n=306)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2016/2017'  (n=306)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2017/2018'  (n=305)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2018/2019'  (n=305)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2020/2021'  (n=380)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig 2022/2023'  (n=292)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Spor Toto Süper Lig Ahmet Çalık Sezonu 2021/2022'  (n=341)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Süper Lig 2019/2020'  (n=306)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye TFF 1. Lig 2019/2020'  (n=268)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye TFF 1. Lig 2021/2022'  (n=326)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye TFF 1. Lig 2022/2023'  (n=287)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+>>> 'Türkiye TFF 1.Lig 2016/2017'  (n=306)
+     v1.5 -> Other        fix -> 1. Lig
+   'Türkiye Trendyol 1. Lig 2023/2024'  (n=296)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Trendyol 1. Lig 2024/2025'  (n=346)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Trendyol 1. Lig 2025/2026'  (n=157)
+     v1.5 -> 1. Lig       fix -> 1. Lig
+   'Türkiye Trendyol Süper Lig 2023/2024'  (n=337)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Trendyol Süper Lig 2025/2026'  (n=152)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+   'Türkiye Trendyol Süper Lig Şamil Ekinci Sezonu 2024/2025'  (n=297)
+     v1.5 -> Süper Lig    fix -> Süper Lig
+
+Filtre sonucu değişen satır: 306
+  Sezon(lar): ['2016/2017']
+  Lig/Sezon değeri: ['Türkiye TFF 1.Lig 2016/2017']
+
+==============================================================================
+2. v1.5 FİLTRELEME SIRASI (kodla birebir)
+==============================================================================
+  0. Başlangıç   : 7422
+  1. date        : 7422 -> 7422  (-0)
+  2. season      : 7422 -> 7422  (-0)
+  3. league      : 7422 -> 7116  (-306)
+  4. MS          : 7116 -> 7116  (-0)
+  Filtre sonrası: 7116
+
+==============================================================================
+3. 306 MAÇIN FAIR-ODDS ve SKOR DURUMU
+==============================================================================
+Other sınıfındaki maç: 306
+  valid_odds = True : 306
+  valid_odds = False: 0
+  valid_score = True : 306
+  valid_score = False: 0
+
+==============================================================================
+4. TEST KÜMESİ ETKİSİ (fair, sezon bazında)
+==============================================================================
+
+--- v1.5 (mevcut, 7116) ---
+season        test_full  test_fair
+2016/2017           306        306
+2017/2018           601        601
+2018/2019           573        573
+2019/2020           574        574
+2020/2021           683        683
+2021/2022           667        666
+2022/2023           579        579
+2023/2024           633        629
+2024/2025           643        632
+2025/2026           309        305
+TOTAL              5568       5548
+
+--- Fix (lig normalizasyonu) ---
+season        test_full  test_fair   Δ full   Δ fair
+2016/2017           612        612     +306     +306
+2017/2018           601        601       +0       +0
+2018/2019           573        573       +0       +0
+2019/2020           574        574       +0       +0
+2020/2021           683        683       +0       +0
+2021/2022           667        666       +0       +0
+2022/2023           579        579       +0       +0
+2023/2024           633        629       +0       +0
+2024/2025           643        632       +0       +0
+2025/2026           309        305       +0       +0
+TOTAL              5874       5854     +306     +306
+
+==============================================================================
+5. COMMON FAIR ETKİSİ
+==============================================================================
+  v1.5 common fair toplamı : 5548
+  Fix sonrası toplam       : 5854
+  Net değişim              : +306 maç
+
+  Yorum: RF'nin v1.5 metrikleri (1.0236 / 0.6132 / 49.26%)
+  5548 maç üzerinde hesaplandı. Fix sonrası fair küme
+  5854 maça çıkar. İki metrik kümesi doğrudan karşılaştırılamaz;
+  v1.6 ayrı bir baseline olarak kurulacak, v1.5 tarihsel referans kalır.
+
+==============================================================================
+6. 2016/2017 DETAYI
+==============================================================================
+Toplam maç         : 612
+Lig (v1.5)         : {'Süper Lig': 306, 'Other': 306}
+Lig (fix)          : {'Süper Lig': 306, '1. Lig': 306}
+
+1. Lig 2016/2017:
+  Toplam          : 306
+  valid_odds=True : 306
+  valid_odds=False: 0
+  valid_score=True: 306
+
+==============================================================================
+7. SINIFLANDIRMA DÜZELTMELERİ (not)
+==============================================================================
+  MS           -> TARGET
+  İY05AÜ       -> LEAKY
+  İY15AÜ       -> LEAKY
+  İY25AÜ       -> LEAKY
+  MS05AÜ       -> LEAKY
+  MS15AÜ       -> LEAKY
+  MS25AÜ       -> LEAKY
+  MS35AÜ       -> LEAKY
+  date         -> HELPER
