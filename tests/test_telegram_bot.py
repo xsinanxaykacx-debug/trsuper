@@ -6,10 +6,12 @@ from src.telegram_bot import (
     CACHE_VERSION,
     DISCLAIMER,
     MODEL_FEATURES,
+    ODDS_FEATURES,
     ZKahinPredictor,
     calculate_value_rows,
     format_prediction,
     make_feature_matrix,
+    make_odds_feature_matrix,
     normalize_team_name,
     parse_match_input,
     parse_odds,
@@ -90,6 +92,27 @@ def test_feature_matrix_orders_columns_and_replaces_missing_values():
     assert matrix["rest_h"].iloc[0] == 0.0
 
 
+def test_odds_feature_matrix_includes_all_three_odds_and_model_features():
+    import pandas as pd
+
+    row = {name: float(index + 2) for index, name in enumerate(ODDS_FEATURES)}
+    matrix = make_odds_feature_matrix(pd.DataFrame([row]))
+    assert list(matrix.columns) == ODDS_FEATURES
+    assert matrix.shape == (1, len(ODDS_FEATURES))
+    assert matrix.loc[0, "_odd_H"] > 1.0
+    assert matrix.loc[0, "_odd_D"] > 1.0
+    assert matrix.loc[0, "_odd_A"] > 1.0
+
+
+def test_odds_feature_matrix_rejects_invalid_odds():
+    import pandas as pd
+
+    row = {name: 1.5 for name in ODDS_FEATURES}
+    row["_odd_D"] = 1.0
+    with pytest.raises(ValueError, match="1.00'dan büyük"):
+        make_odds_feature_matrix(pd.DataFrame([row]))
+
+
 def test_prediction_format_contains_all_markets_and_disclaimer():
     result = {
         "home": "Galatasaray",
@@ -115,6 +138,7 @@ def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypat
     cache_path.parent.mkdir()
     predictor = ZKahinPredictor()
     predictor.model_1x2 = object()
+    predictor.model_1x2_odds = object()
     predictor.model_ou25 = object()
     joblib.dump(
         {"cache_version": CACHE_VERSION, "predictor": predictor},
@@ -128,4 +152,5 @@ def test_cache_load_does_not_retrain_when_valid_cache_exists(tmp_path, monkeypat
     loaded = load_or_train_predictor(cache_path)
     assert isinstance(loaded, ZKahinPredictor)
     assert loaded.model_1x2 is not None
+    assert loaded.model_1x2_odds is not None
     assert loaded.model_ou25 is not None
