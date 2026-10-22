@@ -22,12 +22,29 @@ if str(ROOT) not in sys.path:
 # Set this before importing telegram_bot so its default cache path is /tmp.
 os.environ.setdefault("ZKAHIN_CACHE_PATH", "/tmp/zkahin_bot_model.pkl")
 
-from telegram import Update
+from telegram import Bot, Update
 from src.telegram_bot import build_application, load_or_train_predictor
 
 LOGGER = logging.getLogger("zkahin.vercel")
 _PREDICTOR: Any = None
 _PREDICTOR_LOCK = threading.Lock()
+
+
+async def _register_webhook() -> bool:
+    """Register the deployed Vercel endpoint with Telegram."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    webhook_url = os.environ.get("WEBHOOK_URL", "").strip()
+    if not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN environment variable is not configured")
+    if not webhook_url.startswith("https://"):
+        raise RuntimeError("WEBHOOK_URL must be the complete https://.../api/webhook URL")
+    secret = os.environ.get("TELEGRAM_WEBHOOK_SECRET") or None
+    async with Bot(token=token) as bot:
+        return await bot.set_webhook(
+            url=webhook_url,
+            secret_token=secret,
+            allowed_updates=["message"],
+        )
 
 
 def get_predictor() -> Any:
@@ -77,7 +94,21 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write(encoded)
 
     def do_GET(self) -> None:
-        self._respond(200, {"status": "ok", "service": "z-kahin-telegram-webhook"})
+        # Visiting the endpoint once after deployment registers Telegram's webhook.
+        try:
+            registered = asyncio.run(_register_webhook())
+        except Exception:
+            LOGGER.exception("Telegram webhook registration failed")
+            self._respond(500, {"error": "webhook registration failed"})
+            return
+        self._respond(
+            200,
+            {
+                "status": "ok",
+                "service": "z-kahin-telegram-webhook",
+                "webhook_registered": str(bool(registered)).lower(),
+            },
+        )
 
     def do_POST(self) -> None:
         expected_secret = os.environ.get("TELEGRAM_WEBHOOK_SECRET", "")
