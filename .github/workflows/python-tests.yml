@@ -20,7 +20,7 @@ jobs:
           cache: pip
 
       - name: Install project and test dependencies
-        run: python -m pip install numpy pandas scipy scikit-learn pytest
+        run: python -m pip install numpy pandas scipy scikit-learn xgboost pytest
 
       - name: Run test suite
         env:
