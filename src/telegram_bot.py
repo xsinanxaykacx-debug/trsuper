@@ -725,10 +725,18 @@ async def value_ou_command(update: Any, context: Any) -> None:
 
 
 def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
-    """Load cached models/state, or train and atomically cache them."""
-    if cache_path.is_file():
+    """Load a pre-trained artifact; never train during a bot/serverless startup."""
+    repo_model_path = Path(__file__).resolve().parents[1] / "models" / "zkahin_bot_model.pkl"
+    release_url = os.environ.get(
+        "ZKAHIN_MODEL_URL",
+        "https://github.com/xsinanxaykacx-debug/trsuper/releases/latest/download/zkahin_bot_model.pkl",
+    ).strip()
+    candidates = [cache_path, repo_model_path]
+    seen: set[str] = set()
+
+    def load_artifact(path: Path) -> ZKahinPredictor | None:
         try:
-            payload = joblib.load(cache_path)
+            payload = joblib.load(path)
             if (
                 isinstance(payload, dict)
                 and payload.get("cache_version") == CACHE_VERSION
@@ -737,25 +745,61 @@ def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
                 and payload["predictor"].model_1x2_odds is not None
                 and payload["predictor"].model_ou25 is not None
             ):
-                LOGGER.info("Model önbellekten yüklendi: %s", cache_path)
+                LOGGER.info("Önceden eğitilmiş model yüklendi: %s", path)
                 return payload["predictor"]
-            LOGGER.warning("Model önbelleği geçersiz; yeniden eğitilecek.")
+            LOGGER.warning("Model dosyası beklenen biçimde değil: %s", path)
         except Exception:
-            LOGGER.exception("Model önbelleği okunamadı; yeniden eğitilecek.")
+            LOGGER.exception("Model dosyası okunamadı: %s", path)
+        return None
 
-    predictor = ZKahinPredictor()
-    predictor.load_and_train()
-    cache_path.parent.mkdir(parents=True, exist_ok=True)
-    temporary_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
-    joblib.dump(
-        {"cache_version": CACHE_VERSION, "predictor": predictor},
-        temporary_path,
-        compress=3,
+    for path in candidates:
+        key = str(path.resolve())
+        if key in seen:
+            continue
+        seen.add(key)
+        if path.is_file():
+            predictor = load_artifact(path)
+            if predictor is not None:
+                # Repo içindeki model, /tmp önbelleğine kopyalanır; sonraki
+                # sıcak çağrılarda tekrar diskten açılması gerekmez.
+                if path.resolve() != cache_path.resolve():
+                    try:
+                        cache_path.parent.mkdir(parents=True, exist_ok=True)
+                        temporary_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+                        joblib.dump(
+                            {"cache_version": CACHE_VERSION, "predictor": predictor},
+                            temporary_path,
+                            compress=3,
+                        )
+                        temporary_path.replace(cache_path)
+                    except OSError:
+                        LOGGER.warning("Model /tmp önbelleğine kopyalanamadı.", exc_info=True)
+                return predictor
+
+    if release_url:
+        try:
+            from urllib.request import Request, urlopen
+
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
+            temporary_path = cache_path.with_suffix(cache_path.suffix + ".download")
+            request = Request(
+                release_url,
+                headers={"User-Agent": "z-kahin-model-loader/1.0"},
+            )
+            with urlopen(request, timeout=8) as response, temporary_path.open("wb") as output:
+                output.write(response.read())
+            predictor = load_artifact(temporary_path)
+            if predictor is not None:
+                temporary_path.replace(cache_path)
+                LOGGER.info("Model GitHub Releases üzerinden indirildi.")
+                return predictor
+            temporary_path.unlink(missing_ok=True)
+        except Exception:
+            LOGGER.warning("GitHub Releases model indirmesi başarısız: %s", release_url, exc_info=True)
+
+    raise FileNotFoundError(
+        "Model dosyası bulunamadı, lütfen export_model.py çalıştırın ve dosyayı repoya ekleyin."
     )
-    temporary_path.replace(cache_path)
-    LOGGER.info("Model ve tahmin durumu önbelleğe kaydedildi: %s", cache_path)
-    return predictor
-
 
 async def post_init(application: Any) -> None:
     """Load the cached predictor or train once without blocking the event loop."""
