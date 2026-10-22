@@ -767,6 +767,25 @@ async def post_init(application: Any) -> None:
     application.bot_data["predictor"] = predictor
 
 
+def build_application(token: str) -> Any:
+    """Build the Telegram application with all bot handlers."""
+    from telegram.ext import Application, CommandHandler
+
+    application = (
+        Application.builder()
+        .token(token)
+        .post_init(post_init)
+        .build()
+    )
+    application.add_handler(CommandHandler("start", start_command))
+    application.add_handler(CommandHandler("tahmin", prediction_command))
+    application.add_handler(CommandHandler("value", value_command))
+    application.add_handler(CommandHandler("value_ou", value_ou_command))
+    application.add_handler(CommandHandler("yardim", help_command))
+    application.add_handler(CommandHandler("hakkinda", about_command))
+    return application
+
+
 def main() -> None:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
@@ -787,18 +806,7 @@ def main() -> None:
         level=os.environ.get("LOG_LEVEL", "INFO").upper(),
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
-    application = (
-        Application.builder()
-        .token(token)
-        .post_init(post_init)
-        .build()
-    )
-    application.add_handler(CommandHandler("start", start_command))
-    application.add_handler(CommandHandler("tahmin", prediction_command))
-    application.add_handler(CommandHandler("value", value_command))
-    application.add_handler(CommandHandler("value_ou", value_ou_command))
-    application.add_handler(CommandHandler("yardim", help_command))
-    application.add_handler(CommandHandler("hakkinda", about_command))
+    application = build_application(token)
     LOGGER.info("Z-Kahin Telegram botu başlatılıyor.")
     webhook_url = os.environ.get("WEBHOOK_URL", "").strip()
     if webhook_url:
