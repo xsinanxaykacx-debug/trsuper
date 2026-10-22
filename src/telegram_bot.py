@@ -762,13 +762,11 @@ def load_or_train_predictor(cache_path: Path = CACHE_PATH) -> ZKahinPredictor:
             if predictor is not None:
                 if path.resolve() != cache_path.resolve():
                     try:
+                        import shutil
+
                         cache_path.parent.mkdir(parents=True, exist_ok=True)
                         temporary_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
-                        joblib.dump(
-                            {"cache_version": CACHE_VERSION, "predictor": predictor},
-                            temporary_path,
-                            compress=3,
-                        )
+                        shutil.copy2(path, temporary_path)
                         temporary_path.replace(cache_path)
                     except OSError:
                         LOGGER.warning("Model /tmp önbelleğine kopyalanamadı.", exc_info=True)
