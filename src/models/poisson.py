@@ -7,7 +7,6 @@ def _rates(features):
     return home_rate,away_rate
 
 def poisson_probabilities(features):
-    # All inputs are pre-match rolling features. Grid is home goals by away goals.
     home_rate,away_rate=_rates(features)
     grid=np.arange(7)
     rows=[]
@@ -21,7 +20,7 @@ def poisson_probabilities(features):
         mat[1,1]*=max(.1,1-rho)
         mat=mat/mat.sum()
         rows.append([mat[np.tril_indices(7,-1)].sum(),mat.trace(),mat[np.triu_indices(7,1)].sum()])
-    p=np.asarray(rows)
+    p=np.asarray(rows)  # H, D, A
     return p/p.sum(axis=1,keepdims=True)
 
 def goal_market_probabilities(features):
