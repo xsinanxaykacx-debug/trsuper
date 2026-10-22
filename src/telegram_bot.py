@@ -908,7 +908,6 @@ def main() -> None:
     except KeyboardInterrupt:
         LOGGER.info("Kapatma sinyali alındı.")
     finally:
-        server.shutdown()
         server.server_close()
 
 
