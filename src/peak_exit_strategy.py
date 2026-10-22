@@ -357,6 +357,8 @@ def main() -> None:
 
     total_sessions_opened = int(len(sessions_df))
     trailing_count = int(len(trailing))
+    profitable_trailing_count = int((trailing["net_profit_loss"] > 0.0).sum())
+    losing_trailing_count = trailing_count - profitable_trailing_count
     stop_count = int(len(stop_loss))
     active_count = int(len(active))
     highest_peak = float(sessions_df["peak_bankroll"].max())
@@ -383,6 +385,8 @@ def main() -> None:
         "bets_placed": total_bets,
         "sessions_opened": total_sessions_opened,
         "sessions_closed_by_trailing_25pct": trailing_count,
+        "profitable_trailing_exit_sessions": profitable_trailing_count,
+        "nonprofitable_trailing_exit_sessions": losing_trailing_count,
         "sessions_closed_by_below_50_stop_loss": stop_count,
         "active_sessions_at_test_end": active_count,
         "highest_bankroll_peak": highest_peak,
@@ -405,7 +409,9 @@ def main() -> None:
     print("=" * 104)
     print(f"Test akışı: {', '.join(TEST_SEASONS)} (tek kronolojik simülasyon)")
     print(f"Toplam açılan seans: {total_sessions_opened}")
-    print(f"Zirveden %25 düşüş ile kapanan: {trailing_count}")
+    print(f"Zirveden %25 düşüş ile kapanan toplam seans: {trailing_count}")
+    print(f"   Bunların kârla kapananı: {profitable_trailing_count}")
+    print(f"   Bunların zararla/başabaş kapananı: {losing_trailing_count}")
     print(f"50 birimin altı stop-loss ile kapanan: {stop_count}")
     print(f"Test sonunda aktif kalan seans: {active_count}")
     print(f"Görülen en yüksek kasa zirvesi: {highest_peak:.2f} birim")
@@ -438,6 +444,7 @@ def main() -> None:
     print("- Test bahisleri 2018/2019 ve 2019/2020 boyunca tarih + maç ID ile sıralanır.")
     print("- Her bahis öncesi kasa tutarının %20'si yatırılır; sonuçtan sonra zirve güncellenir.")
     print("- Zirve 100'ü aştıktan sonra kasa zirvenin %75'ine veya altına inerse seans kapanır.")
+    print("- Zirveden çıkış her zaman kâr garantilemez: düşük bir zirvenin %25 geri çekilmesi, başlangıç kasasının altına düşebilir.")
     print("- Zirve 100'ü aşmadıysa kasa 50'nin ALTINA indiğinde stop-loss uygulanır.")
     print("- Kapanan seansın tüm net sonucu, strateji toplamına dahil edilir; pozitif trailing çıkışı ayrıca cebe atılan kâr olarak raporlanır.")
     print("- Seans sıfırlaması yeni 100 birim tahsis varsayar; bu ek tahsisler toplam netten düşülür.")
