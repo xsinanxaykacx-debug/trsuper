@@ -358,7 +358,7 @@ def main() -> None:
             f"| ROI={roi_text}"
         )
 
-    print("\\n5. Eşleştirilmiş bootstrap testi (1.000 tekrar)...")
+    print("\n5. Eşleştirilmiş bootstrap testi (1.000 tekrar)...")
     bootstrap_df = paired_bootstrap(test, predictions, n_bootstrap=1000, seed=RANDOM_STATE)
     bootstrap_path = Path("data/csv/bootstrap_ablation_results.csv")
     bootstrap_path.parent.mkdir(parents=True, exist_ok=True)
