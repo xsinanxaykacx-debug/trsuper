@@ -14,6 +14,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import os
+import pickle
 import re
 import unicodedata
 from collections import defaultdict, deque
@@ -55,6 +56,9 @@ DISCLAIMER = (
 )
 TRAIN_SEASONS_REQUIRED = set(TRAIN_SEASONS)
 CURRENT_LEAGUE_KEY = "Dunya"
+CACHE_PATH = Path(__file__).resolve().parents[1] / "models" / "zkahin_bot_model.pkl"
+CACHE_VERSION = 1
+VALUE_THRESHOLD = 0.05
 
 
 def normalize_team_name(value: str) -> str:
@@ -76,6 +80,63 @@ def parse_match_input(text: str) -> tuple[str, str]:
     if normalize_team_name(home) == normalize_team_name(away):
         raise ValueError("Ev sahibi ve deplasman takımları farklı olmalı.")
     return home, away
+
+
+def parse_odds(raw_values: list[str]) -> list[float]:
+    """Parse decimal odds, accepting dot or comma decimal separators."""
+    odds: list[float] = []
+    for raw in raw_values:
+        try:
+            value = float(raw.strip().replace(",", "."))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("Oranlar sayı olmalı. Örnek: 1.95 3.40 3.20") from exc
+        if not np.isfinite(value) or value < 1.0:
+            raise ValueError("Her oran 1.00 veya daha büyük olmalı.")
+        odds.append(value)
+    return odds
+
+
+def parse_value_input(text: str, odds_count: int) -> tuple[str, str, list[float]]:
+    """Split final N tokens as odds; team names may contain spaces."""
+    parts = text.strip().split()
+    usage = (
+        "Kullanım: /value Ev Sahibi vs Deplasman 1.95 3.40 3.20"
+        if odds_count == 3
+        else "Kullanım: /value_ou Ev Sahibi vs Deplasman 1.80 2.00"
+    )
+    if len(parts) < odds_count + 3:
+        raise ValueError(usage)
+    raw_odds = parts[-odds_count:]
+    match_text = " ".join(parts[1:-odds_count])
+    match = re.split(r"\s+vs\.?\s+", match_text, maxsplit=1, flags=re.IGNORECASE)
+    if len(match) != 2 or not match[0].strip() or not match[1].strip():
+        raise ValueError(usage)
+    home, away = match[0].strip(), match[1].strip()
+    if normalize_team_name(home) == normalize_team_name(away):
+        raise ValueError("Ev sahibi ve deplasman takımları farklı olmalı.")
+    return home, away, parse_odds(raw_odds)
+
+
+def calculate_value_rows(
+    probabilities: list[float], odds: list[float], labels: list[str]
+) -> list[dict[str, float | str]]:
+    """Compute EV and market probabilities normalized to remove overround."""
+    if len(probabilities) != len(odds) or len(odds) != len(labels):
+        raise ValueError("Olasılık, oran ve seçenek sayıları eşleşmiyor.")
+    if any(not np.isfinite(p) or p < 0.0 or p > 1.0 for p in probabilities):
+        raise ValueError("Model olasılıkları geçersiz.")
+    implied = [1.0 / odd for odd in odds]
+    total_implied = sum(implied)
+    return [
+        {
+            "label": label,
+            "model_probability": float(probability),
+            "market_probability": float(raw_probability / total_implied),
+            "odds": float(odd),
+            "ev": float(probability * odd - 1.0),
+        }
+        for label, probability, odd, raw_probability in zip(labels, probabilities, odds, implied)
+    ]
 
 
 def make_feature_matrix(frame: pd.DataFrame) -> pd.DataFrame:
@@ -114,6 +175,7 @@ class ZKahinPredictor:
         self.recent_away: dict[tuple[str, str], deque] = {}
         self.last_dt: dict[tuple[str, str], pd.Timestamp] = {}
         self.h2h: dict[tuple[tuple[str, str], tuple[str, str]], deque] = {}
+        self.team_latest_league: dict[str, str] = {}
 
     def load_and_train(self) -> None:
         LOGGER.info("Tarihsel veri yükleniyor.")
@@ -190,6 +252,8 @@ class ZKahinPredictor:
         self.model_1x2 = model_1x2
         self._build_live_state(matches)
         self._build_team_index(matches)
+        self.matches = None
+        self.data = None
         LOGGER.info("Z-Kahin hazır. Eğitim satırı: %s.", len(train))
 
     def _build_team_index(self, matches: pd.DataFrame) -> None:
@@ -270,6 +334,12 @@ class ZKahinPredictor:
         self.recent_away = dict(recent_away)
         self.last_dt = last_dt
         self.h2h = dict(h2h)
+        latest_league: dict[str, str] = {}
+        for row in ordered.to_dict("records"):
+            league = _league_key(row.get("Lig/Sezon"))
+            latest_league[str(row["Ev_Sahibi"]).strip()] = league
+            latest_league[str(row["Deplasman"]).strip()] = league
+        self.team_latest_league = latest_league
 
     @staticmethod
     def _mean_recent(queue: deque, count: int | None = None) -> tuple[float, float, float]:
@@ -283,8 +353,8 @@ class ZKahinPredictor:
 
     def _make_live_row(self, home_name: str, away_name: str) -> pd.DataFrame:
         prediction_date = pd.Timestamp(datetime.now().date())
-        home = (CURRENT_LEAGUE_KEY, home_name)
-        away = (CURRENT_LEAGUE_KEY, away_name)
+        home = (self.team_latest_league.get(home_name, CURRENT_LEAGUE_KEY), home_name)
+        away = (self.team_latest_league.get(away_name, CURRENT_LEAGUE_KEY), away_name)
 
         elo_home = float(self.elo.get(home, 1500.0))
         elo_away = float(self.elo.get(away, 1500.0))
@@ -365,18 +435,27 @@ class ZKahinPredictor:
         }
 
 
+def _markdown_escape(value: str) -> str:
+    escaped = str(value)
+    for char in ("\\_*[]()~" + chr(96) + ">#+-=|{}.!"):
+        escaped = escaped.replace(char, "\\" + char)
+    return escaped
+
+
 def format_prediction(result: dict[str, Any]) -> str:
+    home = _markdown_escape(result["home"])
+    away = _markdown_escape(result["away"])
     return (
-        f"Z-Kahin maç analizi\n"
-        f"{result['home']} - {result['away']}\n\n"
-        f"1X2 olasılıkları\n"
+        f"⚽ *Z-Kahin maç analizi*\n"
+        f"*{home} - {away}*\n\n"
+        f"📊 *1X2 olasılıkları*\n"
         f"1 (Ev sahibi): %{result['p_home_win'] * 100:.1f}\n"
         f"X (Beraberlik): %{result['p_draw'] * 100:.1f}\n"
         f"2 (Deplasman): %{result['p_away_win'] * 100:.1f}\n\n"
-        f"Alt/Üst 2.5 gol\n"
+        f"🥅 *Alt/Üst 2.5 gol*\n"
         f"Alt 2.5: %{result['p_under25'] * 100:.1f}\n"
         f"Üst 2.5: %{result['p_over25'] * 100:.1f}\n\n"
-        f"{DISCLAIMER}"
+        f"_{DISCLAIMER}_"
     )
 
 
@@ -385,12 +464,13 @@ async def start_command(update: Any, context: Any) -> None:
     if message is None:
         return
     await message.reply_text(
-        "Z-Kahin'e hoş geldin.\n\n"
-        "Geçmiş maçlardan hesaplanan Elo, form, momentum ve dinlenme günü "
-        "özellikleriyle futbol maçları için 1X2 ve Alt/Üst 2.5 gol olasılıkları sunarım.\n\n"
-        "Maç analizi için:\n"
-        "/tahmin Galatasaray vs Fenerbahçe\n\n"
-        "Komutlar: /yardim ve /hakkinda"
+        "⚽ *Z-Kahin'e hoş geldin!*\n\n"
+        "Geçmiş maç verileriyle 1X2 ve Alt/Üst 2.5 gol olasılıkları sunarım.\n\n"
+        "`/tahmin Galatasaray vs Fenerbahçe`\n"
+        "`/value Galatasaray vs Fenerbahçe 1.95 3.40 3.20`\n"
+        "`/value_ou Galatasaray vs Fenerbahçe 1.80 2.00`\n\n"
+        "Komutlar için /yardim yaz.",
+        parse_mode="Markdown"
     )
 
 
@@ -399,12 +479,18 @@ async def help_command(update: Any, context: Any) -> None:
     if message is None:
         return
     await message.reply_text(
-        "Kullanılabilir komutlar:\n"
+        "📚 *Kullanılabilir komutlar*\n\n"
         "/start — Botu başlatır.\n"
-        "/tahmin Ev Sahibi vs Deplasman — 1X2 ve Alt/Üst 2.5 olasılıklarını verir.\n"
+        "/tahmin Ev Sahibi vs Deplasman — 1X2 ve Alt/Üst 2.5 olasılıkları.\n"
+        "/value Ev Sahibi vs Deplasman 1 X 2 — 1X2 oranlarıyla EV analizi.\n"
+        "/value_ou Ev Sahibi vs Deplasman Alt Üst — Alt/Üst oranlarıyla EV analizi.\n"
         "/yardim — Komutları listeler.\n"
-        "/hakkinda — Veri ve kullanım sınırlarını açıklar.\n\n"
-        "Örnek: /tahmin Galatasaray vs Fenerbahçe"
+        "/hakkinda — Veri ve kullanım sınırları.\n\n"
+        "*Örnekler*\n"
+        "`/tahmin Galatasaray vs Fenerbahçe`\n"
+        "`/value Galatasaray vs Fenerbahçe 1.95 3.40 3.20`\n"
+        "`/value_ou Galatasaray vs Fenerbahçe 1.80 2.00`",
+        parse_mode="Markdown"
     )
 
 
@@ -413,12 +499,11 @@ async def about_command(update: Any, context: Any) -> None:
     if message is None:
         return
     await message.reply_text(
-        "Z-Kahin, yaklaşık 180.000 tarihsel maç içeren veri kaynağını kullanan "
-        "bir futbol analiz prototipidir. Modeller kronolojik maç öncesi özelliklerle "
-        "eğitilir; veri setindeki her maç doğrudan eğitim örneği olarak kullanılmaz.\n\n"
-        "Olasılıklar istatistiksel model çıktılarıdır; garanti, kesin sonuç veya "
-        "kârlılık iddiası taşımaz. Yalnızca analiz ve bilgilendirme amacıyla sunulur.\n\n"
-        f"{DISCLAIMER}"
+        "ℹ️ *Z-Kahin hakkında*\n\n"
+        "Yaklaşık 180.000 tarihsel maç içeren veri kaynağından yararlanan bir futbol analiz prototipidir. "
+        "Olasılıklar garanti veya kârlılık iddiası taşımaz; yalnızca bilgilendirme amaçlıdır.\n\n"
+        f"_{DISCLAIMER}_",
+        parse_mode="Markdown"
     )
 
 
@@ -443,7 +528,7 @@ async def prediction_command(update: Any, context: Any) -> None:
     except ValueError as exc:
         if str(exc) == "UNKNOWN_TEAM":
             await message.reply_text(
-                "Bu takımı tanımıyorum, lütfen geçerli bir takım adı girin."
+                "Takım bulunamadı, lütfen doğru yazdığınızdan emin olun."
             )
         else:
             await message.reply_text(str(exc))
@@ -454,7 +539,7 @@ async def prediction_command(update: Any, context: Any) -> None:
         )
         return
     else:
-        await message.reply_text(format_prediction(result))
+        await message.reply_text(format_prediction(result), parse_mode="Markdown")
 
 
 async def post_init(application: Any) -> None:
