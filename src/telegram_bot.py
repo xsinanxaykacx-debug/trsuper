@@ -863,7 +863,7 @@ def main() -> None:
             secret_token=os.environ.get("TELEGRAM_WEBHOOK_SECRET") or None,
         )
     else:
-        LOGGER.info("WEBHOOK_URL tanımlı değil; polling modunda çalışılıyor.")
+        LOGGER.info("WEBHOOK_URL tanımlı değil; polling modu başlatıldı.")
         application.run_polling(allowed_updates=["message"])
 
 
