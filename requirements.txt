@@ -1,12 +1,6 @@
-pandas
-numpy
-scikit-learn
+python-telegram-bot==21.0
 joblib
-scipy
+numpy
+pandas
 xgboost
-lightgbm
-optuna
-matplotlib
-seaborn
-pytest
-python-telegram-bot>=20.0,<23.0
+scikit-learn
