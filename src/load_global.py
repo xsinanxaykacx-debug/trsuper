@@ -1,71 +1,161 @@
-import pandas as pd
-import numpy as np
-from pathlib import Path
-import pickle
 import os
+import pickle
+from pathlib import Path
 
-def load_global_data() -> pd.DataFrame:
-    xlsx_path = Path("data/csv/180k.xlsx")
-    pkl_path = Path("data/csv/180k.pkl")
-    
-    # Eğer daha önce hızlı formata (pkl) çevirdiysek direkt onu oku (0.1 saniye)
-    if pkl_path.exists():
-        print("Hizli formattan (pkl) okunuyor...")
-        with open(pkl_path, "rb") as f:
-            return pickle.load(f)
-            
-    if not xlsx_path.exists():
-        raise FileNotFoundError("180k.xlsx bulunamadi!")
-        
-    print("Excel okunuyor (Sadece bu seferlik, lutfen bekleyin)...")
-    df = pd.read_excel(xlsx_path)
-    
-    # 1. İsim Eşleştirmeleri
-    df = df.rename(columns={
-        "TARİH": "Tarih",
-        "EV": "Ev_Sahibi",
-        "DEP": "Deplasman",
-        "MS1": "_odd_H",
-        "MSX": "_odd_D",
-        "MS2": "_odd_A"
-    })
-    
-    # 2. Tarih Formatı
+import numpy as np
+import pandas as pd
+
+CACHE_VERSION = 2
+PICKLE_PATH = Path("data/csv/180k.pkl")
+XLSX_PATH = Path("data/csv/180k.xlsx")
+
+
+def _clean_odds(series: pd.Series) -> pd.Series:
+    """Virgüllü veya noktalı ondalık oranları sayısala dönüştürür."""
+    return pd.to_numeric(
+        series.astype(str).str.replace(",", ".", regex=False).str.strip(),
+        errors="coerce",
+    )
+
+
+def _build_global_frame(raw: pd.DataFrame) -> pd.DataFrame:
+    """180k ham verisinden modelleme için standartlaştırılmış tablo üretir."""
+    required = ["TARİH", "EV", "DEP", "MSE", "MSD"]
+    missing = [column for column in required if column not in raw.columns]
+    if missing:
+        raise KeyError(f"180k verisinde gerekli sütunlar eksik: {missing}")
+
+    df = raw.rename(
+        columns={
+            "TARİH": "Tarih",
+            "EV": "Ev_Sahibi",
+            "DEP": "Deplasman",
+            "MS1": "_odd_H",
+            "MSX": "_odd_D",
+            "MS2": "_odd_A",
+            "25A": "_odd_under25",
+            "25Ü": "_odd_over25",
+        }
+    ).copy()
+
     df["_date"] = pd.to_datetime(df["Tarih"], dayfirst=True, errors="coerce")
-    
-    # 3. Sezon Hesaplama
-    df["_season"] = df["_date"].apply(lambda d: f"{d.year}/{d.year+1}" if d.month >= 7 else f"{d.year-1}/{d.year}" if pd.notna(d) else None)
+    df["_season"] = np.where(
+        df["_date"].dt.month >= 7,
+        df["_date"].dt.year.astype("Int64").astype(str)
+        + "/"
+        + (df["_date"].dt.year + 1).astype("Int64").astype(str),
+        (df["_date"].dt.year - 1).astype("Int64").astype(str)
+        + "/"
+        + df["_date"].dt.year.astype("Int64").astype(str),
+    )
+    df.loc[df["_date"].isna(), "_season"] = None
     df["Lig/Sezon"] = "Dunya " + df["_season"].astype(str)
-    
-    # 4. Skorlar ve Hedef (y)
+
     df["MSE"] = pd.to_numeric(df["MSE"], errors="coerce")
     df["MSD"] = pd.to_numeric(df["MSD"], errors="coerce")
-    
-    conditions = [(df["MSE"] > df["MSD"]), (df["MSE"] == df["MSD"]), (df["MSE"] < df["MSD"])]
-    df["_y"] = np.select(conditions, ["H", "D", "A"], default=None)
-    
-    # 5. Oranları Temizle
-    def clean_odds(s):
-        return pd.to_numeric(s.astype(str).str.replace(",", ".", regex=False).str.strip(), errors="coerce")
-    
-    df["_odd_H"] = clean_odds(df["_odd_H"])
-    df["_odd_D"] = clean_odds(df["_odd_D"])
-    df["_odd_A"] = clean_odds(df["_odd_A"])
-    
-    # 6. Benzersiz ID
-    df["_id"] = np.arange(20000000, 20000000 + len(df))
-    
-    # Eksik olanları sil (Sadece kesinlikle olması gerekenler)
-    df = df.dropna(subset=["_date", "_season", "_y"])
-    
+
+    # Mevcut 1X2 hedefi Elo/form özelliklerinin hesaplanması için korunur.
+    home_goals = df["MSE"]
+    away_goals = df["MSD"]
+    df["_y"] = np.select(
+        [home_goals > away_goals, home_goals == away_goals, home_goals < away_goals],
+        ["H", "D", "A"],
+        default=None,
+    )
+
+    # İkili ALT/ÜST 2.5 hedefi: 1 = ÜST, 0 = ALT.
+    total_goals = home_goals + away_goals
+    df["_y_ou25"] = np.where(
+        total_goals.notna(),
+        (total_goals > 2.5).astype("int8"),
+        np.nan,
+    )
+
+    for column in (
+        "_odd_H",
+        "_odd_D",
+        "_odd_A",
+        "_odd_under25",
+        "_odd_over25",
+    ):
+        if column not in df.columns:
+            df[column] = np.nan
+        df[column] = _clean_odds(df[column])
+
+    # 180k satırlarına özel sentetik kimlik; gerçek maç ID'si olarak kullanılmamalı.
+    df["_id"] = np.arange(20_000_000, 20_000_000 + len(df), dtype=np.int64)
+
+    columns = [
+        "_id",
+        "_date",
+        "_season",
+        "Lig/Sezon",
+        "Ev_Sahibi",
+        "Deplasman",
+        "MSE",
+        "MSD",
+        "_y",
+        "_y_ou25",
+        "_odd_H",
+        "_odd_D",
+        "_odd_A",
+        "_odd_under25",
+        "_odd_over25",
+    ]
+    df = df.dropna(subset=["_date", "_season", "_y", "_y_ou25"])
+    return df[columns].reset_index(drop=True)
+
+
+def load_global_data(force_rebuild: bool = False) -> pd.DataFrame:
+    """
+    180k verisini yükler. Cache sürümü ve gerekli ALT/ÜST sütunları kontrol edilir;
+    eski PKL dosyası varsa Excel'den yeniden üretilir.
+    """
+    if not force_rebuild and PICKLE_PATH.exists():
+        try:
+            with PICKLE_PATH.open("rb") as handle:
+                cached = pickle.load(handle)
+            required_cache_columns = {
+                "_odd_under25",
+                "_odd_over25",
+                "_y_ou25",
+                "_id",
+                "_date",
+            }
+            if (
+                isinstance(cached, pd.DataFrame)
+                and required_cache_columns.issubset(cached.columns)
+                and cached.attrs.get("cache_version") == CACHE_VERSION
+            ):
+                print("Hizli formattan (pkl) okunuyor...")
+                return cached
+            print("Eski/eksik PKL tespit edildi; Excel'den yeniden olusturulacak.")
+        except (EOFError, pickle.UnpicklingError, OSError, AttributeError):
+            print("PKL okunamadi; Excel'den yeniden olusturulacak.")
+
+    if not XLSX_PATH.exists():
+        raise FileNotFoundError(
+            f"{XLSX_PATH} bulunamadi. ALT/UST oranlarini eklemek icin kaynak Excel gerekli."
+        )
+
+    print("Excel okunuyor (gerekirse PKL yeniden olusturulacak)...")
+    raw = pd.read_excel(XLSX_PATH)
+    df = _build_global_frame(raw)
+    df.attrs["cache_version"] = CACHE_VERSION
+
+    PICKLE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temp_path = PICKLE_PATH.with_suffix(".pkl.tmp")
+    with temp_path.open("wb") as handle:
+        pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    os.replace(temp_path, PICKLE_PATH)
+
     print(f"Basarili: {len(df)} mac yuklendi.")
-    
-    cols = ["_id", "_date", "_season", "Lig/Sezon", "Ev_Sahibi", "Deplasman", "MSE", "MSD", "_y", "_odd_H", "_odd_D", "_odd_A"]
-    df_final = df[cols].reset_index(drop=True)
-    
-    # Bir sonraki calistirmalar icin Pickle olarak kaydet
-    print("Gelecek testler icin hizli formata (pkl) kaydediliyor...")
-    with open(pkl_path, "wb") as f:
-        pickle.dump(df_final, f)
-        
-    return df_final
+    print(f"ALT oran dolulugu: {df['_odd_under25'].notna().sum()} mac")
+    print(f"UST oran dolulugu: {df['_odd_over25'].notna().sum()} mac")
+    print("Gelecek testler icin guncel PKL kaydedildi.")
+    return df
+
+
+if __name__ == "__main__":
+    data = load_global_data()
+    print(data[["_odd_under25", "_odd_over25", "_y_ou25"]].head())
