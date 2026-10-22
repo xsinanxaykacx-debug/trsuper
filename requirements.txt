@@ -8,3 +8,4 @@ optuna
 matplotlib
 seaborn
 pytest
+python-telegram-bot>=20.0,<23.0
