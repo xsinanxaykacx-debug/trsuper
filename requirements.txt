@@ -1,13 +1,15 @@
-python-telegram-bot==21.0
-joblib
-numpy
-pandas
-scipy
-scikit-learn
-xgboost
-lightgbm
-optuna
-matplotlib
-seaborn
-pytest
-playwright
+# Runtime: Python 3.11
+# Conservative pinned versions for repeatable Railway/Docker builds.
+python-telegram-bot==21.11.1
+joblib==1.4.2
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+xgboost==2.1.4
+lightgbm==4.6.0
+optuna==4.2.1
+matplotlib==3.10.1
+seaborn==0.13.2
+pytest==8.3.5
+playwright==1.51.0

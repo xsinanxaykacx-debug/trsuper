@@ -1,28 +1,50 @@
-# Local datasets and training outputs
-data/
-scratch/
-*.xlsx
-*.csv
-*.duckdb
-
-# Git and Python artifacts
+# Git / editor metadata
 .git/
 .gitignore
+.gitattributes
+.vscode/
+.idea/
+
+# Python environments and generated files
+.venv/
+venv/
+env/
 __pycache__/
 **/__pycache__/
 *.py[cod]
 *.pyo
 *.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Deployment configurations not used by Koyeb
-vercel.json
-api/
-
-# Secrets / local configuration
+# Local secrets and environment files
 .env
 .env.*
 !.env.example
 
-# Keep the pre-trained model in the Docker image
+# Local data, reports, caches and training outputs
+data/
+scratch/
+*.csv
+*.xlsx
+*.xls
+*.duckdb
+*.log
+*.tmp
+*.bak
+
+# Build artifacts
+build/
+dist/
+node_modules/
+
+# Deployment configuration not used by this Docker image
+vercel.json
+api/
+
+# Keep the pre-trained model required by the bot
 !models/
 !models/zkahin_bot_model.pkl
