@@ -43,6 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p data/prediction_tests/
           git add data/prediction_tests/
           if ! git diff --cached --quiet; then
             git commit -m "Save Nov 16 Z-Kahin fixture prediction snapshot"
