@@ -6,12 +6,15 @@ import json
 from datetime import date, datetime, time, timezone
 from pathlib import Path
 from typing import Any
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 import joblib
 import src.telegram_bot as bot
 
 FIXTURE_DATE = date(2026, 11, 16)
-ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "zkahin_bot_model.pkl"
 OUTPUT_DIR = ROOT / "data" / "prediction_tests"
 OUTPUT_CSV = OUTPUT_DIR / "2026-11-16-fixtures.csv"
