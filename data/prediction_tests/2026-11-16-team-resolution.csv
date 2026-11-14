@@ -1,0 +1,37 @@
+﻿fixture_id,input_team,resolved_team,status
+F01,Letonya,Letonya,ok
+F01,Ermenistan,Ermenistan,ok
+F02,G. Kıbrıs,Güney Kıbrıs,ok
+F02,Karadağ,Karadağ,ok
+F03,Belarus,Belarus,ok
+F03,Arnavutluk,Arnavutluk,ok
+F04,Finlandiya,Finlandiya,ok
+F04,San Marino,San Marino,ok
+F05,Hırvatistan,Hırvatistan,ok
+F05,Çekya,Çekya,ok
+F06,İspanya,İspanya,ok
+F06,İngiltere,İngiltere,ok
+F07,Fransa,Fransa,ok
+F07,Türkiye,Türkiye,ok
+F08,Belçika,Belçika,ok
+F08,İtalya,İtalya,ok
+N01,Kazakistan,Kazakistan,ok
+N01,Slovakya,Slovakya,ok
+N02,Faroe Adaları,Faroe Adaları,ok
+N02,Moldova,Moldova,ok
+N03,Litvanya,Litvanya,ok
+N03,Lihtenştayn,Liechtenstein,ok
+N04,İzlanda,İzlanda,ok
+N04,Lüksemburg,Lüksemburg,ok
+N05,Estonya,Estonya,ok
+N05,Bulgaristan,Bulgaristan,ok
+N06,Yunanistan,Yunanistan,ok
+N06,Sırbistan,Sırbistan,ok
+N07,Almanya,Almanya,ok
+N07,Hollanda,Hollanda,ok
+N08,Kuzey Makedonya,Kuzey Makedonya,ok
+N08,Slovenya,Slovenya,ok
+N09,İsviçre,İsviçre,ok
+N09,İskoçya,İskoçya,ok
+N10,Cebelitarık,Cebelitarık,ok
+N10,Malta,Malta,ok
